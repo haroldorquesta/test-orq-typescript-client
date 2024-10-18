@@ -1,0 +1,756 @@
+lockVersion: 2.0.0
+id: 53c28128-5c38-4f41-bba4-e482fb33eb14
+management:
+  docChecksum: 0712d37e7a822a17421fc57fd9ffaac1
+  docVersion: "2.0"
+  speakeasyVersion: 1.419.0
+  generationVersion: 2.438.3
+  releaseVersion: 0.0.1
+  configChecksum: 5f151a12ff5d35aa0084024f9d560fb9
+features:
+  typescript:
+    acceptHeaders: 2.81.2
+    additionalDependencies: 0.1.0
+    constsAndDefaults: 0.1.11
+    core: 3.18.2
+    defaultEnabledRetries: 0.1.0
+    devContainers: 2.90.0
+    enumUnions: 0.1.0
+    envVarSecurityUsage: 0.1.1
+    globalSecurity: 2.82.11
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.4
+    inputOutputModels: 2.82.0
+    nullables: 0.1.0
+    responseFormat: 0.2.3
+    retries: 2.83.0
+    sdkHooks: 0.1.0
+    serverEvents: 0.1.5
+    unions: 2.85.7
+generatedFiles:
+  - .devcontainer/README.md
+  - .devcontainer/devcontainer.json
+  - .devcontainer/setup.sh
+  - .eslintrc.cjs
+  - .gitattributes
+  - .npmignore
+  - CONTRIBUTING.md
+  - FUNCTIONS.md
+  - RUNTIMES.md
+  - USAGE.md
+  - docs/lib/utils/retryconfig.md
+  - docs/models/components/content.md
+  - docs/models/components/content2.md
+  - docs/models/components/deployments.md
+  - docs/models/components/deployments22.md
+  - docs/models/components/deployments2messagescontenttype.md
+  - docs/models/components/deployments2messagestype.md
+  - docs/models/components/deployments2type.md
+  - docs/models/components/deploymentscontent.md
+  - docs/models/components/deploymentsfunction.md
+  - docs/models/components/deploymentsrole.md
+  - docs/models/components/deploymentstoolcalls.md
+  - docs/models/components/deploymentstype.md
+  - docs/models/components/functiont.md
+  - docs/models/components/imageurl.md
+  - docs/models/components/inputs.md
+  - docs/models/components/invokeoptions.md
+  - docs/models/components/messages.md
+  - docs/models/components/one.md
+  - docs/models/components/prefixmessages.md
+  - docs/models/components/role.md
+  - docs/models/components/security.md
+  - docs/models/components/toolcalls.md
+  - docs/models/components/two.md
+  - docs/models/components/two1.md
+  - docs/models/components/two2.md
+  - docs/models/components/twoimageurl.md
+  - docs/models/components/twotype.md
+  - docs/models/components/type.md
+  - docs/models/components/userid.md
+  - docs/models/errors/getv2resourcesdatasetsdatasetidresponsebody.md
+  - docs/models/errors/getv2resourcesdatasetsdatasetidrowsrowidresponsebody.md
+  - docs/models/operations/apiversion.md
+  - docs/models/operations/billedunits.md
+  - docs/models/operations/choices.md
+  - docs/models/operations/content.md
+  - docs/models/operations/content2.md
+  - docs/models/operations/data.md
+  - docs/models/operations/datasetrows.md
+  - docs/models/operations/deletev2resourcesdatasetsdatasetidrequest.md
+  - docs/models/operations/deletev2resourcesdatasetsdatasetidrowsbulkrequest.md
+  - docs/models/operations/deletev2resourcesdatasetsdatasetidrowsrowidrequest.md
+  - docs/models/operations/delta.md
+  - docs/models/operations/detail.md
+  - docs/models/operations/document.md
+  - docs/models/operations/documents.md
+  - docs/models/operations/embedding.md
+  - docs/models/operations/encodingformat.md
+  - docs/models/operations/feedback.md
+  - docs/models/operations/finishreason.md
+  - docs/models/operations/format.md
+  - docs/models/operations/four.md
+  - docs/models/operations/functiont.md
+  - docs/models/operations/getv2resourcesdatasets21.md
+  - docs/models/operations/getv2resourcesdatasets22.md
+  - docs/models/operations/getv2resourcesdatasets2imageurl.md
+  - docs/models/operations/getv2resourcesdatasets2resourcestype.md
+  - docs/models/operations/getv2resourcesdatasets2type.md
+  - docs/models/operations/getv2resourcesdatasetscontent.md
+  - docs/models/operations/getv2resourcesdatasetscontent2.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetid21.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetid22.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetid2imageurl.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetid2resourcestype.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetid2type.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidcontent.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidcontent2.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidfunction.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetiditems.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidmessages.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrequest.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidresponsebody.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrole.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrows21.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrows22.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrows2imageurl.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrows2resourcestype.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrows2type.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowscontent.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowscontent2.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsfunction.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsitems.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsmessages.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrequest.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsresponsebody.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrole.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowid21.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowid22.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowid2imageurl.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowid2resourcestype.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowid2type.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidcontent.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidcontent2.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidfunction.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidmessages.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidrequest.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidresponsebody.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidrole.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidtoolcalls.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowsrowidtype.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowstoolcalls.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidrowstype.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidtoolcalls.md
+  - docs/models/operations/getv2resourcesdatasetsdatasetidtype.md
+  - docs/models/operations/getv2resourcesdatasetsfunction.md
+  - docs/models/operations/getv2resourcesdatasetsitems.md
+  - docs/models/operations/getv2resourcesdatasetsmessages.md
+  - docs/models/operations/getv2resourcesdatasetsrequest.md
+  - docs/models/operations/getv2resourcesdatasetsresponsebody.md
+  - docs/models/operations/getv2resourcesdatasetsrole.md
+  - docs/models/operations/getv2resourcesdatasetstoolcalls.md
+  - docs/models/operations/getv2resourcesdatasetstype.md
+  - docs/models/operations/getv2resourcesdatasetsupdatedby.md
+  - docs/models/operations/imageurl.md
+  - docs/models/operations/input.md
+  - docs/models/operations/inputs.md
+  - docs/models/operations/invokeoptions.md
+  - docs/models/operations/items.md
+  - docs/models/operations/jsonschema.md
+  - docs/models/operations/logprobs.md
+  - docs/models/operations/message.md
+  - docs/models/operations/message1.md
+  - docs/models/operations/message2.md
+  - docs/models/operations/message3.md
+  - docs/models/operations/messagefunction.md
+  - docs/models/operations/messagerole.md
+  - docs/models/operations/messages.md
+  - docs/models/operations/messages1.md
+  - docs/models/operations/messages2.md
+  - docs/models/operations/messages3.md
+  - docs/models/operations/messagescontent.md
+  - docs/models/operations/messagesfunction.md
+  - docs/models/operations/messagesrole.md
+  - docs/models/operations/messagestoolcalls.md
+  - docs/models/operations/messagestype.md
+  - docs/models/operations/messagetoolcalls.md
+  - docs/models/operations/messagetype.md
+  - docs/models/operations/meta.md
+  - docs/models/operations/metadata.md
+  - docs/models/operations/objectt.md
+  - docs/models/operations/one.md
+  - docs/models/operations/parameterst.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrequest.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrequestbody.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidresponsebody.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid21.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid22.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2imageurl.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2resources1.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2resources2.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2resourcesimageurl.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2resourcespublicresponsetype.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2resourcespublictype.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2resourcestype.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid2type.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidcontent.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidcontent2.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidcontentresources2.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidfunction.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidmessages.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidrequest.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidrequestbody.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidresourcescontent.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidresourcesfunction.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidresourcesmessages.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidresourcesrole.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidresourcestoolcalls.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidresourcestype.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidresponsebody.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidrole.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidtoolcalls.md
+  - docs/models/operations/patchv2resourcesdatasetsdatasetidrowsrowidtype.md
+  - docs/models/operations/performance.md
+  - docs/models/operations/photorealversion.md
+  - docs/models/operations/postcontactsrequestbody.md
+  - docs/models/operations/postcontactsresponsebody.md
+  - docs/models/operations/postfeedbackrequestbody.md
+  - docs/models/operations/postfeedbackresponsebody.md
+  - docs/models/operations/postfeedbackvalue.md
+  - docs/models/operations/postv2deploymentsgetconfig21.md
+  - docs/models/operations/postv2deploymentsgetconfig22.md
+  - docs/models/operations/postv2deploymentsgetconfig2deployments2.md
+  - docs/models/operations/postv2deploymentsgetconfig2deploymentspublicresponsetype.md
+  - docs/models/operations/postv2deploymentsgetconfig2deploymentspublictype.md
+  - docs/models/operations/postv2deploymentsgetconfig2deploymentstype.md
+  - docs/models/operations/postv2deploymentsgetconfig2imageurl.md
+  - docs/models/operations/postv2deploymentsgetconfig2type.md
+  - docs/models/operations/postv2deploymentsgetconfigcontent.md
+  - docs/models/operations/postv2deploymentsgetconfigcontent2.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentscontent.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentsfunction.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublicfunction.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublicresponse200type.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublicresponsetype.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublictype.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentsrole.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentstoolcalls.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentstype.md
+  - docs/models/operations/postv2deploymentsgetconfigencodingformat.md
+  - docs/models/operations/postv2deploymentsgetconfigfunction.md
+  - docs/models/operations/postv2deploymentsgetconfigmessages.md
+  - docs/models/operations/postv2deploymentsgetconfigparameters.md
+  - docs/models/operations/postv2deploymentsgetconfigquality.md
+  - docs/models/operations/postv2deploymentsgetconfigrequestbody.md
+  - docs/models/operations/postv2deploymentsgetconfigresponsebody.md
+  - docs/models/operations/postv2deploymentsgetconfigresponseformat.md
+  - docs/models/operations/postv2deploymentsgetconfigresponseformattype.md
+  - docs/models/operations/postv2deploymentsgetconfigrole.md
+  - docs/models/operations/postv2deploymentsgetconfigtoolcalls.md
+  - docs/models/operations/postv2deploymentsgetconfigtools.md
+  - docs/models/operations/postv2deploymentsgetconfigtype.md
+  - docs/models/operations/postv2deploymentsidmetrics21.md
+  - docs/models/operations/postv2deploymentsidmetrics22.md
+  - docs/models/operations/postv2deploymentsidmetrics2deploymentstype.md
+  - docs/models/operations/postv2deploymentsidmetrics2imageurl.md
+  - docs/models/operations/postv2deploymentsidmetrics2type.md
+  - docs/models/operations/postv2deploymentsidmetricscontent.md
+  - docs/models/operations/postv2deploymentsidmetricscontent2.md
+  - docs/models/operations/postv2deploymentsidmetricsfunction.md
+  - docs/models/operations/postv2deploymentsidmetricsmessagedeploymentsrole.md
+  - docs/models/operations/postv2deploymentsidmetricsmessagerole.md
+  - docs/models/operations/postv2deploymentsidmetricsmessages.md
+  - docs/models/operations/postv2deploymentsidmetricsrequest.md
+  - docs/models/operations/postv2deploymentsidmetricsrequestbody.md
+  - docs/models/operations/postv2deploymentsidmetricsresponsebody.md
+  - docs/models/operations/postv2deploymentsidmetricsrole.md
+  - docs/models/operations/postv2deploymentsidmetricstoolcalls.md
+  - docs/models/operations/postv2deploymentsidmetricstype.md
+  - docs/models/operations/postv2deploymentsinvokechoices.md
+  - docs/models/operations/postv2deploymentsinvokedeploymentsresponsebody.md
+  - docs/models/operations/postv2deploymentsinvokemessage.md
+  - docs/models/operations/postv2deploymentsinvokemessage1.md
+  - docs/models/operations/postv2deploymentsinvokemessage2.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicrole.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentsrole.md
+  - docs/models/operations/postv2deploymentsinvokemessagefunction.md
+  - docs/models/operations/postv2deploymentsinvokemessagerole.md
+  - docs/models/operations/postv2deploymentsinvokemessagetoolcalls.md
+  - docs/models/operations/postv2deploymentsinvokemessagetype.md
+  - docs/models/operations/postv2deploymentsinvokeresponse.md
+  - docs/models/operations/postv2deploymentsinvokeresponsebody.md
+  - docs/models/operations/postv2filesbulkfilespurpose.md
+  - docs/models/operations/postv2filesbulkpurpose.md
+  - docs/models/operations/postv2filesbulkrequestbody.md
+  - docs/models/operations/postv2filespurpose.md
+  - docs/models/operations/postv2filesrequestbody.md
+  - docs/models/operations/postv2filesresponsebody.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows21.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows22.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2imageurl.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2resources1.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2resources2.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2resourcesimageurl.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2resourcespublicresponsetype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2resourcespublictype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2resourcestype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrows2type.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk21.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk22.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2imageurl.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2resources1.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2resources2.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2resourcesimageurl.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2resourcespublicresponsetype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2resourcespublictype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2resourcestype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulk2type.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkcontent.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkcontent2.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkcontentresources2.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkfunction.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkmessages.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkrequest.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkrequestbody.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkresourcescontent.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkresourcesfunction.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkresourcesmessages.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkresourcesrole.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkresourcestoolcalls.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkresourcestype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkresponsebody.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulkrole.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulktoolcalls.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsbulktype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowscontent.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowscontent2.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowscontentresources2.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsfunction.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsmessages.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsrequest.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsrequestbody.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsresourcescontent.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsresourcesfunction.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsresourcesmessages.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsresourcesrole.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsresourcestoolcalls.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsresourcestype.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsresponsebody.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowsrole.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowstoolcalls.md
+  - docs/models/operations/postv2resourcesdatasetsdatasetidrowstype.md
+  - docs/models/operations/postv2resourcesdatasetsrequestbody.md
+  - docs/models/operations/postv2resourcesdatasetsresponsebody.md
+  - docs/models/operations/postv2routerchatcompletions21.md
+  - docs/models/operations/postv2routerchatcompletions22.md
+  - docs/models/operations/postv2routerchatcompletions2detail.md
+  - docs/models/operations/postv2routerchatcompletions2imageurl.md
+  - docs/models/operations/postv2routerchatcompletions2router1.md
+  - docs/models/operations/postv2routerchatcompletions2router2.md
+  - docs/models/operations/postv2routerchatcompletions2routerimageurl.md
+  - docs/models/operations/postv2routerchatcompletions2routerpublic1.md
+  - docs/models/operations/postv2routerchatcompletions2routerpublic2.md
+  - docs/models/operations/postv2routerchatcompletions2routerpublicimageurl.md
+  - docs/models/operations/postv2routerchatcompletions2routerpublicrequestrequestbodymessagestype.md
+  - docs/models/operations/postv2routerchatcompletions2routerpublicrequestrequestbodytype.md
+  - docs/models/operations/postv2routerchatcompletions2routerpublicrequesttype.md
+  - docs/models/operations/postv2routerchatcompletions2routerpublictype.md
+  - docs/models/operations/postv2routerchatcompletions2routertype.md
+  - docs/models/operations/postv2routerchatcompletions2type.md
+  - docs/models/operations/postv2routerchatcompletionscontent2.md
+  - docs/models/operations/postv2routerchatcompletionscontentrouter2.md
+  - docs/models/operations/postv2routerchatcompletionscontentrouterpublic2.md
+  - docs/models/operations/postv2routerchatcompletionsfunction.md
+  - docs/models/operations/postv2routerchatcompletionsmessages.md
+  - docs/models/operations/postv2routerchatcompletionsmessagescontent.md
+  - docs/models/operations/postv2routerchatcompletionsmessagesrole.md
+  - docs/models/operations/postv2routerchatcompletionsmessagesroutercontent.md
+  - docs/models/operations/postv2routerchatcompletionsmessagesrouterpubliccontent.md
+  - docs/models/operations/postv2routerchatcompletionsmessagesrouterpublicrole.md
+  - docs/models/operations/postv2routerchatcompletionsmessagesrouterrole.md
+  - docs/models/operations/postv2routerchatcompletionsrequestbody.md
+  - docs/models/operations/postv2routerchatcompletionsresponse.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebody.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodychoices.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodycontent.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodyfinishreason.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodyfunction.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodyrole.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodyroutertoplogprobs.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodytoolcalls.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodytoplogprobs.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodytype.md
+  - docs/models/operations/postv2routerchatcompletionsresponsebodyusage.md
+  - docs/models/operations/postv2routerchatcompletionsrouterresponsebody.md
+  - docs/models/operations/postv2routerchatcompletionsroutertype.md
+  - docs/models/operations/postv2routerchatcompletionstype.md
+  - docs/models/operations/postv2routercompletionschoices.md
+  - docs/models/operations/postv2routercompletionsrequestbody.md
+  - docs/models/operations/postv2routercompletionsresponsebody.md
+  - docs/models/operations/postv2routercompletionsusage.md
+  - docs/models/operations/postv2routerembeddingsobject.md
+  - docs/models/operations/postv2routerembeddingsrequestbody.md
+  - docs/models/operations/postv2routerembeddingsresponsebody.md
+  - docs/models/operations/postv2routerembeddingsrouterobject.md
+  - docs/models/operations/postv2routerembeddingsusage.md
+  - docs/models/operations/postv2routerimagesgenerationschoices.md
+  - docs/models/operations/postv2routerimagesgenerationsmessage.md
+  - docs/models/operations/postv2routerimagesgenerationsmessage1.md
+  - docs/models/operations/postv2routerimagesgenerationsmessage2.md
+  - docs/models/operations/postv2routerimagesgenerationsmessage3.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagefunction.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagerole.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagerouterpublicrole.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagerouterrole.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagetoolcalls.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagetype.md
+  - docs/models/operations/postv2routerimagesgenerationsrequestbody.md
+  - docs/models/operations/postv2routerimagesgenerationsresponsebody.md
+  - docs/models/operations/postv2routerrerankrequestbody.md
+  - docs/models/operations/postv2routerrerankresponsebody.md
+  - docs/models/operations/prefixmessages.md
+  - docs/models/operations/prompt.md
+  - docs/models/operations/provider.md
+  - docs/models/operations/purpose.md
+  - docs/models/operations/quality.md
+  - docs/models/operations/refusal.md
+  - docs/models/operations/responsebody.md
+  - docs/models/operations/responsebody1.md
+  - docs/models/operations/responsebody2.md
+  - docs/models/operations/responsebodychoices.md
+  - docs/models/operations/responsebodycontent.md
+  - docs/models/operations/responsebodyfinishreason.md
+  - docs/models/operations/responsebodyfunction.md
+  - docs/models/operations/responsebodylogprobs.md
+  - docs/models/operations/responsebodymessage.md
+  - docs/models/operations/responsebodyrefusal.md
+  - docs/models/operations/responsebodyrole.md
+  - docs/models/operations/responsebodytoolcalls.md
+  - docs/models/operations/responsebodytoplogprobs.md
+  - docs/models/operations/responsebodytype.md
+  - docs/models/operations/responsebodyusage.md
+  - docs/models/operations/responseformat.md
+  - docs/models/operations/responseformat1.md
+  - docs/models/operations/responseformat2.md
+  - docs/models/operations/responseformattype.md
+  - docs/models/operations/results.md
+  - docs/models/operations/retrievals.md
+  - docs/models/operations/role.md
+  - docs/models/operations/size.md
+  - docs/models/operations/stop.md
+  - docs/models/operations/three.md
+  - docs/models/operations/tokens.md
+  - docs/models/operations/toolcalls.md
+  - docs/models/operations/tools.md
+  - docs/models/operations/toplogprobs.md
+  - docs/models/operations/two.md
+  - docs/models/operations/two1.md
+  - docs/models/operations/two2.md
+  - docs/models/operations/twodetail.md
+  - docs/models/operations/twoimageurl.md
+  - docs/models/operations/twotype.md
+  - docs/models/operations/type.md
+  - docs/models/operations/updatedby.md
+  - docs/models/operations/usage.md
+  - docs/models/operations/userid.md
+  - docs/models/operations/value.md
+  - docs/sdks/contacts/README.md
+  - docs/sdks/deployments/README.md
+  - docs/sdks/feedback/README.md
+  - docs/sdks/files/README.md
+  - docs/sdks/orq/README.md
+  - docs/sdks/public/README.md
+  - docs/sdks/resources/README.md
+  - docs/sdks/router/README.md
+  - jsr.json
+  - package.json
+  - src/core.ts
+  - src/funcs/contactsPostContacts.ts
+  - src/funcs/deploymentsPostV2DeploymentsGetConfig.ts
+  - src/funcs/deploymentsPostV2DeploymentsIdMetrics.ts
+  - src/funcs/deploymentsPostV2DeploymentsInvoke.ts
+  - src/funcs/feedbackPostFeedback.ts
+  - src/funcs/filesPostV2Files.ts
+  - src/funcs/filesPostV2FilesBulk.ts
+  - src/funcs/publicDeleteV2ResourcesDatasetsDatasetId.ts
+  - src/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk.ts
+  - src/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId.ts
+  - src/funcs/publicGetV2ResourcesDatasets.ts
+  - src/funcs/publicGetV2ResourcesDatasetsDatasetId.ts
+  - src/funcs/publicGetV2ResourcesDatasetsDatasetIdRows.ts
+  - src/funcs/publicGetV2ResourcesDatasetsDatasetIdRowsRowId.ts
+  - src/funcs/publicPatchV2ResourcesDatasetsDatasetId.ts
+  - src/funcs/publicPatchV2ResourcesDatasetsDatasetIdRowsRowId.ts
+  - src/funcs/publicPostV2DeploymentsGetConfig.ts
+  - src/funcs/publicPostV2DeploymentsIdMetrics.ts
+  - src/funcs/publicPostV2DeploymentsInvoke.ts
+  - src/funcs/publicPostV2Files.ts
+  - src/funcs/publicPostV2FilesBulk.ts
+  - src/funcs/publicPostV2ResourcesDatasets.ts
+  - src/funcs/publicPostV2ResourcesDatasetsDatasetIdRows.ts
+  - src/funcs/publicPostV2ResourcesDatasetsDatasetIdRowsBulk.ts
+  - src/funcs/publicPostV2RouterChatCompletions.ts
+  - src/funcs/publicPostV2RouterCompletions.ts
+  - src/funcs/publicPostV2RouterEmbeddings.ts
+  - src/funcs/publicPostV2RouterImagesGenerations.ts
+  - src/funcs/publicPostV2RouterRerank.ts
+  - src/funcs/resourcesDeleteV2ResourcesDatasetsDatasetId.ts
+  - src/funcs/resourcesDeleteV2ResourcesDatasetsDatasetIdRowsBulk.ts
+  - src/funcs/resourcesDeleteV2ResourcesDatasetsDatasetIdRowsRowId.ts
+  - src/funcs/resourcesGetV2ResourcesDatasets.ts
+  - src/funcs/resourcesGetV2ResourcesDatasetsDatasetId.ts
+  - src/funcs/resourcesGetV2ResourcesDatasetsDatasetIdRows.ts
+  - src/funcs/resourcesGetV2ResourcesDatasetsDatasetIdRowsRowId.ts
+  - src/funcs/resourcesPatchV2ResourcesDatasetsDatasetId.ts
+  - src/funcs/resourcesPatchV2ResourcesDatasetsDatasetIdRowsRowId.ts
+  - src/funcs/resourcesPostV2ResourcesDatasets.ts
+  - src/funcs/resourcesPostV2ResourcesDatasetsDatasetIdRows.ts
+  - src/funcs/resourcesPostV2ResourcesDatasetsDatasetIdRowsBulk.ts
+  - src/funcs/routerPostV2RouterChatCompletions.ts
+  - src/funcs/routerPostV2RouterCompletions.ts
+  - src/funcs/routerPostV2RouterEmbeddings.ts
+  - src/funcs/routerPostV2RouterImagesGenerations.ts
+  - src/funcs/routerPostV2RouterRerank.ts
+  - src/hooks/hooks.ts
+  - src/hooks/index.ts
+  - src/hooks/types.ts
+  - src/index.ts
+  - src/lib/base64.ts
+  - src/lib/config.ts
+  - src/lib/dlv.ts
+  - src/lib/encodings.ts
+  - src/lib/env.ts
+  - src/lib/event-streams.ts
+  - src/lib/files.ts
+  - src/lib/http.ts
+  - src/lib/is-plain-object.ts
+  - src/lib/logger.ts
+  - src/lib/matchers.ts
+  - src/lib/primitives.ts
+  - src/lib/retries.ts
+  - src/lib/schemas.ts
+  - src/lib/sdks.ts
+  - src/lib/security.ts
+  - src/lib/url.ts
+  - src/models/components/deployments.ts
+  - src/models/components/index.ts
+  - src/models/components/security.ts
+  - src/models/errors/getv2resourcesdatasetsdatasetid.ts
+  - src/models/errors/getv2resourcesdatasetsdatasetidrowsrowid.ts
+  - src/models/errors/httpclienterrors.ts
+  - src/models/errors/index.ts
+  - src/models/errors/sdkerror.ts
+  - src/models/errors/sdkvalidationerror.ts
+  - src/models/operations/deletev2resourcesdatasetsdatasetid.ts
+  - src/models/operations/deletev2resourcesdatasetsdatasetidrowsbulk.ts
+  - src/models/operations/deletev2resourcesdatasetsdatasetidrowsrowid.ts
+  - src/models/operations/getv2resourcesdatasets.ts
+  - src/models/operations/getv2resourcesdatasetsdatasetid.ts
+  - src/models/operations/getv2resourcesdatasetsdatasetidrows.ts
+  - src/models/operations/getv2resourcesdatasetsdatasetidrowsrowid.ts
+  - src/models/operations/index.ts
+  - src/models/operations/patchv2resourcesdatasetsdatasetid.ts
+  - src/models/operations/patchv2resourcesdatasetsdatasetidrowsrowid.ts
+  - src/models/operations/postcontacts.ts
+  - src/models/operations/postfeedback.ts
+  - src/models/operations/postv2deploymentsgetconfig.ts
+  - src/models/operations/postv2deploymentsidmetrics.ts
+  - src/models/operations/postv2deploymentsinvoke.ts
+  - src/models/operations/postv2files.ts
+  - src/models/operations/postv2filesbulk.ts
+  - src/models/operations/postv2resourcesdatasets.ts
+  - src/models/operations/postv2resourcesdatasetsdatasetidrows.ts
+  - src/models/operations/postv2resourcesdatasetsdatasetidrowsbulk.ts
+  - src/models/operations/postv2routerchatcompletions.ts
+  - src/models/operations/postv2routercompletions.ts
+  - src/models/operations/postv2routerembeddings.ts
+  - src/models/operations/postv2routerimagesgenerations.ts
+  - src/models/operations/postv2routerrerank.ts
+  - src/sdk/contacts.ts
+  - src/sdk/deployments.ts
+  - src/sdk/feedback.ts
+  - src/sdk/files.ts
+  - src/sdk/index.ts
+  - src/sdk/public.ts
+  - src/sdk/resources.ts
+  - src/sdk/router.ts
+  - src/sdk/sdk.ts
+  - src/types/blobs.ts
+  - src/types/constdatetime.ts
+  - src/types/enums.ts
+  - src/types/fp.ts
+  - src/types/index.ts
+  - src/types/operations.ts
+  - src/types/rfcdate.ts
+  - src/types/streams.ts
+  - tsconfig.json
+examples:
+  post_/contacts:
+    speakeasy-default-post-/contacts:
+      requestBody:
+        application/json: {"external_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"success": true}
+  post_/feedback:
+    "":
+      requestBody:
+        application/json: {"property": "rating", "value": ["good"], "trace_id": "67HTZ65Z9W91HSF51CW68KK1QH"}
+      responses:
+        "200":
+          application/json: {"property": "<value>", "value": "<value>", "trace_id": "<id>", "id": "<id>"}
+  post_/v2/deployments/get_config:
+    speakeasy-default-post-/v2-/deployments/get-config:
+      requestBody:
+        application/json: {"key": "<key>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "provider": "<value>", "model": "Explorer", "messages": [{"role": "system", "content": "<value>"}, {"role": "user", "content": [{"type": "image_url", "image_url": {"url": "https://wobbly-harp.name"}}]}, {"role": "assistant", "content": [{"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}]}]}
+  post_/v2/deployments/invoke:
+    speakeasy-default-post-/v2-/deployments/invoke:
+      requestBody:
+        application/json: {"key": "<key>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "created": "2023-09-30T20:46:04.314Z", "object": "chat", "model": "Accord", "provider": "google-ai", "is_final": true, "choices": []}
+  post_/v2/deployments/{id}/metrics:
+    speakeasy-default-post-/v2-/deployments/{id}/metrics:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"code": "418.94", "success": true}
+  post_/v2/files:
+    speakeasy-default-post-/v2-/files:
+      responses:
+        "200":
+          application/json: {"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "587.72", "file_name": "example.file"}
+  post_/v2/files/bulk:
+    speakeasy-default-post-/v2-/files/bulk:
+      requestBody:
+        multipart/form-data: {"files": [], "purpose": "retrieval"}
+      responses:
+        "200":
+          application/json: []
+  post_/v2/router/embeddings:
+    speakeasy-default-post-/v2-/router/embeddings:
+      requestBody:
+        application/json: {"input": "<value>", "model": "Accord"}
+      responses:
+        "200":
+          application/json: {"object": "list", "data": [{"object": "embedding", "embedding": [], "index": "5011.00"}, {"object": "embedding", "embedding": "<value>", "index": "8076.69"}, {"object": "embedding", "embedding": ["3624.61", "3278.34"], "index": "5462.94"}], "model": "Taurus", "usage": {"prompt_tokens": "1442.96", "total_tokens": "8074.39"}}
+  post_/v2/router/chat/completions:
+    speakeasy-default-post-/v2-/router/chat/completions:
+      requestBody:
+        application/json: {"model": "Land Cruiser", "messages": [{"role": "tool", "tool_call_id": "<id>", "content": "<value>"}]}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "choices": [{"finish_reason": "tool_calls", "index": "1486.49", "logprobs": {"content": [{"token": "<value>", "logprob": "2644.65", "bytes": ["8038.28", "379.60"], "top_logprobs": [{"token": "<value>", "logprob": "3899.37", "bytes": ["7192.33", "1442.13"]}, {"token": "<value>", "logprob": "5367.29", "bytes": ["1604.15"]}]}, {"token": "<value>", "logprob": "57.93", "bytes": ["9924.98"], "top_logprobs": [{"token": "<value>", "logprob": "108.92", "bytes": ["3006.35", "8280.13", "9595.61"]}, {"token": "<value>", "logprob": "9457.57", "bytes": ["9909.46", "8477.76"]}, {"token": "<value>", "logprob": "7392.15", "bytes": ["291.86", "56.16"]}]}, {"token": "<value>", "logprob": "499.57", "bytes": ["2753.09", "9535.70", "776.70"], "top_logprobs": [{"token": "<value>", "logprob": "4472.96", "bytes": ["357.46", "646.56", "9497.39"]}]}], "refusal": []}, "delta": {"content": "<value>", "refusal": "<value>", "tool_calls": [], "role": "assistant"}}], "created": "6111.01", "model": "Ranchero", "system_fingerprint": "<value>", "object": "<value>", "usage": {"completion_tokens": "6741.92", "prompt_tokens": "1180.99", "total_tokens": "3079.43"}}
+  post_/v2/router/completions:
+    speakeasy-default-post-/v2-/router/completions:
+      responses:
+        "200":
+          application/json: {"id": "<id>", "choices": [{"finish_reason": "stop", "index": "1168.96", "text": "<value>"}, {"finish_reason": "stop", "index": "7003.89", "text": "<value>"}], "created": "9961.28", "model": "Charger", "system_fingerprint": "<value>", "object": "<value>", "usage": {"completion_tokens": "3408.35", "prompt_tokens": "3824.96", "total_tokens": "8119.02"}}
+  post_/v2/router/rerank:
+    speakeasy-default-post-/v2-/router/rerank:
+      responses:
+        "200":
+          application/json: {"results": [{"index": "4079.57", "relevance_score": "1009.11"}, {"index": "5824.08", "relevance_score": "5034.91"}]}
+  post_/v2/router/images/generations:
+    speakeasy-default-post-/v2-/router/images/generations:
+      responses:
+        "200":
+          application/json: {"id": "<id>", "created": "2215.02", "choices": [{"index": "9621.64"}, {"index": "3627.94"}, {"index": "6464.02"}], "model": "Escalade", "object": "<value>"}
+  post_/v2/resources/datasets:
+    speakeasy-default-post-/v2-/resources/datasets:
+      responses:
+        "200":
+          application/json: {"display_name": "Donato.Hilpert83", "domain_id": "2a7e968c-a8a9-4c77-a01c-48a11cd627aa"}
+  get_/v2/resources/datasets:
+    speakeasy-default-get-/v2-/resources/datasets:
+      parameters:
+        query:
+          page: "1698.73"
+          limit: "6833.85"
+      responses:
+        "200":
+          application/json: {"count": "3905.93", "page": "7804.31", "limit": "3017.22", "totalPages": "2636.38", "items": [{"id": "305c2107-1d32-498a-a127-f1ac5342554e", "display_name": "Asa.McKenzie33", "domain_id": "5fdfa97b-b9b3-4fb0-b338-d1a92b03a0cc", "updated_by": {"id": "d44d058b-60cc-4e1f-bb6d-b5736abc4f35", "email": "Kip.Hudson85@yahoo.com", "display_name": "Daren49", "logo_url": "https://insecure-custody.org"}, "updated_by_id": "d308bfc9-6326-4e11-80fd-218041092786", "items": [{"id": "b95c5491-846b-43ef-997d-f7731cab8713", "messages": [{"role": "expected_output", "content": [{"type": "text", "text": "<value>"}]}]}]}, {"id": "410db1fc-f02e-4d8a-9fac-073f840f3c61", "display_name": "Tatyana13", "domain_id": "fed025c3-df6f-4abd-b58c-bc70aa969ff2", "updated_by": {"id": "92fd3188-b2d3-4cad-8a6c-c99159b98950", "email": "Lessie_Hauck@hotmail.com", "display_name": "Lue_Schuster41", "logo_url": "https://reasonable-wombat.com/"}, "updated_by_id": "2c0413f9-672c-4c1e-9512-bcbba48e4702", "items": [{"id": "b0208307-3d0a-4a9b-a14d-86ca4979bc2c", "messages": [{"role": "assistant", "content": []}]}, {"id": "9e8c3346-f974-4850-b74a-375245841b67", "messages": []}, {"id": "8b584160-8cbe-43c0-9785-04c0475b9630", "messages": [{"role": "expected_output", "content": [{"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}]}]}]}, {"id": "446ae8a5-12a7-46a1-90d6-9a256157f8be", "display_name": "Danyka55", "domain_id": "b0f52e3b-b1a5-4a78-a9b0-fe76c6cd3642", "updated_by": {"id": "ffa85fe1-4bd8-4233-b009-8ab1d86a6a7d", "email": "Raegan49@yahoo.com", "display_name": "Brandt34", "logo_url": "https://parched-luck.name"}, "updated_by_id": "24eb6c00-a611-415a-96f6-c401bf6d2aa0", "items": [{"id": "ae0d1427-dcec-4c0d-be29-4d4a7ba9208b", "messages": [{"role": "correction", "content": "<value>"}]}]}]}
+  delete_/v2/resources/datasets/{dataset_id}:
+    speakeasy-default-delete-/v2-/resources/datasets/{dataset-id}:
+      parameters:
+        path:
+          dataset_id: "<id>"
+  get_/v2/resources/datasets/{dataset_id}:
+    speakeasy-default-get-/v2-/resources/datasets/{dataset-id}:
+      parameters:
+        path:
+          dataset_id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "c617ebfe-6608-44a0-b20e-5021751453b4", "display_name": "Annie72", "domain_id": "6af1184b-f020-4f87-80c0-07262e2e96bb", "updated_by": {"id": "abe24ad1-c2b9-4956-8e4e-e7729a6b5050", "email": "Golda78@hotmail.com", "display_name": "Arlene_Ferry53", "logo_url": "https://different-heartbeat.info/"}, "updated_by_id": "7b3f0fcb-a3b2-4318-8fa8-05855d353019", "items": [{"id": "e8fec165-8a17-4f61-83db-c4285032ace6", "messages": []}]}
+        "404":
+          application/json: {"message": "<value>"}
+  patch_/v2/resources/datasets/{dataset_id}:
+    speakeasy-default-patch-/v2-/resources/datasets/{dataset-id}:
+      parameters:
+        path:
+          dataset_id: "<id>"
+  post_/v2/resources/datasets/{dataset_id}/rows/bulk:
+    speakeasy-default-post-/v2-/resources/datasets/{dataset-id}/rows/bulk:
+      parameters:
+        path:
+          dataset_id: "<id>"
+      requestBody:
+        application/json: {"datasetRows": [{"messages": [{"role": "assistant", "content": "You are a helpful assistant.", "tool_calls": [{"id": "tool-id", "index": 0, "type": "function", "function": {"name": "some-function", "arguments": "some-args"}}]}]}]}
+      responses:
+        "200":
+          application/json: [{"id": "uuid-string", "messages": [{"role": "assistant", "content": "You are a helpful assistant.", "tool_calls": [{"id": "tool-id", "index": 0, "type": "function", "function": {"name": "some-function", "arguments": "some-args"}}]}]}]
+  delete_/v2/resources/datasets/{dataset_id}/rows/bulk:
+    speakeasy-default-delete-/v2-/resources/datasets/{dataset-id}/rows/bulk:
+      parameters:
+        path:
+          dataset_id: "<id>"
+  post_/v2/resources/datasets/{dataset_id}/rows:
+    speakeasy-default-post-/v2-/resources/datasets/{dataset-id}/rows:
+      parameters:
+        path:
+          dataset_id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "uuid-string", "messages": [{"role": "assistant", "content": "You are a helpful assistant.", "tool_calls": [{"id": "tool-id", "index": 0, "type": "function", "function": {"name": "some-function", "arguments": "some-args"}}]}]}
+  get_/v2/resources/datasets/{dataset_id}/rows:
+    speakeasy-default-get-/v2-/resources/datasets/{dataset-id}/rows:
+      parameters:
+        path:
+          dataset_id: "<id>"
+      responses:
+        "200":
+          application/json: {"count": "731.53", "page": "8393.45", "limit": "9494.82", "totalPages": "5036.10", "items": [{"id": "7a62452e-2e9a-4868-a91e-93369bfbf25a", "messages": []}, {"id": "5e6ee6b4-9787-48dd-b34c-9308954cf82b", "messages": [{"role": "exception", "content": [{"type": "image_url", "image_url": {"url": "https://considerate-bakeware.info/"}}]}]}]}
+  delete_/v2/resources/datasets/{dataset_id}/rows/{row_id}:
+    speakeasy-default-delete-/v2-/resources/datasets/{dataset-id}/rows/{row-id}:
+      parameters:
+        path:
+          dataset_id: "<id>"
+          row_id: "<id>"
+  get_/v2/resources/datasets/{dataset_id}/rows/{row_id}:
+    speakeasy-default-get-/v2-/resources/datasets/{dataset-id}/rows/{row-id}:
+      parameters:
+        path:
+          dataset_id: "<id>"
+          row_id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "f4a7457c-11bc-4a78-b076-1b9ac35ff9fc", "messages": [{"role": "exception", "content": "<value>"}, {"role": "system", "content": [{"type": "text", "text": "<value>"}]}, {"role": "prompt", "content": []}]}
+        "404":
+          application/json: {"message": "<value>"}
+  patch_/v2/resources/datasets/{dataset_id}/rows/{row_id}:
+    speakeasy-default-patch-/v2-/resources/datasets/{dataset-id}/rows/{row-id}:
+      parameters:
+        path:
+          dataset_id: "<id>"
+          row_id: "<id>"
+      responses:
+        "200":
+          application/json: {"messages": []}
