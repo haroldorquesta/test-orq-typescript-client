@@ -5,31 +5,31 @@ Datasets Retrieved.
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsResponseBody } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsResponseBody = {
-  count: 3182.34,
-  page: 8587.77,
-  limit: 4585.03,
-  totalPages: 4445.87,
+  count: 6771.41,
+  page: 5928.80,
+  limit: 100.64,
+  totalPages: 4758.26,
   items: [
     {
-      id: "5eff6fca-332e-4477-8cd2-6dd124161939",
-      displayName: "Werner.Huel",
-      domainId: "0a66cbf5-ec59-44d1-a326-b870613e3dc2",
+      id: "b0e803f9-1470-4673-b9c3-9afcd72f271f",
+      displayName: "Millie.Funk",
+      domainId: "25ab06ad-7f40-474d-834c-b8b600810fd2",
       updatedBy: {
-        id: "1bac7e04-b621-4d7e-bb65-8eb0beb2725e",
-        email: "Euna25@gmail.com",
-        displayName: "Jerald_Denesik32",
-        logoUrl: "https://irresponsible-formation.org/",
+        id: "f42b14fa-86c2-4fd9-b0be-851ce1c0f984",
+        email: "Rhianna.Sawayn-Leannon@gmail.com",
+        displayName: "Colton.Herzog44",
+        logoUrl: "https://another-testing.net",
       },
-      updatedById: "bb49cc5c-b2d7-4779-897d-a66c530ee152",
+      updatedById: "8df1aff9-2903-4f5a-84fb-5c163a16485b",
       items: [
         {
-          id: "e0f1d955-c5a8-47e8-8db0-c3e0517d425d",
+          id: "a34cf5d1-ac26-4e10-b96c-e4679fb64f2b",
           messages: [
             {
-              role: "assistant",
+              role: "prompt",
               content: "<value>",
             },
           ],

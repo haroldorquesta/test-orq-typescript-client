@@ -1,26 +1,31 @@
-speakeasyVersion: 1.419.0
+speakeasyVersion: 1.421.2
 sources:
     orq-OAS:
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:08e9dcd1162b5c7d0da27e2286515e3f9592ff87a9742a6740c84eedb0d0e0b8
-        sourceBlobDigest: sha256:1192ce49ced2e950cf7fecb556329717481e67fc7fdd0c07a336fc580f373d6e
+        sourceRevisionDigest: sha256:9f7de918a983413c3b27b3c578ca1d389fdf03dac12e28f1565bc61f7de7ef49
+        sourceBlobDigest: sha256:f2a87d84eb305d4875efae691496ef523d1c59d0ecadc4d5b6ce54b387cc2ab5
         tags:
             - latest
+            - main
 targets:
     orq:
         source: orq-OAS
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:08e9dcd1162b5c7d0da27e2286515e3f9592ff87a9742a6740c84eedb0d0e0b8
-        sourceBlobDigest: sha256:1192ce49ced2e950cf7fecb556329717481e67fc7fdd0c07a336fc580f373d6e
+        sourceRevisionDigest: sha256:9f7de918a983413c3b27b3c578ca1d389fdf03dac12e28f1565bc61f7de7ef49
+        sourceBlobDigest: sha256:f2a87d84eb305d4875efae691496ef523d1c59d0ecadc4d5b6ce54b387cc2ab5
 workflow:
     workflowVersion: 1.0.0
+    speakeasyVersion: latest
     sources:
         orq-OAS:
             inputs:
-                - location: ../.openapi/v2/public/openapi.json
+                - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi.json
             registry:
                 location: registry.speakeasyapi.dev/orq/orq/orq-oas
     targets:
         orq:
             target: typescript
             source: orq-OAS
+            publish:
+                npm:
+                    token: $npm_token

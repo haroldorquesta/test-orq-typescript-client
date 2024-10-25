@@ -5,13 +5,13 @@ User model returned from the API
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsUpdatedBy } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsUpdatedBy } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsUpdatedBy = {
-  id: "f7142629-6ef8-449e-9684-7638458c5ed0",
-  email: "Bella62@yahoo.com",
-  displayName: "Conor_Padberg54",
-  logoUrl: "https://scary-accountability.info/",
+  id: "11d28c72-3685-4cce-a0e6-ebfc586547a4",
+  email: "Carol.Witting@gmail.com",
+  displayName: "Armani_Reichel50",
+  logoUrl: "https://vibrant-legislature.biz",
 };
 ```
 

@@ -5,12 +5,12 @@ Usage statistics for the completion request.
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletionsResponseBodyUsage } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletionsResponseBodyUsage } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsResponseBodyUsage = {
-  completionTokens: 5864.10,
-  promptTokens: 639.55,
-  totalTokens: 4856.28,
+  completionTokens: 2484.13,
+  promptTokens: 5058.66,
+  totalTokens: 3103.81,
 };
 ```
 

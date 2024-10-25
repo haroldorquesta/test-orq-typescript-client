@@ -5,18 +5,18 @@ Response from the gateway
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsInvokeResponseBody } from "orq-node-client/models/operations";
+import { PostV2DeploymentsInvokeResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsInvokeResponseBody = {
   id: "<id>",
-  created: new Date("2023-10-05T19:38:10.454Z"),
+  created: new Date("2022-05-29T11:30:35.227Z"),
   object: "chat",
-  model: "Ranchero",
-  provider: "cohere",
+  model: "Grand Cherokee",
+  provider: "aws",
   isFinal: false,
   choices: [
     {
-      index: 6778.17,
+      index: 5743.25,
     },
   ],
 };

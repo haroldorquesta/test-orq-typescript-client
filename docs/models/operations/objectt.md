@@ -5,9 +5,9 @@ Indicates the type of model used to generate the response
 ## Example Usage
 
 ```typescript
-import { ObjectT } from "orq-node-client/models/operations";
+import { ObjectT } from "orq-poc-typescript/models/operations";
 
-let value: ObjectT = "image";
+let value: ObjectT = "completion";
 ```
 
 ## Values

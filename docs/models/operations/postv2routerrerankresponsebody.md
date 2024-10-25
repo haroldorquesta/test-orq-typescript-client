@@ -5,13 +5,13 @@ A response body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { PostV2RouterRerankResponseBody } from "orq-node-client/models/operations";
+import { PostV2RouterRerankResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterRerankResponseBody = {
   results: [
     {
-      index: 2327.44,
-      relevanceScore: 6144.65,
+      index: 5896.95,
+      relevanceScore: 7453.98,
     },
   ],
 };

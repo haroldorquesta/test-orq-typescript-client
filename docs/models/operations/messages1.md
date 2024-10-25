@@ -3,11 +3,18 @@
 ## Example Usage
 
 ```typescript
-import { Messages1 } from "orq-node-client/models/operations";
+import { Messages1 } from "orq-poc-typescript/models/operations";
 
 let value: Messages1 = {
   role: "system",
-  content: "<value>",
+  content: [
+    {
+      type: "image_url",
+      imageUrl: {
+        url: "https://unsung-entry.org",
+      },
+    },
+  ],
 };
 ```
 

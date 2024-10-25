@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletions2RouterPublicType } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletions2RouterPublicType } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletions2RouterPublicType = "text";
 ```

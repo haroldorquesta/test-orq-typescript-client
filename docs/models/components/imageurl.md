@@ -3,10 +3,10 @@
 ## Example Usage
 
 ```typescript
-import { ImageUrl } from "orq-node-client/models/components";
+import { ImageUrl } from "orq-poc-typescript/models/components";
 
 let value: ImageUrl = {
-  url: "https://steel-march.org",
+  url: "https://ill-fated-bowler.info/",
 };
 ```
 

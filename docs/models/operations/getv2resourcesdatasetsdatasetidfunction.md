@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdFunction } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsDatasetIdFunction } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsDatasetIdFunction = {
   name: "<value>",

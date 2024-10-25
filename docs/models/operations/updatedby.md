@@ -5,13 +5,13 @@ User model returned from the API
 ## Example Usage
 
 ```typescript
-import { UpdatedBy } from "orq-node-client/models/operations";
+import { UpdatedBy } from "orq-poc-typescript/models/operations";
 
 let value: UpdatedBy = {
-  id: "b64b5bd3-f242-4578-ade3-917557b1eb2f",
-  email: "Clifton59@hotmail.com",
-  displayName: "Quinten49",
-  logoUrl: "https://earnest-safe.com",
+  id: "35baedde-4568-4a40-a64f-eda58d1c0dc0",
+  email: "Cecelia98@yahoo.com",
+  displayName: "Zachery45",
+  logoUrl: "https://obvious-convection.com/",
 };
 ```
 

@@ -18,7 +18,7 @@ const value: operations.PostV2RouterChatCompletions2Router1 = {
 const value: operations.PostV2RouterChatCompletions2Router2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://showy-jungle.biz",
+    url: "https://clean-octave.org/",
   },
 };
 ```

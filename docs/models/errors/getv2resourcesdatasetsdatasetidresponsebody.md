@@ -5,7 +5,7 @@ Dataset not found with the given id
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdResponseBody } from "orq-node-client/models/errors";
+import { GetV2ResourcesDatasetsDatasetIdResponseBody } from "orq-poc-typescript/models/errors";
 
 // No examples available for this model
 ```

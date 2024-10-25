@@ -5,7 +5,7 @@ A request body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { PostV2RouterRerankRequestBody } from "orq-node-client/models/operations";
+import { PostV2RouterRerankRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterRerankRequestBody = {
   query: "<value>",
@@ -14,7 +14,7 @@ let value: PostV2RouterRerankRequestBody = {
       "key": "<value>",
     },
   ],
-  model: "Silverado",
+  model: "Wrangler",
 };
 ```
 

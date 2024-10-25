@@ -5,13 +5,13 @@ Metadata of the retrieved chunk from the knowledge base
 ## Example Usage
 
 ```typescript
-import { Metadata } from "orq-node-client/models/operations";
+import { Metadata } from "orq-poc-typescript/models/operations";
 
 let value: Metadata = {
   fileName: "example.file",
-  pageNumber: 3185.69,
-  fileType: "text",
-  searchScore: 1317.98,
+  pageNumber: 191.93,
+  fileType: "audio",
+  searchScore: 6601.74,
 };
 ```
 

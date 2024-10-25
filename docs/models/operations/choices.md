@@ -3,10 +3,10 @@
 ## Example Usage
 
 ```typescript
-import { Choices } from "orq-node-client/models/operations";
+import { Choices } from "orq-poc-typescript/models/operations";
 
 let value: Choices = {
-  index: 9194.83,
+  index: 318.39,
 };
 ```
 

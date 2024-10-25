@@ -5,7 +5,7 @@ The deployment configuration
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsGetConfigResponseBody } from "orq-node-client/models/operations";
+import { PostV2DeploymentsGetConfigResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsGetConfigResponseBody = {
   id: "<id>",

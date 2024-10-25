@@ -17,10 +17,8 @@ const value: string = "<value>";
 const value:
   operations.PatchV2ResourcesDatasetsDatasetIdRowsRowIdContentResources2[] = [
     {
-      type: "image_url",
-      imageUrl: {
-        url: "https://diligent-cantaloupe.com/",
-      },
+      type: "text",
+      text: "<value>",
     },
   ];
 ```

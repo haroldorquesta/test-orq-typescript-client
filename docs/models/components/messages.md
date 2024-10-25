@@ -3,11 +3,16 @@
 ## Example Usage
 
 ```typescript
-import { Messages } from "orq-node-client/models/components";
+import { Messages } from "orq-poc-typescript/models/components";
 
 let value: Messages = {
-  role: "assistant",
-  content: "<value>",
+  role: "tool",
+  content: [
+    {
+      type: "text",
+      text: "<value>",
+    },
+  ],
 };
 ```
 

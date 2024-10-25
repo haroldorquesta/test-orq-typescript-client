@@ -151,7 +151,7 @@ export const PostV2FilesResponseBody$inboundSchema: z.ZodType<
   bytes: z.number(),
   file_name: z.string(),
   created: z.string().datetime({ offset: true }).default(
-    "2024-10-14T12:39:39.273Z",
+    "2024-10-22T07:23:04.563Z",
   ).transform(v => new Date(v)),
 }).transform((v) => {
   return remap$(v, {
@@ -182,7 +182,7 @@ export const PostV2FilesResponseBody$outboundSchema: z.ZodType<
   purpose: PostV2FilesPurpose$outboundSchema,
   bytes: z.number(),
   fileName: z.string(),
-  created: z.date().default(() => new Date("2024-10-14T12:39:39.273Z"))
+  created: z.date().default(() => new Date("2024-10-22T07:23:04.563Z"))
     .transform(v => v.toISOString()),
 }).transform((v) => {
   return remap$(v, {

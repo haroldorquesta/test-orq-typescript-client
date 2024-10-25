@@ -719,7 +719,7 @@ export const GetV2ResourcesDatasetsDatasetIdRowsItems$inboundSchema: z.ZodType<
   created: z.string().datetime({ offset: true }).transform(v => new Date(v))
     .optional(),
   updated: z.string().datetime({ offset: true }).default(
-    "2024-10-14T12:39:38.949Z",
+    "2024-10-22T07:23:04.365Z",
   ).transform(v => new Date(v)),
 }).transform((v) => {
   return remap$(v, {
@@ -748,7 +748,7 @@ export const GetV2ResourcesDatasetsDatasetIdRowsItems$outboundSchema: z.ZodType<
   ),
   expectedOutput: z.nullable(z.string()).optional(),
   created: z.date().transform(v => v.toISOString()).optional(),
-  updated: z.date().default(() => new Date("2024-10-14T12:39:38.949Z"))
+  updated: z.date().default(() => new Date("2024-10-22T07:23:04.365Z"))
     .transform(v => v.toISOString()),
 }).transform((v) => {
   return remap$(v, {

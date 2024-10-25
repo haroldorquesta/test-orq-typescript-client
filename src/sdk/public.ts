@@ -5,6 +5,7 @@
 import { publicDeleteV2ResourcesDatasetsDatasetId } from "../funcs/publicDeleteV2ResourcesDatasetsDatasetId.js";
 import { publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk } from "../funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk.js";
 import { publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId } from "../funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId.js";
+import { publicGetV2Deployments } from "../funcs/publicGetV2Deployments.js";
 import { publicGetV2ResourcesDatasets } from "../funcs/publicGetV2ResourcesDatasets.js";
 import { publicGetV2ResourcesDatasetsDatasetId } from "../funcs/publicGetV2ResourcesDatasetsDatasetId.js";
 import { publicGetV2ResourcesDatasetsDatasetIdRows } from "../funcs/publicGetV2ResourcesDatasetsDatasetIdRows.js";
@@ -87,6 +88,23 @@ export class Public extends ClientSDK {
     options?: RequestOptions,
   ): Promise<operations.PostV2DeploymentsIdMetricsResponseBody> {
     return unwrapAsync(publicPostV2DeploymentsIdMetrics(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * List all deployments
+   *
+   * @remarks
+   * Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
+   */
+  async getV2Deployments(
+    request: operations.GetV2DeploymentsRequest,
+    options?: RequestOptions,
+  ): Promise<operations.GetV2DeploymentsResponseBody> {
+    return unwrapAsync(publicGetV2Deployments(
       this,
       request,
       options,

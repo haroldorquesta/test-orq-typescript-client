@@ -5,7 +5,7 @@ The deployment request payload
 ## Example Usage
 
 ```typescript
-import { Deployments } from "orq-node-client/models/components";
+import { Deployments } from "orq-poc-typescript/models/components";
 
 let value: Deployments = {
   key: "<key>",

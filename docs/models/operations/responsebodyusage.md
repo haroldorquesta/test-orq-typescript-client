@@ -5,12 +5,12 @@ Usage statistics for the completion request.
 ## Example Usage
 
 ```typescript
-import { ResponseBodyUsage } from "orq-node-client/models/operations";
+import { ResponseBodyUsage } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBodyUsage = {
-  completionTokens: 2703.28,
-  promptTokens: 1314.83,
-  totalTokens: 553.74,
+  completionTokens: 972.43,
+  promptTokens: 4420.36,
+  totalTokens: 5199.52,
 };
 ```
 

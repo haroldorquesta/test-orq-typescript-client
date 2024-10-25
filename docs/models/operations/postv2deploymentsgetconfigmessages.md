@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsGetConfigMessages } from "orq-node-client/models/operations";
+import { PostV2DeploymentsGetConfigMessages } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsGetConfigMessages = {
   role: "assistant",

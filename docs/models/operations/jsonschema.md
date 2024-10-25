@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { JsonSchema } from "orq-node-client/models/operations";
+import { JsonSchema } from "orq-poc-typescript/models/operations";
 
 let value: JsonSchema = {
   name: "<value>",

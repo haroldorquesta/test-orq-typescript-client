@@ -5,25 +5,25 @@ A response body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { PostV2RouterCompletionsResponseBody } from "orq-node-client/models/operations";
+import { PostV2RouterCompletionsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "length",
-      index: 3567.07,
+      finishReason: "content_filter",
+      index: 3354.98,
       text: "<value>",
     },
   ],
-  created: 163.29,
-  model: "CTS",
+  created: 1476.86,
+  model: "A4",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {
-    completionTokens: 4012.60,
-    promptTokens: 9292.91,
-    totalTokens: 996.15,
+    completionTokens: 2419.02,
+    promptTokens: 4322.81,
+    totalTokens: 5219.96,
   },
 };
 ```

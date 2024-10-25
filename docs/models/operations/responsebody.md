@@ -3,13 +3,13 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBody } from "orq-node-client/models/operations";
+import { ResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBody = {
   id: "<id>",
   objectName: "<value>",
   purpose: "retrieval",
-  bytes: 8681.26,
+  bytes: 5909.84,
   fileName: "example.file",
 };
 ```

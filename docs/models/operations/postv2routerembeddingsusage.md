@@ -3,11 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterEmbeddingsUsage } from "orq-node-client/models/operations";
+import { PostV2RouterEmbeddingsUsage } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterEmbeddingsUsage = {
-  promptTokens: 4071.83,
-  totalTokens: 691.67,
+  promptTokens: 8155.24,
+  totalTokens: 1594.14,
 };
 ```
 

@@ -5,26 +5,33 @@ Returned dataset model from the API
 ## Example Usage
 
 ```typescript
-import { Items } from "orq-node-client/models/operations";
+import { Items } from "orq-poc-typescript/models/operations";
 
 let value: Items = {
-  id: "e2a71b30-00eb-4ea8-94f5-76f25a197438",
-  displayName: "Jaclyn.Witting",
-  domainId: "9a6f5bad-fecb-4521-a368-cf119bdef662",
+  id: "1326b870-613e-43dc-9291-bac7e04b621d",
+  displayName: "Shanon51",
+  domainId: "b0beb272-5ee4-459f-924d-7e2855765ebb",
   updatedBy: {
-    id: "ad17932d-0717-4f6d-a146-6a5ba6691dab",
-    email: "Gus.Hammes73@gmail.com",
-    displayName: "Lemuel10",
-    logoUrl: "https://mushy-habit.name/",
+    id: "9cc5cb2d-7779-497d-ba66-c530ee1521e0",
+    email: "Salma.Hills75@gmail.com",
+    displayName: "Madyson55",
+    logoUrl: "https://apprehensive-saloon.biz",
   },
-  updatedById: "5308d531-1314-411d-b28c-723685cce0e6",
+  updatedById: "e0517d42-5d23-41b6-84b5-bd3f242578de",
   items: [
     {
-      id: "bfc58654-7a48-4120-9f02-91ebf848e84e",
+      id: "917557b1-eb2f-48f3-9844-9ecb8e7dd3c0",
       messages: [
         {
-          role: "system",
-          content: "<value>",
+          role: "assistant",
+          content: [
+            {
+              type: "image_url",
+              imageUrl: {
+                url: "https://mild-tune-up.biz/",
+              },
+            },
+          ],
         },
       ],
     },

@@ -5,7 +5,7 @@ Update user information payload
 ## Example Usage
 
 ```typescript
-import { PostContactsRequestBody } from "orq-node-client/models/operations";
+import { PostContactsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostContactsRequestBody = {
   externalId: "<id>",

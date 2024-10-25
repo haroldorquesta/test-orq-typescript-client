@@ -3,10 +3,10 @@
 ## Example Usage
 
 ```typescript
-import { PostV2ResourcesDatasetsRequestBody } from "orq-node-client/models/operations";
+import { PostV2ResourcesDatasetsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2ResourcesDatasetsRequestBody = {
-  displayName: "Mandy28",
+  displayName: "Guillermo.Osinski",
 };
 ```
 

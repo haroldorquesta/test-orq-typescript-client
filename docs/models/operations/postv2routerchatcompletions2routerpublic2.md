@@ -3,12 +3,12 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletions2RouterPublic2 } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletions2RouterPublic2 } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletions2RouterPublic2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://awful-councilman.com",
+    url: "https://dependent-guide.org/",
   },
 };
 ```

@@ -5,7 +5,7 @@ The image part of the prompt message. Only supported with vision models.
 ## Example Usage
 
 ```typescript
-import { Two2 } from "orq-node-client/models/operations";
+import { Two2 } from "orq-poc-typescript/models/operations";
 
 let value: Two2 = {
   type: "image_url",

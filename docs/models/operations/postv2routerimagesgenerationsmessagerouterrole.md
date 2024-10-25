@@ -5,7 +5,7 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { PostV2RouterImagesGenerationsMessageRouterRole } from "orq-node-client/models/operations";
+import { PostV2RouterImagesGenerationsMessageRouterRole } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsMessageRouterRole = "assistant";
 ```

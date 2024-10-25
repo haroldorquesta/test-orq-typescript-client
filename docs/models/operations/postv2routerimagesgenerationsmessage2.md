@@ -3,11 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterImagesGenerationsMessage2 } from "orq-node-client/models/operations";
+import { PostV2RouterImagesGenerationsMessage2 } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsMessage2 = {
-  role: "user",
-  url: "https://affectionate-captain.name/",
+  role: "prompt",
+  url: "https://tough-brace.info",
 };
 ```
 

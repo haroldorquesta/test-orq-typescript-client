@@ -15,7 +15,7 @@ Files are used to upload documents that can be used with features like [Deployme
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -36,8 +36,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { filesPostV2Files } from "orq-node-client/funcs/filesPostV2Files.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { filesPostV2Files } from "orq-poc-typescript/funcs/filesPostV2Files.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -87,7 +87,7 @@ Files are used to upload documents that can be used with features like [Deployme
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -113,8 +113,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { filesPostV2FilesBulk } from "orq-node-client/funcs/filesPostV2FilesBulk.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { filesPostV2FilesBulk } from "orq-poc-typescript/funcs/filesPostV2FilesBulk.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

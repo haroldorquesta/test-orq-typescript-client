@@ -8,6 +8,7 @@
 * [postV2DeploymentsGetConfig](#postv2deploymentsgetconfig) - Get config
 * [postV2DeploymentsInvoke](#postv2deploymentsinvoke) - Invoke
 * [postV2DeploymentsIdMetrics](#postv2deploymentsidmetrics) - Add metrics
+* [getV2Deployments](#getv2deployments) - List all deployments
 
 ## postV2DeploymentsGetConfig
 
@@ -16,7 +17,7 @@ Retrieve the deployment configuration
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -39,8 +40,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { deploymentsPostV2DeploymentsGetConfig } from "orq-node-client/funcs/deploymentsPostV2DeploymentsGetConfig.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { deploymentsPostV2DeploymentsGetConfig } from "orq-poc-typescript/funcs/deploymentsPostV2DeploymentsGetConfig.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -92,7 +93,7 @@ Invoke a deployment with a given payload
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -117,8 +118,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { deploymentsPostV2DeploymentsInvoke } from "orq-node-client/funcs/deploymentsPostV2DeploymentsInvoke.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { deploymentsPostV2DeploymentsInvoke } from "orq-poc-typescript/funcs/deploymentsPostV2DeploymentsInvoke.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -172,7 +173,7 @@ Add metrics to a deployment
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -196,8 +197,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { deploymentsPostV2DeploymentsIdMetrics } from "orq-node-client/funcs/deploymentsPostV2DeploymentsIdMetrics.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { deploymentsPostV2DeploymentsIdMetrics } from "orq-poc-typescript/funcs/deploymentsPostV2DeploymentsIdMetrics.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -242,3 +243,76 @@ run();
 | Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## getV2Deployments
+
+Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
+
+### Example Usage
+
+```typescript
+import { Orq } from "orq-poc-typescript";
+
+const orq = new Orq({
+  bearer: process.env["ORQ_BEARER"] ?? "",
+});
+
+async function run() {
+  const result = await orq.deployments.getV2Deployments({});
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { deploymentsGetV2Deployments } from "orq-poc-typescript/funcs/deploymentsGetV2Deployments.js";
+
+// Use `OrqCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const orq = new OrqCore({
+  bearer: process.env["ORQ_BEARER"] ?? "",
+});
+
+async function run() {
+  const res = await deploymentsGetV2Deployments(orq, {});
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetV2DeploymentsRequest](../../models/operations/getv2deploymentsrequest.md)                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[operations.GetV2DeploymentsResponseBody](../../models/operations/getv2deploymentsresponsebody.md)\>**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| errors.HonoApiError | 500                 | application/json    |
+| errors.SDKError     | 4XX, 5XX            | \*/\*               |

@@ -5,9 +5,9 @@ The provider used to generate the response
 ## Example Usage
 
 ```typescript
-import { Provider } from "orq-node-client/models/operations";
+import { Provider } from "orq-poc-typescript/models/operations";
 
-let value: Provider = "azure";
+let value: Provider = "aws";
 ```
 
 ## Values

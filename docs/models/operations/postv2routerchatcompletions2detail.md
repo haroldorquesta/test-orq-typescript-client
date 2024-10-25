@@ -5,7 +5,7 @@ Specifies the detail level of the image.
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletions2Detail } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletions2Detail } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletions2Detail = "auto";
 ```
