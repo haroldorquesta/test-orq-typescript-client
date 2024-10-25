@@ -18,7 +18,7 @@ const value: operations.PostV2ResourcesDatasetsDatasetIdRowsBulk2Resources1 = {
 const value: operations.PostV2ResourcesDatasetsDatasetIdRowsBulk2Resources2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://immense-valuable.name",
+    url: "https://enchanted-hydrolyze.org/",
   },
 };
 ```

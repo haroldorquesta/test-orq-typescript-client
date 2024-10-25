@@ -4,6 +4,7 @@
 
 export * from "./getv2resourcesdatasetsdatasetid.js";
 export * from "./getv2resourcesdatasetsdatasetidrowsrowid.js";
+export * from "./honoapierror.js";
 export * from "./httpclienterrors.js";
 export * from "./sdkerror.js";
 export * from "./sdkvalidationerror.js";

@@ -5,7 +5,7 @@ A response body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletionsRouterResponseBody } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletionsRouterResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsRouterResponseBody = {
   data: "<value>",

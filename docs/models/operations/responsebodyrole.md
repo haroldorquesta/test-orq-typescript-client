@@ -3,9 +3,9 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBodyRole } from "orq-node-client/models/operations";
+import { ResponseBodyRole } from "orq-poc-typescript/models/operations";
 
-let value: ResponseBodyRole = "exception";
+let value: ResponseBodyRole = "prompt";
 ```
 
 ## Values

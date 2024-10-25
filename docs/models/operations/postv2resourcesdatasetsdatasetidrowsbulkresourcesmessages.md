@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PostV2ResourcesDatasetsDatasetIdRowsBulkResourcesMessages } from "orq-node-client/models/operations";
+import { PostV2ResourcesDatasetsDatasetIdRowsBulkResourcesMessages } from "orq-poc-typescript/models/operations";
 
 let value: PostV2ResourcesDatasetsDatasetIdRowsBulkResourcesMessages = {
   role: "exception",
@@ -11,7 +11,7 @@ let value: PostV2ResourcesDatasetsDatasetIdRowsBulkResourcesMessages = {
     {
       type: "image_url",
       imageUrl: {
-        url: "https://far-off-reward.info",
+        url: "https://nervous-wear.name",
       },
     },
   ],

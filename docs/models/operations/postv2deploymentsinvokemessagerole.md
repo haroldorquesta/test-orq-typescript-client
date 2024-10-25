@@ -5,9 +5,9 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsInvokeMessageRole } from "orq-node-client/models/operations";
+import { PostV2DeploymentsInvokeMessageRole } from "orq-poc-typescript/models/operations";
 
-let value: PostV2DeploymentsInvokeMessageRole = "user";
+let value: PostV2DeploymentsInvokeMessageRole = "correction";
 ```
 
 ## Values

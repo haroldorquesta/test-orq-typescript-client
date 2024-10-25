@@ -20,7 +20,7 @@ const value: operations.PatchV2ResourcesDatasetsDatasetIdRowsRowId2Resources2 =
   {
     type: "image_url",
     imageUrl: {
-      url: "https://questionable-fort.org/",
+      url: "https://educated-remark.biz/",
     },
   };
 ```

@@ -3,11 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { Results } from "orq-node-client/models/operations";
+import { Results } from "orq-poc-typescript/models/operations";
 
 let value: Results = {
-  index: 4541.62,
-  relevanceScore: 3267.01,
+  index: 1173.20,
+  relevanceScore: 1070.04,
 };
 ```
 

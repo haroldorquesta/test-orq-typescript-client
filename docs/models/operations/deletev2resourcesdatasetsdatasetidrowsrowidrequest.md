@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteV2ResourcesDatasetsDatasetIdRowsRowIdRequest } from "orq-node-client/models/operations";
+import { DeleteV2ResourcesDatasetsDatasetIdRowsRowIdRequest } from "orq-poc-typescript/models/operations";
 
 let value: DeleteV2ResourcesDatasetsDatasetIdRowsRowIdRequest = {
   datasetId: "<id>",

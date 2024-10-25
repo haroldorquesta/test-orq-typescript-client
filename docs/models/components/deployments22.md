@@ -5,12 +5,12 @@ The image part of the prompt message. Only supported with vision models.
 ## Example Usage
 
 ```typescript
-import { Deployments22 } from "orq-node-client/models/components";
+import { Deployments22 } from "orq-poc-typescript/models/components";
 
 let value: Deployments22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://secondary-recovery.org/",
+    url: "https://dreary-scorpion.biz",
   },
 };
 ```

@@ -5,28 +5,28 @@ Represents a streamed chunk of a chat completion response returned by model, bas
 ## Example Usage
 
 ```typescript
-import { ResponseBody2 } from "orq-node-client/models/operations";
+import { ResponseBody2 } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBody2 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "tool_calls",
-      index: 8765.05,
+      finishReason: "length",
+      index: 5249.70,
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 3381.59,
+            logprob: 7505.95,
             bytes: [
-              9615.70,
+              3335.07,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 2317.02,
+                logprob: 9241.59,
                 bytes: [
-                  9493.19,
+                  8623.19,
                 ],
               },
             ],
@@ -35,16 +35,16 @@ let value: ResponseBody2 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 9413.78,
+            logprob: 486.90,
             bytes: [
-              7992.03,
+              2536.43,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 6304.48,
+                logprob: 4461.36,
                 bytes: [
-                  8742.88,
+                  1046.28,
                 ],
               },
             ],
@@ -68,14 +68,14 @@ let value: ResponseBody2 = {
       },
     },
   ],
-  created: 8489.44,
-  model: "Land Cruiser",
+  created: 7400.98,
+  model: "Mercielago",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {
-    completionTokens: 132.37,
-    promptTokens: 3472.34,
-    totalTokens: 1481.41,
+    completionTokens: 6223.84,
+    promptTokens: 7105.28,
+    totalTokens: 2049.24,
   },
 };
 ```

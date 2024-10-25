@@ -25,7 +25,7 @@ Create a dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -46,8 +46,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesPostV2ResourcesDatasets } from "orq-node-client/funcs/resourcesPostV2ResourcesDatasets.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesPostV2ResourcesDatasets } from "orq-poc-typescript/funcs/resourcesPostV2ResourcesDatasets.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -97,7 +97,7 @@ Get all datasets
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -121,8 +121,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesGetV2ResourcesDatasets } from "orq-node-client/funcs/resourcesGetV2ResourcesDatasets.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesGetV2ResourcesDatasets } from "orq-poc-typescript/funcs/resourcesGetV2ResourcesDatasets.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -175,7 +175,7 @@ Delete a dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -197,8 +197,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesDeleteV2ResourcesDatasetsDatasetId } from "orq-node-client/funcs/resourcesDeleteV2ResourcesDatasetsDatasetId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesDeleteV2ResourcesDatasetsDatasetId } from "orq-poc-typescript/funcs/resourcesDeleteV2ResourcesDatasetsDatasetId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -249,7 +249,7 @@ Get one  dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -272,8 +272,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesGetV2ResourcesDatasetsDatasetId } from "orq-node-client/funcs/resourcesGetV2ResourcesDatasetsDatasetId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesGetV2ResourcesDatasetsDatasetId } from "orq-poc-typescript/funcs/resourcesGetV2ResourcesDatasetsDatasetId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -326,7 +326,7 @@ Update a dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -349,8 +349,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesPatchV2ResourcesDatasetsDatasetId } from "orq-node-client/funcs/resourcesPatchV2ResourcesDatasetsDatasetId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesPatchV2ResourcesDatasetsDatasetId } from "orq-poc-typescript/funcs/resourcesPatchV2ResourcesDatasetsDatasetId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -402,7 +402,7 @@ Create a list of dataset rows
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -448,8 +448,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesPostV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-node-client/funcs/resourcesPostV2ResourcesDatasetsDatasetIdRowsBulk.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesPostV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-poc-typescript/funcs/resourcesPostV2ResourcesDatasetsDatasetIdRowsBulk.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -524,7 +524,7 @@ Delete a list of dataset rows
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -546,8 +546,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesDeleteV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-node-client/funcs/resourcesDeleteV2ResourcesDatasetsDatasetIdRowsBulk.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesDeleteV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-poc-typescript/funcs/resourcesDeleteV2ResourcesDatasetsDatasetIdRowsBulk.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -598,7 +598,7 @@ Create a dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -621,8 +621,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesPostV2ResourcesDatasetsDatasetIdRows } from "orq-node-client/funcs/resourcesPostV2ResourcesDatasetsDatasetIdRows.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesPostV2ResourcesDatasetsDatasetIdRows } from "orq-poc-typescript/funcs/resourcesPostV2ResourcesDatasetsDatasetIdRows.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -674,7 +674,7 @@ Retrieve all dataset rows
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -697,8 +697,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesGetV2ResourcesDatasetsDatasetIdRows } from "orq-node-client/funcs/resourcesGetV2ResourcesDatasetsDatasetIdRows.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesGetV2ResourcesDatasetsDatasetIdRows } from "orq-poc-typescript/funcs/resourcesGetV2ResourcesDatasetsDatasetIdRows.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -750,7 +750,7 @@ Delete a dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -773,8 +773,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesDeleteV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-node-client/funcs/resourcesDeleteV2ResourcesDatasetsDatasetIdRowsRowId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesDeleteV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-poc-typescript/funcs/resourcesDeleteV2ResourcesDatasetsDatasetIdRowsRowId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -826,7 +826,7 @@ Get one dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -850,8 +850,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesGetV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-node-client/funcs/resourcesGetV2ResourcesDatasetsDatasetIdRowsRowId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesGetV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-poc-typescript/funcs/resourcesGetV2ResourcesDatasetsDatasetIdRowsRowId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -905,7 +905,7 @@ Update a dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -929,8 +929,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { resourcesPatchV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-node-client/funcs/resourcesPatchV2ResourcesDatasetsDatasetIdRowsRowId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { resourcesPatchV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-poc-typescript/funcs/resourcesPatchV2ResourcesDatasetsDatasetIdRowsRowId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -18,7 +18,7 @@ const value: operations.PostV2RouterChatCompletionsContent2[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://ajar-reward.biz/",
+      url: "https://athletic-department.info",
     },
   },
 ];

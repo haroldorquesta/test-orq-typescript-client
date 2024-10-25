@@ -18,7 +18,7 @@ const value: operations.GetV2ResourcesDatasetsDatasetIdRowsRowId21 = {
 const value: operations.GetV2ResourcesDatasetsDatasetIdRowsRowId22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://complete-corporation.net/",
+    url: "https://crowded-couch.name/",
   },
 };
 ```

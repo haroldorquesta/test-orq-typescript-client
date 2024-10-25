@@ -3,11 +3,16 @@
 ## Example Usage
 
 ```typescript
-import { PostV2ResourcesDatasetsDatasetIdRowsMessages } from "orq-node-client/models/operations";
+import { PostV2ResourcesDatasetsDatasetIdRowsMessages } from "orq-poc-typescript/models/operations";
 
 let value: PostV2ResourcesDatasetsDatasetIdRowsMessages = {
-  role: "prompt",
-  content: "<value>",
+  role: "exception",
+  content: [
+    {
+      type: "text",
+      text: "<value>",
+    },
+  ],
 };
 ```
 

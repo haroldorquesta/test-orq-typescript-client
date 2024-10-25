@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MessagesToolCalls } from "orq-node-client/models/operations";
+import { MessagesToolCalls } from "orq-poc-typescript/models/operations";
 
 let value: MessagesToolCalls = {
   id: "<id>",

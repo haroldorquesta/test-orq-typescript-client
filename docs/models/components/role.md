@@ -5,9 +5,9 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { Role } from "orq-node-client/models/components";
+import { Role } from "orq-poc-typescript/models/components";
 
-let value: Role = "expected_output";
+let value: Role = "exception";
 ```
 
 ## Values

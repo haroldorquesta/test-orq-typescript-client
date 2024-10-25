@@ -9,7 +9,7 @@ The embedding result.
 
 ```typescript
 const value: number[] = [
-  8480.08,
+  5757.51,
 ];
 ```
 

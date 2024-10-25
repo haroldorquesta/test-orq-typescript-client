@@ -5,11 +5,11 @@ Dataset Created.
 ## Example Usage
 
 ```typescript
-import { PostV2ResourcesDatasetsResponseBody } from "orq-node-client/models/operations";
+import { PostV2ResourcesDatasetsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2ResourcesDatasetsResponseBody = {
-  displayName: "Haskell_Shields4",
-  domainId: "5dffe4f3-1f3b-40be-b465-b3274d38fadf",
+  displayName: "Green.Morar",
+  domainId: "b816650b-19ba-4f1d-9086-85308d531131",
 };
 ```
 

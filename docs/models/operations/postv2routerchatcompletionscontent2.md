@@ -18,7 +18,7 @@ const value: operations.PostV2RouterChatCompletions21 = {
 const value: operations.PostV2RouterChatCompletions22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://unlucky-word.biz",
+    url: "https://sarcastic-hawk.info/",
   },
 };
 ```

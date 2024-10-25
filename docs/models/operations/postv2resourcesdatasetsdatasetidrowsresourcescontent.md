@@ -19,7 +19,7 @@ const value:
     {
       type: "image_url",
       imageUrl: {
-        url: "https://trim-emergent.info/",
+        url: "https://thick-shadowbox.org/",
       },
     },
   ];

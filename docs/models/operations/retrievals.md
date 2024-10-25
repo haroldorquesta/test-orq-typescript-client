@@ -3,15 +3,15 @@
 ## Example Usage
 
 ```typescript
-import { Retrievals } from "orq-node-client/models/operations";
+import { Retrievals } from "orq-poc-typescript/models/operations";
 
 let value: Retrievals = {
   document: "<value>",
   metadata: {
     fileName: "example.file",
-    pageNumber: 7163.27,
-    fileType: "audio",
-    searchScore: 1831.91,
+    pageNumber: 2900.78,
+    fileType: "text",
+    searchScore: 4287.69,
   },
 };
 ```

@@ -14,7 +14,7 @@ Submit feedback for the LLM transaction via the API
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { feedbackPostFeedback } from "orq-node-client/funcs/feedbackPostFeedback.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { feedbackPostFeedback } from "orq-poc-typescript/funcs/feedbackPostFeedback.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -5,7 +5,7 @@ Successful operation
 ## Example Usage
 
 ```typescript
-import { PostContactsResponseBody } from "orq-node-client/models/operations";
+import { PostContactsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostContactsResponseBody = {
   success: false,

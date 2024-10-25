@@ -5,10 +5,10 @@ A request body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { PostV2RouterCompletionsRequestBody } from "orq-node-client/models/operations";
+import { PostV2RouterCompletionsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterCompletionsRequestBody = {
-  model: "Land Cruiser",
+  model: "XTS",
   prompt: "<value>",
 };
 ```

@@ -18,7 +18,7 @@ const value: operations.PostV2ResourcesDatasetsDatasetIdRows2Resources1 = {
 const value: operations.PostV2ResourcesDatasetsDatasetIdRows2Resources2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://swift-perp.com/",
+    url: "https://long-equal.org/",
   },
 };
 ```

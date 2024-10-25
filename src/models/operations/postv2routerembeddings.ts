@@ -71,7 +71,7 @@ export type PostV2RouterEmbeddingsRouterObject = ClosedEnum<
  */
 export type Embedding = Array<number> | string;
 
-export type Data = {
+export type PostV2RouterEmbeddingsData = {
   /**
    * The object type, which is always "embedding".
    */
@@ -96,7 +96,7 @@ export type PostV2RouterEmbeddingsUsage = {
  */
 export type PostV2RouterEmbeddingsResponseBody = {
   object: PostV2RouterEmbeddingsObject;
-  data: Array<Data>;
+  data: Array<PostV2RouterEmbeddingsData>;
   /**
    * ID of the model to use
    */
@@ -283,39 +283,45 @@ export namespace Embedding$ {
 }
 
 /** @internal */
-export const Data$inboundSchema: z.ZodType<Data, z.ZodTypeDef, unknown> = z
-  .object({
-    object: PostV2RouterEmbeddingsRouterObject$inboundSchema,
-    embedding: z.union([z.array(z.number()), z.string()]),
-    index: z.number(),
-  });
+export const PostV2RouterEmbeddingsData$inboundSchema: z.ZodType<
+  PostV2RouterEmbeddingsData,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  object: PostV2RouterEmbeddingsRouterObject$inboundSchema,
+  embedding: z.union([z.array(z.number()), z.string()]),
+  index: z.number(),
+});
 
 /** @internal */
-export type Data$Outbound = {
+export type PostV2RouterEmbeddingsData$Outbound = {
   object: string;
   embedding: Array<number> | string;
   index: number;
 };
 
 /** @internal */
-export const Data$outboundSchema: z.ZodType<Data$Outbound, z.ZodTypeDef, Data> =
-  z.object({
-    object: PostV2RouterEmbeddingsRouterObject$outboundSchema,
-    embedding: z.union([z.array(z.number()), z.string()]),
-    index: z.number(),
-  });
+export const PostV2RouterEmbeddingsData$outboundSchema: z.ZodType<
+  PostV2RouterEmbeddingsData$Outbound,
+  z.ZodTypeDef,
+  PostV2RouterEmbeddingsData
+> = z.object({
+  object: PostV2RouterEmbeddingsRouterObject$outboundSchema,
+  embedding: z.union([z.array(z.number()), z.string()]),
+  index: z.number(),
+});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace Data$ {
-  /** @deprecated use `Data$inboundSchema` instead. */
-  export const inboundSchema = Data$inboundSchema;
-  /** @deprecated use `Data$outboundSchema` instead. */
-  export const outboundSchema = Data$outboundSchema;
-  /** @deprecated use `Data$Outbound` instead. */
-  export type Outbound = Data$Outbound;
+export namespace PostV2RouterEmbeddingsData$ {
+  /** @deprecated use `PostV2RouterEmbeddingsData$inboundSchema` instead. */
+  export const inboundSchema = PostV2RouterEmbeddingsData$inboundSchema;
+  /** @deprecated use `PostV2RouterEmbeddingsData$outboundSchema` instead. */
+  export const outboundSchema = PostV2RouterEmbeddingsData$outboundSchema;
+  /** @deprecated use `PostV2RouterEmbeddingsData$Outbound` instead. */
+  export type Outbound = PostV2RouterEmbeddingsData$Outbound;
 }
 
 /** @internal */
@@ -374,7 +380,7 @@ export const PostV2RouterEmbeddingsResponseBody$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   object: PostV2RouterEmbeddingsObject$inboundSchema,
-  data: z.array(z.lazy(() => Data$inboundSchema)),
+  data: z.array(z.lazy(() => PostV2RouterEmbeddingsData$inboundSchema)),
   model: z.string(),
   usage: z.lazy(() => PostV2RouterEmbeddingsUsage$inboundSchema),
 });
@@ -382,7 +388,7 @@ export const PostV2RouterEmbeddingsResponseBody$inboundSchema: z.ZodType<
 /** @internal */
 export type PostV2RouterEmbeddingsResponseBody$Outbound = {
   object: string;
-  data: Array<Data$Outbound>;
+  data: Array<PostV2RouterEmbeddingsData$Outbound>;
   model: string;
   usage: PostV2RouterEmbeddingsUsage$Outbound;
 };
@@ -394,7 +400,7 @@ export const PostV2RouterEmbeddingsResponseBody$outboundSchema: z.ZodType<
   PostV2RouterEmbeddingsResponseBody
 > = z.object({
   object: PostV2RouterEmbeddingsObject$outboundSchema,
-  data: z.array(z.lazy(() => Data$outboundSchema)),
+  data: z.array(z.lazy(() => PostV2RouterEmbeddingsData$outboundSchema)),
   model: z.string(),
   usage: z.lazy(() => PostV2RouterEmbeddingsUsage$outboundSchema),
 });

@@ -3,13 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterEmbeddingsRequestBody } from "orq-node-client/models/operations";
+import { PostV2RouterEmbeddingsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterEmbeddingsRequestBody = {
-  input: [
-    "<value>",
-  ],
-  model: "Alpine",
+  input: "<value>",
+  model: "Wrangler",
 };
 ```
 

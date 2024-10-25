@@ -5,7 +5,7 @@ Expected dataset row model when talking to the API.
 ## Example Usage
 
 ```typescript
-import { PostV2ResourcesDatasetsDatasetIdRowsBulkResponseBody } from "orq-node-client/models/operations";
+import { PostV2ResourcesDatasetsDatasetIdRowsBulkResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2ResourcesDatasetsDatasetIdRowsBulkResponseBody = {
   id: "uuid-string",

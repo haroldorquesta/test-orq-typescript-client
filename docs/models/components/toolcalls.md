@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ToolCalls } from "orq-node-client/models/components";
+import { ToolCalls } from "orq-poc-typescript/models/components";
 
 let value: ToolCalls = {
   type: "function",

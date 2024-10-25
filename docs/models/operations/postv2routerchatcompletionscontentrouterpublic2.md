@@ -18,7 +18,7 @@ const value: operations.PostV2RouterChatCompletions2RouterPublic1 = {
 const value: operations.PostV2RouterChatCompletions2RouterPublic2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://elliptical-fog.org",
+    url: "https://weary-summer.info/",
   },
 };
 ```

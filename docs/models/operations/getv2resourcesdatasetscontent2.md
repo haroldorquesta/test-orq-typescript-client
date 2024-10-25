@@ -18,7 +18,7 @@ const value: operations.GetV2ResourcesDatasets21 = {
 const value: operations.GetV2ResourcesDatasets22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://orderly-porter.net/",
+    url: "https://weary-worth.info",
   },
 };
 ```

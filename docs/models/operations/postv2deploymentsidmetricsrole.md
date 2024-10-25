@@ -5,9 +5,9 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsIdMetricsRole } from "orq-node-client/models/operations";
+import { PostV2DeploymentsIdMetricsRole } from "orq-poc-typescript/models/operations";
 
-let value: PostV2DeploymentsIdMetricsRole = "expected_output";
+let value: PostV2DeploymentsIdMetricsRole = "prompt";
 ```
 
 ## Values

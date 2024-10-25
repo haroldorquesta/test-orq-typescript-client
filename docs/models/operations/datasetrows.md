@@ -5,7 +5,7 @@ Expected dataset row model when talking to the API.
 ## Example Usage
 
 ```typescript
-import { DatasetRows } from "orq-node-client/models/operations";
+import { DatasetRows } from "orq-poc-typescript/models/operations";
 
 let value: DatasetRows = {
   messages: [

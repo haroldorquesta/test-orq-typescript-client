@@ -3,11 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBodyChoices } from "orq-node-client/models/operations";
+import { ResponseBodyChoices } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBodyChoices = {
   finishReason: "stop",
-  index: 7705.81,
+  index: 6471.97,
   message: {
     content: "<value>",
     refusal: "<value>",
@@ -21,22 +21,22 @@ let value: ResponseBodyChoices = {
         },
       },
     ],
-    role: "assistant",
+    role: "tool",
   },
   logprobs: {
     content: [
       {
         token: "<value>",
-        logprob: 795.22,
+        logprob: 5887.40,
         bytes: [
-          896.03,
+          9627.70,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 6720.48,
+            logprob: 168.72,
             bytes: [
-              2453.67,
+              6964.82,
             ],
           },
         ],
@@ -45,16 +45,16 @@ let value: ResponseBodyChoices = {
     refusal: [
       {
         token: "<value>",
-        logprob: 4205.39,
+        logprob: 8136.79,
         bytes: [
-          5573.69,
+          5098.07,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 8605.51,
+            logprob: 3339.65,
             bytes: [
-              7270.44,
+              7908.40,
             ],
           },
         ],

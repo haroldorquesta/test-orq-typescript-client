@@ -18,7 +18,7 @@ Creates an embedding vector representing the input text.
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -42,8 +42,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { routerPostV2RouterEmbeddings } from "orq-node-client/funcs/routerPostV2RouterEmbeddings.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { routerPostV2RouterEmbeddings } from "orq-poc-typescript/funcs/routerPostV2RouterEmbeddings.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -96,7 +96,7 @@ For sending requests to chat completion models
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -128,8 +128,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { routerPostV2RouterChatCompletions } from "orq-node-client/funcs/routerPostV2RouterChatCompletions.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { routerPostV2RouterChatCompletions } from "orq-poc-typescript/funcs/routerPostV2RouterChatCompletions.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -190,7 +190,7 @@ For sending requests to legacy completion models
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -211,8 +211,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { routerPostV2RouterCompletions } from "orq-node-client/funcs/routerPostV2RouterCompletions.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { routerPostV2RouterCompletions } from "orq-poc-typescript/funcs/routerPostV2RouterCompletions.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -262,7 +262,7 @@ For sending requests to rerank models
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -283,8 +283,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { routerPostV2RouterRerank } from "orq-node-client/funcs/routerPostV2RouterRerank.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { routerPostV2RouterRerank } from "orq-poc-typescript/funcs/routerPostV2RouterRerank.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -332,7 +332,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -353,8 +353,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { routerPostV2RouterImagesGenerations } from "orq-node-client/funcs/routerPostV2RouterImagesGenerations.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { routerPostV2RouterImagesGenerations } from "orq-poc-typescript/funcs/routerPostV2RouterImagesGenerations.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

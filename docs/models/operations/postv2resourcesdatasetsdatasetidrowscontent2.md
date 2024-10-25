@@ -18,7 +18,7 @@ const value: operations.PostV2ResourcesDatasetsDatasetIdRows21 = {
 const value: operations.PostV2ResourcesDatasetsDatasetIdRows22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://meager-scholarship.net",
+    url: "https://pushy-swim.name",
   },
 };
 ```

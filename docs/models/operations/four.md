@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Four } from "orq-node-client/models/operations";
+import { Four } from "orq-poc-typescript/models/operations";
 
 let value: Four = {
   role: "tool",

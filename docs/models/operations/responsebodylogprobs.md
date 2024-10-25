@@ -5,22 +5,22 @@ Log probability information for the choice.
 ## Example Usage
 
 ```typescript
-import { ResponseBodyLogprobs } from "orq-node-client/models/operations";
+import { ResponseBodyLogprobs } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBodyLogprobs = {
   content: [
     {
       token: "<value>",
-      logprob: 5654.21,
+      logprob: 9679.66,
       bytes: [
-        1832.80,
+        9944.01,
       ],
       topLogprobs: [
         {
           token: "<value>",
-          logprob: 1448.48,
+          logprob: 4518.22,
           bytes: [
-            4880.56,
+            708.70,
           ],
         },
       ],
@@ -29,16 +29,16 @@ let value: ResponseBodyLogprobs = {
   refusal: [
     {
       token: "<value>",
-      logprob: 3556.13,
+      logprob: 2927.94,
       bytes: [
-        9404.32,
+        1523.55,
       ],
       topLogprobs: [
         {
           token: "<value>",
-          logprob: 7653.25,
+          logprob: 4174.86,
           bytes: [
-            7486.64,
+            1312.89,
           ],
         },
       ],

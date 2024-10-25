@@ -5,12 +5,12 @@ Dataset updated.
 ## Example Usage
 
 ```typescript
-import { PatchV2ResourcesDatasetsDatasetIdRowsRowIdResponseBody } from "orq-node-client/models/operations";
+import { PatchV2ResourcesDatasetsDatasetIdRowsRowIdResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PatchV2ResourcesDatasetsDatasetIdRowsRowIdResponseBody = {
   messages: [
     {
-      role: "correction",
+      role: "exception",
       content: "<value>",
     },
   ],

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { InvokeOptions } from "orq-node-client/models/operations";
+import { InvokeOptions } from "orq-poc-typescript/models/operations";
 
 let value: InvokeOptions = {};
 ```

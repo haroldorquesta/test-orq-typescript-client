@@ -3,25 +3,25 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletionsResponseBodyChoices } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletionsResponseBodyChoices } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsResponseBodyChoices = {
-  finishReason: "content_filter",
-  index: 5844.76,
+  finishReason: "tool_calls",
+  index: 9677.95,
   logprobs: {
     content: [
       {
         token: "<value>",
-        logprob: 9619.36,
+        logprob: 5468.85,
         bytes: [
-          2921.48,
+          2748.24,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 2408.29,
+            logprob: 5922.30,
             bytes: [
-              1002.94,
+              8967.61,
             ],
           },
         ],
@@ -30,16 +30,16 @@ let value: PostV2RouterChatCompletionsResponseBodyChoices = {
     refusal: [
       {
         token: "<value>",
-        logprob: 164.30,
+        logprob: 4067.33,
         bytes: [
-          9295.29,
+          5520.78,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 6699.17,
+            logprob: 2716.53,
             bytes: [
-              7851.53,
+              4554.44,
             ],
           },
         ],
@@ -59,7 +59,7 @@ let value: PostV2RouterChatCompletionsResponseBodyChoices = {
         },
       },
     ],
-    role: "user",
+    role: "exception",
   },
 };
 ```

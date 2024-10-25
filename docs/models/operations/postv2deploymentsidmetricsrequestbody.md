@@ -5,7 +5,7 @@ The deployment request payload
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsIdMetricsRequestBody } from "orq-node-client/models/operations";
+import { PostV2DeploymentsIdMetricsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsIdMetricsRequestBody = {};
 ```

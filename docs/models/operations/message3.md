@@ -3,11 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { Message3 } from "orq-node-client/models/operations";
+import { Message3 } from "orq-poc-typescript/models/operations";
 
 let value: Message3 = {
-  role: "tool",
-  url: "https://appropriate-ecliptic.com",
+  role: "expected_output",
+  url: "https://that-premeditation.biz/",
 };
 ```
 

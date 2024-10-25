@@ -5,33 +5,26 @@ Returned dataset model from the API
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdResponseBody } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsDatasetIdResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsDatasetIdResponseBody = {
-  id: "5ab06ad7-f407-44d3-b4cb-8b600810fd20",
-  displayName: "Dudley26",
-  domainId: "a86c2fd9-0be8-451c-9e1c-0f984e4dfc81",
+  id: "5055fd60-da2f-41d4-b6ca-f91ecb062dbe",
+  displayName: "Opal34",
+  domainId: "df10e48f-6a6c-4834-848b-fbc256a445c9",
   updatedBy: {
-    id: "73652748-0ed8-4df1-baff-92903f5a4fb5",
-    email: "Gladyce.Paucek39@gmail.com",
-    displayName: "Jody.Quigley63",
-    logoUrl: "https://sticky-valuable.biz/",
+    id: "15cbbc48-8bf4-4ca9-acf0-2c1834b0d788",
+    email: "Baron31@yahoo.com",
+    displayName: "Virginia88",
+    logoUrl: "https://helpful-courtroom.info/",
   },
-  updatedById: "d1ac26e1-096c-4e46-a79f-b64f2bea635b",
+  updatedById: "fe10e83a-a140-4323-9a01-2544cf8f6164",
   items: [
     {
-      id: "edde4568-a406-44fe-bda5-8d1c0dc0a822",
+      id: "a7eeb726-b41e-4b9c-ad7e-e4988f4fe7dc",
       messages: [
         {
-          role: "tool",
-          content: [
-            {
-              type: "image_url",
-              imageUrl: {
-                url: "https://close-tune-up.biz",
-              },
-            },
-          ],
+          role: "user",
+          content: "<value>",
         },
       ],
     },

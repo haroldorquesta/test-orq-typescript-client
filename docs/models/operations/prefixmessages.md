@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PrefixMessages } from "orq-node-client/models/operations";
+import { PrefixMessages } from "orq-poc-typescript/models/operations";
 
 let value: PrefixMessages = {
   role: "correction",

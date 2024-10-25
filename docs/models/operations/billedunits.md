@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BilledUnits } from "orq-node-client/models/operations";
+import { BilledUnits } from "orq-poc-typescript/models/operations";
 
 let value: BilledUnits = {};
 ```

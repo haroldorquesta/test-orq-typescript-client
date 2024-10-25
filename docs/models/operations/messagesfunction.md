@@ -5,7 +5,7 @@ The function that the model called.
 ## Example Usage
 
 ```typescript
-import { MessagesFunction } from "orq-node-client/models/operations";
+import { MessagesFunction } from "orq-poc-typescript/models/operations";
 
 let value: MessagesFunction = {
   name: "<value>",

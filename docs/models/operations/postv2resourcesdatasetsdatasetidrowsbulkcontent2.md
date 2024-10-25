@@ -18,7 +18,7 @@ const value: operations.PostV2ResourcesDatasetsDatasetIdRowsBulk21 = {
 const value: operations.PostV2ResourcesDatasetsDatasetIdRowsBulk22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://ragged-guide.com/",
+    url: "https://scientific-sonar.com/",
   },
 };
 ```

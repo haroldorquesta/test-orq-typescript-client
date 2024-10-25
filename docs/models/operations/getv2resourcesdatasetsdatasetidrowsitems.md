@@ -5,21 +5,14 @@ Returned dataset row model from the API.
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdRowsItems } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsDatasetIdRowsItems } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsDatasetIdRowsItems = {
-  id: "8f6a6c83-448b-4fbc-b256-a445c9115cbb",
+  id: "9b55004b-accd-4bfe-b990-f2bd531b7be2",
   messages: [
     {
-      role: "user",
-      content: [
-        {
-          type: "image_url",
-          imageUrl: {
-            url: "https://well-to-do-dusk.net",
-          },
-        },
-      ],
+      role: "exception",
+      content: "<value>",
     },
   ],
 };

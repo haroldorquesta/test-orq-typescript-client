@@ -5,19 +5,19 @@ Dataset rows Retrieved.
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdRowsResponseBody } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsDatasetIdRowsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsDatasetIdRowsResponseBody = {
-  count: 6599.71,
-  page: 5802.38,
-  limit: 7748.80,
-  totalPages: 9440.32,
+  count: 9430.62,
+  page: 9906.52,
+  limit: 1988.92,
+  totalPages: 6568.38,
   items: [
     {
-      id: "02c1834b-0d78-48a5-9152-85ff99fec553",
+      id: "1ada6669-ee02-4135-88ab-efadc4e0047a",
       messages: [
         {
-          role: "expected_output",
+          role: "prompt",
           content: [
             {
               type: "text",
