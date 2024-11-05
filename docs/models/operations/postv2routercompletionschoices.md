@@ -6,8 +6,8 @@
 import { PostV2RouterCompletionsChoices } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterCompletionsChoices = {
-  finishReason: "content_filter",
-  index: 8130.54,
+  finishReason: "length",
+  index: 6803.49,
   text: "<value>",
 };
 ```

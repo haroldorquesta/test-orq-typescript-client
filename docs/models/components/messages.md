@@ -6,11 +6,13 @@
 import { Messages } from "orq-poc-typescript/models/components";
 
 let value: Messages = {
-  role: "tool",
+  role: "correction",
   content: [
     {
-      type: "text",
-      text: "<value>",
+      type: "image_url",
+      imageUrl: {
+        url: "https://cheerful-haircut.info",
+      },
     },
   ],
 };

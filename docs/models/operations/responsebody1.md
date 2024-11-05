@@ -11,8 +11,8 @@ let value: ResponseBody1 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "content_filter",
-      index: 908.86,
+      finishReason: "stop",
+      index: 6964.82,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -26,22 +26,22 @@ let value: ResponseBody1 = {
             },
           },
         ],
-        role: "assistant",
+        role: "correction",
       },
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 4103.02,
+            logprob: 5098.07,
             bytes: [
-              6232.95,
+              3339.65,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 8869.61,
+                logprob: 7908.40,
                 bytes: [
-                  6188.26,
+                  972.43,
                 ],
               },
             ],
@@ -50,16 +50,16 @@ let value: ResponseBody1 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 1334.61,
+            logprob: 4420.36,
             bytes: [
-              9805.80,
+              5199.52,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 8717.86,
+                logprob: 6939.56,
                 bytes: [
-                  5027.21,
+                  908.86,
                 ],
               },
             ],
@@ -68,15 +68,11 @@ let value: ResponseBody1 = {
       },
     },
   ],
-  created: 9223.48,
-  model: "Golf",
+  created: 2277.60,
+  model: "Element",
   systemFingerprint: "<value>",
   object: "<value>",
-  usage: {
-    completionTokens: 9233.06,
-    promptTokens: 8298.97,
-    totalTokens: 9682.86,
-  },
+  usage: {},
 };
 ```
 

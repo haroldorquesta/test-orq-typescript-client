@@ -87,6 +87,7 @@ Files are used to upload documents that can be used with features like [Deployme
 ### Example Usage
 
 ```typescript
+import { openAsBlob } from "node:fs";
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
@@ -96,7 +97,10 @@ const orq = new Orq({
 async function run() {
   const result = await orq.files.postV2FilesBulk({
     files: [
-      "<value>",
+      {
+        fileName: "example.file",
+        content: await openAsBlob("example.file"),
+      },
     ],
     purpose: "retrieval",
   });
@@ -113,6 +117,7 @@ run();
 The standalone function version of this method:
 
 ```typescript
+import { openAsBlob } from "node:fs";
 import { OrqCore } from "orq-poc-typescript/core.js";
 import { filesPostV2FilesBulk } from "orq-poc-typescript/funcs/filesPostV2FilesBulk.js";
 
@@ -125,7 +130,10 @@ const orq = new OrqCore({
 async function run() {
   const res = await filesPostV2FilesBulk(orq, {
     files: [
-      "<value>",
+      {
+        fileName: "example.file",
+        content: await openAsBlob("example.file"),
+      },
     ],
     purpose: "retrieval",
   });
