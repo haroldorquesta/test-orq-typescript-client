@@ -3,6 +3,7 @@
  */
 
 import { OrqCore } from "../core.js";
+import { readableStreamToArrayBuffer } from "../lib/files.js";
 import * as M from "../lib/matchers.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
@@ -18,7 +19,9 @@ import {
 import { SDKError } from "../models/errors/sdkerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
+import { isBlobLike } from "../types/blobs.js";
 import { Result } from "../types/fp.js";
+import { isReadableStream } from "../types/streams.js";
 
 /**
  * Upload file
@@ -54,7 +57,19 @@ export async function publicPostV2Files(
   const body = new FormData();
 
   if (payload.file !== undefined) {
-    body.append("file", String(payload.file));
+    if (isBlobLike(payload.file)) {
+      body.append("file", payload.file);
+    } else if (isReadableStream(payload.file.content)) {
+      const buffer = await readableStreamToArrayBuffer(payload.file.content);
+      const blob = new Blob([buffer], { type: "application/octet-stream" });
+      body.append("file", blob);
+    } else {
+      body.append(
+        "file",
+        new Blob([payload.file.content], { type: "application/octet-stream" }),
+        payload.file.fileName,
+      );
+    }
   }
   if (payload.purpose !== undefined) {
     body.append("purpose", payload.purpose);

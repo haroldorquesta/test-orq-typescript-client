@@ -11,21 +11,21 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
   choices: [
     {
       finishReason: "stop",
-      index: 6072.49,
+      index: 396.16,
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 4776.47,
+            logprob: 599.44,
             bytes: [
-              2840.00,
+              610.79,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 2384.13,
+                logprob: 9077.33,
                 bytes: [
-                  5145.13,
+                  7398.84,
                 ],
               },
             ],
@@ -34,16 +34,16 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
         refusal: [
           {
             token: "<value>",
-            logprob: 3679.28,
+            logprob: 8980.62,
             bytes: [
-              4565.20,
+              6725.82,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 3374.77,
+                logprob: 5289.40,
                 bytes: [
-                  9704.94,
+                  3044.46,
                 ],
               },
             ],
@@ -63,19 +63,15 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
             },
           },
         ],
-        role: "assistant",
+        role: "expected_output",
       },
     },
   ],
-  created: 968.04,
-  model: "Countach",
+  created: 3621.89,
+  model: "F-150",
   systemFingerprint: "<value>",
   object: "<value>",
-  usage: {
-    completionTokens: 5910.27,
-    promptTokens: 6591.76,
-    totalTokens: 3972.57,
-  },
+  usage: {},
 };
 ```
 

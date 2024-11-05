@@ -31,6 +31,7 @@ For more information about the API: [orq.ai Documentation](https://docs.orq.ai)
 * [Available Resources and Operations](#available-resources-and-operations)
 * [Standalone functions](#standalone-functions)
 * [Server-sent event streaming](#server-sent-event-streaming)
+* [File uploads](#file-uploads)
 * [Retries](#retries)
 * [Error Handling](#error-handling)
 * [Server Selection](#server-selection)
@@ -123,7 +124,7 @@ run();
 
 ### [feedback](docs/sdks/feedback/README.md)
 
-* [postFeedback](docs/sdks/feedback/README.md#postfeedback) - Submit feedback
+* [postV2Feedback](docs/sdks/feedback/README.md#postv2feedback) - Submit feedback
 
 ### [files](docs/sdks/files/README.md)
 
@@ -144,33 +145,11 @@ run();
 * [postV2RouterCompletions](docs/sdks/public/README.md#postv2routercompletions) - legacy completions route
 * [postV2RouterRerank](docs/sdks/public/README.md#postv2routerrerank) - rerank route
 * [postV2RouterImagesGenerations](docs/sdks/public/README.md#postv2routerimagesgenerations)
-* [postV2ResourcesDatasets](docs/sdks/public/README.md#postv2resourcesdatasets) - Create a dataset
-* [getV2ResourcesDatasets](docs/sdks/public/README.md#getv2resourcesdatasets) - Get all datasets
-* [deleteV2ResourcesDatasetsDatasetId](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetid) - Delete a dataset
-* [getV2ResourcesDatasetsDatasetId](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetid) - Get one  dataset
-* [patchV2ResourcesDatasetsDatasetId](docs/sdks/public/README.md#patchv2resourcesdatasetsdatasetid) - Update a dataset
-* [postV2ResourcesDatasetsDatasetIdRowsBulk](docs/sdks/public/README.md#postv2resourcesdatasetsdatasetidrowsbulk) - Create a list of dataset rows
-* [deleteV2ResourcesDatasetsDatasetIdRowsBulk](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetidrowsbulk) - Delete a list of dataset rows
-* [postV2ResourcesDatasetsDatasetIdRows](docs/sdks/public/README.md#postv2resourcesdatasetsdatasetidrows) - Create a dataset row
-* [getV2ResourcesDatasetsDatasetIdRows](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetidrows) - Retrieve all dataset rows
-* [deleteV2ResourcesDatasetsDatasetIdRowsRowId](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetidrowsrowid) - Delete a dataset row
-* [getV2ResourcesDatasetsDatasetIdRowsRowId](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetidrowsrowid) - Get one dataset row
-* [patchV2ResourcesDatasetsDatasetIdRowsRowId](docs/sdks/public/README.md#patchv2resourcesdatasetsdatasetidrowsrowid) - Update a dataset row
+* [postV2Remoteconfigs](docs/sdks/public/README.md#postv2remoteconfigs)
 
-### [resources](docs/sdks/resources/README.md)
+### [remoteconfig](docs/sdks/remoteconfig/README.md)
 
-* [postV2ResourcesDatasets](docs/sdks/resources/README.md#postv2resourcesdatasets) - Create a dataset
-* [getV2ResourcesDatasets](docs/sdks/resources/README.md#getv2resourcesdatasets) - Get all datasets
-* [deleteV2ResourcesDatasetsDatasetId](docs/sdks/resources/README.md#deletev2resourcesdatasetsdatasetid) - Delete a dataset
-* [getV2ResourcesDatasetsDatasetId](docs/sdks/resources/README.md#getv2resourcesdatasetsdatasetid) - Get one  dataset
-* [patchV2ResourcesDatasetsDatasetId](docs/sdks/resources/README.md#patchv2resourcesdatasetsdatasetid) - Update a dataset
-* [postV2ResourcesDatasetsDatasetIdRowsBulk](docs/sdks/resources/README.md#postv2resourcesdatasetsdatasetidrowsbulk) - Create a list of dataset rows
-* [deleteV2ResourcesDatasetsDatasetIdRowsBulk](docs/sdks/resources/README.md#deletev2resourcesdatasetsdatasetidrowsbulk) - Delete a list of dataset rows
-* [postV2ResourcesDatasetsDatasetIdRows](docs/sdks/resources/README.md#postv2resourcesdatasetsdatasetidrows) - Create a dataset row
-* [getV2ResourcesDatasetsDatasetIdRows](docs/sdks/resources/README.md#getv2resourcesdatasetsdatasetidrows) - Retrieve all dataset rows
-* [deleteV2ResourcesDatasetsDatasetIdRowsRowId](docs/sdks/resources/README.md#deletev2resourcesdatasetsdatasetidrowsrowid) - Delete a dataset row
-* [getV2ResourcesDatasetsDatasetIdRowsRowId](docs/sdks/resources/README.md#getv2resourcesdatasetsdatasetidrowsrowid) - Get one dataset row
-* [patchV2ResourcesDatasetsDatasetIdRowsRowId](docs/sdks/resources/README.md#patchv2resourcesdatasetsdatasetidrowsrowid) - Update a dataset row
+* [postV2Remoteconfigs](docs/sdks/remoteconfig/README.md#postv2remoteconfigs)
 
 ### [router](docs/sdks/router/README.md)
 
@@ -203,44 +182,22 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`deploymentsPostV2DeploymentsGetConfig`](docs/sdks/deployments/README.md#postv2deploymentsgetconfig) - Get config
 - [`deploymentsPostV2DeploymentsIdMetrics`](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
 - [`deploymentsPostV2DeploymentsInvoke`](docs/sdks/deployments/README.md#postv2deploymentsinvoke) - Invoke
-- [`feedbackPostFeedback`](docs/sdks/feedback/README.md#postfeedback) - Submit feedback
+- [`feedbackPostV2Feedback`](docs/sdks/feedback/README.md#postv2feedback) - Submit feedback
 - [`filesPostV2Files`](docs/sdks/files/README.md#postv2files) - Upload file
 - [`filesPostV2FilesBulk`](docs/sdks/files/README.md#postv2filesbulk) - Bulk upload file
-- [`publicDeleteV2ResourcesDatasetsDatasetId`](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetid) - Delete a dataset
-- [`publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk`](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetidrowsbulk) - Delete a list of dataset rows
-- [`publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId`](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetidrowsrowid) - Delete a dataset row
 - [`publicGetV2Deployments`](docs/sdks/public/README.md#getv2deployments) - List all deployments
-- [`publicGetV2ResourcesDatasets`](docs/sdks/public/README.md#getv2resourcesdatasets) - Get all datasets
-- [`publicGetV2ResourcesDatasetsDatasetId`](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetid) - Get one  dataset
-- [`publicGetV2ResourcesDatasetsDatasetIdRows`](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetidrows) - Retrieve all dataset rows
-- [`publicGetV2ResourcesDatasetsDatasetIdRowsRowId`](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetidrowsrowid) - Get one dataset row
-- [`publicPatchV2ResourcesDatasetsDatasetId`](docs/sdks/public/README.md#patchv2resourcesdatasetsdatasetid) - Update a dataset
-- [`publicPatchV2ResourcesDatasetsDatasetIdRowsRowId`](docs/sdks/public/README.md#patchv2resourcesdatasetsdatasetidrowsrowid) - Update a dataset row
 - [`publicPostV2DeploymentsGetConfig`](docs/sdks/public/README.md#postv2deploymentsgetconfig) - Get config
 - [`publicPostV2DeploymentsIdMetrics`](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
 - [`publicPostV2DeploymentsInvoke`](docs/sdks/public/README.md#postv2deploymentsinvoke) - Invoke
 - [`publicPostV2Files`](docs/sdks/public/README.md#postv2files) - Upload file
 - [`publicPostV2FilesBulk`](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
-- [`publicPostV2ResourcesDatasets`](docs/sdks/public/README.md#postv2resourcesdatasets) - Create a dataset
-- [`publicPostV2ResourcesDatasetsDatasetIdRows`](docs/sdks/public/README.md#postv2resourcesdatasetsdatasetidrows) - Create a dataset row
-- [`publicPostV2ResourcesDatasetsDatasetIdRowsBulk`](docs/sdks/public/README.md#postv2resourcesdatasetsdatasetidrowsbulk) - Create a list of dataset rows
+- [`publicPostV2Remoteconfigs`](docs/sdks/public/README.md#postv2remoteconfigs)
 - [`publicPostV2RouterChatCompletions`](docs/sdks/public/README.md#postv2routerchatcompletions) - Chat
 - [`publicPostV2RouterCompletions`](docs/sdks/public/README.md#postv2routercompletions) - legacy completions route
 - [`publicPostV2RouterEmbeddings`](docs/sdks/public/README.md#postv2routerembeddings) - Embeddings
 - [`publicPostV2RouterImagesGenerations`](docs/sdks/public/README.md#postv2routerimagesgenerations)
 - [`publicPostV2RouterRerank`](docs/sdks/public/README.md#postv2routerrerank) - rerank route
-- [`resourcesDeleteV2ResourcesDatasetsDatasetId`](docs/sdks/resources/README.md#deletev2resourcesdatasetsdatasetid) - Delete a dataset
-- [`resourcesDeleteV2ResourcesDatasetsDatasetIdRowsBulk`](docs/sdks/resources/README.md#deletev2resourcesdatasetsdatasetidrowsbulk) - Delete a list of dataset rows
-- [`resourcesDeleteV2ResourcesDatasetsDatasetIdRowsRowId`](docs/sdks/resources/README.md#deletev2resourcesdatasetsdatasetidrowsrowid) - Delete a dataset row
-- [`resourcesGetV2ResourcesDatasets`](docs/sdks/resources/README.md#getv2resourcesdatasets) - Get all datasets
-- [`resourcesGetV2ResourcesDatasetsDatasetId`](docs/sdks/resources/README.md#getv2resourcesdatasetsdatasetid) - Get one  dataset
-- [`resourcesGetV2ResourcesDatasetsDatasetIdRows`](docs/sdks/resources/README.md#getv2resourcesdatasetsdatasetidrows) - Retrieve all dataset rows
-- [`resourcesGetV2ResourcesDatasetsDatasetIdRowsRowId`](docs/sdks/resources/README.md#getv2resourcesdatasetsdatasetidrowsrowid) - Get one dataset row
-- [`resourcesPatchV2ResourcesDatasetsDatasetId`](docs/sdks/resources/README.md#patchv2resourcesdatasetsdatasetid) - Update a dataset
-- [`resourcesPatchV2ResourcesDatasetsDatasetIdRowsRowId`](docs/sdks/resources/README.md#patchv2resourcesdatasetsdatasetidrowsrowid) - Update a dataset row
-- [`resourcesPostV2ResourcesDatasets`](docs/sdks/resources/README.md#postv2resourcesdatasets) - Create a dataset
-- [`resourcesPostV2ResourcesDatasetsDatasetIdRows`](docs/sdks/resources/README.md#postv2resourcesdatasetsdatasetidrows) - Create a dataset row
-- [`resourcesPostV2ResourcesDatasetsDatasetIdRowsBulk`](docs/sdks/resources/README.md#postv2resourcesdatasetsdatasetidrowsbulk) - Create a list of dataset rows
+- [`remoteconfigPostV2Remoteconfigs`](docs/sdks/remoteconfig/README.md#postv2remoteconfigs)
 - [`routerPostV2RouterChatCompletions`](docs/sdks/router/README.md#postv2routerchatcompletions) - Chat
 - [`routerPostV2RouterCompletions`](docs/sdks/router/README.md#postv2routercompletions) - legacy completions route
 - [`routerPostV2RouterEmbeddings`](docs/sdks/router/README.md#postv2routerembeddings) - Embeddings
@@ -284,6 +241,39 @@ run();
 [mdn-sse]: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events
 [mdn-for-await-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of
 <!-- End Server-sent event streaming [eventstream] -->
+
+<!-- Start File uploads [file-upload] -->
+## File uploads
+
+Certain SDK methods accept files as part of a multi-part request. It is possible and typically recommended to upload files as a stream rather than reading the entire contents into memory. This avoids excessive memory consumption and potentially crashing with out-of-memory errors when working with very large files. The following example demonstrates how to attach a file stream to a request.
+
+> [!TIP]
+>
+> Depending on your JavaScript runtime, there are convenient utilities that return a handle to a file without reading the entire contents into memory:
+>
+> - **Node.js v20+:** Since v20, Node.js comes with a native `openAsBlob` function in [`node:fs`](https://nodejs.org/docs/latest-v20.x/api/fs.html#fsopenasblobpath-options).
+> - **Bun:** The native [`Bun.file`](https://bun.sh/docs/api/file-io#reading-files-bun-file) function produces a file handle that can be used for streaming file uploads.
+> - **Browsers:** All supported browsers return an instance to a [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) when reading the value from an `<input type="file">` element.
+> - **Node.js v18:** A file stream can be created using the `fileFrom` helper from [`fetch-blob/from.js`](https://www.npmjs.com/package/fetch-blob).
+
+```typescript
+import { Orq } from "orq-poc-typescript";
+
+const orq = new Orq({
+  bearer: process.env["ORQ_BEARER"] ?? "",
+});
+
+async function run() {
+  const result = await orq.public.postV2Files({});
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+
+```
+<!-- End File uploads [file-upload] -->
 
 <!-- Start Retries [retries] -->
 ## Retries

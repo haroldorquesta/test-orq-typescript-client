@@ -5,9 +5,9 @@
 
 ### Available Operations
 
-* [postFeedback](#postfeedback) - Submit feedback
+* [postV2Feedback](#postv2feedback) - Submit feedback
 
-## postFeedback
+## postV2Feedback
 
 Submit feedback for the LLM transaction via the API
 
@@ -21,7 +21,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.feedback.postFeedback({
+  const result = await orq.feedback.postV2Feedback({
     property: "rating",
     value: [
       "good",
@@ -42,7 +42,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { feedbackPostFeedback } from "orq-poc-typescript/funcs/feedbackPostFeedback.js";
+import { feedbackPostV2Feedback } from "orq-poc-typescript/funcs/feedbackPostV2Feedback.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -51,7 +51,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await feedbackPostFeedback(orq, {
+  const res = await feedbackPostV2Feedback(orq, {
     property: "rating",
     value: [
       "good",
@@ -76,14 +76,14 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.PostFeedbackRequestBody](../../models/operations/postfeedbackrequestbody.md)                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.PostV2FeedbackRequestBody](../../models/operations/postv2feedbackrequestbody.md)                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.PostFeedbackResponseBody](../../models/operations/postfeedbackresponsebody.md)\>**
+**Promise\<[operations.PostV2FeedbackResponseBody](../../models/operations/postv2feedbackresponsebody.md)\>**
 
 ### Errors
 

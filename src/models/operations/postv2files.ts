@@ -4,7 +4,13 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { blobLikeSchema } from "../../types/blobs.js";
 import { ClosedEnum } from "../../types/enums.js";
+
+export type FileT = {
+  fileName: string;
+  content: ReadableStream<Uint8Array> | Blob | ArrayBuffer | Uint8Array;
+};
 
 /**
  * The intended purpose of the uploaded file.
@@ -21,7 +27,7 @@ export type PostV2FilesRequestBody = {
   /**
    * The file to be uploaded.
    */
-  file?: any | undefined;
+  file?: FileT | Blob | undefined;
   /**
    * The intended purpose of the uploaded file.
    */
@@ -61,6 +67,52 @@ export type PostV2FilesResponseBody = {
 };
 
 /** @internal */
+export const FileT$inboundSchema: z.ZodType<FileT, z.ZodTypeDef, unknown> = z
+  .object({
+    fileName: z.string(),
+    content: z.union([
+      z.instanceof(ReadableStream<Uint8Array>),
+      z.instanceof(Blob),
+      z.instanceof(ArrayBuffer),
+      z.instanceof(Uint8Array),
+    ]),
+  });
+
+/** @internal */
+export type FileT$Outbound = {
+  fileName: string;
+  content: ReadableStream<Uint8Array> | Blob | ArrayBuffer | Uint8Array;
+};
+
+/** @internal */
+export const FileT$outboundSchema: z.ZodType<
+  FileT$Outbound,
+  z.ZodTypeDef,
+  FileT
+> = z.object({
+  fileName: z.string(),
+  content: z.union([
+    z.instanceof(ReadableStream<Uint8Array>),
+    z.instanceof(Blob),
+    z.instanceof(ArrayBuffer),
+    z.instanceof(Uint8Array),
+  ]),
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace FileT$ {
+  /** @deprecated use `FileT$inboundSchema` instead. */
+  export const inboundSchema = FileT$inboundSchema;
+  /** @deprecated use `FileT$outboundSchema` instead. */
+  export const outboundSchema = FileT$outboundSchema;
+  /** @deprecated use `FileT$Outbound` instead. */
+  export type Outbound = FileT$Outbound;
+}
+
+/** @internal */
 export const Purpose$inboundSchema: z.ZodNativeEnum<typeof Purpose> = z
   .nativeEnum(Purpose);
 
@@ -85,13 +137,13 @@ export const PostV2FilesRequestBody$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  file: z.any().optional(),
+  file: z.lazy(() => FileT$inboundSchema).optional(),
   purpose: Purpose$inboundSchema.default("retrieval"),
 });
 
 /** @internal */
 export type PostV2FilesRequestBody$Outbound = {
-  file?: any | undefined;
+  file?: FileT$Outbound | Blob | undefined;
   purpose: string;
 };
 
@@ -101,7 +153,7 @@ export const PostV2FilesRequestBody$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2FilesRequestBody
 > = z.object({
-  file: z.any().optional(),
+  file: z.lazy(() => FileT$outboundSchema).or(blobLikeSchema).optional(),
   purpose: Purpose$outboundSchema.default("retrieval"),
 });
 
@@ -151,7 +203,7 @@ export const PostV2FilesResponseBody$inboundSchema: z.ZodType<
   bytes: z.number(),
   file_name: z.string(),
   created: z.string().datetime({ offset: true }).default(
-    "2024-10-22T07:23:04.563Z",
+    "2024-11-05T13:45:01.500Z",
   ).transform(v => new Date(v)),
 }).transform((v) => {
   return remap$(v, {
@@ -182,7 +234,7 @@ export const PostV2FilesResponseBody$outboundSchema: z.ZodType<
   purpose: PostV2FilesPurpose$outboundSchema,
   bytes: z.number(),
   fileName: z.string(),
-  created: z.date().default(() => new Date("2024-10-22T07:23:04.563Z"))
+  created: z.date().default(() => new Date("2024-11-05T13:45:01.500Z"))
     .transform(v => v.toISOString()),
 }).transform((v) => {
   return remap$(v, {

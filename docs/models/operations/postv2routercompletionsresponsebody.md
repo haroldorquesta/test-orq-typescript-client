@@ -11,20 +11,16 @@ let value: PostV2RouterCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "content_filter",
-      index: 3354.98,
+      finishReason: "stop",
+      index: 6072.49,
       text: "<value>",
     },
   ],
-  created: 1476.86,
-  model: "A4",
+  created: 4776.47,
+  model: "Civic",
   systemFingerprint: "<value>",
   object: "<value>",
-  usage: {
-    completionTokens: 2419.02,
-    promptTokens: 4322.81,
-    totalTokens: 5219.96,
-  },
+  usage: {},
 };
 ```
 

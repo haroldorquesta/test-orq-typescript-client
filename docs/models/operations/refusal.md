@@ -7,16 +7,16 @@ import { Refusal } from "orq-poc-typescript/models/operations";
 
 let value: Refusal = {
   token: "<value>",
-  logprob: 894.95,
+  logprob: 302.35,
   bytes: [
-    4059.42,
+    7103.37,
   ],
   topLogprobs: [
     {
       token: "<value>",
-      logprob: 243.13,
+      logprob: 78.84,
       bytes: [
-        3426.11,
+        3726.79,
       ],
     },
   ],

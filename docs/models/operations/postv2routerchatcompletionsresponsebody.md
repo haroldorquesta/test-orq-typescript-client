@@ -12,8 +12,8 @@ const value: operations.ResponseBody1 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "tool_calls",
-      index: 360.34,
+      finishReason: "content_filter",
+      index: 8869.61,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -27,8 +27,65 @@ const value: operations.ResponseBody1 = {
             },
           },
         ],
-        role: "assistant",
+        role: "tool",
       },
+      logprobs: {
+        content: [
+          {
+            token: "<value>",
+            logprob: 1334.61,
+            bytes: [
+              9805.80,
+            ],
+            topLogprobs: [
+              {
+                token: "<value>",
+                logprob: 8717.86,
+                bytes: [
+                  5027.21,
+                ],
+              },
+            ],
+          },
+        ],
+        refusal: [
+          {
+            token: "<value>",
+            logprob: 9223.48,
+            bytes: [
+              5413.81,
+            ],
+            topLogprobs: [
+              {
+                token: "<value>",
+                logprob: 9233.06,
+                bytes: [
+                  8298.97,
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    },
+  ],
+  created: 9682.86,
+  model: "V90",
+  systemFingerprint: "<value>",
+  object: "<value>",
+  usage: {},
+};
+```
+
+### `operations.ResponseBody2`
+
+```typescript
+const value: operations.ResponseBody2 = {
+  id: "<id>",
+  choices: [
+    {
+      finishReason: "stop",
+      index: 1747.72,
       logprobs: {
         content: [
           {
@@ -67,67 +124,6 @@ const value: operations.ResponseBody1 = {
           },
         ],
       },
-    },
-  ],
-  created: 6611.18,
-  model: "Expedition",
-  systemFingerprint: "<value>",
-  object: "<value>",
-  usage: {
-    completionTokens: 764.87,
-    promptTokens: 6964.63,
-    totalTokens: 2473.99,
-  },
-};
-```
-
-### `operations.ResponseBody2`
-
-```typescript
-const value: operations.ResponseBody2 = {
-  id: "<id>",
-  choices: [
-    {
-      finishReason: "stop",
-      index: 599.44,
-      logprobs: {
-        content: [
-          {
-            token: "<value>",
-            logprob: 610.79,
-            bytes: [
-              9077.33,
-            ],
-            topLogprobs: [
-              {
-                token: "<value>",
-                logprob: 7398.84,
-                bytes: [
-                  8980.62,
-                ],
-              },
-            ],
-          },
-        ],
-        refusal: [
-          {
-            token: "<value>",
-            logprob: 6725.82,
-            bytes: [
-              5289.40,
-            ],
-            topLogprobs: [
-              {
-                token: "<value>",
-                logprob: 3044.46,
-                bytes: [
-                  9979.62,
-                ],
-              },
-            ],
-          },
-        ],
-      },
       delta: {
         content: "<value>",
         refusal: "<value>",
@@ -141,19 +137,15 @@ const value: operations.ResponseBody2 = {
             },
           },
         ],
-        role: "user",
+        role: "prompt",
       },
     },
   ],
-  created: 4706.49,
-  model: "Durango",
+  created: 4402.64,
+  model: "A8",
   systemFingerprint: "<value>",
   object: "<value>",
-  usage: {
-    completionTokens: 9795.27,
-    promptTokens: 1746.58,
-    totalTokens: 3279.88,
-  },
+  usage: {},
 };
 ```
 

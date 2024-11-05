@@ -6,7 +6,7 @@
 import { PostV2RouterImagesGenerationsMessage3 } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsMessage3 = {
-  role: "exception",
+  role: "prompt",
   toolCalls: [
     {
       type: "function",

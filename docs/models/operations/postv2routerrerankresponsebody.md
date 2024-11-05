@@ -10,8 +10,8 @@ import { PostV2RouterRerankResponseBody } from "orq-poc-typescript/models/operat
 let value: PostV2RouterRerankResponseBody = {
   results: [
     {
-      index: 5896.95,
-      relevanceScore: 7453.98,
+      index: 3374.77,
+      relevanceScore: 9704.94,
     },
   ],
 };

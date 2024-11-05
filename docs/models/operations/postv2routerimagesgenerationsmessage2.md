@@ -6,8 +6,8 @@
 import { PostV2RouterImagesGenerationsMessage2 } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsMessage2 = {
-  role: "prompt",
-  url: "https://tough-brace.info",
+  role: "expected_output",
+  url: "https://selfish-pacemaker.net/",
 };
 ```
 
