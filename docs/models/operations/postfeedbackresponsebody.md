@@ -5,7 +5,7 @@ Successful operation
 ## Example Usage
 
 ```typescript
-import { PostFeedbackResponseBody } from "orq-node-client/models/operations";
+import { PostFeedbackResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostFeedbackResponseBody = {
   property: "<value>",

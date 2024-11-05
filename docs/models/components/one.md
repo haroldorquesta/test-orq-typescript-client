@@ -5,7 +5,7 @@ Text content part of a prompt message
 ## Example Usage
 
 ```typescript
-import { One } from "orq-node-client/models/components";
+import { One } from "orq-poc-typescript/models/components";
 
 let value: One = {
   type: "text",

@@ -5,7 +5,7 @@ Only supported on `image` models.
 ## Example Usage
 
 ```typescript
-import { Format } from "orq-node-client/models/operations";
+import { Format } from "orq-poc-typescript/models/operations";
 
 let value: Format = "text";
 ```

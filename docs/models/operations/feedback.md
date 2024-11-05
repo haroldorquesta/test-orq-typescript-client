@@ -5,10 +5,10 @@ Feedback from the user on the completion
 ## Example Usage
 
 ```typescript
-import { Feedback } from "orq-node-client/models/operations";
+import { Feedback } from "orq-poc-typescript/models/operations";
 
 let value: Feedback = {
-  score: 714242,
+  score: 164694,
 };
 ```
 

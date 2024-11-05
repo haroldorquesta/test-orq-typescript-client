@@ -5,14 +5,14 @@ Represents a chat completion response returned by model, based on the provided i
 ## Example Usage
 
 ```typescript
-import { ResponseBody1 } from "orq-node-client/models/operations";
+import { ResponseBody1 } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBody1 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "length",
-      index: 2621.18,
+      finishReason: "content_filter",
+      index: 908.86,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -26,22 +26,22 @@ let value: ResponseBody1 = {
             },
           },
         ],
-        role: "exception",
+        role: "assistant",
       },
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 6832.81,
+            logprob: 4103.02,
             bytes: [
-              6956.25,
+              6232.95,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 2835.19,
+                logprob: 8869.61,
                 bytes: [
-                  3799.27,
+                  6188.26,
                 ],
               },
             ],
@@ -50,16 +50,16 @@ let value: ResponseBody1 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 1811.51,
+            logprob: 1334.61,
             bytes: [
-              7885.46,
+              9805.80,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 568.48,
+                logprob: 8717.86,
                 bytes: [
-                  6969.97,
+                  5027.21,
                 ],
               },
             ],
@@ -68,14 +68,14 @@ let value: ResponseBody1 = {
       },
     },
   ],
-  created: 7786.95,
-  model: "Mustang",
+  created: 9223.48,
+  model: "Golf",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {
-    completionTokens: 2594.23,
-    promptTokens: 3738.13,
-    totalTokens: 5876.00,
+    completionTokens: 9233.06,
+    promptTokens: 8298.97,
+    totalTokens: 9682.86,
   },
 };
 ```

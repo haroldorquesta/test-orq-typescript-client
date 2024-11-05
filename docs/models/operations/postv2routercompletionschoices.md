@@ -3,11 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterCompletionsChoices } from "orq-node-client/models/operations";
+import { PostV2RouterCompletionsChoices } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterCompletionsChoices = {
-  finishReason: "length",
-  index: 2586.84,
+  finishReason: "content_filter",
+  index: 8130.54,
   text: "<value>",
 };
 ```

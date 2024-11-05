@@ -5,17 +5,17 @@ A response body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { PostV2RouterImagesGenerationsResponseBody } from "orq-node-client/models/operations";
+import { PostV2RouterImagesGenerationsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsResponseBody = {
   id: "<id>",
-  created: 2414.19,
+  created: 8571.25,
   choices: [
     {
-      index: 6625.05,
+      index: 1173.16,
     },
   ],
-  model: "Camry",
+  model: "Charger",
   object: "<value>",
 };
 ```

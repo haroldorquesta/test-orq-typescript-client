@@ -3,9 +3,9 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletionsResponseBodyRole } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletionsResponseBodyRole } from "orq-poc-typescript/models/operations";
 
-let value: PostV2RouterChatCompletionsResponseBodyRole = "expected_output";
+let value: PostV2RouterChatCompletionsResponseBodyRole = "tool";
 ```
 
 ## Values

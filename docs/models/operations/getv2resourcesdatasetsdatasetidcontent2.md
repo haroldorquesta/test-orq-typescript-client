@@ -18,7 +18,7 @@ const value: operations.GetV2ResourcesDatasetsDatasetId21 = {
 const value: operations.GetV2ResourcesDatasetsDatasetId22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://adolescent-interchange.net",
+    url: "https://wicked-cinema.net/",
   },
 };
 ```

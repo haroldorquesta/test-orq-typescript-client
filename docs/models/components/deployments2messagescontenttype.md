@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Deployments2MessagesContentType } from "orq-node-client/models/components";
+import { Deployments2MessagesContentType } from "orq-poc-typescript/models/components";
 
 let value: Deployments2MessagesContentType = "image_url";
 ```

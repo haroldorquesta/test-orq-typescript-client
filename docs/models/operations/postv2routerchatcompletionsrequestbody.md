@@ -5,20 +5,18 @@ Creates a model response for the given chat conversation.
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletionsRequestBody } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletionsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsRequestBody = {
-  model: "CX-9",
+  model: "Model 3",
   messages: [
     {
-      role: "assistant",
-      toolCalls: [
+      role: "system",
+      content: [
         {
-          id: "<id>",
-          type: "function",
-          function: {
-            name: "<value>",
-            arguments: "<value>",
+          type: "image_url",
+          imageUrl: {
+            url: "https://hungry-gerbil.net/",
           },
         },
       ],

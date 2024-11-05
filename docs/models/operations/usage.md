@@ -5,11 +5,11 @@ Usage statistics to add to the deployment
 ## Example Usage
 
 ```typescript
-import { Usage } from "orq-node-client/models/operations";
+import { Usage } from "orq-poc-typescript/models/operations";
 
 let value: Usage = {
-  promptTokens: 5920.42,
-  completionTokens: 5722.52,
+  promptTokens: 4358.65,
+  completionTokens: 8919.23,
 };
 ```
 

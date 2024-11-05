@@ -8,9 +8,274 @@ import { remap as remap$ } from "../../lib/primitives.js";
 import { ClosedEnum } from "../../types/enums.js";
 
 /**
+ * Indicates the type of model used to generate the response
+ */
+export const PostV2DeploymentsInvokeObject = {
+  Chat: "chat",
+  Completion: "completion",
+  Image: "image",
+} as const;
+/**
+ * Indicates the type of model used to generate the response
+ */
+export type PostV2DeploymentsInvokeObject = ClosedEnum<
+  typeof PostV2DeploymentsInvokeObject
+>;
+
+/**
+ * The provider used to generate the response
+ */
+export const PostV2DeploymentsInvokeProvider = {
+  Cohere: "cohere",
+  Openai: "openai",
+  Anthropic: "anthropic",
+  Huggingface: "huggingface",
+  Replicate: "replicate",
+  Google: "google",
+  GoogleAi: "google-ai",
+  Azure: "azure",
+  Aws: "aws",
+  Anyscale: "anyscale",
+  Perplexity: "perplexity",
+  Groq: "groq",
+  Fal: "fal",
+  Leonardoai: "leonardoai",
+  Nvidia: "nvidia",
+} as const;
+/**
+ * The provider used to generate the response
+ */
+export type PostV2DeploymentsInvokeProvider = ClosedEnum<
+  typeof PostV2DeploymentsInvokeProvider
+>;
+
+/**
+ * The role of the prompt message
+ */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role = {
+  System: "system",
+  Assistant: "assistant",
+  User: "user",
+  Exception: "exception",
+  Tool: "tool",
+  Prompt: "prompt",
+  Correction: "correction",
+  ExpectedOutput: "expected_output",
+} as const;
+/**
+ * The role of the prompt message
+ */
+export type PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role =
+  ClosedEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role
+  >;
+
+export type PostV2DeploymentsInvokeMessage3 = {
+  /**
+   * The role of the prompt message
+   */
+  role: PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role;
+  url: string;
+};
+
+/**
+ * The role of the prompt message
+ */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole = {
+  System: "system",
+  Assistant: "assistant",
+  User: "user",
+  Exception: "exception",
+  Tool: "tool",
+  Prompt: "prompt",
+  Correction: "correction",
+  ExpectedOutput: "expected_output",
+} as const;
+/**
+ * The role of the prompt message
+ */
+export type PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole =
+  ClosedEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole
+  >;
+
+export type PostV2DeploymentsInvokeMessageDeployments2 = {
+  /**
+   * The role of the prompt message
+   */
+  role: PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole;
+  content: string | null;
+};
+
+/**
+ * The role of the prompt message
+ */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole =
+  {
+    System: "system",
+    Assistant: "assistant",
+    User: "user",
+    Exception: "exception",
+    Tool: "tool",
+    Prompt: "prompt",
+    Correction: "correction",
+    ExpectedOutput: "expected_output",
+  } as const;
+/**
+ * The role of the prompt message
+ */
+export type PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole =
+  ClosedEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole
+  >;
+
+export const PostV2DeploymentsInvokeMessageDeploymentsType = {
+  Function: "function",
+} as const;
+export type PostV2DeploymentsInvokeMessageDeploymentsType = ClosedEnum<
+  typeof PostV2DeploymentsInvokeMessageDeploymentsType
+>;
+
+export type PostV2DeploymentsInvokeMessageDeploymentsFunction = {
+  name: string;
+  /**
+   * JSON string arguments for the functions
+   */
+  arguments: string;
+};
+
+export type PostV2DeploymentsInvokeMessageDeploymentsToolCalls = {
+  id?: string | undefined;
+  index?: number | undefined;
+  type: PostV2DeploymentsInvokeMessageDeploymentsType;
+  function: PostV2DeploymentsInvokeMessageDeploymentsFunction;
+};
+
+export type PostV2DeploymentsInvokeMessageDeployments1 = {
+  /**
+   * The role of the prompt message
+   */
+  role:
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole;
+  content?: string | null | undefined;
+  toolCalls: Array<PostV2DeploymentsInvokeMessageDeploymentsToolCalls>;
+};
+
+export type PostV2DeploymentsInvokeDeploymentsMessage =
+  | PostV2DeploymentsInvokeMessageDeployments2
+  | PostV2DeploymentsInvokeMessage3
+  | PostV2DeploymentsInvokeMessageDeployments1;
+
+export type PostV2DeploymentsInvokeDeploymentsChoices = {
+  index: number;
+  message?:
+    | PostV2DeploymentsInvokeMessageDeployments2
+    | PostV2DeploymentsInvokeMessage3
+    | PostV2DeploymentsInvokeMessageDeployments1
+    | undefined;
+  finishReason?: string | null | undefined;
+};
+
+/**
+ * Metadata of the retrieved chunk from the knowledge base
+ */
+export type PostV2DeploymentsInvokeMetadata = {
+  /**
+   * Name of the file
+   */
+  fileName: string;
+  /**
+   * Page number of the chunk
+   */
+  pageNumber: number | null;
+  /**
+   * Type of the file
+   */
+  fileType: string;
+  /**
+   * Rerank scores are normalized to be in the range [0, 1]. Scores close to 1 indicate a high relevance to the query, and scores closer to 0 indicate low relevance. It is not accurate to assume a score of 0.9 means the document is 2x more relevant than a document with a score of 0.45
+   */
+  rerankScore?: number | undefined;
+  /**
+   * Search scores are normalized to be in the range [0, 1]. Search score is calculated based on `[Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)` algorithm. Scores close to 1 indicate the document is closer to the query, and scores closer to 0 indicate the document is farther from the query.
+   */
+  searchScore: number;
+};
+
+export type PostV2DeploymentsInvokeRetrievals = {
+  /**
+   * Content of the retrieved chunk from the knowledge base
+   */
+  document: string;
+  /**
+   * Metadata of the retrieved chunk from the knowledge base
+   */
+  metadata: PostV2DeploymentsInvokeMetadata;
+};
+
+/**
  * Response from the gateway
  */
-export type PostV2DeploymentsInvokeDeploymentsResponseBody = {};
+export type Data = {
+  /**
+   * A unique identifier for the response. Can be used to add metrics to the transaction.
+   */
+  id: string;
+  /**
+   * A timestamp indicating when the object was created. Usually in a standardized format like ISO 8601
+   */
+  created: Date;
+  /**
+   * Indicates the type of model used to generate the response
+   */
+  object: PostV2DeploymentsInvokeObject;
+  /**
+   * The model used to generate the response
+   */
+  model: string;
+  /**
+   * The provider used to generate the response
+   */
+  provider: PostV2DeploymentsInvokeProvider;
+  /**
+   * Indicates if the response is the final response
+   */
+  isFinal: boolean;
+  /**
+   * Indicates integration id used to generate the response
+   */
+  integrationId?: string | undefined;
+  /**
+   * A timestamp indicating when the object was finalized. Usually in a standardized format like ISO 8601
+   */
+  finalized?: Date | undefined;
+  /**
+   * Provider backed system fingerprint.
+   */
+  systemFingerprint?: string | null | undefined;
+  /**
+   * A list of choices generated by the model
+   */
+  choices: Array<PostV2DeploymentsInvokeDeploymentsChoices>;
+  /**
+   * List of documents retrieved from the knowledge base. This property is only available when the `include_retrievals` flag is set to `true` in the invoke settings. When stream is set to true, the `retrievals` property will be returned in the last streamed chunk where the property `is_final` is set to `true`.
+   */
+  retrievals?: Array<PostV2DeploymentsInvokeRetrievals> | undefined;
+  /**
+   * Response returned by the model provider. This functionality is only supported when streaming is not used. If streaming is used, the `provider_response` property will be set to `null`.
+   */
+  providerResponse?: any | undefined;
+};
+
+/**
+ * Successful operation
+ */
+export type PostV2DeploymentsInvokeDeploymentsResponseBody = {
+  /**
+   * Response from the gateway
+   */
+  data: Data;
+};
 
 /**
  * Indicates the type of model used to generate the response
@@ -268,15 +533,718 @@ export type PostV2DeploymentsInvokeResponse =
   | EventStream<PostV2DeploymentsInvokeDeploymentsResponseBody>;
 
 /** @internal */
+export const PostV2DeploymentsInvokeObject$inboundSchema: z.ZodNativeEnum<
+  typeof PostV2DeploymentsInvokeObject
+> = z.nativeEnum(PostV2DeploymentsInvokeObject);
+
+/** @internal */
+export const PostV2DeploymentsInvokeObject$outboundSchema: z.ZodNativeEnum<
+  typeof PostV2DeploymentsInvokeObject
+> = PostV2DeploymentsInvokeObject$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeObject$ {
+  /** @deprecated use `PostV2DeploymentsInvokeObject$inboundSchema` instead. */
+  export const inboundSchema = PostV2DeploymentsInvokeObject$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeObject$outboundSchema` instead. */
+  export const outboundSchema = PostV2DeploymentsInvokeObject$outboundSchema;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeProvider$inboundSchema: z.ZodNativeEnum<
+  typeof PostV2DeploymentsInvokeProvider
+> = z.nativeEnum(PostV2DeploymentsInvokeProvider);
+
+/** @internal */
+export const PostV2DeploymentsInvokeProvider$outboundSchema: z.ZodNativeEnum<
+  typeof PostV2DeploymentsInvokeProvider
+> = PostV2DeploymentsInvokeProvider$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeProvider$ {
+  /** @deprecated use `PostV2DeploymentsInvokeProvider$inboundSchema` instead. */
+  export const inboundSchema = PostV2DeploymentsInvokeProvider$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeProvider$outboundSchema` instead. */
+  export const outboundSchema = PostV2DeploymentsInvokeProvider$outboundSchema;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role
+  > = z.nativeEnum(
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role,
+  );
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role
+  > =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessage3$inboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeMessage3,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  role:
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema,
+  url: z.string(),
+});
+
+/** @internal */
+export type PostV2DeploymentsInvokeMessage3$Outbound = {
+  role: string;
+  url: string;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessage3$outboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeMessage3$Outbound,
+  z.ZodTypeDef,
+  PostV2DeploymentsInvokeMessage3
+> = z.object({
+  role:
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema,
+  url: z.string(),
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessage3$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessage3$inboundSchema` instead. */
+  export const inboundSchema = PostV2DeploymentsInvokeMessage3$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessage3$outboundSchema` instead. */
+  export const outboundSchema = PostV2DeploymentsInvokeMessage3$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessage3$Outbound` instead. */
+  export type Outbound = PostV2DeploymentsInvokeMessage3$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole
+  > = z.nativeEnum(PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole);
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole
+  > = PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeployments2$inboundSchema:
+  z.ZodType<PostV2DeploymentsInvokeMessageDeployments2, z.ZodTypeDef, unknown> =
+    z.object({
+      role:
+        PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema,
+      content: z.nullable(z.string()),
+    });
+
+/** @internal */
+export type PostV2DeploymentsInvokeMessageDeployments2$Outbound = {
+  role: string;
+  content: string | null;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeployments2$outboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeMessageDeployments2$Outbound,
+    z.ZodTypeDef,
+    PostV2DeploymentsInvokeMessageDeployments2
+  > = z.object({
+    role:
+      PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema,
+    content: z.nullable(z.string()),
+  });
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeployments2$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeployments2$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeployments2$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeployments2$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeployments2$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeployments2$Outbound` instead. */
+  export type Outbound = PostV2DeploymentsInvokeMessageDeployments2$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole
+  > = z.nativeEnum(
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole,
+  );
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole
+  > =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsType$inboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsInvokeMessageDeploymentsType> = z
+    .nativeEnum(PostV2DeploymentsInvokeMessageDeploymentsType);
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsType$outboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsInvokeMessageDeploymentsType> =
+    PostV2DeploymentsInvokeMessageDeploymentsType$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsType$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsType$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsType$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsType$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsType$outboundSchema;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsFunction$inboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeMessageDeploymentsFunction,
+    z.ZodTypeDef,
+    unknown
+  > = z.object({
+    name: z.string(),
+    arguments: z.string(),
+  });
+
+/** @internal */
+export type PostV2DeploymentsInvokeMessageDeploymentsFunction$Outbound = {
+  name: string;
+  arguments: string;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsFunction$outboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeMessageDeploymentsFunction$Outbound,
+    z.ZodTypeDef,
+    PostV2DeploymentsInvokeMessageDeploymentsFunction
+  > = z.object({
+    name: z.string(),
+    arguments: z.string(),
+  });
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsFunction$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsFunction$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsFunction$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsFunction$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsFunction$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsFunction$Outbound` instead. */
+  export type Outbound =
+    PostV2DeploymentsInvokeMessageDeploymentsFunction$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsToolCalls$inboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeMessageDeploymentsToolCalls,
+    z.ZodTypeDef,
+    unknown
+  > = z.object({
+    id: z.string().optional(),
+    index: z.number().optional(),
+    type: PostV2DeploymentsInvokeMessageDeploymentsType$inboundSchema,
+    function: z.lazy(() =>
+      PostV2DeploymentsInvokeMessageDeploymentsFunction$inboundSchema
+    ),
+  });
+
+/** @internal */
+export type PostV2DeploymentsInvokeMessageDeploymentsToolCalls$Outbound = {
+  id?: string | undefined;
+  index?: number | undefined;
+  type: string;
+  function: PostV2DeploymentsInvokeMessageDeploymentsFunction$Outbound;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeploymentsToolCalls$outboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeMessageDeploymentsToolCalls$Outbound,
+    z.ZodTypeDef,
+    PostV2DeploymentsInvokeMessageDeploymentsToolCalls
+  > = z.object({
+    id: z.string().optional(),
+    index: z.number().optional(),
+    type: PostV2DeploymentsInvokeMessageDeploymentsType$outboundSchema,
+    function: z.lazy(() =>
+      PostV2DeploymentsInvokeMessageDeploymentsFunction$outboundSchema
+    ),
+  });
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsToolCalls$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsToolCalls$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsToolCalls$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsToolCalls$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeploymentsToolCalls$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsToolCalls$Outbound` instead. */
+  export type Outbound =
+    PostV2DeploymentsInvokeMessageDeploymentsToolCalls$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeployments1$inboundSchema:
+  z.ZodType<PostV2DeploymentsInvokeMessageDeployments1, z.ZodTypeDef, unknown> =
+    z.object({
+      role:
+        PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema,
+      content: z.nullable(z.string()).optional(),
+      tool_calls: z.array(
+        z.lazy(() =>
+          PostV2DeploymentsInvokeMessageDeploymentsToolCalls$inboundSchema
+        ),
+      ),
+    }).transform((v) => {
+      return remap$(v, {
+        "tool_calls": "toolCalls",
+      });
+    });
+
+/** @internal */
+export type PostV2DeploymentsInvokeMessageDeployments1$Outbound = {
+  role: string;
+  content?: string | null | undefined;
+  tool_calls: Array<
+    PostV2DeploymentsInvokeMessageDeploymentsToolCalls$Outbound
+  >;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeMessageDeployments1$outboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeMessageDeployments1$Outbound,
+    z.ZodTypeDef,
+    PostV2DeploymentsInvokeMessageDeployments1
+  > = z.object({
+    role:
+      PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema,
+    content: z.nullable(z.string()).optional(),
+    toolCalls: z.array(
+      z.lazy(() =>
+        PostV2DeploymentsInvokeMessageDeploymentsToolCalls$outboundSchema
+      ),
+    ),
+  }).transform((v) => {
+    return remap$(v, {
+      toolCalls: "tool_calls",
+    });
+  });
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMessageDeployments1$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeployments1$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeMessageDeployments1$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeployments1$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeMessageDeployments1$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeployments1$Outbound` instead. */
+  export type Outbound = PostV2DeploymentsInvokeMessageDeployments1$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeDeploymentsMessage$inboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeDeploymentsMessage,
+  z.ZodTypeDef,
+  unknown
+> = z.union([
+  z.lazy(() => PostV2DeploymentsInvokeMessageDeployments2$inboundSchema),
+  z.lazy(() => PostV2DeploymentsInvokeMessage3$inboundSchema),
+  z.lazy(() => PostV2DeploymentsInvokeMessageDeployments1$inboundSchema),
+]);
+
+/** @internal */
+export type PostV2DeploymentsInvokeDeploymentsMessage$Outbound =
+  | PostV2DeploymentsInvokeMessageDeployments2$Outbound
+  | PostV2DeploymentsInvokeMessage3$Outbound
+  | PostV2DeploymentsInvokeMessageDeployments1$Outbound;
+
+/** @internal */
+export const PostV2DeploymentsInvokeDeploymentsMessage$outboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeDeploymentsMessage$Outbound,
+    z.ZodTypeDef,
+    PostV2DeploymentsInvokeDeploymentsMessage
+  > = z.union([
+    z.lazy(() => PostV2DeploymentsInvokeMessageDeployments2$outboundSchema),
+    z.lazy(() => PostV2DeploymentsInvokeMessage3$outboundSchema),
+    z.lazy(() => PostV2DeploymentsInvokeMessageDeployments1$outboundSchema),
+  ]);
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeDeploymentsMessage$ {
+  /** @deprecated use `PostV2DeploymentsInvokeDeploymentsMessage$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeDeploymentsMessage$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeDeploymentsMessage$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeDeploymentsMessage$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeDeploymentsMessage$Outbound` instead. */
+  export type Outbound = PostV2DeploymentsInvokeDeploymentsMessage$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeDeploymentsChoices$inboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeDeploymentsChoices,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  index: z.number(),
+  message: z.union([
+    z.lazy(() => PostV2DeploymentsInvokeMessageDeployments2$inboundSchema),
+    z.lazy(() => PostV2DeploymentsInvokeMessage3$inboundSchema),
+    z.lazy(() => PostV2DeploymentsInvokeMessageDeployments1$inboundSchema),
+  ]).optional(),
+  finish_reason: z.nullable(z.string()).optional(),
+}).transform((v) => {
+  return remap$(v, {
+    "finish_reason": "finishReason",
+  });
+});
+
+/** @internal */
+export type PostV2DeploymentsInvokeDeploymentsChoices$Outbound = {
+  index: number;
+  message?:
+    | PostV2DeploymentsInvokeMessageDeployments2$Outbound
+    | PostV2DeploymentsInvokeMessage3$Outbound
+    | PostV2DeploymentsInvokeMessageDeployments1$Outbound
+    | undefined;
+  finish_reason?: string | null | undefined;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeDeploymentsChoices$outboundSchema:
+  z.ZodType<
+    PostV2DeploymentsInvokeDeploymentsChoices$Outbound,
+    z.ZodTypeDef,
+    PostV2DeploymentsInvokeDeploymentsChoices
+  > = z.object({
+    index: z.number(),
+    message: z.union([
+      z.lazy(() => PostV2DeploymentsInvokeMessageDeployments2$outboundSchema),
+      z.lazy(() => PostV2DeploymentsInvokeMessage3$outboundSchema),
+      z.lazy(() => PostV2DeploymentsInvokeMessageDeployments1$outboundSchema),
+    ]).optional(),
+    finishReason: z.nullable(z.string()).optional(),
+  }).transform((v) => {
+    return remap$(v, {
+      finishReason: "finish_reason",
+    });
+  });
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeDeploymentsChoices$ {
+  /** @deprecated use `PostV2DeploymentsInvokeDeploymentsChoices$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2DeploymentsInvokeDeploymentsChoices$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeDeploymentsChoices$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeDeploymentsChoices$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeDeploymentsChoices$Outbound` instead. */
+  export type Outbound = PostV2DeploymentsInvokeDeploymentsChoices$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeMetadata$inboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeMetadata,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  file_name: z.string(),
+  page_number: z.nullable(z.number()),
+  file_type: z.string(),
+  rerank_score: z.number().optional(),
+  search_score: z.number(),
+}).transform((v) => {
+  return remap$(v, {
+    "file_name": "fileName",
+    "page_number": "pageNumber",
+    "file_type": "fileType",
+    "rerank_score": "rerankScore",
+    "search_score": "searchScore",
+  });
+});
+
+/** @internal */
+export type PostV2DeploymentsInvokeMetadata$Outbound = {
+  file_name: string;
+  page_number: number | null;
+  file_type: string;
+  rerank_score?: number | undefined;
+  search_score: number;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeMetadata$outboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeMetadata$Outbound,
+  z.ZodTypeDef,
+  PostV2DeploymentsInvokeMetadata
+> = z.object({
+  fileName: z.string(),
+  pageNumber: z.nullable(z.number()),
+  fileType: z.string(),
+  rerankScore: z.number().optional(),
+  searchScore: z.number(),
+}).transform((v) => {
+  return remap$(v, {
+    fileName: "file_name",
+    pageNumber: "page_number",
+    fileType: "file_type",
+    rerankScore: "rerank_score",
+    searchScore: "search_score",
+  });
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeMetadata$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMetadata$inboundSchema` instead. */
+  export const inboundSchema = PostV2DeploymentsInvokeMetadata$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMetadata$outboundSchema` instead. */
+  export const outboundSchema = PostV2DeploymentsInvokeMetadata$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMetadata$Outbound` instead. */
+  export type Outbound = PostV2DeploymentsInvokeMetadata$Outbound;
+}
+
+/** @internal */
+export const PostV2DeploymentsInvokeRetrievals$inboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeRetrievals,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  document: z.string(),
+  metadata: z.lazy(() => PostV2DeploymentsInvokeMetadata$inboundSchema),
+});
+
+/** @internal */
+export type PostV2DeploymentsInvokeRetrievals$Outbound = {
+  document: string;
+  metadata: PostV2DeploymentsInvokeMetadata$Outbound;
+};
+
+/** @internal */
+export const PostV2DeploymentsInvokeRetrievals$outboundSchema: z.ZodType<
+  PostV2DeploymentsInvokeRetrievals$Outbound,
+  z.ZodTypeDef,
+  PostV2DeploymentsInvokeRetrievals
+> = z.object({
+  document: z.string(),
+  metadata: z.lazy(() => PostV2DeploymentsInvokeMetadata$outboundSchema),
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PostV2DeploymentsInvokeRetrievals$ {
+  /** @deprecated use `PostV2DeploymentsInvokeRetrievals$inboundSchema` instead. */
+  export const inboundSchema = PostV2DeploymentsInvokeRetrievals$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeRetrievals$outboundSchema` instead. */
+  export const outboundSchema =
+    PostV2DeploymentsInvokeRetrievals$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeRetrievals$Outbound` instead. */
+  export type Outbound = PostV2DeploymentsInvokeRetrievals$Outbound;
+}
+
+/** @internal */
+export const Data$inboundSchema: z.ZodType<Data, z.ZodTypeDef, unknown> = z
+  .object({
+    id: z.string(),
+    created: z.string().datetime({ offset: true }).transform(v => new Date(v)),
+    object: PostV2DeploymentsInvokeObject$inboundSchema,
+    model: z.string(),
+    provider: PostV2DeploymentsInvokeProvider$inboundSchema,
+    is_final: z.boolean(),
+    integration_id: z.string().optional(),
+    finalized: z.string().datetime({ offset: true }).transform(v => new Date(v))
+      .optional(),
+    system_fingerprint: z.nullable(z.string()).optional(),
+    choices: z.array(
+      z.lazy(() => PostV2DeploymentsInvokeDeploymentsChoices$inboundSchema),
+    ),
+    retrievals: z.array(
+      z.lazy(() => PostV2DeploymentsInvokeRetrievals$inboundSchema),
+    ).optional(),
+    provider_response: z.any().optional(),
+  }).transform((v) => {
+    return remap$(v, {
+      "is_final": "isFinal",
+      "integration_id": "integrationId",
+      "system_fingerprint": "systemFingerprint",
+      "provider_response": "providerResponse",
+    });
+  });
+
+/** @internal */
+export type Data$Outbound = {
+  id: string;
+  created: string;
+  object: string;
+  model: string;
+  provider: string;
+  is_final: boolean;
+  integration_id?: string | undefined;
+  finalized?: string | undefined;
+  system_fingerprint?: string | null | undefined;
+  choices: Array<PostV2DeploymentsInvokeDeploymentsChoices$Outbound>;
+  retrievals?: Array<PostV2DeploymentsInvokeRetrievals$Outbound> | undefined;
+  provider_response?: any | undefined;
+};
+
+/** @internal */
+export const Data$outboundSchema: z.ZodType<Data$Outbound, z.ZodTypeDef, Data> =
+  z.object({
+    id: z.string(),
+    created: z.date().transform(v => v.toISOString()),
+    object: PostV2DeploymentsInvokeObject$outboundSchema,
+    model: z.string(),
+    provider: PostV2DeploymentsInvokeProvider$outboundSchema,
+    isFinal: z.boolean(),
+    integrationId: z.string().optional(),
+    finalized: z.date().transform(v => v.toISOString()).optional(),
+    systemFingerprint: z.nullable(z.string()).optional(),
+    choices: z.array(
+      z.lazy(() => PostV2DeploymentsInvokeDeploymentsChoices$outboundSchema),
+    ),
+    retrievals: z.array(
+      z.lazy(() => PostV2DeploymentsInvokeRetrievals$outboundSchema),
+    ).optional(),
+    providerResponse: z.any().optional(),
+  }).transform((v) => {
+    return remap$(v, {
+      isFinal: "is_final",
+      integrationId: "integration_id",
+      systemFingerprint: "system_fingerprint",
+      providerResponse: "provider_response",
+    });
+  });
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace Data$ {
+  /** @deprecated use `Data$inboundSchema` instead. */
+  export const inboundSchema = Data$inboundSchema;
+  /** @deprecated use `Data$outboundSchema` instead. */
+  export const outboundSchema = Data$outboundSchema;
+  /** @deprecated use `Data$Outbound` instead. */
+  export type Outbound = Data$Outbound;
+}
+
+/** @internal */
 export const PostV2DeploymentsInvokeDeploymentsResponseBody$inboundSchema:
   z.ZodType<
     PostV2DeploymentsInvokeDeploymentsResponseBody,
     z.ZodTypeDef,
     unknown
-  > = z.object({});
+  > = z.object({
+    data: z.string().transform((v, ctx) => {
+      try {
+        return JSON.parse(v);
+      } catch (err) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `malformed json: ${err}`,
+        });
+        return z.NEVER;
+      }
+    }).pipe(z.lazy(() => Data$inboundSchema)),
+  });
 
 /** @internal */
-export type PostV2DeploymentsInvokeDeploymentsResponseBody$Outbound = {};
+export type PostV2DeploymentsInvokeDeploymentsResponseBody$Outbound = {
+  data: Data$Outbound;
+};
 
 /** @internal */
 export const PostV2DeploymentsInvokeDeploymentsResponseBody$outboundSchema:
@@ -284,7 +1252,9 @@ export const PostV2DeploymentsInvokeDeploymentsResponseBody$outboundSchema:
     PostV2DeploymentsInvokeDeploymentsResponseBody$Outbound,
     z.ZodTypeDef,
     PostV2DeploymentsInvokeDeploymentsResponseBody
-  > = z.object({});
+  > = z.object({
+    data: z.lazy(() => Data$outboundSchema),
+  });
 
 /**
  * @internal

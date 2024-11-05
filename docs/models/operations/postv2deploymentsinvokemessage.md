@@ -7,7 +7,7 @@
 
 ```typescript
 const value: operations.PostV2DeploymentsInvokeMessage1 = {
-  role: "system",
+  role: "expected_output",
   toolCalls: [
     {
       type: "function",
@@ -33,8 +33,8 @@ const value: operations.PostV2DeploymentsInvokeMessage2 = {
 
 ```typescript
 const value: operations.Message3 = {
-  role: "tool",
-  url: "https://moist-bourgeoisie.name/",
+  role: "prompt",
+  url: "https://well-to-do-papa.info",
 };
 ```
 

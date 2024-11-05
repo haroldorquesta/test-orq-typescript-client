@@ -3,17 +3,14 @@
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsRequest } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsRequest } from "orq-poc-typescript/models/operations";
 
-let value: GetV2ResourcesDatasetsRequest = {
-  page: 6995.75,
-  limit: 9679.66,
-};
+let value: GetV2ResourcesDatasetsRequest = {};
 ```
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `page`             | *number*           | :heavy_check_mark: | N/A                |
-| `limit`            | *number*           | :heavy_check_mark: | N/A                |
+| `page`             | *number*           | :heavy_minus_sign: | N/A                |
+| `limit`            | *number*           | :heavy_minus_sign: | N/A                |

@@ -18,7 +18,7 @@ const value: operations.GetV2ResourcesDatasetsContent2[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://pure-nerve.name/",
+      url: "https://regal-developing.biz",
     },
   },
 ];

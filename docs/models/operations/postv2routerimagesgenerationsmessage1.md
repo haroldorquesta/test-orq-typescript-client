@@ -3,10 +3,10 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterImagesGenerationsMessage1 } from "orq-node-client/models/operations";
+import { PostV2RouterImagesGenerationsMessage1 } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsMessage1 = {
-  role: "expected_output",
+  role: "assistant",
   content: "<value>",
 };
 ```

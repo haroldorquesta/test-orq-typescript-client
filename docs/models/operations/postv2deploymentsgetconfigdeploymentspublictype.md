@@ -5,7 +5,7 @@ The type of the model. Current `chat`,`completion` and `image` are supported
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsGetConfigDeploymentsPublicType } from "orq-node-client/models/operations";
+import { PostV2DeploymentsGetConfigDeploymentsPublicType } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsGetConfigDeploymentsPublicType = "tts";
 ```

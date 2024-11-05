@@ -5,6 +5,7 @@
 export * from "./deletev2resourcesdatasetsdatasetid.js";
 export * from "./deletev2resourcesdatasetsdatasetidrowsbulk.js";
 export * from "./deletev2resourcesdatasetsdatasetidrowsrowid.js";
+export * from "./getv2deployments.js";
 export * from "./getv2resourcesdatasets.js";
 export * from "./getv2resourcesdatasetsdatasetid.js";
 export * from "./getv2resourcesdatasetsdatasetidrows.js";

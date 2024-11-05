@@ -5,9 +5,9 @@ The reason the model stopped generating tokens.
 ## Example Usage
 
 ```typescript
-import { FinishReason } from "orq-node-client/models/operations";
+import { FinishReason } from "orq-poc-typescript/models/operations";
 
-let value: FinishReason = "stop";
+let value: FinishReason = "content_filter";
 ```
 
 ## Values

@@ -18,7 +18,7 @@ const value: operations.PatchV2ResourcesDatasetsDatasetIdRowsRowId21 = {
 const value: operations.PatchV2ResourcesDatasetsDatasetIdRowsRowId22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://proper-hutch.org/",
+    url: "https://milky-heartache.biz/",
   },
 };
 ```

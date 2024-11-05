@@ -7,8 +7,8 @@ import { remap as remap$ } from "../../lib/primitives.js";
 import { ClosedEnum } from "../../types/enums.js";
 
 export type GetV2ResourcesDatasetsRequest = {
-  page: number;
-  limit: number;
+  page?: number | undefined;
+  limit?: number | undefined;
 };
 
 /**
@@ -212,14 +212,14 @@ export const GetV2ResourcesDatasetsRequest$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  page: z.number(),
-  limit: z.number(),
+  page: z.number().optional(),
+  limit: z.number().optional(),
 });
 
 /** @internal */
 export type GetV2ResourcesDatasetsRequest$Outbound = {
-  page: number;
-  limit: number;
+  page?: number | undefined;
+  limit?: number | undefined;
 };
 
 /** @internal */
@@ -228,8 +228,8 @@ export const GetV2ResourcesDatasetsRequest$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   GetV2ResourcesDatasetsRequest
 > = z.object({
-  page: z.number(),
-  limit: z.number(),
+  page: z.number().optional(),
+  limit: z.number().optional(),
 });
 
 /**
@@ -765,7 +765,7 @@ export const GetV2ResourcesDatasetsItems$inboundSchema: z.ZodType<
   created: z.string().datetime({ offset: true }).transform(v => new Date(v))
     .optional(),
   updated: z.string().datetime({ offset: true }).default(
-    "2024-10-14T12:39:38.949Z",
+    "2024-10-22T07:23:04.365Z",
   ).transform(v => new Date(v)),
 }).transform((v) => {
   return remap$(v, {
@@ -794,7 +794,7 @@ export const GetV2ResourcesDatasetsItems$outboundSchema: z.ZodType<
   ),
   expectedOutput: z.nullable(z.string()).optional(),
   created: z.date().transform(v => v.toISOString()).optional(),
-  updated: z.date().default(() => new Date("2024-10-14T12:39:38.949Z"))
+  updated: z.date().default(() => new Date("2024-10-22T07:23:04.365Z"))
     .transform(v => v.toISOString()),
 }).transform((v) => {
   return remap$(v, {
@@ -827,7 +827,7 @@ export const Items$inboundSchema: z.ZodType<Items, z.ZodTypeDef, unknown> = z
     created: z.string().datetime({ offset: true }).transform(v => new Date(v))
       .optional(),
     updated: z.string().datetime({ offset: true }).default(
-      "2024-10-14T12:39:38.949Z",
+      "2024-10-22T07:23:04.365Z",
     ).transform(v => new Date(v)),
   }).transform((v) => {
     return remap$(v, {
@@ -863,7 +863,7 @@ export const Items$outboundSchema: z.ZodType<
   updatedById: z.nullable(z.string()),
   items: z.array(z.lazy(() => GetV2ResourcesDatasetsItems$outboundSchema)),
   created: z.date().transform(v => v.toISOString()).optional(),
-  updated: z.date().default(() => new Date("2024-10-14T12:39:38.949Z"))
+  updated: z.date().default(() => new Date("2024-10-22T07:23:04.365Z"))
     .transform(v => v.toISOString()),
 }).transform((v) => {
   return remap$(v, {

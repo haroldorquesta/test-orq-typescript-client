@@ -3,20 +3,20 @@
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletionsResponseBodyContent } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletionsResponseBodyContent } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsResponseBodyContent = {
   token: "<value>",
-  logprob: 3741.70,
+  logprob: 3044.68,
   bytes: [
-    4635.75,
+    8391.89,
   ],
   topLogprobs: [
     {
       token: "<value>",
-      logprob: 2776.29,
+      logprob: 2377.42,
       bytes: [
-        5867.84,
+        5023.89,
       ],
     },
   ],

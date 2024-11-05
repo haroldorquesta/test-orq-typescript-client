@@ -1,12 +1,15 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 0712d37e7a822a17421fc57fd9ffaac1
+  docChecksum: 04bb26bbe622ecb022c9735e3b9e8873
   docVersion: "2.0"
-  speakeasyVersion: 1.419.0
-  generationVersion: 2.438.3
-  releaseVersion: 0.0.1
-  configChecksum: 5f151a12ff5d35aa0084024f9d560fb9
+  speakeasyVersion: 1.421.2
+  generationVersion: 2.438.15
+  releaseVersion: 0.0.2
+  configChecksum: 8771bf3cad70dc21924c6f12dbd3c626
+  repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
+  installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
+  published: true
 features:
   typescript:
     acceptHeaders: 2.81.2
@@ -71,6 +74,7 @@ generatedFiles:
   - docs/models/components/userid.md
   - docs/models/errors/getv2resourcesdatasetsdatasetidresponsebody.md
   - docs/models/errors/getv2resourcesdatasetsdatasetidrowsrowidresponsebody.md
+  - docs/models/errors/honoapierror.md
   - docs/models/operations/apiversion.md
   - docs/models/operations/billedunits.md
   - docs/models/operations/choices.md
@@ -92,6 +96,37 @@ generatedFiles:
   - docs/models/operations/format.md
   - docs/models/operations/four.md
   - docs/models/operations/functiont.md
+  - docs/models/operations/getv2deployments21.md
+  - docs/models/operations/getv2deployments22.md
+  - docs/models/operations/getv2deployments2deploymentstype.md
+  - docs/models/operations/getv2deployments2imageurl.md
+  - docs/models/operations/getv2deployments2type.md
+  - docs/models/operations/getv2deploymentscontent.md
+  - docs/models/operations/getv2deploymentscontent2.md
+  - docs/models/operations/getv2deploymentsdata.md
+  - docs/models/operations/getv2deploymentsdeploymentsfunction.md
+  - docs/models/operations/getv2deploymentsdeploymentspublictype.md
+  - docs/models/operations/getv2deploymentsdeploymentstype.md
+  - docs/models/operations/getv2deploymentsencodingformat.md
+  - docs/models/operations/getv2deploymentsformat.md
+  - docs/models/operations/getv2deploymentsfunction.md
+  - docs/models/operations/getv2deploymentsmessages.md
+  - docs/models/operations/getv2deploymentsobject.md
+  - docs/models/operations/getv2deploymentsparameters.md
+  - docs/models/operations/getv2deploymentsphotorealversion.md
+  - docs/models/operations/getv2deploymentsprovider.md
+  - docs/models/operations/getv2deploymentsquality.md
+  - docs/models/operations/getv2deploymentsrequest.md
+  - docs/models/operations/getv2deploymentsresponsebody.md
+  - docs/models/operations/getv2deploymentsresponseformat.md
+  - docs/models/operations/getv2deploymentsresponseformat1.md
+  - docs/models/operations/getv2deploymentsresponseformat2.md
+  - docs/models/operations/getv2deploymentsresponseformatdeploymentstype.md
+  - docs/models/operations/getv2deploymentsresponseformattype.md
+  - docs/models/operations/getv2deploymentsrole.md
+  - docs/models/operations/getv2deploymentstoolcalls.md
+  - docs/models/operations/getv2deploymentstools.md
+  - docs/models/operations/getv2deploymentstype.md
   - docs/models/operations/getv2resourcesdatasets21.md
   - docs/models/operations/getv2resourcesdatasets22.md
   - docs/models/operations/getv2resourcesdatasets2imageurl.md
@@ -178,6 +213,8 @@ generatedFiles:
   - docs/models/operations/messagetype.md
   - docs/models/operations/meta.md
   - docs/models/operations/metadata.md
+  - docs/models/operations/modelparameters.md
+  - docs/models/operations/modeltype.md
   - docs/models/operations/objectt.md
   - docs/models/operations/one.md
   - docs/models/operations/parameterst.md
@@ -268,18 +305,33 @@ generatedFiles:
   - docs/models/operations/postv2deploymentsidmetricstoolcalls.md
   - docs/models/operations/postv2deploymentsidmetricstype.md
   - docs/models/operations/postv2deploymentsinvokechoices.md
+  - docs/models/operations/postv2deploymentsinvokedeploymentschoices.md
+  - docs/models/operations/postv2deploymentsinvokedeploymentsmessage.md
   - docs/models/operations/postv2deploymentsinvokedeploymentsresponsebody.md
   - docs/models/operations/postv2deploymentsinvokemessage.md
   - docs/models/operations/postv2deploymentsinvokemessage1.md
   - docs/models/operations/postv2deploymentsinvokemessage2.md
+  - docs/models/operations/postv2deploymentsinvokemessage3.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeployments1.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeployments2.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentsfunction.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicresponse200role.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicresponse200texteventstreamrole.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicresponserole.md
   - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicrole.md
   - docs/models/operations/postv2deploymentsinvokemessagedeploymentsrole.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentstoolcalls.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentstype.md
   - docs/models/operations/postv2deploymentsinvokemessagefunction.md
   - docs/models/operations/postv2deploymentsinvokemessagerole.md
   - docs/models/operations/postv2deploymentsinvokemessagetoolcalls.md
   - docs/models/operations/postv2deploymentsinvokemessagetype.md
+  - docs/models/operations/postv2deploymentsinvokemetadata.md
+  - docs/models/operations/postv2deploymentsinvokeobject.md
+  - docs/models/operations/postv2deploymentsinvokeprovider.md
   - docs/models/operations/postv2deploymentsinvokeresponse.md
   - docs/models/operations/postv2deploymentsinvokeresponsebody.md
+  - docs/models/operations/postv2deploymentsinvokeretrievals.md
   - docs/models/operations/postv2filesbulkfilespurpose.md
   - docs/models/operations/postv2filesbulkpurpose.md
   - docs/models/operations/postv2filesbulkrequestbody.md
@@ -389,6 +441,7 @@ generatedFiles:
   - docs/models/operations/postv2routercompletionsrequestbody.md
   - docs/models/operations/postv2routercompletionsresponsebody.md
   - docs/models/operations/postv2routercompletionsusage.md
+  - docs/models/operations/postv2routerembeddingsdata.md
   - docs/models/operations/postv2routerembeddingsobject.md
   - docs/models/operations/postv2routerembeddingsrequestbody.md
   - docs/models/operations/postv2routerembeddingsresponsebody.md
@@ -411,6 +464,7 @@ generatedFiles:
   - docs/models/operations/postv2routerrerankresponsebody.md
   - docs/models/operations/prefixmessages.md
   - docs/models/operations/prompt.md
+  - docs/models/operations/promptconfig.md
   - docs/models/operations/provider.md
   - docs/models/operations/purpose.md
   - docs/models/operations/quality.md
@@ -433,6 +487,7 @@ generatedFiles:
   - docs/models/operations/responseformat.md
   - docs/models/operations/responseformat1.md
   - docs/models/operations/responseformat2.md
+  - docs/models/operations/responseformatjsonschema.md
   - docs/models/operations/responseformattype.md
   - docs/models/operations/results.md
   - docs/models/operations/retrievals.md
@@ -467,6 +522,7 @@ generatedFiles:
   - package.json
   - src/core.ts
   - src/funcs/contactsPostContacts.ts
+  - src/funcs/deploymentsGetV2Deployments.ts
   - src/funcs/deploymentsPostV2DeploymentsGetConfig.ts
   - src/funcs/deploymentsPostV2DeploymentsIdMetrics.ts
   - src/funcs/deploymentsPostV2DeploymentsInvoke.ts
@@ -476,6 +532,7 @@ generatedFiles:
   - src/funcs/publicDeleteV2ResourcesDatasetsDatasetId.ts
   - src/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk.ts
   - src/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId.ts
+  - src/funcs/publicGetV2Deployments.ts
   - src/funcs/publicGetV2ResourcesDatasets.ts
   - src/funcs/publicGetV2ResourcesDatasetsDatasetId.ts
   - src/funcs/publicGetV2ResourcesDatasetsDatasetIdRows.ts
@@ -538,6 +595,7 @@ generatedFiles:
   - src/models/components/security.ts
   - src/models/errors/getv2resourcesdatasetsdatasetid.ts
   - src/models/errors/getv2resourcesdatasetsdatasetidrowsrowid.ts
+  - src/models/errors/honoapierror.ts
   - src/models/errors/httpclienterrors.ts
   - src/models/errors/index.ts
   - src/models/errors/sdkerror.ts
@@ -545,6 +603,7 @@ generatedFiles:
   - src/models/operations/deletev2resourcesdatasetsdatasetid.ts
   - src/models/operations/deletev2resourcesdatasetsdatasetidrowsbulk.ts
   - src/models/operations/deletev2resourcesdatasetsdatasetidrowsrowid.ts
+  - src/models/operations/getv2deployments.ts
   - src/models/operations/getv2resourcesdatasets.ts
   - src/models/operations/getv2resourcesdatasetsdatasetid.ts
   - src/models/operations/getv2resourcesdatasetsdatasetidrows.ts
@@ -640,7 +699,7 @@ examples:
         application/json: {"input": "<value>", "model": "Accord"}
       responses:
         "200":
-          application/json: {"object": "list", "data": [{"object": "embedding", "embedding": [], "index": "5011.00"}, {"object": "embedding", "embedding": "<value>", "index": "8076.69"}, {"object": "embedding", "embedding": ["3624.61", "3278.34"], "index": "5462.94"}], "model": "Taurus", "usage": {"prompt_tokens": "1442.96", "total_tokens": "8074.39"}}
+          application/json: {"object": "list", "data": [{"object": "embedding", "embedding": [], "index": "5011.00"}, {"object": "embedding", "embedding": "<value>", "index": "8076.69"}, {"object": "embedding", "embedding": [], "index": "5462.94"}], "model": "Taurus", "usage": {"prompt_tokens": "1442.96", "total_tokens": "8074.39"}}
   post_/v2/router/chat/completions:
     speakeasy-default-post-/v2-/router/chat/completions:
       requestBody:
@@ -754,3 +813,10 @@ examples:
       responses:
         "200":
           application/json: {"messages": []}
+  get_/v2/deployments:
+    speakeasy-default-get-/v2-/deployments:
+      responses:
+        "200":
+          application/json: {"object": "list", "data": [{"id": "c5a7fdb5-c79d-4ab9-a747-0c1e87dc1c30", "created": "<value>", "updated": "<value>", "key": "<key>", "description": "step-mother ah likewise parched how supposing unto midst", "prompt_config": {"tools": [{"type": "function", "function": {"name": "<value>", "parameters": {"type": "object", "properties": {"key": "<value>"}}}}, {"type": "function", "function": {"name": "<value>", "parameters": {"type": "object", "properties": {}}}}], "model": "Element", "model_type": "rerank", "provider": "leonardoai", "messages": [{"role": "system", "content": [{"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}, {"type": "image_url", "image_url": {"url": "https://quixotic-suspension.info"}}]}, {"role": "system", "content": "<value>"}, {"role": "user", "content": []}]}, "version": "<value>"}, {"id": "debdd73f-22f9-496a-92b3-6e348cc7d35a", "created": "<value>", "updated": "<value>", "key": "<key>", "description": "taxicab nearly if think reluctantly", "prompt_config": {"tools": [], "model": "Element", "model_type": "completion", "provider": "openai", "messages": []}, "version": "<value>"}, {"id": "6dbc75ad-ce3a-48e9-bdf6-444671edb165", "created": "<value>", "updated": "<value>", "key": "<key>", "description": "sociable scrutinise while instruction furthermore horde upliftingly footrest", "prompt_config": {"tools": [], "model": "Malibu", "model_type": "vision", "provider": "azure", "messages": [{"role": "user", "content": "<value>"}]}, "version": "<value>"}], "has_more": true}
+        "500":
+          application/json: {"message": "<value>"}

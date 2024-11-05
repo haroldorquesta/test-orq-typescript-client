@@ -5,9 +5,9 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { PatchV2ResourcesDatasetsDatasetIdRowsRowIdRole } from "orq-node-client/models/operations";
+import { PatchV2ResourcesDatasetsDatasetIdRowsRowIdRole } from "orq-poc-typescript/models/operations";
 
-let value: PatchV2ResourcesDatasetsDatasetIdRowsRowIdRole = "expected_output";
+let value: PatchV2ResourcesDatasetsDatasetIdRowsRowIdRole = "prompt";
 ```
 
 ## Values

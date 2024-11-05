@@ -5,9 +5,9 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdRowsRowIdRole } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsDatasetIdRowsRowIdRole } from "orq-poc-typescript/models/operations";
 
-let value: GetV2ResourcesDatasetsDatasetIdRowsRowIdRole = "system";
+let value: GetV2ResourcesDatasetsDatasetIdRowsRowIdRole = "exception";
 ```
 
 ## Values

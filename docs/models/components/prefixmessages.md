@@ -3,18 +3,11 @@
 ## Example Usage
 
 ```typescript
-import { PrefixMessages } from "orq-node-client/models/components";
+import { PrefixMessages } from "orq-poc-typescript/models/components";
 
 let value: PrefixMessages = {
   role: "tool",
-  content: [
-    {
-      type: "image_url",
-      imageUrl: {
-        url: "https://criminal-mathematics.info",
-      },
-    },
-  ],
+  content: "<value>",
 };
 ```
 

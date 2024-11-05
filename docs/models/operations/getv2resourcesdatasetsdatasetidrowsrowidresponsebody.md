@@ -5,21 +5,14 @@ Returned dataset row model from the API.
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdRowsRowIdResponseBody } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsDatasetIdRowsRowIdResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsDatasetIdRowsRowIdResponseBody = {
-  id: "544cf8f6-1647-4a7e-beb7-26b41eb9cd7e",
+  id: "96866b12-dc46-4ed9-b306-add0353cc8f2",
   messages: [
     {
-      role: "user",
-      content: [
-        {
-          type: "image_url",
-          imageUrl: {
-            url: "https://warm-excess.org",
-          },
-        },
-      ],
+      role: "system",
+      content: "<value>",
     },
   ],
 };

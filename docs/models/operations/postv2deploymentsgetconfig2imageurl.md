@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsGetConfig2ImageUrl } from "orq-node-client/models/operations";
+import { PostV2DeploymentsGetConfig2ImageUrl } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsGetConfig2ImageUrl = {
   url: "https://gigantic-freezing.name/",

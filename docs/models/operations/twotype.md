@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TwoType } from "orq-node-client/models/operations";
+import { TwoType } from "orq-poc-typescript/models/operations";
 
 let value: TwoType = "image_url";
 ```

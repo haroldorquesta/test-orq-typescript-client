@@ -3,10 +3,10 @@
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsInvokeMessage1 } from "orq-node-client/models/operations";
+import { PostV2DeploymentsInvokeMessage1 } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsInvokeMessage1 = {
-  role: "exception",
+  role: "tool",
   toolCalls: [
     {
       type: "function",

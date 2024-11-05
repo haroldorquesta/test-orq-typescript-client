@@ -16,10 +16,8 @@ const value: string = "<value>";
 ```typescript
 const value: operations.PostV2DeploymentsIdMetricsContent2[] = [
   {
-    type: "image_url",
-    imageUrl: {
-      url: "https://insignificant-noon.com",
-    },
+    type: "text",
+    text: "<value>",
   },
 ];
 ```

@@ -18,7 +18,7 @@ const value: operations.PostV2ResourcesDatasetsDatasetIdRowsContent2[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://sticky-mantua.info/",
+      url: "https://untrue-cinder.name",
     },
   },
 ];

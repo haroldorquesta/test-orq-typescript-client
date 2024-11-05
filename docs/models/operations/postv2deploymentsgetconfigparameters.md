@@ -5,7 +5,7 @@ Model Parameters: Not all parameters apply to every model
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsGetConfigParameters } from "orq-node-client/models/operations";
+import { PostV2DeploymentsGetConfigParameters } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsGetConfigParameters = {};
 ```

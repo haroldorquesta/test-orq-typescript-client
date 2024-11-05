@@ -3,20 +3,20 @@
 ## Example Usage
 
 ```typescript
-import { Refusal } from "orq-node-client/models/operations";
+import { Refusal } from "orq-poc-typescript/models/operations";
 
 let value: Refusal = {
   token: "<value>",
-  logprob: 8621.92,
+  logprob: 894.95,
   bytes: [
-    9729.19,
+    4059.42,
   ],
   topLogprobs: [
     {
       token: "<value>",
-      logprob: 9608.35,
+      logprob: 243.13,
       bytes: [
-        9065.55,
+        3426.11,
       ],
     },
   ],

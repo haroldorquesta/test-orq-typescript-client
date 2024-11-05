@@ -3,10 +3,10 @@
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasets2ImageUrl } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasets2ImageUrl } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasets2ImageUrl = {
-  url: "https://brisk-haircut.com",
+  url: "https://able-diagram.biz/",
 };
 ```
 

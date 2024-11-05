@@ -8,14 +8,7 @@
 ```typescript
 const value: operations.Messages1 = {
   role: "system",
-  content: [
-    {
-      type: "image_url",
-      imageUrl: {
-        url: "https://trustworthy-drive.net",
-      },
-    },
-  ],
+  content: "<value>",
 };
 ```
 
@@ -54,10 +47,8 @@ const value: operations.Four = {
   toolCallId: "<id>",
   content: [
     {
-      type: "image_url",
-      imageUrl: {
-        url: "https://wee-ravioli.biz/",
-      },
+      type: "text",
+      text: "<value>",
     },
   ],
 };

@@ -5,13 +5,13 @@ File uploaded successfully
 ## Example Usage
 
 ```typescript
-import { PostV2FilesResponseBody } from "orq-node-client/models/operations";
+import { PostV2FilesResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2FilesResponseBody = {
   id: "<id>",
   objectName: "<value>",
   purpose: "retrieval",
-  bytes: 1494.48,
+  bytes: 4581.39,
   fileName: "example.file",
 };
 ```

@@ -5,7 +5,7 @@ The role of the messages author, in this case **tool**.
 ## Example Usage
 
 ```typescript
-import { PostV2RouterChatCompletionsMessagesRouterPublicRole } from "orq-node-client/models/operations";
+import { PostV2RouterChatCompletionsMessagesRouterPublicRole } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsMessagesRouterPublicRole = "tool";
 ```

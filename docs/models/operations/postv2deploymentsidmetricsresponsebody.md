@@ -5,10 +5,10 @@ Successful operation
 ## Example Usage
 
 ```typescript
-import { PostV2DeploymentsIdMetricsResponseBody } from "orq-node-client/models/operations";
+import { PostV2DeploymentsIdMetricsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsIdMetricsResponseBody = {
-  code: 9988.47,
+  code: 6214.78,
   success: false,
 };
 ```

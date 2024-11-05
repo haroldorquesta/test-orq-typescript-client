@@ -10,9 +10,47 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "tool_calls",
-      index: 6360.61,
-      message: {
+      finishReason: "stop",
+      index: 6072.49,
+      logprobs: {
+        content: [
+          {
+            token: "<value>",
+            logprob: 4776.47,
+            bytes: [
+              2840.00,
+            ],
+            topLogprobs: [
+              {
+                token: "<value>",
+                logprob: 2384.13,
+                bytes: [
+                  5145.13,
+                ],
+              },
+            ],
+          },
+        ],
+        refusal: [
+          {
+            token: "<value>",
+            logprob: 3679.28,
+            bytes: [
+              4565.20,
+            ],
+            topLogprobs: [
+              {
+                token: "<value>",
+                logprob: 3374.77,
+                bytes: [
+                  9704.94,
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      delta: {
         content: "<value>",
         refusal: "<value>",
         toolCalls: [
@@ -27,54 +65,16 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
         ],
         role: "assistant",
       },
-      logprobs: {
-        content: [
-          {
-            token: "<value>",
-            logprob: 1605.39,
-            bytes: [
-              7963.91,
-            ],
-            topLogprobs: [
-              {
-                token: "<value>",
-                logprob: 9591.67,
-                bytes: [
-                  4581.39,
-                ],
-              },
-            ],
-          },
-        ],
-        refusal: [
-          {
-            token: "<value>",
-            logprob: 5909.84,
-            bytes: [
-              8577.23,
-            ],
-            topLogprobs: [
-              {
-                token: "<value>",
-                logprob: 4572.23,
-                bytes: [
-                  9518.74,
-                ],
-              },
-            ],
-          },
-        ],
-      },
     },
   ],
-  created: 5757.51,
-  model: "Ranchero",
+  created: 968.04,
+  model: "Countach",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {
-    completionTokens: 9088.44,
-    promptTokens: 8155.24,
-    totalTokens: 1594.14,
+    completionTokens: 5910.27,
+    promptTokens: 6591.76,
+    totalTokens: 3972.57,
   },
 };
 ```

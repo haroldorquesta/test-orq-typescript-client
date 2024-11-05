@@ -16,10 +16,8 @@ const value: string = "<value>";
 ```typescript
 const value: operations.PostV2RouterChatCompletionsContentRouterPublic2[] = [
   {
-    type: "image_url",
-    imageUrl: {
-      url: "https://dark-omelet.name/",
-    },
+    type: "text",
+    text: "<value>",
   },
 ];
 ```

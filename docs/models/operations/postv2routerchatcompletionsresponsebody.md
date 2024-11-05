@@ -12,8 +12,8 @@ const value: operations.ResponseBody1 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "length",
-      index: 3708.53,
+      finishReason: "tool_calls",
+      index: 360.34,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -33,16 +33,16 @@ const value: operations.ResponseBody1 = {
         content: [
           {
             token: "<value>",
-            logprob: 4598.56,
+            logprob: 3891.35,
             bytes: [
-              446.12,
+              9521.43,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 7997.96,
+                logprob: 3000.29,
                 bytes: [
-                  769.56,
+                  1604.68,
                 ],
               },
             ],
@@ -51,16 +51,16 @@ const value: operations.ResponseBody1 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 5188.35,
+            logprob: 8863.05,
             bytes: [
-              3068.10,
+              4463.94,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 5775.43,
+                logprob: 9078.76,
                 bytes: [
-                  9594.33,
+                  1602.30,
                 ],
               },
             ],
@@ -69,14 +69,14 @@ const value: operations.ResponseBody1 = {
       },
     },
   ],
-  created: 6455.70,
-  model: "911",
+  created: 6611.18,
+  model: "Expedition",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {
-    completionTokens: 4304.02,
-    promptTokens: 5100.17,
-    totalTokens: 5361.77,
+    completionTokens: 764.87,
+    promptTokens: 6964.63,
+    totalTokens: 2473.99,
   },
 };
 ```
@@ -88,22 +88,22 @@ const value: operations.ResponseBody2 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "content_filter",
-      index: 2775.96,
+      finishReason: "stop",
+      index: 599.44,
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 1288.61,
+            logprob: 610.79,
             bytes: [
-              3926.76,
+              9077.33,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 9564.06,
+                logprob: 7398.84,
                 bytes: [
-                  1871.31,
+                  8980.62,
                 ],
               },
             ],
@@ -112,16 +112,16 @@ const value: operations.ResponseBody2 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 9039.84,
+            logprob: 6725.82,
             bytes: [
-              5438.06,
+              5289.40,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 4569.11,
+                logprob: 3044.46,
                 bytes: [
-                  8820.41,
+                  9979.62,
                 ],
               },
             ],
@@ -141,18 +141,18 @@ const value: operations.ResponseBody2 = {
             },
           },
         ],
-        role: "exception",
+        role: "user",
       },
     },
   ],
-  created: 7241.68,
-  model: "El Camino",
+  created: 4706.49,
+  model: "Durango",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {
-    completionTokens: 9040.44,
-    promptTokens: 6900.25,
-    totalTokens: 6996.22,
+    completionTokens: 9795.27,
+    promptTokens: 1746.58,
+    totalTokens: 3279.88,
   },
 };
 ```

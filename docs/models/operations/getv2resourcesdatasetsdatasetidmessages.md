@@ -3,10 +3,10 @@
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasetsDatasetIdMessages } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasetsDatasetIdMessages } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasetsDatasetIdMessages = {
-  role: "expected_output",
+  role: "correction",
   content: [
     {
       type: "text",

@@ -18,7 +18,7 @@ const value: operations.GetV2ResourcesDatasetsDatasetIdRows21 = {
 const value: operations.GetV2ResourcesDatasetsDatasetIdRows22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://pleasing-angle.com",
+    url: "https://negative-fledgling.com",
   },
 };
 ```

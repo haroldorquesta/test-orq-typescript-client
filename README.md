@@ -47,25 +47,25 @@ The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https
 ### NPM
 
 ```bash
-npm add <UNSET>
+npm add orq-poc-typescript
 ```
 
 ### PNPM
 
 ```bash
-pnpm add <UNSET>
+pnpm add orq-poc-typescript
 ```
 
 ### Bun
 
 ```bash
-bun add <UNSET>
+bun add orq-poc-typescript
 ```
 
 ### Yarn
 
 ```bash
-yarn add <UNSET> zod
+yarn add orq-poc-typescript zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -84,7 +84,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -119,6 +119,7 @@ run();
 * [postV2DeploymentsGetConfig](docs/sdks/deployments/README.md#postv2deploymentsgetconfig) - Get config
 * [postV2DeploymentsInvoke](docs/sdks/deployments/README.md#postv2deploymentsinvoke) - Invoke
 * [postV2DeploymentsIdMetrics](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
+* [getV2Deployments](docs/sdks/deployments/README.md#getv2deployments) - List all deployments
 
 ### [feedback](docs/sdks/feedback/README.md)
 
@@ -135,6 +136,7 @@ run();
 * [postV2DeploymentsGetConfig](docs/sdks/public/README.md#postv2deploymentsgetconfig) - Get config
 * [postV2DeploymentsInvoke](docs/sdks/public/README.md#postv2deploymentsinvoke) - Invoke
 * [postV2DeploymentsIdMetrics](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
+* [getV2Deployments](docs/sdks/public/README.md#getv2deployments) - List all deployments
 * [postV2Files](docs/sdks/public/README.md#postv2files) - Upload file
 * [postV2FilesBulk](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
 * [postV2RouterEmbeddings](docs/sdks/public/README.md#postv2routerembeddings) - Embeddings
@@ -197,6 +199,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 <summary>Available standalone functions</summary>
 
 - [`contactsPostContacts`](docs/sdks/contacts/README.md#postcontacts) - Update user information
+- [`deploymentsGetV2Deployments`](docs/sdks/deployments/README.md#getv2deployments) - List all deployments
 - [`deploymentsPostV2DeploymentsGetConfig`](docs/sdks/deployments/README.md#postv2deploymentsgetconfig) - Get config
 - [`deploymentsPostV2DeploymentsIdMetrics`](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
 - [`deploymentsPostV2DeploymentsInvoke`](docs/sdks/deployments/README.md#postv2deploymentsinvoke) - Invoke
@@ -206,6 +209,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`publicDeleteV2ResourcesDatasetsDatasetId`](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetid) - Delete a dataset
 - [`publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk`](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetidrowsbulk) - Delete a list of dataset rows
 - [`publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId`](docs/sdks/public/README.md#deletev2resourcesdatasetsdatasetidrowsrowid) - Delete a dataset row
+- [`publicGetV2Deployments`](docs/sdks/public/README.md#getv2deployments) - List all deployments
 - [`publicGetV2ResourcesDatasets`](docs/sdks/public/README.md#getv2resourcesdatasets) - Get all datasets
 - [`publicGetV2ResourcesDatasetsDatasetId`](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetid) - Get one  dataset
 - [`publicGetV2ResourcesDatasetsDatasetIdRows`](docs/sdks/public/README.md#getv2resourcesdatasetsdatasetidrows) - Retrieve all dataset rows
@@ -256,7 +260,7 @@ terminate when the server no longer has any events to send and closes the
 underlying connection.
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -288,7 +292,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -320,7 +324,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   retryConfig: {
@@ -365,19 +369,19 @@ If a HTTP request fails, an operation my also throw an error from the `models/er
 | InvalidRequestError                                  | Any input used to create a request is invalid        |
 | UnexpectedClientError                                | Unrecognised or unexpected error                     |
 
-In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `getV2ResourcesDatasetsDatasetId` method may throw the following errors:
+In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `getV2Deployments` method may throw the following errors:
 
-| Error Type                                         | Status Code                                        | Content Type                                       |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| errors.GetV2ResourcesDatasetsDatasetIdResponseBody | 404                                                | application/json                                   |
-| errors.SDKError                                    | 4XX, 5XX                                           | \*/\*                                              |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| errors.HonoApiError | 500                 | application/json    |
+| errors.SDKError     | 4XX, 5XX            | \*/\*               |
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 import {
-  GetV2ResourcesDatasetsDatasetIdResponseBody,
+  HonoApiError,
   SDKValidationError,
-} from "orq-node-client/models/errors";
+} from "orq-poc-typescript/models/errors";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -386,9 +390,7 @@ const orq = new Orq({
 async function run() {
   let result;
   try {
-    result = await orq.public.getV2ResourcesDatasetsDatasetId({
-      datasetId: "<id>",
-    });
+    result = await orq.deployments.getV2Deployments({});
 
     // Handle the result
     console.log(result);
@@ -401,8 +403,8 @@ async function run() {
         console.error(err.rawValue);
         return;
       }
-      case (err instanceof GetV2ResourcesDatasetsDatasetIdResponseBody): {
-        // Handle err.data$: GetV2ResourcesDatasetsDatasetIdResponseBodyData
+      case (err instanceof HonoApiError): {
+        // Handle err.data$: HonoApiErrorData
         console.error(err);
         return;
       }
@@ -432,7 +434,7 @@ You can override the default server globally by passing a server index to the `s
 | 0 | `https://my.dev.orq.ai` | None |
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   serverIdx: 0,
@@ -458,7 +460,7 @@ run();
 The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   serverURL: "https://my.dev.orq.ai",
@@ -497,8 +499,8 @@ custom header and a timeout to requests and how to use the `"requestError"` hook
 to log errors:
 
 ```typescript
-import { Orq } from "orq-node-client";
-import { HTTPClient } from "orq-node-client/lib/http";
+import { Orq } from "orq-poc-typescript";
+import { HTTPClient } from "orq-poc-typescript/lib/http";
 
 const httpClient = new HTTPClient({
   // fetcher takes a function that has the same signature as native `fetch`.
@@ -541,7 +543,7 @@ This SDK supports the following security scheme globally:
 
 To authenticate with the API the `bearer` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -572,7 +574,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const sdk = new Orq({ debugLogger: console });
 ```

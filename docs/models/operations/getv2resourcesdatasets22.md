@@ -5,12 +5,12 @@ The image part of the prompt message. Only supported with vision models.
 ## Example Usage
 
 ```typescript
-import { GetV2ResourcesDatasets22 } from "orq-node-client/models/operations";
+import { GetV2ResourcesDatasets22 } from "orq-poc-typescript/models/operations";
 
 let value: GetV2ResourcesDatasets22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://portly-dwell.biz/",
+    url: "https://lavish-hydrocarbon.info",
   },
 };
 ```

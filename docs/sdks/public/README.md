@@ -8,6 +8,7 @@
 * [postV2DeploymentsGetConfig](#postv2deploymentsgetconfig) - Get config
 * [postV2DeploymentsInvoke](#postv2deploymentsinvoke) - Invoke
 * [postV2DeploymentsIdMetrics](#postv2deploymentsidmetrics) - Add metrics
+* [getV2Deployments](#getv2deployments) - List all deployments
 * [postV2Files](#postv2files) - Upload file
 * [postV2FilesBulk](#postv2filesbulk) - Bulk upload file
 * [postV2RouterEmbeddings](#postv2routerembeddings) - Embeddings
@@ -35,7 +36,7 @@ Retrieve the deployment configuration
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -58,8 +59,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2DeploymentsGetConfig } from "orq-node-client/funcs/publicPostV2DeploymentsGetConfig.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2DeploymentsGetConfig } from "orq-poc-typescript/funcs/publicPostV2DeploymentsGetConfig.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -111,7 +112,7 @@ Invoke a deployment with a given payload
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -136,8 +137,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2DeploymentsInvoke } from "orq-node-client/funcs/publicPostV2DeploymentsInvoke.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2DeploymentsInvoke } from "orq-poc-typescript/funcs/publicPostV2DeploymentsInvoke.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -191,7 +192,7 @@ Add metrics to a deployment
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -215,8 +216,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2DeploymentsIdMetrics } from "orq-node-client/funcs/publicPostV2DeploymentsIdMetrics.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2DeploymentsIdMetrics } from "orq-poc-typescript/funcs/publicPostV2DeploymentsIdMetrics.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -262,6 +263,79 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## getV2Deployments
+
+Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
+
+### Example Usage
+
+```typescript
+import { Orq } from "orq-poc-typescript";
+
+const orq = new Orq({
+  bearer: process.env["ORQ_BEARER"] ?? "",
+});
+
+async function run() {
+  const result = await orq.public.getV2Deployments({});
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicGetV2Deployments } from "orq-poc-typescript/funcs/publicGetV2Deployments.js";
+
+// Use `OrqCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const orq = new OrqCore({
+  bearer: process.env["ORQ_BEARER"] ?? "",
+});
+
+async function run() {
+  const res = await publicGetV2Deployments(orq, {});
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetV2DeploymentsRequest](../../models/operations/getv2deploymentsrequest.md)                                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[operations.GetV2DeploymentsResponseBody](../../models/operations/getv2deploymentsresponsebody.md)\>**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| errors.HonoApiError | 500                 | application/json    |
+| errors.SDKError     | 4XX, 5XX            | \*/\*               |
+
 ## postV2Files
 
 Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
@@ -269,7 +343,7 @@ Files are used to upload documents that can be used with features like [Deployme
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -290,8 +364,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2Files } from "orq-node-client/funcs/publicPostV2Files.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2Files } from "orq-poc-typescript/funcs/publicPostV2Files.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -341,7 +415,7 @@ Files are used to upload documents that can be used with features like [Deployme
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -367,8 +441,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2FilesBulk } from "orq-node-client/funcs/publicPostV2FilesBulk.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2FilesBulk } from "orq-poc-typescript/funcs/publicPostV2FilesBulk.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -423,7 +497,7 @@ Creates an embedding vector representing the input text.
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -447,8 +521,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2RouterEmbeddings } from "orq-node-client/funcs/publicPostV2RouterEmbeddings.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2RouterEmbeddings } from "orq-poc-typescript/funcs/publicPostV2RouterEmbeddings.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -501,7 +575,7 @@ For sending requests to chat completion models
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -533,8 +607,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2RouterChatCompletions } from "orq-node-client/funcs/publicPostV2RouterChatCompletions.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2RouterChatCompletions } from "orq-poc-typescript/funcs/publicPostV2RouterChatCompletions.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -595,7 +669,7 @@ For sending requests to legacy completion models
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -616,8 +690,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2RouterCompletions } from "orq-node-client/funcs/publicPostV2RouterCompletions.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2RouterCompletions } from "orq-poc-typescript/funcs/publicPostV2RouterCompletions.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -667,7 +741,7 @@ For sending requests to rerank models
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -688,8 +762,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2RouterRerank } from "orq-node-client/funcs/publicPostV2RouterRerank.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2RouterRerank } from "orq-poc-typescript/funcs/publicPostV2RouterRerank.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -737,7 +811,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -758,8 +832,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2RouterImagesGenerations } from "orq-node-client/funcs/publicPostV2RouterImagesGenerations.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2RouterImagesGenerations } from "orq-poc-typescript/funcs/publicPostV2RouterImagesGenerations.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -809,7 +883,7 @@ Create a dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -830,8 +904,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2ResourcesDatasets } from "orq-node-client/funcs/publicPostV2ResourcesDatasets.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2ResourcesDatasets } from "orq-poc-typescript/funcs/publicPostV2ResourcesDatasets.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -881,7 +955,7 @@ Get all datasets
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -905,8 +979,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicGetV2ResourcesDatasets } from "orq-node-client/funcs/publicGetV2ResourcesDatasets.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicGetV2ResourcesDatasets } from "orq-poc-typescript/funcs/publicGetV2ResourcesDatasets.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -959,7 +1033,7 @@ Delete a dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -981,8 +1055,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicDeleteV2ResourcesDatasetsDatasetId } from "orq-node-client/funcs/publicDeleteV2ResourcesDatasetsDatasetId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicDeleteV2ResourcesDatasetsDatasetId } from "orq-poc-typescript/funcs/publicDeleteV2ResourcesDatasetsDatasetId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1033,7 +1107,7 @@ Get one  dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1056,8 +1130,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicGetV2ResourcesDatasetsDatasetId } from "orq-node-client/funcs/publicGetV2ResourcesDatasetsDatasetId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicGetV2ResourcesDatasetsDatasetId } from "orq-poc-typescript/funcs/publicGetV2ResourcesDatasetsDatasetId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1110,7 +1184,7 @@ Update a dataset
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1133,8 +1207,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPatchV2ResourcesDatasetsDatasetId } from "orq-node-client/funcs/publicPatchV2ResourcesDatasetsDatasetId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPatchV2ResourcesDatasetsDatasetId } from "orq-poc-typescript/funcs/publicPatchV2ResourcesDatasetsDatasetId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1186,7 +1260,7 @@ Create a list of dataset rows
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1232,8 +1306,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-node-client/funcs/publicPostV2ResourcesDatasetsDatasetIdRowsBulk.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-poc-typescript/funcs/publicPostV2ResourcesDatasetsDatasetIdRowsBulk.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1308,7 +1382,7 @@ Delete a list of dataset rows
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1330,8 +1404,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-node-client/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk } from "orq-poc-typescript/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsBulk.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1382,7 +1456,7 @@ Create a dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1405,8 +1479,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPostV2ResourcesDatasetsDatasetIdRows } from "orq-node-client/funcs/publicPostV2ResourcesDatasetsDatasetIdRows.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPostV2ResourcesDatasetsDatasetIdRows } from "orq-poc-typescript/funcs/publicPostV2ResourcesDatasetsDatasetIdRows.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1458,7 +1532,7 @@ Retrieve all dataset rows
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1481,8 +1555,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicGetV2ResourcesDatasetsDatasetIdRows } from "orq-node-client/funcs/publicGetV2ResourcesDatasetsDatasetIdRows.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicGetV2ResourcesDatasetsDatasetIdRows } from "orq-poc-typescript/funcs/publicGetV2ResourcesDatasetsDatasetIdRows.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1534,7 +1608,7 @@ Delete a dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1557,8 +1631,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-node-client/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-poc-typescript/funcs/publicDeleteV2ResourcesDatasetsDatasetIdRowsRowId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1610,7 +1684,7 @@ Get one dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1634,8 +1708,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicGetV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-node-client/funcs/publicGetV2ResourcesDatasetsDatasetIdRowsRowId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicGetV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-poc-typescript/funcs/publicGetV2ResourcesDatasetsDatasetIdRowsRowId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1689,7 +1763,7 @@ Update a dataset row
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-node-client";
+import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   bearer: process.env["ORQ_BEARER"] ?? "",
@@ -1713,8 +1787,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-node-client/core.js";
-import { publicPatchV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-node-client/funcs/publicPatchV2ResourcesDatasetsDatasetIdRowsRowId.js";
+import { OrqCore } from "orq-poc-typescript/core.js";
+import { publicPatchV2ResourcesDatasetsDatasetIdRowsRowId } from "orq-poc-typescript/funcs/publicPatchV2ResourcesDatasetsDatasetIdRowsRowId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

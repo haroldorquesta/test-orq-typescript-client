@@ -5,7 +5,7 @@ A request body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { PostV2RouterImagesGenerationsRequestBody } from "orq-node-client/models/operations";
+import { PostV2RouterImagesGenerationsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsRequestBody = {
   prompt: "<value>",
