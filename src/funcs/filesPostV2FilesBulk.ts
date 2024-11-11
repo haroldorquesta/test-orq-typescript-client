@@ -55,8 +55,6 @@ export async function filesPostV2FilesBulk(
   const payload = parsed.value;
   const body = new FormData();
 
-  body.append("files", String(payload.files));
-
   for (const file of payload.files) {
     if (file !== undefined) {
       if (typeof file === 'object' && 'content' in file) {
