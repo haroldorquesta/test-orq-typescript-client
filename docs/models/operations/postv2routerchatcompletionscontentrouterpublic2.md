@@ -18,7 +18,7 @@ const value: operations.PostV2RouterChatCompletions2RouterPublic1 = {
 const value: operations.PostV2RouterChatCompletions2RouterPublic2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://weary-summer.info/",
+    url: "https://beneficial-hippodrome.biz/",
   },
 };
 ```

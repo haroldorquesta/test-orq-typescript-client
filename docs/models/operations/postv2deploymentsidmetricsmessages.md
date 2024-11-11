@@ -6,13 +6,8 @@
 import { PostV2DeploymentsIdMetricsMessages } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsIdMetricsMessages = {
-  role: "system",
-  content: [
-    {
-      type: "text",
-      text: "<value>",
-    },
-  ],
+  role: "tool",
+  content: "<value>",
 };
 ```
 

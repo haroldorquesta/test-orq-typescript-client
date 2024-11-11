@@ -10,7 +10,7 @@ import { PostV2DeploymentsIdMetrics22 } from "orq-poc-typescript/models/operatio
 let value: PostV2DeploymentsIdMetrics22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://trivial-coil.name/",
+    url: "https://hidden-hubris.org",
   },
 };
 ```

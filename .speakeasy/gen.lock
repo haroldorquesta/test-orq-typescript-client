@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 7e526ac3e0b841b9c49c3a4046288295
+  docChecksum: 4151eb77193c840318eec6d1926829a7
   docVersion: "2.0"
   speakeasyVersion: 1.426.0
   generationVersion: 2.446.5
-  releaseVersion: 0.6.1
-  configChecksum: 7047c2a4335289ca3396986707de9a38
+  releaseVersion: 0.4.2
+  configChecksum: 4a3a710802d159526dd80cf63ae90bc2
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -483,7 +483,7 @@ examples:
         application/json: {"key": "<key>"}
       responses:
         "200":
-          application/json: {"id": "<id>", "provider": "<value>", "model": "Explorer", "messages": [{"role": "system", "content": "<value>"}, {"role": "user", "content": [{"type": "image_url", "image_url": {"url": "https://wobbly-harp.name"}}]}, {"role": "assistant", "content": [{"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}]}]}
+          application/json: {"id": "<id>", "provider": "<value>", "model": "Explorer", "version": "<value>", "messages": [{"role": "system", "content": "<value>"}, {"role": "user", "content": [{"type": "image_url", "image_url": {"url": "https://wobbly-harp.name"}}]}, {"role": "assistant", "content": [{"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}]}]}
   post_/v2/deployments/invoke:
     speakeasy-default-post-/v2-/deployments/invoke:
       requestBody:

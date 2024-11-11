@@ -8,7 +8,7 @@ import { PostV2RouterChatCompletions2RouterPublic2 } from "orq-poc-typescript/mo
 let value: PostV2RouterChatCompletions2RouterPublic2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://dependent-guide.org/",
+    url: "https://submissive-coal.name",
   },
 };
 ```

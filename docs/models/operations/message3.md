@@ -6,8 +6,8 @@
 import { Message3 } from "orq-poc-typescript/models/operations";
 
 let value: Message3 = {
-  role: "expected_output",
-  url: "https://that-premeditation.biz/",
+  role: "system",
+  url: "https://finished-receptor.org",
 };
 ```
 

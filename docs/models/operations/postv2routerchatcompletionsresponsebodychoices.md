@@ -6,22 +6,22 @@
 import { PostV2RouterChatCompletionsResponseBodyChoices } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsResponseBodyChoices = {
-  finishReason: "tool_calls",
-  index: 9677.95,
+  finishReason: "content_filter",
+  index: 9425.84,
   logprobs: {
     content: [
       {
         token: "<value>",
-        logprob: 5468.85,
+        logprob: 6339.98,
         bytes: [
-          2748.24,
+          8672.89,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 5922.30,
+            logprob: 9402.10,
             bytes: [
-              8967.61,
+              7507.65,
             ],
           },
         ],
@@ -30,16 +30,16 @@ let value: PostV2RouterChatCompletionsResponseBodyChoices = {
     refusal: [
       {
         token: "<value>",
-        logprob: 4067.33,
+        logprob: 6995.75,
         bytes: [
-          5520.78,
+          9679.66,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 2716.53,
+            logprob: 9944.01,
             bytes: [
-              4554.44,
+              4518.22,
             ],
           },
         ],
@@ -59,7 +59,7 @@ let value: PostV2RouterChatCompletionsResponseBodyChoices = {
         },
       },
     ],
-    role: "exception",
+    role: "system",
   },
 };
 ```

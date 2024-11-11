@@ -18,7 +18,7 @@ const value: operations.GetV2DeploymentsContent2[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://delectable-airmail.com/",
+      url: "https://enchanted-disclosure.com/",
     },
   },
 ];

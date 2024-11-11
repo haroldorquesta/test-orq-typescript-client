@@ -6,7 +6,7 @@
 import { PostV2DeploymentsIdMetrics2ImageUrl } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsIdMetrics2ImageUrl = {
-  url: "https://usable-providence.org/",
+  url: "https://quarrelsome-pecan.info",
 };
 ```
 

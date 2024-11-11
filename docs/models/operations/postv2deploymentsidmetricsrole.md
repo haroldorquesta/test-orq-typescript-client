@@ -7,7 +7,7 @@ The role of the prompt message
 ```typescript
 import { PostV2DeploymentsIdMetricsRole } from "orq-poc-typescript/models/operations";
 
-let value: PostV2DeploymentsIdMetricsRole = "prompt";
+let value: PostV2DeploymentsIdMetricsRole = "tool";
 ```
 
 ## Values

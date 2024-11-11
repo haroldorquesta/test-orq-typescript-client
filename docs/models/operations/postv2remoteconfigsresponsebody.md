@@ -8,7 +8,7 @@ An individual remote config
 import { PostV2RemoteconfigsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RemoteconfigsResponseBody = {
-  type: "list",
+  type: "json",
 };
 ```
 

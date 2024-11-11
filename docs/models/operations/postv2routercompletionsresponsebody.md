@@ -12,12 +12,12 @@ let value: PostV2RouterCompletionsResponseBody = {
   choices: [
     {
       finishReason: "stop",
-      index: 6072.49,
+      index: 599.44,
       text: "<value>",
     },
   ],
-  created: 4776.47,
-  model: "Civic",
+  created: 610.79,
+  model: "Taurus",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

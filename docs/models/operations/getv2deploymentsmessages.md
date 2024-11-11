@@ -6,7 +6,7 @@
 import { GetV2DeploymentsMessages } from "orq-poc-typescript/models/operations";
 
 let value: GetV2DeploymentsMessages = {
-  role: "prompt",
+  role: "exception",
   content: "<value>",
 };
 ```

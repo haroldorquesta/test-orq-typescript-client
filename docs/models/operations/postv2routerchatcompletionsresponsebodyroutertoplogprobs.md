@@ -7,9 +7,9 @@ import { PostV2RouterChatCompletionsResponseBodyRouterTopLogprobs } from "orq-po
 
 let value: PostV2RouterChatCompletionsResponseBodyRouterTopLogprobs = {
   token: "<value>",
-  logprob: 9425.84,
+  logprob: 9509.53,
   bytes: [
-    6339.98,
+    2334.20,
   ],
 };
 ```

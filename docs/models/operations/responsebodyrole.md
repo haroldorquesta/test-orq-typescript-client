@@ -5,7 +5,7 @@
 ```typescript
 import { ResponseBodyRole } from "orq-poc-typescript/models/operations";
 
-let value: ResponseBodyRole = "prompt";
+let value: ResponseBodyRole = "user";
 ```
 
 ## Values

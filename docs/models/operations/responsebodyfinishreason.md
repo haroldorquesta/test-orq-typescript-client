@@ -7,7 +7,7 @@ The reason the model stopped generating tokens.
 ```typescript
 import { ResponseBodyFinishReason } from "orq-poc-typescript/models/operations";
 
-let value: ResponseBodyFinishReason = "stop";
+let value: ResponseBodyFinishReason = "tool_calls";
 ```
 
 ## Values
