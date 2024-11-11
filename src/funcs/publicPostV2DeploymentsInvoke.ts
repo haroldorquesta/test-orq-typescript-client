@@ -121,6 +121,7 @@ export async function publicPostV2DeploymentsInvoke(
     M.sse(
       200,
       operations.PostV2DeploymentsInvokeResponse$inboundSchema.optional(),
+      { sseSentinel: "[DONE]" },
     ),
     M.nil(
       204,
