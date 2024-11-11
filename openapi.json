@@ -37230,6 +37230,7 @@
                 }
               },
               "text/event-stream": {
+                "x-speakeasy-sse-sentinel": "[DONE]",
                 "schema": {
                   "type": "object",
                   "properties": {
@@ -39981,6 +39982,7 @@
                 }
               },
               "text/event-stream": {
+                "x-speakeasy-sse-sentinel": "[DONE]",
                 "schema": {
                   "type": "object",
                   "properties": {
