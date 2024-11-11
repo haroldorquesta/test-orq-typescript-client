@@ -5,8 +5,8 @@ management:
   docVersion: "2.0"
   speakeasyVersion: 1.426.0
   generationVersion: 2.446.5
-  releaseVersion: 0.1.0
-  configChecksum: c9a23957257865675b3b280d3b7c7ee7
+  releaseVersion: 0.2.1
+  configChecksum: 82bc545f53b70a9500df98a7fe56940e
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -381,7 +381,6 @@ generatedFiles:
   - src/funcs/deploymentsPostV2DeploymentsInvoke.ts
   - src/funcs/feedbackPostV2Feedback.ts
   - src/funcs/filesPostV2Files.ts
-  - src/funcs/filesPostV2FilesBulk.ts
   - src/funcs/publicGetV2Deployments.ts
   - src/funcs/publicPostV2DeploymentsGetConfig.ts
   - src/funcs/publicPostV2DeploymentsIdMetrics.ts
