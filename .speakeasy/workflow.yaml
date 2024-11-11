@@ -4,10 +4,6 @@ sources:
     orq-OAS:
         inputs:
             - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi.json
-        registry:
-            location: registry.speakeasyapi.dev/orq/orq/orq-oas
-    overlay:
-        inputs:
             - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi-overlay.yaml
 targets:
     orq:
