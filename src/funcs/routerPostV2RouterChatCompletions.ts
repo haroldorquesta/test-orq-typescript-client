@@ -117,7 +117,9 @@ export async function routerPostV2RouterChatCompletions(
     | ConnectionError
   >(
     M.json(200, operations.PostV2RouterChatCompletionsResponse$inboundSchema),
-    M.sse(200, operations.PostV2RouterChatCompletionsResponse$inboundSchema),
+    M.sse(200, operations.PostV2RouterChatCompletionsResponse$inboundSchema, {
+      sseSentinel: "[DONE]",
+    }),
     M.fail(["4XX", "5XX"]),
   )(response);
   if (!result.ok) {
