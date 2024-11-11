@@ -1,4 +1,3 @@
-import { HTTPClient } from "../lib/http";
 import {
   BeforeRequestContext,
   BeforeRequestHook,
