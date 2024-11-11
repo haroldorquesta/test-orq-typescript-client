@@ -4,9 +4,11 @@ sources:
     orq-OAS:
         inputs:
             - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi.json
-            - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi-overlay.yaml
         registry:
             location: registry.speakeasyapi.dev/orq/orq/orq-oas
+    overlay:
+        inputs:
+            - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi-overlay.yaml
 targets:
     orq:
         target: typescript
@@ -15,6 +17,6 @@ targets:
             npm:
                 token: $npm_token
         codeSamples:
+            output: ""
             registry:
                 location: registry.speakeasyapi.dev/orq/orq/orq-oas-code-samples
-            blocking: false
