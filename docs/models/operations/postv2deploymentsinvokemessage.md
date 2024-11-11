@@ -7,7 +7,7 @@
 
 ```typescript
 const value: operations.PostV2DeploymentsInvokeMessage1 = {
-  role: "expected_output",
+  role: "assistant",
   toolCalls: [
     {
       type: "function",
@@ -24,7 +24,7 @@ const value: operations.PostV2DeploymentsInvokeMessage1 = {
 
 ```typescript
 const value: operations.PostV2DeploymentsInvokeMessage2 = {
-  role: "prompt",
+  role: "expected_output",
   content: "<value>",
 };
 ```
@@ -33,8 +33,8 @@ const value: operations.PostV2DeploymentsInvokeMessage2 = {
 
 ```typescript
 const value: operations.Message3 = {
-  role: "prompt",
-  url: "https://well-to-do-papa.info",
+  role: "exception",
+  url: "https://runny-epic.net",
 };
 ```
 

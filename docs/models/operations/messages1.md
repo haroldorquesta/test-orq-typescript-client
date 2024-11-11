@@ -9,10 +9,8 @@ let value: Messages1 = {
   role: "system",
   content: [
     {
-      type: "image_url",
-      imageUrl: {
-        url: "https://unsung-entry.org",
-      },
+      type: "text",
+      text: "<value>",
     },
   ],
 };

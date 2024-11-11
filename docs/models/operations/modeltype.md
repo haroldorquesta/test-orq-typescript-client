@@ -7,7 +7,7 @@ The type of the model
 ```typescript
 import { ModelType } from "orq-poc-typescript/models/operations";
 
-let value: ModelType = "image";
+let value: ModelType = "completion";
 ```
 
 ## Values

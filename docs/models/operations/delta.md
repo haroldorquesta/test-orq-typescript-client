@@ -20,7 +20,7 @@ let value: Delta = {
       },
     },
   ],
-  role: "exception",
+  role: "assistant",
 };
 ```
 

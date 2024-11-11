@@ -20,19 +20,14 @@ let value: PromptConfig = {
       },
     },
   ],
-  model: "Golf",
-  modelType: "rerank",
+  model: "Model 3",
+  modelType: "vision",
   modelParameters: {},
-  provider: "nvidia",
+  provider: "anthropic",
   messages: [
     {
-      role: "assistant",
-      content: [
-        {
-          type: "text",
-          text: "<value>",
-        },
-      ],
+      role: "system",
+      content: "<value>",
     },
   ],
 };

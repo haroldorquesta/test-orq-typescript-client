@@ -8,7 +8,7 @@ Successful operation
 import { PostV2DeploymentsIdMetricsResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsIdMetricsResponseBody = {
-  code: 6214.78,
+  code: 7936.98,
   success: false,
 };
 ```

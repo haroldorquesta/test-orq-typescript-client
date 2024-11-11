@@ -11,11 +11,11 @@ let value: GetV2DeploymentsResponseBody = {
   object: "list",
   data: [
     {
-      id: "831dffec-5163-420b-90c2-11a368db4204",
+      id: "2f77a52d-3831-4dff-8ec5-16320b0c211a",
       created: "<value>",
       updated: "<value>",
       key: "<key>",
-      description: "and first inside nearly creaking impish",
+      description: "ethyl covenant jaggedly where appropriate jubilantly",
       promptConfig: {
         tools: [
           {
@@ -31,21 +31,14 @@ let value: GetV2DeploymentsResponseBody = {
             },
           },
         ],
-        model: "Taurus",
-        modelType: "tts",
+        model: "Wrangler",
+        modelType: "completion",
         modelParameters: {},
-        provider: "perplexity",
+        provider: "leonardoai",
         messages: [
           {
-            role: "user",
-            content: [
-              {
-                type: "image_url",
-                imageUrl: {
-                  url: "https://cute-secrecy.org/",
-                },
-              },
-            ],
+            role: "tool",
+            content: "<value>",
           },
         ],
       },

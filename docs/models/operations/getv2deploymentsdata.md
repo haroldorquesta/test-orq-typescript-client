@@ -6,11 +6,11 @@
 import { GetV2DeploymentsData } from "orq-poc-typescript/models/operations";
 
 let value: GetV2DeploymentsData = {
-  id: "0c569dad-4c2f-4a3f-ab43-80365749d182",
+  id: "a78ef3a4-0c56-49da-9d4c-2fa3fb438036",
   created: "<value>",
   updated: "<value>",
   key: "<key>",
-  description: "roundabout embarrassment earth wildly frank now",
+  description: "until twist oof ack flame turbulent",
   promptConfig: {
     tools: [
       {
@@ -26,19 +26,14 @@ let value: GetV2DeploymentsData = {
         },
       },
     ],
-    model: "Fiesta",
-    modelType: "tts",
+    model: "Civic",
+    modelType: "stt",
     modelParameters: {},
-    provider: "google",
+    provider: "anyscale",
     messages: [
       {
-        role: "assistant",
-        content: [
-          {
-            type: "text",
-            text: "<value>",
-          },
-        ],
+        role: "system",
+        content: "<value>",
       },
     ],
   },

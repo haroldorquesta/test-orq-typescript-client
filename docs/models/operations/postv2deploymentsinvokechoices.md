@@ -6,7 +6,7 @@
 import { PostV2DeploymentsInvokeChoices } from "orq-poc-typescript/models/operations";
 
 let value: PostV2DeploymentsInvokeChoices = {
-  index: 6063.93,
+  index: 3965.06,
 };
 ```
 

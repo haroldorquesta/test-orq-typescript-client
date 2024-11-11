@@ -12,14 +12,16 @@ let value: PostV2RouterEmbeddingsResponseBody = {
   data: [
     {
       object: "embedding",
-      embedding: "<value>",
-      index: 3984.34,
+      embedding: [
+        1605.39,
+      ],
+      index: 7963.91,
     },
   ],
-  model: "A4",
+  model: "Wrangler",
   usage: {
-    promptTokens: 4240.32,
-    totalTokens: 2586.84,
+    promptTokens: 4581.39,
+    totalTokens: 5909.84,
   },
 };
 ```

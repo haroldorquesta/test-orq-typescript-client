@@ -7,7 +7,7 @@ Only supported on `image` models.
 ```typescript
 import { GetV2DeploymentsFormat } from "orq-poc-typescript/models/operations";
 
-let value: GetV2DeploymentsFormat = "url";
+let value: GetV2DeploymentsFormat = "b64_json";
 ```
 
 ## Values

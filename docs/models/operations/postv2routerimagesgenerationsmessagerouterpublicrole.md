@@ -7,7 +7,8 @@ The role of the prompt message
 ```typescript
 import { PostV2RouterImagesGenerationsMessageRouterPublicRole } from "orq-poc-typescript/models/operations";
 
-let value: PostV2RouterImagesGenerationsMessageRouterPublicRole = "tool";
+let value: PostV2RouterImagesGenerationsMessageRouterPublicRole =
+  "expected_output";
 ```
 
 ## Values

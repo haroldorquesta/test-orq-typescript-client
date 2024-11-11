@@ -6,7 +6,7 @@
 import { GetV2Deployments2ImageUrl } from "orq-poc-typescript/models/operations";
 
 let value: GetV2Deployments2ImageUrl = {
-  url: "https://impeccable-cruelty.biz/",
+  url: "https://everlasting-trick.name",
 };
 ```
 

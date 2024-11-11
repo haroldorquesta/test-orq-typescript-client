@@ -9,13 +9,13 @@ import { PostV2RouterImagesGenerationsResponseBody } from "orq-poc-typescript/mo
 
 let value: PostV2RouterImagesGenerationsResponseBody = {
   id: "<id>",
-  created: 7730.84,
+  created: 6591.76,
   choices: [
     {
-      index: 9587.41,
+      index: 3972.57,
     },
   ],
-  model: "Alpine",
+  model: "XTS",
   object: "<value>",
 };
 ```

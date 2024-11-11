@@ -7,7 +7,7 @@ import { Three } from "orq-poc-typescript/models/operations";
 
 let value: Three = {
   role: "correction",
-  url: "https://tight-address.info",
+  url: "https://impure-battle.net",
 };
 ```
 

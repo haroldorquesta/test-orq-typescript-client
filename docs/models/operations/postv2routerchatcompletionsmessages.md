@@ -17,7 +17,12 @@ const value: operations.Messages1 = {
 ```typescript
 const value: operations.Messages2 = {
   role: "user",
-  content: "<value>",
+  content: [
+    {
+      type: "text",
+      text: "<value>",
+    },
+  ],
 };
 ```
 
@@ -47,8 +52,10 @@ const value: operations.Four = {
   toolCallId: "<id>",
   content: [
     {
-      type: "text",
-      text: "<value>",
+      type: "image_url",
+      imageUrl: {
+        url: "https://nifty-eggplant.net/",
+      },
     },
   ],
 };

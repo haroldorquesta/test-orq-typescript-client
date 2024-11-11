@@ -7,7 +7,7 @@ The provider used to generate the response
 ```typescript
 import { Provider } from "orq-poc-typescript/models/operations";
 
-let value: Provider = "aws";
+let value: Provider = "cohere";
 ```
 
 ## Values

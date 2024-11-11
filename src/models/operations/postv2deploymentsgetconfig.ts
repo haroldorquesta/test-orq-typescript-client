@@ -639,6 +639,10 @@ export type PostV2DeploymentsGetConfigResponseBody = {
    * The type of the model. Current `chat`,`completion` and `image` are supported
    */
   type?: PostV2DeploymentsGetConfigDeploymentsPublicType | undefined;
+  /**
+   * The current version of the deployment
+   */
+  version: string;
   messages: Array<PostV2DeploymentsGetConfigMessages>;
   /**
    * Model Parameters: Not all parameters apply to every model
@@ -2737,6 +2741,7 @@ export const PostV2DeploymentsGetConfigResponseBody$inboundSchema: z.ZodType<
   model: z.string(),
   type: PostV2DeploymentsGetConfigDeploymentsPublicType$inboundSchema
     .optional(),
+  version: z.string(),
   messages: z.array(
     z.lazy(() => PostV2DeploymentsGetConfigMessages$inboundSchema),
   ),
@@ -2751,6 +2756,7 @@ export type PostV2DeploymentsGetConfigResponseBody$Outbound = {
   provider: string;
   model: string;
   type?: string | undefined;
+  version: string;
   messages: Array<PostV2DeploymentsGetConfigMessages$Outbound>;
   parameters: PostV2DeploymentsGetConfigParameters$Outbound;
   tools?: Array<PostV2DeploymentsGetConfigTools$Outbound> | undefined;
@@ -2767,6 +2773,7 @@ export const PostV2DeploymentsGetConfigResponseBody$outboundSchema: z.ZodType<
   model: z.string(),
   type: PostV2DeploymentsGetConfigDeploymentsPublicType$outboundSchema
     .optional(),
+  version: z.string(),
   messages: z.array(
     z.lazy(() => PostV2DeploymentsGetConfigMessages$outboundSchema),
   ),

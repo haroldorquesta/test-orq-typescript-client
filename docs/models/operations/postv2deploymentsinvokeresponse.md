@@ -8,14 +8,14 @@
 ```typescript
 const value: operations.PostV2DeploymentsInvokeResponseBody = {
   id: "<id>",
-  created: new Date("2023-12-17T21:47:39.716Z"),
+  created: new Date("2022-11-27T12:37:26.320Z"),
   object: "completion",
-  model: "Escalade",
-  provider: "leonardoai",
+  model: "Civic",
+  provider: "anyscale",
   isFinal: false,
   choices: [
     {
-      index: 3675.62,
+      index: 4287.69,
     },
   ],
 };

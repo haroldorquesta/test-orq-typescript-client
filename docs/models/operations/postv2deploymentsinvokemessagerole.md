@@ -7,7 +7,7 @@ The role of the prompt message
 ```typescript
 import { PostV2DeploymentsInvokeMessageRole } from "orq-poc-typescript/models/operations";
 
-let value: PostV2DeploymentsInvokeMessageRole = "correction";
+let value: PostV2DeploymentsInvokeMessageRole = "assistant";
 ```
 
 ## Values

@@ -6,7 +6,7 @@
 import { PostV2RouterChatCompletions2RouterPublicImageUrl } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletions2RouterPublicImageUrl = {
-  url: "https://which-fork.info/",
+  url: "https://well-documented-minister.net/",
 };
 ```
 

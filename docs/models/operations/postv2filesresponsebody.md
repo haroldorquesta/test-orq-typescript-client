@@ -11,7 +11,7 @@ let value: PostV2FilesResponseBody = {
   id: "<id>",
   objectName: "<value>",
   purpose: "retrieval",
-  bytes: 4581.39,
+  bytes: 8820.41,
   fileName: "example.file",
 };
 ```

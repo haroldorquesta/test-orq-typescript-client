@@ -18,7 +18,7 @@ const value: operations.GetV2Deployments21 = {
 const value: operations.GetV2Deployments22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://baggy-hovercraft.biz/",
+    url: "https://dull-conversation.org/",
   },
 };
 ```
