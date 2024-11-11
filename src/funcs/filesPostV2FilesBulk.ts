@@ -56,6 +56,13 @@ export async function filesPostV2FilesBulk(
   const body = new FormData();
 
   body.append("files", String(payload.files));
+
+  for (const file of payload.files) {
+    if (file !== undefined) {
+      body.append("files", String(file));
+    }
+  }
+
   body.append("purpose", payload.purpose);
 
   const path = pathToFunc("/v2/files/bulk")();
