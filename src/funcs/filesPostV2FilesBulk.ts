@@ -59,7 +59,12 @@ export async function filesPostV2FilesBulk(
 
   for (const file of payload.files) {
     if (file !== undefined) {
-      body.append("files", String(file));
+      if (typeof file === 'object' && 'content' in file) {
+        const content = (file as { content: ReadableStream<Uint8Array> | Blob | ArrayBuffer | Uint8Array }).content
+        body.append("files", String(content));
+      } else {
+        body.append("files", String(file));
+      }
     }
   }
 
