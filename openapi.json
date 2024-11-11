@@ -574,6 +574,10 @@
             ],
             "description": "The type of the model. Current `chat`,`completion` and `image` are supported"
           },
+          "version": {
+            "type": "string",
+            "description": "The current version of the deployment"
+          },
           "messages": {
             "type": "array",
             "items": {
@@ -907,6 +911,7 @@
           "id",
           "provider",
           "model",
+          "version",
           "messages",
           "parameters"
         ]
@@ -3093,7 +3098,7 @@
                         "id": {
                           "type": "string",
                           "format": "ulid",
-                          "default": "01JBY94PWX66V42JE13S5S7R5E",
+                          "default": "01JCDDT88Q8DNJ63DQD13GVZWV",
                           "description": "The id of the resource",
                           "readOnly": true
                         },
@@ -3238,7 +3243,7 @@
                         "id": {
                           "type": "string",
                           "format": "ulid",
-                          "default": "01JBY94PWYMQBZWKXKBAE1X1VK",
+                          "default": "01JCDDT88RS2SG1EE94T77GZ82",
                           "description": "The id of the resource",
                           "readOnly": true
                         },
@@ -3515,7 +3520,7 @@
           "created": {
             "type": "string",
             "format": "date-time",
-            "default": "2024-11-05T13:45:01.500Z",
+            "default": "2024-11-11T10:55:18.446Z",
             "description": "The date and time the resource was created",
             "readOnly": true
           }
@@ -3574,7 +3579,7 @@
             "created": {
               "type": "string",
               "format": "date-time",
-              "default": "2024-11-05T13:45:01.500Z",
+              "default": "2024-11-11T10:55:18.446Z",
               "description": "The date and time the resource was created",
               "readOnly": true
             }
@@ -5588,7 +5593,7 @@
                               "type": "string"
                             }
                           ],
-                          "default": "2024-11-05T13:45:01.009Z",
+                          "default": "2024-11-11T10:55:18.233Z",
                           "description": "The date and time the resource was created",
                           "readOnly": true,
                           "format": "date-time"
@@ -5598,7 +5603,7 @@
                             {
                               "type": "string",
                               "format": "date-time",
-                              "default": "2024-11-05T13:45:01.009Z"
+                              "default": "2024-11-11T10:55:18.235Z"
                             },
                             {
                               "type": "string"
@@ -5638,7 +5643,7 @@
                     "type": "string"
                   }
                 ],
-                "default": "2024-11-05T13:45:01.009Z",
+                "default": "2024-11-11T10:55:18.233Z",
                 "description": "The date and time the resource was created",
                 "readOnly": true,
                 "format": "date-time"
@@ -5648,7 +5653,7 @@
                   {
                     "type": "string",
                     "format": "date-time",
-                    "default": "2024-11-05T13:45:01.009Z"
+                    "default": "2024-11-11T10:55:18.235Z"
                   },
                   {
                     "type": "string"
@@ -6435,7 +6440,7 @@
                     "type": "string"
                   }
                 ],
-                "default": "2024-11-05T13:45:01.009Z",
+                "default": "2024-11-11T10:55:18.233Z",
                 "description": "The date and time the resource was created",
                 "readOnly": true,
                 "format": "date-time"
@@ -6445,7 +6450,7 @@
                   {
                     "type": "string",
                     "format": "date-time",
-                    "default": "2024-11-05T13:45:01.009Z"
+                    "default": "2024-11-11T10:55:18.235Z"
                   },
                   {
                     "type": "string"
@@ -6676,7 +6681,7 @@
                           "type": "string"
                         }
                       ],
-                      "default": "2024-11-05T13:45:01.009Z",
+                      "default": "2024-11-11T10:55:18.233Z",
                       "description": "The date and time the resource was created",
                       "readOnly": true,
                       "format": "date-time"
@@ -6686,7 +6691,7 @@
                         {
                           "type": "string",
                           "format": "date-time",
-                          "default": "2024-11-05T13:45:01.009Z"
+                          "default": "2024-11-11T10:55:18.235Z"
                         },
                         {
                           "type": "string"
@@ -13152,7 +13157,7 @@
                             "id": {
                               "type": "string",
                               "format": "ulid",
-                              "default": "01JBY94PXX3D8FQJMEVN8B5SND",
+                              "default": "01JCDDT89ZTFGM5AW0DZFK5GDM",
                               "description": "The id of the resource",
                               "readOnly": true
                             },
@@ -13297,7 +13302,7 @@
                             "id": {
                               "type": "string",
                               "format": "ulid",
-                              "default": "01JBY94PXYDDEECFSCK2J2YG8B",
+                              "default": "01JCDDT8A05P2ZWNT5XVX8REG5",
                               "description": "The id of the resource",
                               "readOnly": true
                             },
@@ -28126,7 +28131,7 @@
                                   "id": {
                                     "type": "string",
                                     "format": "ulid",
-                                    "default": "01JBY94PZ9Q5R6P7Q9RBCEZDXV",
+                                    "default": "01JCDDT8CD1P26KTG4034G88E8",
                                     "description": "The id of the resource",
                                     "readOnly": true
                                   },
@@ -28271,7 +28276,7 @@
                                   "id": {
                                     "type": "string",
                                     "format": "ulid",
-                                    "default": "01JBY94PZ9K2C57HE6C2MKA0T3",
+                                    "default": "01JCDDT8CET39JFE9FFVCDF1J9",
                                     "description": "The id of the resource",
                                     "readOnly": true
                                   },
@@ -36566,6 +36571,10 @@
                       ],
                       "description": "The type of the model. Current `chat`,`completion` and `image` are supported"
                     },
+                    "version": {
+                      "type": "string",
+                      "description": "The current version of the deployment"
+                    },
                     "messages": {
                       "type": "array",
                       "items": {
@@ -36899,6 +36908,7 @@
                     "id",
                     "provider",
                     "model",
+                    "version",
                     "messages",
                     "parameters"
                   ],
@@ -37230,299 +37240,291 @@
                 }
               },
               "text/event-stream": {
-                "x-speakeasy-sse-sentinel": "[DONE]",
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "data": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "string",
-                          "format": "ulid",
-                          "description": "A unique identifier for the response. Can be used to add metrics to the transaction.",
-                          "readOnly": true
-                        },
-                        "created": {
-                          "type": "string",
-                          "format": "date-time",
-                          "description": "A timestamp indicating when the object was created. Usually in a standardized format like ISO 8601"
-                        },
-                        "object": {
-                          "type": "string",
-                          "enum": [
-                            "chat",
-                            "completion",
-                            "image"
-                          ],
-                          "description": "Indicates the type of model used to generate the response"
-                        },
-                        "model": {
-                          "type": "string",
-                          "description": "The model used to generate the response"
-                        },
-                        "provider": {
-                          "type": "string",
-                          "enum": [
-                            "cohere",
-                            "openai",
-                            "anthropic",
-                            "huggingface",
-                            "replicate",
-                            "google",
-                            "google-ai",
-                            "azure",
-                            "aws",
-                            "anyscale",
-                            "perplexity",
-                            "groq",
-                            "fal",
-                            "leonardoai",
-                            "nvidia"
-                          ],
-                          "description": "The provider used to generate the response"
-                        },
-                        "is_final": {
-                          "type": "boolean",
-                          "description": "Indicates if the response is the final response"
-                        },
-                        "integration_id": {
-                          "type": "string",
-                          "description": "Indicates integration id used to generate the response"
-                        },
-                        "finalized": {
-                          "type": "string",
-                          "format": "date-time",
-                          "description": "A timestamp indicating when the object was finalized. Usually in a standardized format like ISO 8601"
-                        },
-                        "system_fingerprint": {
-                          "type": [
-                            "string",
-                            "null"
-                          ],
-                          "description": "Provider backed system fingerprint."
-                        },
-                        "choices": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "index": {
-                                "type": "number"
-                              },
-                              "message": {
-                                "anyOf": [
-                                  {
-                                    "type": "object",
-                                    "properties": {
-                                      "role": {
-                                        "type": "string",
-                                        "enum": [
-                                          "system",
-                                          "assistant",
-                                          "user",
-                                          "exception",
-                                          "tool",
-                                          "prompt",
-                                          "correction",
-                                          "expected_output"
-                                        ],
-                                        "description": "The role of the prompt message"
-                                      },
-                                      "content": {
-                                        "type": [
-                                          "string",
-                                          "null"
-                                        ]
-                                      },
-                                      "tool_calls": {
-                                        "type": "array",
-                                        "items": {
+                    "id": {
+                      "type": "string",
+                      "format": "ulid",
+                      "description": "A unique identifier for the response. Can be used to add metrics to the transaction.",
+                      "readOnly": true
+                    },
+                    "created": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "A timestamp indicating when the object was created. Usually in a standardized format like ISO 8601"
+                    },
+                    "object": {
+                      "type": "string",
+                      "enum": [
+                        "chat",
+                        "completion",
+                        "image"
+                      ],
+                      "description": "Indicates the type of model used to generate the response"
+                    },
+                    "model": {
+                      "type": "string",
+                      "description": "The model used to generate the response"
+                    },
+                    "provider": {
+                      "type": "string",
+                      "enum": [
+                        "cohere",
+                        "openai",
+                        "anthropic",
+                        "huggingface",
+                        "replicate",
+                        "google",
+                        "google-ai",
+                        "azure",
+                        "aws",
+                        "anyscale",
+                        "perplexity",
+                        "groq",
+                        "fal",
+                        "leonardoai",
+                        "nvidia"
+                      ],
+                      "description": "The provider used to generate the response"
+                    },
+                    "is_final": {
+                      "type": "boolean",
+                      "description": "Indicates if the response is the final response"
+                    },
+                    "integration_id": {
+                      "type": "string",
+                      "description": "Indicates integration id used to generate the response"
+                    },
+                    "finalized": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "A timestamp indicating when the object was finalized. Usually in a standardized format like ISO 8601"
+                    },
+                    "system_fingerprint": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Provider backed system fingerprint."
+                    },
+                    "choices": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "index": {
+                            "type": "number"
+                          },
+                          "message": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "role": {
+                                    "type": "string",
+                                    "enum": [
+                                      "system",
+                                      "assistant",
+                                      "user",
+                                      "exception",
+                                      "tool",
+                                      "prompt",
+                                      "correction",
+                                      "expected_output"
+                                    ],
+                                    "description": "The role of the prompt message"
+                                  },
+                                  "content": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "tool_calls": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "index": {
+                                          "type": "number"
+                                        },
+                                        "type": {
+                                          "type": "string",
+                                          "enum": [
+                                            "function"
+                                          ]
+                                        },
+                                        "function": {
                                           "type": "object",
                                           "properties": {
-                                            "id": {
+                                            "name": {
                                               "type": "string"
                                             },
-                                            "index": {
-                                              "type": "number"
-                                            },
-                                            "type": {
+                                            "arguments": {
                                               "type": "string",
-                                              "enum": [
-                                                "function"
-                                              ]
-                                            },
-                                            "function": {
-                                              "type": "object",
-                                              "properties": {
-                                                "name": {
-                                                  "type": "string"
-                                                },
-                                                "arguments": {
-                                                  "type": "string",
-                                                  "description": "JSON string arguments for the functions"
-                                                }
-                                              },
-                                              "required": [
-                                                "name",
-                                                "arguments"
-                                              ]
+                                              "description": "JSON string arguments for the functions"
                                             }
                                           },
                                           "required": [
-                                            "type",
-                                            "function"
+                                            "name",
+                                            "arguments"
                                           ]
                                         }
-                                      }
-                                    },
-                                    "required": [
-                                      "role",
-                                      "tool_calls"
-                                    ]
-                                  },
-                                  {
-                                    "type": "object",
-                                    "properties": {
-                                      "role": {
-                                        "type": "string",
-                                        "enum": [
-                                          "system",
-                                          "assistant",
-                                          "user",
-                                          "exception",
-                                          "tool",
-                                          "prompt",
-                                          "correction",
-                                          "expected_output"
-                                        ],
-                                        "description": "The role of the prompt message"
                                       },
-                                      "content": {
-                                        "type": [
-                                          "string",
-                                          "null"
-                                        ]
-                                      }
-                                    },
-                                    "required": [
-                                      "role",
-                                      "content"
-                                    ]
-                                  },
-                                  {
-                                    "type": "object",
-                                    "properties": {
-                                      "role": {
-                                        "type": "string",
-                                        "enum": [
-                                          "system",
-                                          "assistant",
-                                          "user",
-                                          "exception",
-                                          "tool",
-                                          "prompt",
-                                          "correction",
-                                          "expected_output"
-                                        ],
-                                        "description": "The role of the prompt message"
-                                      },
-                                      "url": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "required": [
-                                      "role",
-                                      "url"
-                                    ]
-                                  }
-                                ]
-                              },
-                              "finish_reason": {
-                                "type": [
-                                  "string",
-                                  "null"
-                                ]
-                              }
-                            },
-                            "required": [
-                              "index"
-                            ]
-                          },
-                          "description": "A list of choices generated by the model"
-                        },
-                        "retrievals": {
-                          "type": "array",
-                          "items": {
-                            "type": "object",
-                            "properties": {
-                              "document": {
-                                "type": "string",
-                                "description": "Content of the retrieved chunk from the knowledge base"
-                              },
-                              "metadata": {
-                                "type": "object",
-                                "properties": {
-                                  "file_name": {
-                                    "type": "string",
-                                    "description": "Name of the file"
-                                  },
-                                  "page_number": {
-                                    "type": [
-                                      "number",
-                                      "null"
-                                    ],
-                                    "description": "Page number of the chunk"
-                                  },
-                                  "file_type": {
-                                    "type": "string",
-                                    "description": "Type of the file"
-                                  },
-                                  "rerank_score": {
-                                    "type": "number",
-                                    "description": "Rerank scores are normalized to be in the range [0, 1]. Scores close to 1 indicate a high relevance to the query, and scores closer to 0 indicate low relevance. It is not accurate to assume a score of 0.9 means the document is 2x more relevant than a document with a score of 0.45"
-                                  },
-                                  "search_score": {
-                                    "type": "number",
-                                    "description": "Search scores are normalized to be in the range [0, 1]. Search score is calculated based on `[Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)` algorithm. Scores close to 1 indicate the document is closer to the query, and scores closer to 0 indicate the document is farther from the query."
+                                      "required": [
+                                        "type",
+                                        "function"
+                                      ]
+                                    }
                                   }
                                 },
                                 "required": [
-                                  "file_name",
-                                  "page_number",
-                                  "file_type",
-                                  "search_score"
+                                  "role",
+                                  "tool_calls"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "role": {
+                                    "type": "string",
+                                    "enum": [
+                                      "system",
+                                      "assistant",
+                                      "user",
+                                      "exception",
+                                      "tool",
+                                      "prompt",
+                                      "correction",
+                                      "expected_output"
+                                    ],
+                                    "description": "The role of the prompt message"
+                                  },
+                                  "content": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "role",
+                                  "content"
+                                ]
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "role": {
+                                    "type": "string",
+                                    "enum": [
+                                      "system",
+                                      "assistant",
+                                      "user",
+                                      "exception",
+                                      "tool",
+                                      "prompt",
+                                      "correction",
+                                      "expected_output"
+                                    ],
+                                    "description": "The role of the prompt message"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "role",
+                                  "url"
+                                ]
+                              }
+                            ]
+                          },
+                          "finish_reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "index"
+                        ]
+                      },
+                      "description": "A list of choices generated by the model"
+                    },
+                    "retrievals": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "document": {
+                            "type": "string",
+                            "description": "Content of the retrieved chunk from the knowledge base"
+                          },
+                          "metadata": {
+                            "type": "object",
+                            "properties": {
+                              "file_name": {
+                                "type": "string",
+                                "description": "Name of the file"
+                              },
+                              "page_number": {
+                                "type": [
+                                  "number",
+                                  "null"
                                 ],
-                                "description": "Metadata of the retrieved chunk from the knowledge base"
+                                "description": "Page number of the chunk"
+                              },
+                              "file_type": {
+                                "type": "string",
+                                "description": "Type of the file"
+                              },
+                              "rerank_score": {
+                                "type": "number",
+                                "description": "Rerank scores are normalized to be in the range [0, 1]. Scores close to 1 indicate a high relevance to the query, and scores closer to 0 indicate low relevance. It is not accurate to assume a score of 0.9 means the document is 2x more relevant than a document with a score of 0.45"
+                              },
+                              "search_score": {
+                                "type": "number",
+                                "description": "Search scores are normalized to be in the range [0, 1]. Search score is calculated based on `[Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)` algorithm. Scores close to 1 indicate the document is closer to the query, and scores closer to 0 indicate the document is farther from the query."
                               }
                             },
                             "required": [
-                              "document",
-                              "metadata"
-                            ]
-                          },
-                          "description": "List of documents retrieved from the knowledge base. This property is only available when the `include_retrievals` flag is set to `true` in the invoke settings. When stream is set to true, the `retrievals` property will be returned in the last streamed chunk where the property `is_final` is set to `true`."
+                              "file_name",
+                              "page_number",
+                              "file_type",
+                              "search_score"
+                            ],
+                            "description": "Metadata of the retrieved chunk from the knowledge base"
+                          }
                         },
-                        "provider_response": {
-                          "description": "Response returned by the model provider. This functionality is only supported when streaming is not used. If streaming is used, the `provider_response` property will be set to `null`."
-                        }
+                        "required": [
+                          "document",
+                          "metadata"
+                        ]
                       },
-                      "required": [
-                        "id",
-                        "created",
-                        "object",
-                        "model",
-                        "provider",
-                        "is_final",
-                        "choices"
-                      ],
-                      "description": "Response from the gateway"
+                      "description": "List of documents retrieved from the knowledge base. This property is only available when the `include_retrievals` flag is set to `true` in the invoke settings. When stream is set to true, the `retrievals` property will be returned in the last streamed chunk where the property `is_final` is set to `true`."
+                    },
+                    "provider_response": {
+                      "description": "Response returned by the model provider. This functionality is only supported when streaming is not used. If streaming is used, the `provider_response` property will be set to `null`."
                     }
                   },
                   "required": [
-                    "data"
-                  ]
-                }
+                    "id",
+                    "created",
+                    "object",
+                    "model",
+                    "provider",
+                    "is_final",
+                    "choices"
+                  ],
+                  "description": "Response from the gateway"
+                },
+                "x-speakeasy-sse-sentinel": "[DONE]"
               }
             }
           },
@@ -38566,7 +38568,7 @@
                     "created": {
                       "type": "string",
                       "format": "date-time",
-                      "default": "2024-11-05T13:45:01.500Z",
+                      "default": "2024-11-11T10:55:18.446Z",
                       "description": "The date and time the resource was created",
                       "readOnly": true
                     }
@@ -38665,7 +38667,7 @@
                       "created": {
                         "type": "string",
                         "format": "date-time",
-                        "default": "2024-11-05T13:45:01.500Z",
+                        "default": "2024-11-11T10:55:18.446Z",
                         "description": "The date and time the resource was created",
                         "readOnly": true
                       }
@@ -39982,7 +39984,6 @@
                 }
               },
               "text/event-stream": {
-                "x-speakeasy-sse-sentinel": "[DONE]",
                 "schema": {
                   "type": "object",
                   "properties": {
@@ -40002,7 +40003,8 @@
                   "required": [
                     "data"
                   ]
-                }
+                },
+                "x-speakeasy-sse-sentinel": "[DONE]"
               }
             }
           }
