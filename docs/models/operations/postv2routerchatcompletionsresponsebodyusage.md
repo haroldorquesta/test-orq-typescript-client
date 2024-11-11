@@ -7,17 +7,13 @@ Usage statistics for the completion request.
 ```typescript
 import { PostV2RouterChatCompletionsResponseBodyUsage } from "orq-poc-typescript/models/operations";
 
-let value: PostV2RouterChatCompletionsResponseBodyUsage = {
-  completionTokens: 2484.13,
-  promptTokens: 5058.66,
-  totalTokens: 3103.81,
-};
+let value: PostV2RouterChatCompletionsResponseBodyUsage = {};
 ```
 
 ## Fields
 
 | Field                                                             | Type                                                              | Required                                                          | Description                                                       |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `completionTokens`                                                | *number*                                                          | :heavy_check_mark:                                                | Number of tokens in the generated completion.                     |
-| `promptTokens`                                                    | *number*                                                          | :heavy_check_mark:                                                | Number of tokens in the prompt.                                   |
-| `totalTokens`                                                     | *number*                                                          | :heavy_check_mark:                                                | Total number of tokens used in the request (prompt + completion). |
+| `completionTokens`                                                | *number*                                                          | :heavy_minus_sign:                                                | Number of tokens in the generated completion.                     |
+| `promptTokens`                                                    | *number*                                                          | :heavy_minus_sign:                                                | Number of tokens in the prompt.                                   |
+| `totalTokens`                                                     | *number*                                                          | :heavy_minus_sign:                                                | Total number of tokens used in the request (prompt + completion). |

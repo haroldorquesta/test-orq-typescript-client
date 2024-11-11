@@ -6,6 +6,11 @@ import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
 import { ClosedEnum } from "../../types/enums.js";
 
+export type Files = {
+  fileName: string;
+  content: ReadableStream<Uint8Array> | Blob | ArrayBuffer | Uint8Array;
+};
+
 /**
  * The intended purpose of the uploaded file.
  */
@@ -18,10 +23,7 @@ export const PostV2FilesBulkPurpose = {
 export type PostV2FilesBulkPurpose = ClosedEnum<typeof PostV2FilesBulkPurpose>;
 
 export type PostV2FilesBulkRequestBody = {
-  /**
-   * The file to be uploaded.
-   */
-  files: Array<any>;
+  files: Array<Files>;
   /**
    * The intended purpose of the uploaded file.
    */
@@ -60,6 +62,52 @@ export type ResponseBody = {
 };
 
 /** @internal */
+export const Files$inboundSchema: z.ZodType<Files, z.ZodTypeDef, unknown> = z
+  .object({
+    fileName: z.string(),
+    content: z.union([
+      z.instanceof(ReadableStream<Uint8Array>),
+      z.instanceof(Blob),
+      z.instanceof(ArrayBuffer),
+      z.instanceof(Uint8Array),
+    ]),
+  });
+
+/** @internal */
+export type Files$Outbound = {
+  fileName: string;
+  content: ReadableStream<Uint8Array> | Blob | ArrayBuffer | Uint8Array;
+};
+
+/** @internal */
+export const Files$outboundSchema: z.ZodType<
+  Files$Outbound,
+  z.ZodTypeDef,
+  Files
+> = z.object({
+  fileName: z.string(),
+  content: z.union([
+    z.instanceof(ReadableStream<Uint8Array>),
+    z.instanceof(Blob),
+    z.instanceof(ArrayBuffer),
+    z.instanceof(Uint8Array),
+  ]),
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace Files$ {
+  /** @deprecated use `Files$inboundSchema` instead. */
+  export const inboundSchema = Files$inboundSchema;
+  /** @deprecated use `Files$outboundSchema` instead. */
+  export const outboundSchema = Files$outboundSchema;
+  /** @deprecated use `Files$Outbound` instead. */
+  export type Outbound = Files$Outbound;
+}
+
+/** @internal */
 export const PostV2FilesBulkPurpose$inboundSchema: z.ZodNativeEnum<
   typeof PostV2FilesBulkPurpose
 > = z.nativeEnum(PostV2FilesBulkPurpose);
@@ -86,13 +134,13 @@ export const PostV2FilesBulkRequestBody$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  files: z.array(z.any()),
+  files: z.array(z.lazy(() => Files$inboundSchema)),
   purpose: PostV2FilesBulkPurpose$inboundSchema,
 });
 
 /** @internal */
 export type PostV2FilesBulkRequestBody$Outbound = {
-  files: Array<any>;
+  files: Array<Files$Outbound>;
   purpose: string;
 };
 
@@ -102,7 +150,7 @@ export const PostV2FilesBulkRequestBody$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2FilesBulkRequestBody
 > = z.object({
-  files: z.array(z.any()),
+  files: z.array(z.lazy(() => Files$outboundSchema)),
   purpose: PostV2FilesBulkPurpose$outboundSchema,
 });
 
@@ -152,7 +200,7 @@ export const ResponseBody$inboundSchema: z.ZodType<
   bytes: z.number(),
   file_name: z.string(),
   created: z.string().datetime({ offset: true }).default(
-    "2024-10-22T07:23:04.563Z",
+    "2024-11-05T13:45:01.500Z",
   ).transform(v => new Date(v)),
 }).transform((v) => {
   return remap$(v, {
@@ -183,7 +231,7 @@ export const ResponseBody$outboundSchema: z.ZodType<
   purpose: PostV2FilesBulkFilesPurpose$outboundSchema,
   bytes: z.number(),
   fileName: z.string(),
-  created: z.date().default(() => new Date("2024-10-22T07:23:04.563Z"))
+  created: z.date().default(() => new Date("2024-11-05T13:45:01.500Z"))
     .transform(v => v.toISOString()),
 }).transform((v) => {
   return remap$(v, {

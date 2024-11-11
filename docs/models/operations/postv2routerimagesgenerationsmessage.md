@@ -7,7 +7,7 @@
 
 ```typescript
 const value: operations.PostV2RouterImagesGenerationsMessage1 = {
-  role: "assistant",
+  role: "correction",
   content: "<value>",
 };
 ```
@@ -16,8 +16,8 @@ const value: operations.PostV2RouterImagesGenerationsMessage1 = {
 
 ```typescript
 const value: operations.PostV2RouterImagesGenerationsMessage2 = {
-  role: "correction",
-  url: "https://limp-captain.info/",
+  role: "prompt",
+  url: "https://crazy-barge.biz/",
 };
 ```
 
@@ -25,7 +25,7 @@ const value: operations.PostV2RouterImagesGenerationsMessage2 = {
 
 ```typescript
 const value: operations.PostV2RouterImagesGenerationsMessage3 = {
-  role: "expected_output",
+  role: "exception",
   toolCalls: [
     {
       type: "function",

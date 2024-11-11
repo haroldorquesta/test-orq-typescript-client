@@ -8,7 +8,7 @@ import { Deployments } from "./deployments.js";
 import { Feedback } from "./feedback.js";
 import { Files } from "./files.js";
 import { Public } from "./public.js";
-import { Resources } from "./resources.js";
+import { Remoteconfig } from "./remoteconfig.js";
 import { Router } from "./router.js";
 
 export class Orq extends ClientSDK {
@@ -42,8 +42,8 @@ export class Orq extends ClientSDK {
     return (this._router ??= new Router(this._options));
   }
 
-  private _resources?: Resources;
-  get resources(): Resources {
-    return (this._resources ??= new Resources(this._options));
+  private _remoteconfig?: Remoteconfig;
+  get remoteconfig(): Remoteconfig {
+    return (this._remoteconfig ??= new Remoteconfig(this._options));
   }
 }

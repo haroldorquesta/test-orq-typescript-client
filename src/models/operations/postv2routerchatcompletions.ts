@@ -663,15 +663,15 @@ export type PostV2RouterChatCompletionsResponseBodyUsage = {
   /**
    * Number of tokens in the generated completion.
    */
-  completionTokens: number;
+  completionTokens?: number | undefined;
   /**
    * Number of tokens in the prompt.
    */
-  promptTokens: number;
+  promptTokens?: number | undefined;
   /**
    * Total number of tokens used in the request (prompt + completion).
    */
-  totalTokens: number;
+  totalTokens?: number | undefined;
 };
 
 /**
@@ -882,15 +882,15 @@ export type ResponseBodyUsage = {
   /**
    * Number of tokens in the generated completion.
    */
-  completionTokens: number;
+  completionTokens?: number | undefined;
   /**
    * Number of tokens in the prompt.
    */
-  promptTokens: number;
+  promptTokens?: number | undefined;
   /**
    * Total number of tokens used in the request (prompt + completion).
    */
-  totalTokens: number;
+  totalTokens?: number | undefined;
 };
 
 /**
@@ -3206,9 +3206,9 @@ export const PostV2RouterChatCompletionsResponseBodyUsage$inboundSchema:
     z.ZodTypeDef,
     unknown
   > = z.object({
-    completion_tokens: z.number(),
-    prompt_tokens: z.number(),
-    total_tokens: z.number(),
+    completion_tokens: z.number().optional(),
+    prompt_tokens: z.number().optional(),
+    total_tokens: z.number().optional(),
   }).transform((v) => {
     return remap$(v, {
       "completion_tokens": "completionTokens",
@@ -3219,9 +3219,9 @@ export const PostV2RouterChatCompletionsResponseBodyUsage$inboundSchema:
 
 /** @internal */
 export type PostV2RouterChatCompletionsResponseBodyUsage$Outbound = {
-  completion_tokens: number;
-  prompt_tokens: number;
-  total_tokens: number;
+  completion_tokens?: number | undefined;
+  prompt_tokens?: number | undefined;
+  total_tokens?: number | undefined;
 };
 
 /** @internal */
@@ -3231,9 +3231,9 @@ export const PostV2RouterChatCompletionsResponseBodyUsage$outboundSchema:
     z.ZodTypeDef,
     PostV2RouterChatCompletionsResponseBodyUsage
   > = z.object({
-    completionTokens: z.number(),
-    promptTokens: z.number(),
-    totalTokens: z.number(),
+    completionTokens: z.number().optional(),
+    promptTokens: z.number().optional(),
+    totalTokens: z.number().optional(),
   }).transform((v) => {
     return remap$(v, {
       completionTokens: "completion_tokens",
@@ -3815,9 +3815,9 @@ export const ResponseBodyUsage$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  completion_tokens: z.number(),
-  prompt_tokens: z.number(),
-  total_tokens: z.number(),
+  completion_tokens: z.number().optional(),
+  prompt_tokens: z.number().optional(),
+  total_tokens: z.number().optional(),
 }).transform((v) => {
   return remap$(v, {
     "completion_tokens": "completionTokens",
@@ -3828,9 +3828,9 @@ export const ResponseBodyUsage$inboundSchema: z.ZodType<
 
 /** @internal */
 export type ResponseBodyUsage$Outbound = {
-  completion_tokens: number;
-  prompt_tokens: number;
-  total_tokens: number;
+  completion_tokens?: number | undefined;
+  prompt_tokens?: number | undefined;
+  total_tokens?: number | undefined;
 };
 
 /** @internal */
@@ -3839,9 +3839,9 @@ export const ResponseBodyUsage$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   ResponseBodyUsage
 > = z.object({
-  completionTokens: z.number(),
-  promptTokens: z.number(),
-  totalTokens: z.number(),
+  completionTokens: z.number().optional(),
+  promptTokens: z.number().optional(),
+  totalTokens: z.number().optional(),
 }).transform((v) => {
   return remap$(v, {
     completionTokens: "completion_tokens",

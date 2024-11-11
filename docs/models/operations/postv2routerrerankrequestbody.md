@@ -10,11 +10,9 @@ import { PostV2RouterRerankRequestBody } from "orq-poc-typescript/models/operati
 let value: PostV2RouterRerankRequestBody = {
   query: "<value>",
   documents: [
-    {
-      "key": "<value>",
-    },
+    "<value>",
   ],
-  model: "Wrangler",
+  model: "Focus",
 };
 ```
 

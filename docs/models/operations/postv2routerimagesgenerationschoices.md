@@ -6,7 +6,7 @@
 import { PostV2RouterImagesGenerationsChoices } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterImagesGenerationsChoices = {
-  index: 4237.06,
+  index: 5219.96,
 };
 ```
 
