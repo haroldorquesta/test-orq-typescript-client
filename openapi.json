@@ -36031,6 +36031,7 @@
     },
     "/v2/feedback": {
       "post": {
+        "x-speakeasy-name-override": "create",
         "tags": [
           "Feedback"
         ],
@@ -36132,7 +36133,7 @@
     },
     "/v2/deployments/get_config": {
       "post": {
-        "x-speakeasy-name-override": "config.get",
+        "x-speakeasy-name-override": "getConfig",
         "tags": [
           "Deployments",
           "public"
@@ -37541,6 +37542,7 @@
     },
     "/v2/deployments/{id}/metrics": {
       "post": {
+        "x-speakeasy-name-override": "addMetrics",
         "tags": [
           "Deployments",
           "public"
@@ -38507,6 +38509,7 @@
     },
     "/v2/files": {
       "post": {
+        "x-speakeasy-name-override": "upload",
         "tags": [
           "Files",
           "public"
@@ -38598,6 +38601,7 @@
     },
     "/v2/files/bulk": {
       "post": {
+        "x-speakeasy-name-override": "bulkUpload",
         "tags": [
           "Files",
           "public"
@@ -38698,6 +38702,7 @@
     },
     "/v2/router/embeddings": {
       "post": {
+        "x-speakeasy-name-override": "create",
         "tags": [
           "router",
           "public"
@@ -38851,6 +38856,7 @@
     },
     "/v2/router/chat/completions": {
       "post": {
+        "x-speakeasy-name-override": "create",
         "tags": [
           "router",
           "public"
@@ -40019,6 +40025,7 @@
     },
     "/v2/router/completions": {
       "post": {
+        "x-speakeasy-name-override": "create",
         "tags": [
           "router",
           "public"
@@ -40246,6 +40253,7 @@
     },
     "/v2/router/rerank": {
       "post": {
+        "x-speakeasy-name-override": "rerank",
         "tags": [
           "router",
           "public"
@@ -40429,8 +40437,9 @@
     },
     "/v2/router/images/generations": {
       "post": {
+        "x-speakeasy-name-override": "generate",
         "tags": [
-          "router",
+          "router.images",
           "public"
         ],
         "security": [
@@ -40698,6 +40707,7 @@
     },
     "/v2/remoteconfigs": {
       "post": {
+        "x-speakeasy-name-override": "create",
         "tags": [
           "remoteconfig",
           "public"
