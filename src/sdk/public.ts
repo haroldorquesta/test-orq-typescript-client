@@ -3,12 +3,9 @@
  */
 
 import { publicGetV2Deployments } from "../funcs/publicGetV2Deployments.js";
+import { InvokeAcceptEnum, publicInvoke } from "../funcs/publicInvoke.js";
 import { publicPostV2DeploymentsGetConfig } from "../funcs/publicPostV2DeploymentsGetConfig.js";
 import { publicPostV2DeploymentsIdMetrics } from "../funcs/publicPostV2DeploymentsIdMetrics.js";
-import {
-  PostV2DeploymentsInvokeAcceptEnum,
-  publicPostV2DeploymentsInvoke,
-} from "../funcs/publicPostV2DeploymentsInvoke.js";
 import { publicPostV2Files } from "../funcs/publicPostV2Files.js";
 import { publicPostV2FilesBulk } from "../funcs/publicPostV2FilesBulk.js";
 import { publicPostV2Remoteconfigs } from "../funcs/publicPostV2Remoteconfigs.js";
@@ -25,7 +22,7 @@ import * as components from "../models/components/index.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
-export { PostV2DeploymentsInvokeAcceptEnum } from "../funcs/publicPostV2DeploymentsInvoke.js";
+export { InvokeAcceptEnum } from "../funcs/publicInvoke.js";
 
 export { PostV2RouterChatCompletionsAcceptEnum } from "../funcs/publicPostV2RouterChatCompletions.js";
 
@@ -53,13 +50,11 @@ export class Public extends ClientSDK {
    * @remarks
    * Invoke a deployment with a given payload
    */
-  async postV2DeploymentsInvoke(
+  async invoke(
     request: components.Deployments,
-    options?: RequestOptions & {
-      acceptHeaderOverride?: PostV2DeploymentsInvokeAcceptEnum;
-    },
+    options?: RequestOptions & { acceptHeaderOverride?: InvokeAcceptEnum },
   ): Promise<operations.PostV2DeploymentsInvokeResponse | undefined> {
-    return unwrapAsync(publicPostV2DeploymentsInvoke(
+    return unwrapAsync(publicInvoke(
       this,
       request,
       options,

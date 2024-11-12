@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 4151eb77193c840318eec6d1926829a7
+  docChecksum: 0f00855d59e5b575a037e70408057bb8
   docVersion: "2.0"
   speakeasyVersion: 1.426.0
   generationVersion: 2.446.5
-  releaseVersion: 0.4.2
-  configChecksum: 4a3a710802d159526dd80cf63ae90bc2
+  releaseVersion: 0.5.1
+  configChecksum: 091dbe7a26d06dd2938384d6ffd18412
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -25,6 +25,7 @@ features:
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.4
     inputOutputModels: 2.82.0
+    nameOverrides: 2.81.2
     nullables: 0.1.0
     responseFormat: 0.2.3
     retries: 2.83.0
@@ -377,15 +378,15 @@ generatedFiles:
   - src/core.ts
   - src/funcs/contactsPostContacts.ts
   - src/funcs/deploymentsGetV2Deployments.ts
+  - src/funcs/deploymentsInvoke.ts
   - src/funcs/deploymentsPostV2DeploymentsGetConfig.ts
   - src/funcs/deploymentsPostV2DeploymentsIdMetrics.ts
-  - src/funcs/deploymentsPostV2DeploymentsInvoke.ts
   - src/funcs/feedbackPostV2Feedback.ts
   - src/funcs/filesPostV2Files.ts
   - src/funcs/publicGetV2Deployments.ts
+  - src/funcs/publicInvoke.ts
   - src/funcs/publicPostV2DeploymentsGetConfig.ts
   - src/funcs/publicPostV2DeploymentsIdMetrics.ts
-  - src/funcs/publicPostV2DeploymentsInvoke.ts
   - src/funcs/publicPostV2Files.ts
   - src/funcs/publicPostV2FilesBulk.ts
   - src/funcs/publicPostV2Remoteconfigs.ts

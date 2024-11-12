@@ -6,7 +6,7 @@
 ### Available Operations
 
 * [postV2DeploymentsGetConfig](#postv2deploymentsgetconfig) - Get config
-* [postV2DeploymentsInvoke](#postv2deploymentsinvoke) - Invoke
+* [invoke](#invoke) - Invoke
 * [postV2DeploymentsIdMetrics](#postv2deploymentsidmetrics) - Add metrics
 * [getV2Deployments](#getv2deployments) - List all deployments
 * [postV2Files](#postv2files) - Upload file
@@ -94,7 +94,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2DeploymentsInvoke
+## invoke
 
 Invoke a deployment with a given payload
 
@@ -108,7 +108,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2DeploymentsInvoke({
+  const result = await orq.public.invoke({
     key: "<key>",
   });
 
@@ -127,7 +127,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2DeploymentsInvoke } from "orq-poc-typescript/funcs/publicPostV2DeploymentsInvoke.js";
+import { publicInvoke } from "orq-poc-typescript/funcs/publicInvoke.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -136,7 +136,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2DeploymentsInvoke(orq, {
+  const res = await publicInvoke(orq, {
     key: "<key>",
   });
 

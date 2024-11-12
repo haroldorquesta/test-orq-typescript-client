@@ -3,18 +3,18 @@
  */
 
 import { deploymentsGetV2Deployments } from "../funcs/deploymentsGetV2Deployments.js";
+import {
+  deploymentsInvoke,
+  InvokeAcceptEnum,
+} from "../funcs/deploymentsInvoke.js";
 import { deploymentsPostV2DeploymentsGetConfig } from "../funcs/deploymentsPostV2DeploymentsGetConfig.js";
 import { deploymentsPostV2DeploymentsIdMetrics } from "../funcs/deploymentsPostV2DeploymentsIdMetrics.js";
-import {
-  deploymentsPostV2DeploymentsInvoke,
-  PostV2DeploymentsInvokeAcceptEnum,
-} from "../funcs/deploymentsPostV2DeploymentsInvoke.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
-export { PostV2DeploymentsInvokeAcceptEnum } from "../funcs/deploymentsPostV2DeploymentsInvoke.js";
+export { InvokeAcceptEnum } from "../funcs/deploymentsInvoke.js";
 
 export class Deployments extends ClientSDK {
   /**
@@ -40,13 +40,11 @@ export class Deployments extends ClientSDK {
    * @remarks
    * Invoke a deployment with a given payload
    */
-  async postV2DeploymentsInvoke(
+  async invoke(
     request: components.Deployments,
-    options?: RequestOptions & {
-      acceptHeaderOverride?: PostV2DeploymentsInvokeAcceptEnum;
-    },
+    options?: RequestOptions & { acceptHeaderOverride?: InvokeAcceptEnum },
   ): Promise<operations.PostV2DeploymentsInvokeResponse | undefined> {
-    return unwrapAsync(deploymentsPostV2DeploymentsInvoke(
+    return unwrapAsync(deploymentsInvoke(
       this,
       request,
       options,

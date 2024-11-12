@@ -118,7 +118,7 @@ run();
 ### [deployments](docs/sdks/deployments/README.md)
 
 * [postV2DeploymentsGetConfig](docs/sdks/deployments/README.md#postv2deploymentsgetconfig) - Get config
-* [postV2DeploymentsInvoke](docs/sdks/deployments/README.md#postv2deploymentsinvoke) - Invoke
+* [invoke](docs/sdks/deployments/README.md#invoke) - Invoke
 * [postV2DeploymentsIdMetrics](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
 * [getV2Deployments](docs/sdks/deployments/README.md#getv2deployments) - List all deployments
 
@@ -135,7 +135,7 @@ run();
 ### [public](docs/sdks/public/README.md)
 
 * [postV2DeploymentsGetConfig](docs/sdks/public/README.md#postv2deploymentsgetconfig) - Get config
-* [postV2DeploymentsInvoke](docs/sdks/public/README.md#postv2deploymentsinvoke) - Invoke
+* [invoke](docs/sdks/public/README.md#invoke) - Invoke
 * [postV2DeploymentsIdMetrics](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
 * [getV2Deployments](docs/sdks/public/README.md#getv2deployments) - List all deployments
 * [postV2Files](docs/sdks/public/README.md#postv2files) - Upload file
@@ -179,16 +179,16 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 - [`contactsPostContacts`](docs/sdks/contacts/README.md#postcontacts) - Update user information
 - [`deploymentsGetV2Deployments`](docs/sdks/deployments/README.md#getv2deployments) - List all deployments
+- [`deploymentsInvoke`](docs/sdks/deployments/README.md#invoke) - Invoke
 - [`deploymentsPostV2DeploymentsGetConfig`](docs/sdks/deployments/README.md#postv2deploymentsgetconfig) - Get config
 - [`deploymentsPostV2DeploymentsIdMetrics`](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
-- [`deploymentsPostV2DeploymentsInvoke`](docs/sdks/deployments/README.md#postv2deploymentsinvoke) - Invoke
 - [`feedbackPostV2Feedback`](docs/sdks/feedback/README.md#postv2feedback) - Submit feedback
 - [`filesPostV2Files`](docs/sdks/files/README.md#postv2files) - Upload file
 - [`filesPostV2FilesBulk`](docs/sdks/files/README.md#postv2filesbulk) - Bulk upload file
 - [`publicGetV2Deployments`](docs/sdks/public/README.md#getv2deployments) - List all deployments
+- [`publicInvoke`](docs/sdks/public/README.md#invoke) - Invoke
 - [`publicPostV2DeploymentsGetConfig`](docs/sdks/public/README.md#postv2deploymentsgetconfig) - Get config
 - [`publicPostV2DeploymentsIdMetrics`](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
-- [`publicPostV2DeploymentsInvoke`](docs/sdks/public/README.md#postv2deploymentsinvoke) - Invoke
 - [`publicPostV2Files`](docs/sdks/public/README.md#postv2files) - Upload file
 - [`publicPostV2FilesBulk`](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
 - [`publicPostV2Remoteconfigs`](docs/sdks/public/README.md#postv2remoteconfigs)
@@ -224,7 +224,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.deployments.postV2DeploymentsInvoke({
+  const result = await orq.deployments.invoke({
     key: "<key>",
   });
 
