@@ -3299,7 +3299,7 @@
                         "id": {
                           "type": "string",
                           "format": "ulid",
-                          "default": "01JCG93DBK5FMQC6Q3CQB6927R",
+                          "default": "01JCG9NR8CMBJDF2NCJVFCEEJ4",
                           "description": "The id of the resource",
                           "readOnly": true
                         },
@@ -3645,7 +3645,7 @@
                         "id": {
                           "type": "string",
                           "format": "ulid",
-                          "default": "01JCG93DBM796MM798MMN5BVBA",
+                          "default": "01JCG9NR8JC1YK71R2RNGTDA75",
                           "description": "The id of the resource",
                           "readOnly": true
                         },
@@ -4123,7 +4123,7 @@
           "created": {
             "type": "string",
             "format": "date-time",
-            "default": "2024-11-12T13:30:37.644Z",
+            "default": "2024-11-12T13:40:39.939Z",
             "description": "The date and time the resource was created",
             "readOnly": true
           }
@@ -4182,7 +4182,7 @@
             "created": {
               "type": "string",
               "format": "date-time",
-              "default": "2024-11-12T13:30:37.644Z",
+              "default": "2024-11-12T13:40:39.939Z",
               "description": "The date and time the resource was created",
               "readOnly": true
             }
@@ -6196,7 +6196,7 @@
                               "type": "string"
                             }
                           ],
-                          "default": "2024-11-12T13:30:37.087Z",
+                          "default": "2024-11-12T13:40:39.730Z",
                           "description": "The date and time the resource was created",
                           "readOnly": true,
                           "format": "date-time"
@@ -6206,7 +6206,7 @@
                             {
                               "type": "string",
                               "format": "date-time",
-                              "default": "2024-11-12T13:30:37.087Z"
+                              "default": "2024-11-12T13:40:39.730Z"
                             },
                             {
                               "type": "string"
@@ -6246,7 +6246,7 @@
                     "type": "string"
                   }
                 ],
-                "default": "2024-11-12T13:30:37.087Z",
+                "default": "2024-11-12T13:40:39.730Z",
                 "description": "The date and time the resource was created",
                 "readOnly": true,
                 "format": "date-time"
@@ -6256,7 +6256,7 @@
                   {
                     "type": "string",
                     "format": "date-time",
-                    "default": "2024-11-12T13:30:37.087Z"
+                    "default": "2024-11-12T13:40:39.730Z"
                   },
                   {
                     "type": "string"
@@ -7043,7 +7043,7 @@
                     "type": "string"
                   }
                 ],
-                "default": "2024-11-12T13:30:37.087Z",
+                "default": "2024-11-12T13:40:39.730Z",
                 "description": "The date and time the resource was created",
                 "readOnly": true,
                 "format": "date-time"
@@ -7053,7 +7053,7 @@
                   {
                     "type": "string",
                     "format": "date-time",
-                    "default": "2024-11-12T13:30:37.087Z"
+                    "default": "2024-11-12T13:40:39.730Z"
                   },
                   {
                     "type": "string"
@@ -7284,7 +7284,7 @@
                           "type": "string"
                         }
                       ],
-                      "default": "2024-11-12T13:30:37.087Z",
+                      "default": "2024-11-12T13:40:39.730Z",
                       "description": "The date and time the resource was created",
                       "readOnly": true,
                       "format": "date-time"
@@ -7294,7 +7294,7 @@
                         {
                           "type": "string",
                           "format": "date-time",
-                          "default": "2024-11-12T13:30:37.087Z"
+                          "default": "2024-11-12T13:40:39.730Z"
                         },
                         {
                           "type": "string"
@@ -13961,7 +13961,7 @@
                             "id": {
                               "type": "string",
                               "format": "ulid",
-                              "default": "01JCG93DCJMEXFPANX0ZTMF3K9",
+                              "default": "01JCG9NR9HWXYC2E1RB8D3YPH8",
                               "description": "The id of the resource",
                               "readOnly": true
                             },
@@ -14307,7 +14307,7 @@
                             "id": {
                               "type": "string",
                               "format": "ulid",
-                              "default": "01JCG93DCKXH1QCVBN5F09PFF3",
+                              "default": "01JCG9NR9JPQTSWGWQRYQ7RTGY",
                               "description": "The id of the resource",
                               "readOnly": true
                             },
@@ -29538,7 +29538,7 @@
                                   "id": {
                                     "type": "string",
                                     "format": "ulid",
-                                    "default": "01JCG93DDQN3A95YPCJ19R1T6Z",
+                                    "default": "01JCG9NRAQQHQ38A2R7205SEZQ",
                                     "description": "The id of the resource",
                                     "readOnly": true
                                   },
@@ -29884,7 +29884,7 @@
                                   "id": {
                                     "type": "string",
                                     "format": "ulid",
-                                    "default": "01JCG93DDRPN7EZ58DVYK1RQG5",
+                                    "default": "01JCG9NRARYFJ3A4V180NVWW96",
                                     "description": "The id of the resource",
                                     "readOnly": true
                                   },
@@ -37874,7 +37874,7 @@
                           "type": "string"
                         }
                       ],
-                      "default": "2024-11-12T13:30:37.087Z",
+                      "default": "2024-11-12T13:40:39.730Z",
                       "description": "The date and time the resource was created",
                       "readOnly": true,
                       "format": "date-time"
@@ -37884,7 +37884,7 @@
                         {
                           "type": "string",
                           "format": "date-time",
-                          "default": "2024-11-12T13:30:37.087Z"
+                          "default": "2024-11-12T13:40:39.730Z"
                         },
                         {
                           "type": "string"
@@ -40394,6 +40394,8 @@
           "Files",
           "public"
         ],
+        "x-speakeasy-group": "files",
+        "x-speakeasy-name-override": "upload",
         "summary": "Upload file",
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "security": [
@@ -40457,7 +40459,7 @@
                     "created": {
                       "type": "string",
                       "format": "date-time",
-                      "default": "2024-11-12T13:30:37.644Z",
+                      "default": "2024-11-12T13:40:39.939Z",
                       "description": "The date and time the resource was created",
                       "readOnly": true
                     }
@@ -40485,6 +40487,8 @@
           "Files",
           "public"
         ],
+        "x-speakeasy-group": "files",
+        "x-speakeasy-name-override": "bulkUpload",
         "summary": "Bulk upload file",
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "security": [
@@ -40556,7 +40560,7 @@
                       "created": {
                         "type": "string",
                         "format": "date-time",
-                        "default": "2024-11-12T13:30:37.644Z",
+                        "default": "2024-11-12T13:40:39.939Z",
                         "description": "The date and time the resource was created",
                         "readOnly": true
                       }
@@ -42324,6 +42328,8 @@
           "router",
           "public"
         ],
+        "x-speakeasy-group": "router.images",
+        "x-speakeasy-name-override": "generate",
         "security": [
           {
             "Bearer": []
@@ -42593,6 +42599,7 @@
           "remoteconfig",
           "public"
         ],
+        "x-speakeasy-name-override": "getConfig",
         "x-speakeasy-group": "remoteconfig",
         "security": [
           {
