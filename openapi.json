@@ -36031,7 +36031,7 @@
     },
     "/v2/feedback": {
       "post": {
-        "x-speakeasy-name-override": "create",
+        "x-speakeasy-name-override": "create5",
         "tags": [
           "Feedback"
         ],
@@ -40707,7 +40707,7 @@
     },
     "/v2/remoteconfigs": {
       "post": {
-        "x-speakeasy-name-override": "create",
+        "x-speakeasy-name-override": "create4",
         "tags": [
           "remoteconfig",
           "public"
