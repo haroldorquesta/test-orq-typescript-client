@@ -117,47 +117,62 @@ run();
 
 ### [deployments](docs/sdks/deployments/README.md)
 
-* [configGet](docs/sdks/deployments/README.md#configget) - Get config
+* [getConfig](docs/sdks/deployments/README.md#getconfig) - Get config
 * [invoke](docs/sdks/deployments/README.md#invoke) - Invoke
-* [postV2DeploymentsIdMetrics](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
+* [addMetrics](docs/sdks/deployments/README.md#addmetrics) - Add metrics
 * [list](docs/sdks/deployments/README.md#list) - List all deployments
 
 ### [feedback](docs/sdks/feedback/README.md)
 
-* [postV2Feedback](docs/sdks/feedback/README.md#postv2feedback) - Submit feedback
+* [create5](docs/sdks/feedback/README.md#create5) - Submit feedback
 
 ### [files](docs/sdks/files/README.md)
 
-* [postV2Files](docs/sdks/files/README.md#postv2files) - Upload file
-* [postV2FilesBulk](docs/sdks/files/README.md#postv2filesbulk) - Bulk upload file
+* [upload](docs/sdks/files/README.md#upload) - Upload file
+* [bulkUpload](docs/sdks/files/README.md#bulkupload) - Bulk upload file
 
 
 ### [public](docs/sdks/public/README.md)
 
-* [configGet](docs/sdks/public/README.md#configget) - Get config
+* [getConfig](docs/sdks/public/README.md#getconfig) - Get config
 * [invoke](docs/sdks/public/README.md#invoke) - Invoke
-* [postV2DeploymentsIdMetrics](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
+* [addMetrics](docs/sdks/public/README.md#addmetrics) - Add metrics
 * [list](docs/sdks/public/README.md#list) - List all deployments
-* [postV2Files](docs/sdks/public/README.md#postv2files) - Upload file
-* [postV2FilesBulk](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
-* [postV2RouterEmbeddings](docs/sdks/public/README.md#postv2routerembeddings) - Embeddings
-* [postV2RouterChatCompletions](docs/sdks/public/README.md#postv2routerchatcompletions) - Chat
-* [postV2RouterCompletions](docs/sdks/public/README.md#postv2routercompletions) - legacy completions route
-* [postV2RouterRerank](docs/sdks/public/README.md#postv2routerrerank) - rerank route
-* [postV2RouterImagesGenerations](docs/sdks/public/README.md#postv2routerimagesgenerations)
-* [postV2Remoteconfigs](docs/sdks/public/README.md#postv2remoteconfigs)
+* [upload](docs/sdks/public/README.md#upload) - Upload file
+* [bulkUpload](docs/sdks/public/README.md#bulkupload) - Bulk upload file
+* [create](docs/sdks/public/README.md#create) - Embeddings
+* [create2](docs/sdks/public/README.md#create2) - Chat
+* [create3](docs/sdks/public/README.md#create3) - legacy completions route
+* [rerank](docs/sdks/public/README.md#rerank) - rerank route
+* [generate](docs/sdks/public/README.md#generate)
+* [create4](docs/sdks/public/README.md#create4)
 
 ### [remoteconfig](docs/sdks/remoteconfig/README.md)
 
-* [postV2Remoteconfigs](docs/sdks/remoteconfig/README.md#postv2remoteconfigs)
+* [create4](docs/sdks/remoteconfig/README.md#create4)
 
 ### [router](docs/sdks/router/README.md)
 
-* [postV2RouterEmbeddings](docs/sdks/router/README.md#postv2routerembeddings) - Embeddings
-* [postV2RouterChatCompletions](docs/sdks/router/README.md#postv2routerchatcompletions) - Chat
-* [postV2RouterCompletions](docs/sdks/router/README.md#postv2routercompletions) - legacy completions route
-* [postV2RouterRerank](docs/sdks/router/README.md#postv2routerrerank) - rerank route
-* [postV2RouterImagesGenerations](docs/sdks/router/README.md#postv2routerimagesgenerations)
+* [rerank](docs/sdks/router/README.md#rerank) - rerank route
+
+#### [router.chat](docs/sdks/chat/README.md)
+
+
+#### [router.chat.completions](docs/sdks/orqcompletions/README.md)
+
+* [create2](docs/sdks/orqcompletions/README.md#create2) - Chat
+
+#### [router.completions](docs/sdks/completions/README.md)
+
+* [create3](docs/sdks/completions/README.md#create3) - legacy completions route
+
+#### [router.embeddings](docs/sdks/embeddings/README.md)
+
+* [create](docs/sdks/embeddings/README.md#create) - Embeddings
+
+#### [router.images](docs/sdks/images/README.md)
+
+* [generate](docs/sdks/images/README.md#generate)
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
@@ -178,31 +193,31 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 <summary>Available standalone functions</summary>
 
 - [`contactsPostContacts`](docs/sdks/contacts/README.md#postcontacts) - Update user information
-- [`deploymentsConfigGet`](docs/sdks/deployments/README.md#configget) - Get config
+- [`deploymentsAddMetrics`](docs/sdks/deployments/README.md#addmetrics) - Add metrics
+- [`deploymentsGetConfig`](docs/sdks/deployments/README.md#getconfig) - Get config
 - [`deploymentsInvoke`](docs/sdks/deployments/README.md#invoke) - Invoke
 - [`deploymentsList`](docs/sdks/deployments/README.md#list) - List all deployments
-- [`deploymentsPostV2DeploymentsIdMetrics`](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
-- [`feedbackPostV2Feedback`](docs/sdks/feedback/README.md#postv2feedback) - Submit feedback
-- [`filesPostV2Files`](docs/sdks/files/README.md#postv2files) - Upload file
-- [`filesPostV2FilesBulk`](docs/sdks/files/README.md#postv2filesbulk) - Bulk upload file
-- [`publicConfigGet`](docs/sdks/public/README.md#configget) - Get config
+- [`feedbackCreate5`](docs/sdks/feedback/README.md#create5) - Submit feedback
+- [`filesBulkUpload`](docs/sdks/files/README.md#bulkupload) - Bulk upload file
+- [`filesUpload`](docs/sdks/files/README.md#upload) - Upload file
+- [`publicAddMetrics`](docs/sdks/public/README.md#addmetrics) - Add metrics
+- [`publicBulkUpload`](docs/sdks/public/README.md#bulkupload) - Bulk upload file
+- [`publicCreate`](docs/sdks/public/README.md#create) - Embeddings
+- [`publicCreate2`](docs/sdks/public/README.md#create2) - Chat
+- [`publicCreate3`](docs/sdks/public/README.md#create3) - legacy completions route
+- [`publicCreate4`](docs/sdks/public/README.md#create4)
+- [`publicGenerate`](docs/sdks/public/README.md#generate)
+- [`publicGetConfig`](docs/sdks/public/README.md#getconfig) - Get config
 - [`publicInvoke`](docs/sdks/public/README.md#invoke) - Invoke
 - [`publicList`](docs/sdks/public/README.md#list) - List all deployments
-- [`publicPostV2DeploymentsIdMetrics`](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
-- [`publicPostV2Files`](docs/sdks/public/README.md#postv2files) - Upload file
-- [`publicPostV2FilesBulk`](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
-- [`publicPostV2Remoteconfigs`](docs/sdks/public/README.md#postv2remoteconfigs)
-- [`publicPostV2RouterChatCompletions`](docs/sdks/public/README.md#postv2routerchatcompletions) - Chat
-- [`publicPostV2RouterCompletions`](docs/sdks/public/README.md#postv2routercompletions) - legacy completions route
-- [`publicPostV2RouterEmbeddings`](docs/sdks/public/README.md#postv2routerembeddings) - Embeddings
-- [`publicPostV2RouterImagesGenerations`](docs/sdks/public/README.md#postv2routerimagesgenerations)
-- [`publicPostV2RouterRerank`](docs/sdks/public/README.md#postv2routerrerank) - rerank route
-- [`remoteconfigPostV2Remoteconfigs`](docs/sdks/remoteconfig/README.md#postv2remoteconfigs)
-- [`routerPostV2RouterChatCompletions`](docs/sdks/router/README.md#postv2routerchatcompletions) - Chat
-- [`routerPostV2RouterCompletions`](docs/sdks/router/README.md#postv2routercompletions) - legacy completions route
-- [`routerPostV2RouterEmbeddings`](docs/sdks/router/README.md#postv2routerembeddings) - Embeddings
-- [`routerPostV2RouterImagesGenerations`](docs/sdks/router/README.md#postv2routerimagesgenerations)
-- [`routerPostV2RouterRerank`](docs/sdks/router/README.md#postv2routerrerank) - rerank route
+- [`publicRerank`](docs/sdks/public/README.md#rerank) - rerank route
+- [`publicUpload`](docs/sdks/public/README.md#upload) - Upload file
+- [`remoteconfigCreate4`](docs/sdks/remoteconfig/README.md#create4)
+- [`routerChatCompletionsCreate2`](docs/sdks/orqcompletions/README.md#create2) - Chat
+- [`routerCompletionsCreate3`](docs/sdks/completions/README.md#create3) - legacy completions route
+- [`routerEmbeddingsCreate`](docs/sdks/embeddings/README.md#create) - Embeddings
+- [`routerImagesGenerate`](docs/sdks/images/README.md#generate)
+- [`routerRerank`](docs/sdks/router/README.md#rerank) - rerank route
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->
@@ -264,7 +279,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2Files({});
+  const result = await orq.public.upload({});
 
   // Handle the result
   console.log(result);

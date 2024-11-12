@@ -56,14 +56,14 @@ export type PostV2RouterEmbeddingsObject = ClosedEnum<
 /**
  * The object type, which is always "embedding".
  */
-export const PostV2RouterEmbeddingsRouterObject = {
+export const PostV2RouterEmbeddingsRouterEmbeddingsObject = {
   Embedding: "embedding",
 } as const;
 /**
  * The object type, which is always "embedding".
  */
-export type PostV2RouterEmbeddingsRouterObject = ClosedEnum<
-  typeof PostV2RouterEmbeddingsRouterObject
+export type PostV2RouterEmbeddingsRouterEmbeddingsObject = ClosedEnum<
+  typeof PostV2RouterEmbeddingsRouterEmbeddingsObject
 >;
 
 /**
@@ -75,7 +75,7 @@ export type PostV2RouterEmbeddingsData = {
   /**
    * The object type, which is always "embedding".
    */
-  object: PostV2RouterEmbeddingsRouterObject;
+  object: PostV2RouterEmbeddingsRouterEmbeddingsObject;
   /**
    * The embedding result.
    */
@@ -231,25 +231,26 @@ export namespace PostV2RouterEmbeddingsObject$ {
 }
 
 /** @internal */
-export const PostV2RouterEmbeddingsRouterObject$inboundSchema: z.ZodNativeEnum<
-  typeof PostV2RouterEmbeddingsRouterObject
-> = z.nativeEnum(PostV2RouterEmbeddingsRouterObject);
+export const PostV2RouterEmbeddingsRouterEmbeddingsObject$inboundSchema:
+  z.ZodNativeEnum<typeof PostV2RouterEmbeddingsRouterEmbeddingsObject> = z
+    .nativeEnum(PostV2RouterEmbeddingsRouterEmbeddingsObject);
 
 /** @internal */
-export const PostV2RouterEmbeddingsRouterObject$outboundSchema: z.ZodNativeEnum<
-  typeof PostV2RouterEmbeddingsRouterObject
-> = PostV2RouterEmbeddingsRouterObject$inboundSchema;
+export const PostV2RouterEmbeddingsRouterEmbeddingsObject$outboundSchema:
+  z.ZodNativeEnum<typeof PostV2RouterEmbeddingsRouterEmbeddingsObject> =
+    PostV2RouterEmbeddingsRouterEmbeddingsObject$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterEmbeddingsRouterObject$ {
-  /** @deprecated use `PostV2RouterEmbeddingsRouterObject$inboundSchema` instead. */
-  export const inboundSchema = PostV2RouterEmbeddingsRouterObject$inboundSchema;
-  /** @deprecated use `PostV2RouterEmbeddingsRouterObject$outboundSchema` instead. */
+export namespace PostV2RouterEmbeddingsRouterEmbeddingsObject$ {
+  /** @deprecated use `PostV2RouterEmbeddingsRouterEmbeddingsObject$inboundSchema` instead. */
+  export const inboundSchema =
+    PostV2RouterEmbeddingsRouterEmbeddingsObject$inboundSchema;
+  /** @deprecated use `PostV2RouterEmbeddingsRouterEmbeddingsObject$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterEmbeddingsRouterObject$outboundSchema;
+    PostV2RouterEmbeddingsRouterEmbeddingsObject$outboundSchema;
 }
 
 /** @internal */
@@ -288,7 +289,7 @@ export const PostV2RouterEmbeddingsData$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  object: PostV2RouterEmbeddingsRouterObject$inboundSchema,
+  object: PostV2RouterEmbeddingsRouterEmbeddingsObject$inboundSchema,
   embedding: z.union([z.array(z.number()), z.string()]),
   index: z.number(),
 });
@@ -306,7 +307,7 @@ export const PostV2RouterEmbeddingsData$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2RouterEmbeddingsData
 > = z.object({
-  object: PostV2RouterEmbeddingsRouterObject$outboundSchema,
+  object: PostV2RouterEmbeddingsRouterEmbeddingsObject$outboundSchema,
   embedding: z.union([z.array(z.number()), z.string()]),
   index: z.number(),
 });

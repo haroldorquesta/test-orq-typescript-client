@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [configGet](#configget) - Get config
+* [getConfig](#getconfig) - Get config
 * [invoke](#invoke) - Invoke
-* [postV2DeploymentsIdMetrics](#postv2deploymentsidmetrics) - Add metrics
+* [addMetrics](#addmetrics) - Add metrics
 * [list](#list) - List all deployments
-* [postV2Files](#postv2files) - Upload file
-* [postV2FilesBulk](#postv2filesbulk) - Bulk upload file
-* [postV2RouterEmbeddings](#postv2routerembeddings) - Embeddings
-* [postV2RouterChatCompletions](#postv2routerchatcompletions) - Chat
-* [postV2RouterCompletions](#postv2routercompletions) - legacy completions route
-* [postV2RouterRerank](#postv2routerrerank) - rerank route
-* [postV2RouterImagesGenerations](#postv2routerimagesgenerations)
-* [postV2Remoteconfigs](#postv2remoteconfigs)
+* [upload](#upload) - Upload file
+* [bulkUpload](#bulkupload) - Bulk upload file
+* [create](#create) - Embeddings
+* [create2](#create2) - Chat
+* [create3](#create3) - legacy completions route
+* [rerank](#rerank) - rerank route
+* [generate](#generate)
+* [create4](#create4)
 
-## configGet
+## getConfig
 
 Retrieve the deployment configuration
 
@@ -32,7 +32,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.configGet({
+  const result = await orq.public.getConfig({
     key: "<key>",
   });
 
@@ -49,7 +49,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicConfigGet } from "orq-poc-typescript/funcs/publicConfigGet.js";
+import { publicGetConfig } from "orq-poc-typescript/funcs/publicGetConfig.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -58,7 +58,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicConfigGet(orq, {
+  const res = await publicGetConfig(orq, {
     key: "<key>",
   });
 
@@ -174,7 +174,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2DeploymentsIdMetrics
+## addMetrics
 
 Add metrics to a deployment
 
@@ -188,7 +188,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2DeploymentsIdMetrics({
+  const result = await orq.public.addMetrics({
     id: "<id>",
     requestBody: {},
   });
@@ -206,7 +206,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2DeploymentsIdMetrics } from "orq-poc-typescript/funcs/publicPostV2DeploymentsIdMetrics.js";
+import { publicAddMetrics } from "orq-poc-typescript/funcs/publicAddMetrics.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -215,7 +215,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2DeploymentsIdMetrics(orq, {
+  const res = await publicAddMetrics(orq, {
     id: "<id>",
     requestBody: {},
   });
@@ -325,7 +325,7 @@ run();
 | errors.HonoApiError | 500                 | application/json    |
 | errors.SDKError     | 4XX, 5XX            | \*/\*               |
 
-## postV2Files
+## upload
 
 Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
 
@@ -339,7 +339,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2Files({});
+  const result = await orq.public.upload({});
 
   // Handle the result
   console.log(result);
@@ -354,7 +354,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2Files } from "orq-poc-typescript/funcs/publicPostV2Files.js";
+import { publicUpload } from "orq-poc-typescript/funcs/publicUpload.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -363,7 +363,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2Files(orq, {});
+  const res = await publicUpload(orq, {});
 
   if (!res.ok) {
     throw res.error;
@@ -397,7 +397,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2FilesBulk
+## bulkUpload
 
 Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
 
@@ -412,7 +412,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2FilesBulk({
+  const result = await orq.public.bulkUpload({
     files: [
       {
         fileName: "example.file",
@@ -436,7 +436,7 @@ The standalone function version of this method:
 ```typescript
 import { openAsBlob } from "node:fs";
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2FilesBulk } from "orq-poc-typescript/funcs/publicPostV2FilesBulk.js";
+import { publicBulkUpload } from "orq-poc-typescript/funcs/publicBulkUpload.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -445,7 +445,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2FilesBulk(orq, {
+  const res = await publicBulkUpload(orq, {
     files: [
       {
         fileName: "example.file",
@@ -487,7 +487,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2RouterEmbeddings
+## create
 
 Creates an embedding vector representing the input text.
 
@@ -501,7 +501,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2RouterEmbeddings({
+  const result = await orq.public.create({
     input: "<value>",
     model: "Accord",
   });
@@ -519,7 +519,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2RouterEmbeddings } from "orq-poc-typescript/funcs/publicPostV2RouterEmbeddings.js";
+import { publicCreate } from "orq-poc-typescript/funcs/publicCreate.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -528,7 +528,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2RouterEmbeddings(orq, {
+  const res = await publicCreate(orq, {
     input: "<value>",
     model: "Accord",
   });
@@ -565,7 +565,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2RouterChatCompletions
+## create2
 
 For sending requests to chat completion models
 
@@ -579,7 +579,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2RouterChatCompletions({
+  const result = await orq.public.create2({
     model: "Land Cruiser",
     messages: [
       {
@@ -605,7 +605,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2RouterChatCompletions } from "orq-poc-typescript/funcs/publicPostV2RouterChatCompletions.js";
+import { publicCreate2 } from "orq-poc-typescript/funcs/publicCreate2.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -614,7 +614,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2RouterChatCompletions(orq, {
+  const res = await publicCreate2(orq, {
     model: "Land Cruiser",
     messages: [
       {
@@ -659,7 +659,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2RouterCompletions
+## create3
 
 For sending requests to legacy completion models
 
@@ -673,7 +673,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2RouterCompletions();
+  const result = await orq.public.create3();
 
   // Handle the result
   console.log(result);
@@ -688,7 +688,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2RouterCompletions } from "orq-poc-typescript/funcs/publicPostV2RouterCompletions.js";
+import { publicCreate3 } from "orq-poc-typescript/funcs/publicCreate3.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -697,7 +697,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2RouterCompletions(orq);
+  const res = await publicCreate3(orq);
 
   if (!res.ok) {
     throw res.error;
@@ -731,7 +731,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2RouterRerank
+## rerank
 
 For sending requests to rerank models
 
@@ -745,7 +745,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2RouterRerank();
+  const result = await orq.public.rerank();
 
   // Handle the result
   console.log(result);
@@ -760,7 +760,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2RouterRerank } from "orq-poc-typescript/funcs/publicPostV2RouterRerank.js";
+import { publicRerank } from "orq-poc-typescript/funcs/publicRerank.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -769,7 +769,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2RouterRerank(orq);
+  const res = await publicRerank(orq);
 
   if (!res.ok) {
     throw res.error;
@@ -803,7 +803,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2RouterImagesGenerations
+## generate
 
 ### Example Usage
 
@@ -815,7 +815,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2RouterImagesGenerations();
+  const result = await orq.public.generate();
 
   // Handle the result
   console.log(result);
@@ -830,7 +830,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2RouterImagesGenerations } from "orq-poc-typescript/funcs/publicPostV2RouterImagesGenerations.js";
+import { publicGenerate } from "orq-poc-typescript/funcs/publicGenerate.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -839,7 +839,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2RouterImagesGenerations(orq);
+  const res = await publicGenerate(orq);
 
   if (!res.ok) {
     throw res.error;
@@ -873,7 +873,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2Remoteconfigs
+## create4
 
 ### Example Usage
 
@@ -885,7 +885,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2Remoteconfigs();
+  const result = await orq.public.create4();
 
   // Handle the result
   console.log(result);
@@ -900,7 +900,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2Remoteconfigs } from "orq-poc-typescript/funcs/publicPostV2Remoteconfigs.js";
+import { publicCreate4 } from "orq-poc-typescript/funcs/publicCreate4.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -909,7 +909,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2Remoteconfigs(orq);
+  const res = await publicCreate4(orq);
 
   if (!res.ok) {
     throw res.error;

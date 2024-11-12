@@ -5,12 +5,12 @@
 
 ### Available Operations
 
-* [configGet](#configget) - Get config
+* [getConfig](#getconfig) - Get config
 * [invoke](#invoke) - Invoke
-* [postV2DeploymentsIdMetrics](#postv2deploymentsidmetrics) - Add metrics
+* [addMetrics](#addmetrics) - Add metrics
 * [list](#list) - List all deployments
 
-## configGet
+## getConfig
 
 Retrieve the deployment configuration
 
@@ -24,7 +24,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.deployments.configGet({
+  const result = await orq.deployments.getConfig({
     key: "<key>",
   });
 
@@ -41,7 +41,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { deploymentsConfigGet } from "orq-poc-typescript/funcs/deploymentsConfigGet.js";
+import { deploymentsGetConfig } from "orq-poc-typescript/funcs/deploymentsGetConfig.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -50,7 +50,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await deploymentsConfigGet(orq, {
+  const res = await deploymentsGetConfig(orq, {
     key: "<key>",
   });
 
@@ -166,7 +166,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## postV2DeploymentsIdMetrics
+## addMetrics
 
 Add metrics to a deployment
 
@@ -180,7 +180,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.deployments.postV2DeploymentsIdMetrics({
+  const result = await orq.deployments.addMetrics({
     id: "<id>",
     requestBody: {},
   });
@@ -198,7 +198,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { deploymentsPostV2DeploymentsIdMetrics } from "orq-poc-typescript/funcs/deploymentsPostV2DeploymentsIdMetrics.js";
+import { deploymentsAddMetrics } from "orq-poc-typescript/funcs/deploymentsAddMetrics.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -207,7 +207,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await deploymentsPostV2DeploymentsIdMetrics(orq, {
+  const res = await deploymentsAddMetrics(orq, {
     id: "<id>",
     requestBody: {},
   });
