@@ -11,14 +11,15 @@ The contents of a particular role's message.
 const value: string = "<value>";
 ```
 
-### `operations.PostV2RouterChatCompletionsContentRouter2[]`
+### `operations.PostV2RouterChatCompletionsContentRouterChatCompletions2[]`
 
 ```typescript
-const value: operations.PostV2RouterChatCompletionsContentRouter2[] = [
-  {
-    type: "text",
-    text: "<value>",
-  },
-];
+const value:
+  operations.PostV2RouterChatCompletionsContentRouterChatCompletions2[] = [
+    {
+      type: "text",
+      text: "<value>",
+    },
+  ];
 ```
 
