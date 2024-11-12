@@ -6,7 +6,7 @@
 import { PostV2RouterChatCompletions2RouterChatCompletionsImageUrl } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletions2RouterChatCompletionsImageUrl = {
-  url: "https://vengeful-bran.org/",
+  url: "https://expensive-pick.name",
 };
 ```
 

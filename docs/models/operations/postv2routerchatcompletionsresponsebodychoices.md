@@ -7,21 +7,21 @@ import { PostV2RouterChatCompletionsResponseBodyChoices } from "orq-poc-typescri
 
 let value: PostV2RouterChatCompletionsResponseBodyChoices = {
   finishReason: "content_filter",
-  index: 9425.84,
+  index: 3103.81,
   logprobs: {
     content: [
       {
         token: "<value>",
-        logprob: 6339.98,
+        logprob: 3730.35,
         bytes: [
-          8672.89,
+          5249.70,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 9402.10,
+            logprob: 7505.95,
             bytes: [
-              7507.65,
+              3335.07,
             ],
           },
         ],
@@ -30,16 +30,16 @@ let value: PostV2RouterChatCompletionsResponseBodyChoices = {
     refusal: [
       {
         token: "<value>",
-        logprob: 6995.75,
+        logprob: 9241.59,
         bytes: [
-          9679.66,
+          8623.19,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 9944.01,
+            logprob: 486.90,
             bytes: [
-              4518.22,
+              2536.43,
             ],
           },
         ],
@@ -59,7 +59,7 @@ let value: PostV2RouterChatCompletionsResponseBodyChoices = {
         },
       },
     ],
-    role: "system",
+    role: "exception",
   },
 };
 ```

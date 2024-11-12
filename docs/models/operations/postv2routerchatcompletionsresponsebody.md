@@ -12,8 +12,8 @@ const value: operations.ResponseBody1 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "content_filter",
-      index: 6003.92,
+      finishReason: "tool_calls",
+      index: 360.34,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -27,22 +27,22 @@ const value: operations.ResponseBody1 = {
             },
           },
         ],
-        role: "tool",
+        role: "assistant",
       },
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 9627.70,
+            logprob: 3891.35,
             bytes: [
-              168.72,
+              9521.43,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 6964.82,
+                logprob: 3000.29,
                 bytes: [
-                  8136.79,
+                  1604.68,
                 ],
               },
             ],
@@ -51,16 +51,16 @@ const value: operations.ResponseBody1 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 5098.07,
+            logprob: 8863.05,
             bytes: [
-              3339.65,
+              4463.94,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 7908.40,
+                logprob: 9078.76,
                 bytes: [
-                  972.43,
+                  1602.30,
                 ],
               },
             ],
@@ -69,8 +69,8 @@ const value: operations.ResponseBody1 = {
       },
     },
   ],
-  created: 4420.36,
-  model: "Fortwo",
+  created: 6611.18,
+  model: "Expedition",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},
@@ -84,22 +84,22 @@ const value: operations.ResponseBody2 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "content_filter",
-      index: 908.86,
+      finishReason: "stop",
+      index: 6964.63,
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 2277.60,
+            logprob: 2473.99,
             bytes: [
-              4103.02,
+              396.16,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 6232.95,
+                logprob: 599.44,
                 bytes: [
-                  8869.61,
+                  610.79,
                 ],
               },
             ],
@@ -108,16 +108,16 @@ const value: operations.ResponseBody2 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 6188.26,
+            logprob: 9077.33,
             bytes: [
-              1334.61,
+              7398.84,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 9805.80,
+                logprob: 8980.62,
                 bytes: [
-                  8717.86,
+                  6725.82,
                 ],
               },
             ],
@@ -141,8 +141,8 @@ const value: operations.ResponseBody2 = {
       },
     },
   ],
-  created: 9223.48,
-  model: "Golf",
+  created: 3044.46,
+  model: "XTS",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

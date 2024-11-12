@@ -5,9 +5,9 @@
 
 ### Available Operations
 
-* [create5](#create5) - Submit feedback
+* [create](#create) - Submit feedback
 
-## create5
+## create
 
 Submit feedback for the LLM transaction via the API
 
@@ -21,7 +21,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.feedback.create5({
+  const result = await orq.feedback.create({
     property: "rating",
     value: [
       "good",
@@ -42,7 +42,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { feedbackCreate5 } from "orq-poc-typescript/funcs/feedbackCreate5.js";
+import { feedbackCreate } from "orq-poc-typescript/funcs/feedbackCreate.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -51,7 +51,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await feedbackCreate5(orq, {
+  const res = await feedbackCreate(orq, {
     property: "rating",
     value: [
       "good",

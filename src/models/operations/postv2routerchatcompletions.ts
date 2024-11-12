@@ -10,25 +10,25 @@ import { ClosedEnum } from "../../types/enums.js";
 /**
  * The role of the messages author, in this case **tool**.
  */
-export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole =
+export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole =
   {
     Tool: "tool",
   } as const;
 /**
  * The role of the messages author, in this case **tool**.
  */
-export type PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole =
+export type PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole =
   ClosedEnum<
-    typeof PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole
+    typeof PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole
   >;
 
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType =
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type =
   {
     ImageUrl: "image_url",
   } as const;
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType =
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type =
   ClosedEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type
   >;
 
 /**
@@ -46,7 +46,7 @@ export type PostV2RouterChatCompletions2Detail = ClosedEnum<
   typeof PostV2RouterChatCompletions2Detail
 >;
 
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl = {
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl = {
   /**
    * Either a URL of the image or the base64 encoded image data.
    */
@@ -57,46 +57,46 @@ export type PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl = {
   detail?: PostV2RouterChatCompletions2Detail | undefined;
 };
 
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublic2 = {
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequest2 = {
   type:
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType;
-  imageUrl: PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type;
+  imageUrl: PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl;
 };
 
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType =
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType =
   {
     Text: "text",
   } as const;
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType =
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType =
   ClosedEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType
   >;
 
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublic1 = {
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequest1 = {
   type:
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType;
   text: string;
 };
 
-export type PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2 =
-  | PostV2RouterChatCompletions2RouterChatCompletionsPublic1
-  | PostV2RouterChatCompletions2RouterChatCompletionsPublic2;
+export type PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2 =
+  | PostV2RouterChatCompletions2RouterChatCompletionsRequest1
+  | PostV2RouterChatCompletions2RouterChatCompletionsRequest2;
 
 /**
  * The contents of a particular role's message.
  */
-export type PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent =
+export type PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent =
   | string
   | Array<
-    | PostV2RouterChatCompletions2RouterChatCompletionsPublic1
-    | PostV2RouterChatCompletions2RouterChatCompletionsPublic2
+    | PostV2RouterChatCompletions2RouterChatCompletionsRequest1
+    | PostV2RouterChatCompletions2RouterChatCompletionsRequest2
   >;
 
 export type Four = {
   /**
    * The role of the messages author, in this case **tool**.
    */
-  role: PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole;
+  role: PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole;
   toolCallId: string;
   /**
    * The contents of a particular role's message.
@@ -104,8 +104,8 @@ export type Four = {
   content:
     | string
     | Array<
-      | PostV2RouterChatCompletions2RouterChatCompletionsPublic1
-      | PostV2RouterChatCompletions2RouterChatCompletionsPublic2
+      | PostV2RouterChatCompletions2RouterChatCompletionsRequest1
+      | PostV2RouterChatCompletions2RouterChatCompletionsRequest2
     >;
 };
 
@@ -206,13 +206,13 @@ export type PostV2RouterChatCompletionsMessagesRole = ClosedEnum<
   typeof PostV2RouterChatCompletionsMessagesRole
 >;
 
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType =
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType =
   {
     ImageUrl: "image_url",
   } as const;
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType =
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType =
   ClosedEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType
   >;
 
 /**
@@ -240,20 +240,20 @@ export type PostV2RouterChatCompletions2RouterChatCompletionsImageUrl = {
 };
 
 export type PostV2RouterChatCompletions2RouterChatCompletions2 = {
-  type: PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType;
+  type: PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType;
   imageUrl: PostV2RouterChatCompletions2RouterChatCompletionsImageUrl;
 };
 
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicType = {
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestType = {
   Text: "text",
 } as const;
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublicType =
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequestType =
   ClosedEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestType
   >;
 
 export type PostV2RouterChatCompletions2RouterChatCompletions1 = {
-  type: PostV2RouterChatCompletions2RouterChatCompletionsPublicType;
+  type: PostV2RouterChatCompletions2RouterChatCompletionsRequestType;
   text: string;
 };
 
@@ -954,59 +954,59 @@ export type PostV2RouterChatCompletionsResponse =
   | EventStream<PostV2RouterChatCompletionsRouterChatCompletionsResponseBody>;
 
 /** @internal */
-export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$inboundSchema:
+export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole
+    typeof PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole
   > = z.nativeEnum(
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole,
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole,
   );
 
 /** @internal */
-export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$outboundSchema:
+export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole
+    typeof PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole
   > =
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$inboundSchema;
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$ {
-  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$ {
+  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$outboundSchema` instead. */
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$outboundSchema;
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$outboundSchema;
 }
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$inboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type
   > = z.nativeEnum(
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type,
   );
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$outboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type
   > =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$inboundSchema;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$ {
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$ {
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$outboundSchema` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$outboundSchema;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$outboundSchema;
 }
 
 /** @internal */
@@ -1032,9 +1032,9 @@ export namespace PostV2RouterChatCompletions2Detail$ {
 }
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$inboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$inboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl,
     z.ZodTypeDef,
     unknown
   > = z.object({
@@ -1043,18 +1043,18 @@ export const PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$inb
   });
 
 /** @internal */
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$Outbound =
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$Outbound =
   {
     url: string;
     detail?: string | undefined;
   };
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$outboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$outboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$Outbound,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$Outbound,
     z.ZodTypeDef,
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl
   > = z.object({
     url: z.string(),
     detail: PostV2RouterChatCompletions2Detail$outboundSchema.optional(),
@@ -1064,29 +1064,29 @@ export const PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$out
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$ {
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$ {
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$outboundSchema` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$outboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$Outbound` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$outboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$Outbound` instead. */
   export type Outbound =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$Outbound;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$Outbound;
 }
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublic2$inboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic2,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest2,
     z.ZodTypeDef,
     unknown
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$inboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$inboundSchema,
     image_url: z.lazy(() =>
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$inboundSchema
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$inboundSchema
     ),
   }).transform((v) => {
     return remap$(v, {
@@ -1095,24 +1095,24 @@ export const PostV2RouterChatCompletions2RouterChatCompletionsPublic2$inboundSch
   });
 
 /** @internal */
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublic2$Outbound =
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequest2$Outbound =
   {
     type: string;
     image_url:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$Outbound;
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$Outbound;
   };
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublic2$outboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequest2$outboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic2$Outbound,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest2$Outbound,
     z.ZodTypeDef,
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic2
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest2
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyMessagesType$outboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessages4Type$outboundSchema,
     imageUrl: z.lazy(() =>
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicImageUrl$outboundSchema
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestImageUrl$outboundSchema
     ),
   }).transform((v) => {
     return remap$(v, {
@@ -1124,74 +1124,74 @@ export const PostV2RouterChatCompletions2RouterChatCompletionsPublic2$outboundSc
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletions2RouterChatCompletionsPublic2$ {
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublic2$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletions2RouterChatCompletionsRequest2$ {
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic2$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublic2$outboundSchema` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequest2$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic2$outboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublic2$Outbound` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest2$outboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequest2$Outbound` instead. */
   export type Outbound =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic2$Outbound;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest2$Outbound;
 }
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$inboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType
   > = z.nativeEnum(
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType,
   );
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$outboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType
   > =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$inboundSchema;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$ {
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$ {
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$outboundSchema` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$outboundSchema;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$outboundSchema;
 }
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublic1$inboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequest1$inboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic1,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest1,
     z.ZodTypeDef,
     unknown
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$inboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$inboundSchema,
     text: z.string(),
   });
 
 /** @internal */
-export type PostV2RouterChatCompletions2RouterChatCompletionsPublic1$Outbound =
+export type PostV2RouterChatCompletions2RouterChatCompletionsRequest1$Outbound =
   {
     type: string;
     text: string;
   };
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublic1$outboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequest1$outboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic1$Outbound,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest1$Outbound,
     z.ZodTypeDef,
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic1
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest1
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestRequestBodyType$outboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyMessagesType$outboundSchema,
     text: z.string(),
   });
 
@@ -1199,50 +1199,50 @@ export const PostV2RouterChatCompletions2RouterChatCompletionsPublic1$outboundSc
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletions2RouterChatCompletionsPublic1$ {
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublic1$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletions2RouterChatCompletionsRequest1$ {
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequest1$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic1$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublic1$outboundSchema` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest1$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequest1$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic1$outboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublic1$Outbound` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest1$outboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequest1$Outbound` instead. */
   export type Outbound =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublic1$Outbound;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequest1$Outbound;
 }
 
 /** @internal */
-export const PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$inboundSchema:
+export const PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$inboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2,
+    PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2,
     z.ZodTypeDef,
     unknown
   > = z.union([
     z.lazy(() =>
-      PostV2RouterChatCompletions2RouterChatCompletionsPublic1$inboundSchema
+      PostV2RouterChatCompletions2RouterChatCompletionsRequest1$inboundSchema
     ),
     z.lazy(() =>
-      PostV2RouterChatCompletions2RouterChatCompletionsPublic2$inboundSchema
+      PostV2RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema
     ),
   ]);
 
 /** @internal */
-export type PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$Outbound =
-  | PostV2RouterChatCompletions2RouterChatCompletionsPublic1$Outbound
-  | PostV2RouterChatCompletions2RouterChatCompletionsPublic2$Outbound;
+export type PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$Outbound =
+  | PostV2RouterChatCompletions2RouterChatCompletionsRequest1$Outbound
+  | PostV2RouterChatCompletions2RouterChatCompletionsRequest2$Outbound;
 
 /** @internal */
-export const PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$outboundSchema:
+export const PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$outboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$Outbound,
+    PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$Outbound,
     z.ZodTypeDef,
-    PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2
+    PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2
   > = z.union([
     z.lazy(() =>
-      PostV2RouterChatCompletions2RouterChatCompletionsPublic1$outboundSchema
+      PostV2RouterChatCompletions2RouterChatCompletionsRequest1$outboundSchema
     ),
     z.lazy(() =>
-      PostV2RouterChatCompletions2RouterChatCompletionsPublic2$outboundSchema
+      PostV2RouterChatCompletions2RouterChatCompletionsRequest2$outboundSchema
     ),
   ]);
 
@@ -1250,58 +1250,58 @@ export const PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$outb
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$ {
-  /** @deprecated use `PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$ {
+  /** @deprecated use `PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$outboundSchema` instead. */
+    PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$outboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$Outbound` instead. */
+    PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$outboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$Outbound` instead. */
   export type Outbound =
-    PostV2RouterChatCompletionsContentRouterChatCompletionsPublic2$Outbound;
+    PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2$Outbound;
 }
 
 /** @internal */
-export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$inboundSchema:
+export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$inboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent,
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent,
     z.ZodTypeDef,
     unknown
   > = z.union([
     z.string(),
     z.array(z.union([
       z.lazy(() =>
-        PostV2RouterChatCompletions2RouterChatCompletionsPublic1$inboundSchema
+        PostV2RouterChatCompletions2RouterChatCompletionsRequest1$inboundSchema
       ),
       z.lazy(() =>
-        PostV2RouterChatCompletions2RouterChatCompletionsPublic2$inboundSchema
+        PostV2RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema
       ),
     ])),
   ]);
 
 /** @internal */
-export type PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$Outbound =
+export type PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$Outbound =
   | string
   | Array<
-    | PostV2RouterChatCompletions2RouterChatCompletionsPublic1$Outbound
-    | PostV2RouterChatCompletions2RouterChatCompletionsPublic2$Outbound
+    | PostV2RouterChatCompletions2RouterChatCompletionsRequest1$Outbound
+    | PostV2RouterChatCompletions2RouterChatCompletionsRequest2$Outbound
   >;
 
 /** @internal */
-export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$outboundSchema:
+export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$outboundSchema:
   z.ZodType<
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$Outbound,
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$Outbound,
     z.ZodTypeDef,
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent
   > = z.union([
     z.string(),
     z.array(z.union([
       z.lazy(() =>
-        PostV2RouterChatCompletions2RouterChatCompletionsPublic1$outboundSchema
+        PostV2RouterChatCompletions2RouterChatCompletionsRequest1$outboundSchema
       ),
       z.lazy(() =>
-        PostV2RouterChatCompletions2RouterChatCompletionsPublic2$outboundSchema
+        PostV2RouterChatCompletions2RouterChatCompletionsRequest2$outboundSchema
       ),
     ])),
   ]);
@@ -1310,32 +1310,32 @@ export const PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicConte
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$ {
-  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$ {
+  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$outboundSchema` instead. */
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$outboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$Outbound` instead. */
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$outboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$Outbound` instead. */
   export type Outbound =
-    PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicContent$Outbound;
+    PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$Outbound;
 }
 
 /** @internal */
 export const Four$inboundSchema: z.ZodType<Four, z.ZodTypeDef, unknown> = z
   .object({
     role:
-      PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$inboundSchema,
+      PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$inboundSchema,
     tool_call_id: z.string(),
     content: z.union([
       z.string(),
       z.array(z.union([
         z.lazy(() =>
-          PostV2RouterChatCompletions2RouterChatCompletionsPublic1$inboundSchema
+          PostV2RouterChatCompletions2RouterChatCompletionsRequest1$inboundSchema
         ),
         z.lazy(() =>
-          PostV2RouterChatCompletions2RouterChatCompletionsPublic2$inboundSchema
+          PostV2RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema
         ),
       ])),
     ]),
@@ -1352,8 +1352,8 @@ export type Four$Outbound = {
   content:
     | string
     | Array<
-      | PostV2RouterChatCompletions2RouterChatCompletionsPublic1$Outbound
-      | PostV2RouterChatCompletions2RouterChatCompletionsPublic2$Outbound
+      | PostV2RouterChatCompletions2RouterChatCompletionsRequest1$Outbound
+      | PostV2RouterChatCompletions2RouterChatCompletionsRequest2$Outbound
     >;
 };
 
@@ -1361,16 +1361,16 @@ export type Four$Outbound = {
 export const Four$outboundSchema: z.ZodType<Four$Outbound, z.ZodTypeDef, Four> =
   z.object({
     role:
-      PostV2RouterChatCompletionsMessagesRouterChatCompletionsPublicRole$outboundSchema,
+      PostV2RouterChatCompletionsMessagesRouterChatCompletionsRequestRole$outboundSchema,
     toolCallId: z.string(),
     content: z.union([
       z.string(),
       z.array(z.union([
         z.lazy(() =>
-          PostV2RouterChatCompletions2RouterChatCompletionsPublic1$outboundSchema
+          PostV2RouterChatCompletions2RouterChatCompletionsRequest1$outboundSchema
         ),
         z.lazy(() =>
-          PostV2RouterChatCompletions2RouterChatCompletionsPublic2$outboundSchema
+          PostV2RouterChatCompletions2RouterChatCompletionsRequest2$outboundSchema
         ),
       ])),
     ]),
@@ -1640,31 +1640,31 @@ export namespace PostV2RouterChatCompletionsMessagesRole$ {
 }
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$inboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType
   > = z.nativeEnum(
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType,
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType,
   );
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$outboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType
   > =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$inboundSchema;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$ {
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$ {
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$outboundSchema` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$outboundSchema;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$outboundSchema;
 }
 
 /** @internal */
@@ -1739,7 +1739,7 @@ export const PostV2RouterChatCompletions2RouterChatCompletions2$inboundSchema:
     unknown
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$inboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$inboundSchema,
     image_url: z.lazy(() =>
       PostV2RouterChatCompletions2RouterChatCompletionsImageUrl$inboundSchema
     ),
@@ -1763,7 +1763,7 @@ export const PostV2RouterChatCompletions2RouterChatCompletions2$outboundSchema:
     PostV2RouterChatCompletions2RouterChatCompletions2
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicRequestType$outboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestRequestBodyType$outboundSchema,
     imageUrl: z.lazy(() =>
       PostV2RouterChatCompletions2RouterChatCompletionsImageUrl$outboundSchema
     ),
@@ -1790,28 +1790,31 @@ export namespace PostV2RouterChatCompletions2RouterChatCompletions2$ {
 }
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicType$inboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestType$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicType
-  > = z.nativeEnum(PostV2RouterChatCompletions2RouterChatCompletionsPublicType);
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestType
+  > = z.nativeEnum(
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestType,
+  );
 
 /** @internal */
-export const PostV2RouterChatCompletions2RouterChatCompletionsPublicType$outboundSchema:
+export const PostV2RouterChatCompletions2RouterChatCompletionsRequestType$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2RouterChatCompletions2RouterChatCompletionsPublicType
-  > = PostV2RouterChatCompletions2RouterChatCompletionsPublicType$inboundSchema;
+    typeof PostV2RouterChatCompletions2RouterChatCompletionsRequestType
+  > =
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterChatCompletions2RouterChatCompletionsPublicType$ {
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicType$inboundSchema` instead. */
+export namespace PostV2RouterChatCompletions2RouterChatCompletionsRequestType$ {
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestType$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicType$inboundSchema;
-  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsPublicType$outboundSchema` instead. */
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestType$inboundSchema;
+  /** @deprecated use `PostV2RouterChatCompletions2RouterChatCompletionsRequestType$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterChatCompletions2RouterChatCompletionsPublicType$outboundSchema;
+    PostV2RouterChatCompletions2RouterChatCompletionsRequestType$outboundSchema;
 }
 
 /** @internal */
@@ -1822,7 +1825,7 @@ export const PostV2RouterChatCompletions2RouterChatCompletions1$inboundSchema:
     unknown
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicType$inboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestType$inboundSchema,
     text: z.string(),
   });
 
@@ -1840,7 +1843,7 @@ export const PostV2RouterChatCompletions2RouterChatCompletions1$outboundSchema:
     PostV2RouterChatCompletions2RouterChatCompletions1
   > = z.object({
     type:
-      PostV2RouterChatCompletions2RouterChatCompletionsPublicType$outboundSchema,
+      PostV2RouterChatCompletions2RouterChatCompletionsRequestType$outboundSchema,
     text: z.string(),
   });
 

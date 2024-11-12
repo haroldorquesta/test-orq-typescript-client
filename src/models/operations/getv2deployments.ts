@@ -33,11 +33,11 @@ export const GetV2DeploymentsType = {
  */
 export type GetV2DeploymentsType = ClosedEnum<typeof GetV2DeploymentsType>;
 
-export const GetV2DeploymentsDeploymentsPublicType = {
+export const GetV2DeploymentsDeploymentsResponseType = {
   Object: "object",
 } as const;
-export type GetV2DeploymentsDeploymentsPublicType = ClosedEnum<
-  typeof GetV2DeploymentsDeploymentsPublicType
+export type GetV2DeploymentsDeploymentsResponseType = ClosedEnum<
+  typeof GetV2DeploymentsDeploymentsResponseType
 >;
 
 /**
@@ -48,7 +48,7 @@ export type GetV2DeploymentsDeploymentsPublicType = ClosedEnum<
  *  Omitting `parameters` defines a function with an empty parameter list.
  */
 export type GetV2DeploymentsParameters = {
-  type: GetV2DeploymentsDeploymentsPublicType;
+  type: GetV2DeploymentsDeploymentsResponseType;
   properties: { [k: string]: any };
   required?: Array<string> | undefined;
   additionalProperties?: boolean | undefined;
@@ -538,27 +538,26 @@ export namespace GetV2DeploymentsType$ {
 }
 
 /** @internal */
-export const GetV2DeploymentsDeploymentsPublicType$inboundSchema:
-  z.ZodNativeEnum<typeof GetV2DeploymentsDeploymentsPublicType> = z.nativeEnum(
-    GetV2DeploymentsDeploymentsPublicType,
-  );
+export const GetV2DeploymentsDeploymentsResponseType$inboundSchema:
+  z.ZodNativeEnum<typeof GetV2DeploymentsDeploymentsResponseType> = z
+    .nativeEnum(GetV2DeploymentsDeploymentsResponseType);
 
 /** @internal */
-export const GetV2DeploymentsDeploymentsPublicType$outboundSchema:
-  z.ZodNativeEnum<typeof GetV2DeploymentsDeploymentsPublicType> =
-    GetV2DeploymentsDeploymentsPublicType$inboundSchema;
+export const GetV2DeploymentsDeploymentsResponseType$outboundSchema:
+  z.ZodNativeEnum<typeof GetV2DeploymentsDeploymentsResponseType> =
+    GetV2DeploymentsDeploymentsResponseType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace GetV2DeploymentsDeploymentsPublicType$ {
-  /** @deprecated use `GetV2DeploymentsDeploymentsPublicType$inboundSchema` instead. */
+export namespace GetV2DeploymentsDeploymentsResponseType$ {
+  /** @deprecated use `GetV2DeploymentsDeploymentsResponseType$inboundSchema` instead. */
   export const inboundSchema =
-    GetV2DeploymentsDeploymentsPublicType$inboundSchema;
-  /** @deprecated use `GetV2DeploymentsDeploymentsPublicType$outboundSchema` instead. */
+    GetV2DeploymentsDeploymentsResponseType$inboundSchema;
+  /** @deprecated use `GetV2DeploymentsDeploymentsResponseType$outboundSchema` instead. */
   export const outboundSchema =
-    GetV2DeploymentsDeploymentsPublicType$outboundSchema;
+    GetV2DeploymentsDeploymentsResponseType$outboundSchema;
 }
 
 /** @internal */
@@ -567,7 +566,7 @@ export const GetV2DeploymentsParameters$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  type: GetV2DeploymentsDeploymentsPublicType$inboundSchema,
+  type: GetV2DeploymentsDeploymentsResponseType$inboundSchema,
   properties: z.record(z.any()),
   required: z.array(z.string()).optional(),
   additionalProperties: z.boolean().optional(),
@@ -587,7 +586,7 @@ export const GetV2DeploymentsParameters$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   GetV2DeploymentsParameters
 > = z.object({
-  type: GetV2DeploymentsDeploymentsPublicType$outboundSchema,
+  type: GetV2DeploymentsDeploymentsResponseType$outboundSchema,
   properties: z.record(z.any()),
   required: z.array(z.string()).optional(),
   additionalProperties: z.boolean().optional(),

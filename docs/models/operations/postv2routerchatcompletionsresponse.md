@@ -10,47 +10,9 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "tool_calls",
-      index: 9682.86,
-      logprobs: {
-        content: [
-          {
-            token: "<value>",
-            logprob: 9197.83,
-            bytes: [
-              360.34,
-            ],
-            topLogprobs: [
-              {
-                token: "<value>",
-                logprob: 1747.72,
-                bytes: [
-                  3891.35,
-                ],
-              },
-            ],
-          },
-        ],
-        refusal: [
-          {
-            token: "<value>",
-            logprob: 9521.43,
-            bytes: [
-              3000.29,
-            ],
-            topLogprobs: [
-              {
-                token: "<value>",
-                logprob: 1604.68,
-                bytes: [
-                  8863.05,
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      delta: {
+      finishReason: "length",
+      index: 3782.45,
+      message: {
         content: "<value>",
         refusal: "<value>",
         toolCalls: [
@@ -63,12 +25,50 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
             },
           },
         ],
-        role: "exception",
+        role: "expected_output",
+      },
+      logprobs: {
+        content: [
+          {
+            token: "<value>",
+            logprob: 1746.58,
+            bytes: [
+              3279.88,
+            ],
+            topLogprobs: [
+              {
+                token: "<value>",
+                logprob: 6803.49,
+                bytes: [
+                  632.08,
+                ],
+              },
+            ],
+          },
+        ],
+        refusal: [
+          {
+            token: "<value>",
+            logprob: 6072.49,
+            bytes: [
+              4776.47,
+            ],
+            topLogprobs: [
+              {
+                token: "<value>",
+                logprob: 2840.00,
+                bytes: [
+                  2384.13,
+                ],
+              },
+            ],
+          },
+        ],
       },
     },
   ],
-  created: 9078.76,
-  model: "Aventador",
+  created: 5145.13,
+  model: "Durango",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

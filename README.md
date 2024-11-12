@@ -92,7 +92,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.postContacts({
+  const result = await orq.contacts.create({
     externalId: "<id>",
   });
 
@@ -113,7 +113,7 @@ run();
 
 ### [contacts](docs/sdks/contacts/README.md)
 
-* [postContacts](docs/sdks/contacts/README.md#postcontacts) - Update user information
+* [create](docs/sdks/contacts/README.md#create) - Update user information
 
 ### [deployments](docs/sdks/deployments/README.md)
 
@@ -124,55 +124,43 @@ run();
 
 ### [feedback](docs/sdks/feedback/README.md)
 
-* [create5](docs/sdks/feedback/README.md#create5) - Submit feedback
+* [create](docs/sdks/feedback/README.md#create) - Submit feedback
 
 ### [files](docs/sdks/files/README.md)
 
-* [upload](docs/sdks/files/README.md#upload) - Upload file
-* [bulkUpload](docs/sdks/files/README.md#bulkupload) - Bulk upload file
+* [postV2Files](docs/sdks/files/README.md#postv2files) - Upload file
+* [postV2FilesBulk](docs/sdks/files/README.md#postv2filesbulk) - Bulk upload file
 
 
 ### [public](docs/sdks/public/README.md)
 
-* [getConfig](docs/sdks/public/README.md#getconfig) - Get config
-* [invoke](docs/sdks/public/README.md#invoke) - Invoke
-* [addMetrics](docs/sdks/public/README.md#addmetrics) - Add metrics
-* [list](docs/sdks/public/README.md#list) - List all deployments
-* [upload](docs/sdks/public/README.md#upload) - Upload file
-* [bulkUpload](docs/sdks/public/README.md#bulkupload) - Bulk upload file
-* [create](docs/sdks/public/README.md#create) - Embeddings
-* [create2](docs/sdks/public/README.md#create2) - Chat
-* [create3](docs/sdks/public/README.md#create3) - legacy completions route
-* [rerank](docs/sdks/public/README.md#rerank) - rerank route
-* [generate](docs/sdks/public/README.md#generate)
-* [create4](docs/sdks/public/README.md#create4)
+* [postV2Files](docs/sdks/public/README.md#postv2files) - Upload file
+* [postV2FilesBulk](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
+* [postV2RouterImagesGenerations](docs/sdks/public/README.md#postv2routerimagesgenerations)
 
 ### [remoteconfig](docs/sdks/remoteconfig/README.md)
 
-* [create4](docs/sdks/remoteconfig/README.md#create4)
+* [postV2Remoteconfigs](docs/sdks/remoteconfig/README.md#postv2remoteconfigs)
 
 ### [router](docs/sdks/router/README.md)
 
 * [rerank](docs/sdks/router/README.md#rerank) - rerank route
+* [postV2RouterImagesGenerations](docs/sdks/router/README.md#postv2routerimagesgenerations)
 
 #### [router.chat](docs/sdks/chat/README.md)
 
 
 #### [router.chat.completions](docs/sdks/orqcompletions/README.md)
 
-* [create2](docs/sdks/orqcompletions/README.md#create2) - Chat
+* [create](docs/sdks/orqcompletions/README.md#create) - Chat
 
 #### [router.completions](docs/sdks/completions/README.md)
 
-* [create3](docs/sdks/completions/README.md#create3) - legacy completions route
+* [create](docs/sdks/completions/README.md#create) - legacy completions route
 
 #### [router.embeddings](docs/sdks/embeddings/README.md)
 
 * [create](docs/sdks/embeddings/README.md#create) - Embeddings
-
-#### [router.images](docs/sdks/images/README.md)
-
-* [generate](docs/sdks/images/README.md#generate)
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
@@ -192,31 +180,22 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [`contactsPostContacts`](docs/sdks/contacts/README.md#postcontacts) - Update user information
+- [`contactsCreate`](docs/sdks/contacts/README.md#create) - Update user information
 - [`deploymentsAddMetrics`](docs/sdks/deployments/README.md#addmetrics) - Add metrics
 - [`deploymentsGetConfig`](docs/sdks/deployments/README.md#getconfig) - Get config
 - [`deploymentsInvoke`](docs/sdks/deployments/README.md#invoke) - Invoke
 - [`deploymentsList`](docs/sdks/deployments/README.md#list) - List all deployments
-- [`feedbackCreate5`](docs/sdks/feedback/README.md#create5) - Submit feedback
-- [`filesBulkUpload`](docs/sdks/files/README.md#bulkupload) - Bulk upload file
-- [`filesUpload`](docs/sdks/files/README.md#upload) - Upload file
-- [`publicAddMetrics`](docs/sdks/public/README.md#addmetrics) - Add metrics
-- [`publicBulkUpload`](docs/sdks/public/README.md#bulkupload) - Bulk upload file
-- [`publicCreate`](docs/sdks/public/README.md#create) - Embeddings
-- [`publicCreate2`](docs/sdks/public/README.md#create2) - Chat
-- [`publicCreate3`](docs/sdks/public/README.md#create3) - legacy completions route
-- [`publicCreate4`](docs/sdks/public/README.md#create4)
-- [`publicGenerate`](docs/sdks/public/README.md#generate)
-- [`publicGetConfig`](docs/sdks/public/README.md#getconfig) - Get config
-- [`publicInvoke`](docs/sdks/public/README.md#invoke) - Invoke
-- [`publicList`](docs/sdks/public/README.md#list) - List all deployments
-- [`publicRerank`](docs/sdks/public/README.md#rerank) - rerank route
-- [`publicUpload`](docs/sdks/public/README.md#upload) - Upload file
-- [`remoteconfigCreate4`](docs/sdks/remoteconfig/README.md#create4)
-- [`routerChatCompletionsCreate2`](docs/sdks/orqcompletions/README.md#create2) - Chat
-- [`routerCompletionsCreate3`](docs/sdks/completions/README.md#create3) - legacy completions route
+- [`feedbackCreate`](docs/sdks/feedback/README.md#create) - Submit feedback
+- [`filesPostV2Files`](docs/sdks/files/README.md#postv2files) - Upload file
+- [`filesPostV2FilesBulk`](docs/sdks/files/README.md#postv2filesbulk) - Bulk upload file
+- [`publicPostV2Files`](docs/sdks/public/README.md#postv2files) - Upload file
+- [`publicPostV2FilesBulk`](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
+- [`publicPostV2RouterImagesGenerations`](docs/sdks/public/README.md#postv2routerimagesgenerations)
+- [`remoteconfigPostV2Remoteconfigs`](docs/sdks/remoteconfig/README.md#postv2remoteconfigs)
+- [`routerChatCompletionsCreate`](docs/sdks/orqcompletions/README.md#create) - Chat
+- [`routerCompletionsCreate`](docs/sdks/completions/README.md#create) - legacy completions route
 - [`routerEmbeddingsCreate`](docs/sdks/embeddings/README.md#create) - Embeddings
-- [`routerImagesGenerate`](docs/sdks/images/README.md#generate)
+- [`routerPostV2RouterImagesGenerations`](docs/sdks/router/README.md#postv2routerimagesgenerations)
 - [`routerRerank`](docs/sdks/router/README.md#rerank) - rerank route
 
 </details>
@@ -279,7 +258,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.upload({});
+  const result = await orq.files.postV2Files({});
 
   // Handle the result
   console.log(result);
@@ -304,7 +283,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.postContacts({
+  const result = await orq.contacts.create({
     externalId: "<id>",
   }, {
     retries: {
@@ -346,7 +325,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.postContacts({
+  const result = await orq.contacts.create({
     externalId: "<id>",
   });
 
@@ -447,7 +426,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.postContacts({
+  const result = await orq.contacts.create({
     externalId: "<id>",
   });
 
@@ -473,7 +452,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.postContacts({
+  const result = await orq.contacts.create({
     externalId: "<id>",
   });
 
@@ -555,7 +534,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.postContacts({
+  const result = await orq.contacts.create({
     externalId: "<id>",
   });
 

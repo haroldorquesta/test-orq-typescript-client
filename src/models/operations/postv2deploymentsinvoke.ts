@@ -52,65 +52,7 @@ export type PostV2DeploymentsInvokeProvider = ClosedEnum<
 /**
  * The role of the prompt message
  */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role = {
-  System: "system",
-  Assistant: "assistant",
-  User: "user",
-  Exception: "exception",
-  Tool: "tool",
-  Prompt: "prompt",
-  Correction: "correction",
-  ExpectedOutput: "expected_output",
-} as const;
-/**
- * The role of the prompt message
- */
-export type PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role =
-  ClosedEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role
-  >;
-
-export type PostV2DeploymentsInvokeMessage3 = {
-  /**
-   * The role of the prompt message
-   */
-  role: PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role;
-  url: string;
-};
-
-/**
- * The role of the prompt message
- */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole = {
-  System: "system",
-  Assistant: "assistant",
-  User: "user",
-  Exception: "exception",
-  Tool: "tool",
-  Prompt: "prompt",
-  Correction: "correction",
-  ExpectedOutput: "expected_output",
-} as const;
-/**
- * The role of the prompt message
- */
-export type PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole =
-  ClosedEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole
-  >;
-
-export type PostV2DeploymentsInvokeMessageDeployments2 = {
-  /**
-   * The role of the prompt message
-   */
-  role: PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole;
-  content: string | null;
-};
-
-/**
- * The role of the prompt message
- */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole =
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole =
   {
     System: "system",
     Assistant: "assistant",
@@ -124,9 +66,66 @@ export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEvent
 /**
  * The role of the prompt message
  */
-export type PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole =
+export type PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole =
   ClosedEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole
+  >;
+
+export type PostV2DeploymentsInvokeMessage3 = {
+  /**
+   * The role of the prompt message
+   */
+  role: PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole;
+  url: string;
+};
+
+/**
+ * The role of the prompt message
+ */
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200Role = {
+  System: "system",
+  Assistant: "assistant",
+  User: "user",
+  Exception: "exception",
+  Tool: "tool",
+  Prompt: "prompt",
+  Correction: "correction",
+  ExpectedOutput: "expected_output",
+} as const;
+/**
+ * The role of the prompt message
+ */
+export type PostV2DeploymentsInvokeMessageDeploymentsResponse200Role =
+  ClosedEnum<typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200Role>;
+
+export type PostV2DeploymentsInvokeMessageDeployments2 = {
+  /**
+   * The role of the prompt message
+   */
+  role: PostV2DeploymentsInvokeMessageDeploymentsResponse200Role;
+  content: string | null;
+};
+
+/**
+ * The role of the prompt message
+ */
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole =
+  {
+    System: "system",
+    Assistant: "assistant",
+    User: "user",
+    Exception: "exception",
+    Tool: "tool",
+    Prompt: "prompt",
+    Correction: "correction",
+    ExpectedOutput: "expected_output",
+  } as const;
+/**
+ * The role of the prompt message
+ */
+export type PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole =
+  ClosedEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole
   >;
 
 export const PostV2DeploymentsInvokeMessageDeploymentsType = {
@@ -156,7 +155,7 @@ export type PostV2DeploymentsInvokeMessageDeployments1 = {
    * The role of the prompt message
    */
   role:
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole;
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole;
   content?: string | null | undefined;
   toolCalls: Array<PostV2DeploymentsInvokeMessageDeploymentsToolCalls>;
 };
@@ -368,7 +367,7 @@ export type PostV2DeploymentsInvokeMessage2 = {
 /**
  * The role of the prompt message
  */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicRole = {
+export const PostV2DeploymentsInvokeMessageDeploymentsResponseRole = {
   System: "system",
   Assistant: "assistant",
   User: "user",
@@ -381,8 +380,8 @@ export const PostV2DeploymentsInvokeMessageDeploymentsPublicRole = {
 /**
  * The role of the prompt message
  */
-export type PostV2DeploymentsInvokeMessageDeploymentsPublicRole = ClosedEnum<
-  typeof PostV2DeploymentsInvokeMessageDeploymentsPublicRole
+export type PostV2DeploymentsInvokeMessageDeploymentsResponseRole = ClosedEnum<
+  typeof PostV2DeploymentsInvokeMessageDeploymentsResponseRole
 >;
 
 export const PostV2DeploymentsInvokeMessageType = {
@@ -411,7 +410,7 @@ export type PostV2DeploymentsInvokeMessage1 = {
   /**
    * The role of the prompt message
    */
-  role: PostV2DeploymentsInvokeMessageDeploymentsPublicRole;
+  role: PostV2DeploymentsInvokeMessageDeploymentsResponseRole;
   content?: string | null | undefined;
   toolCalls: Array<PostV2DeploymentsInvokeMessageToolCalls>;
 };
@@ -569,31 +568,31 @@ export namespace PostV2DeploymentsInvokeProvider$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema:
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole
   > = z.nativeEnum(
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role,
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole,
   );
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema:
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole
   > =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema;
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$ {
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema` instead. */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema` instead. */
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema;
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$outboundSchema;
 }
 
 /** @internal */
@@ -603,7 +602,7 @@ export const PostV2DeploymentsInvokeMessage3$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   role:
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$inboundSchema,
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$inboundSchema,
   url: z.string(),
 });
 
@@ -620,7 +619,7 @@ export const PostV2DeploymentsInvokeMessage3$outboundSchema: z.ZodType<
   PostV2DeploymentsInvokeMessage3
 > = z.object({
   role:
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200Role$outboundSchema,
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamRole$outboundSchema,
   url: z.string(),
 });
 
@@ -638,28 +637,28 @@ export namespace PostV2DeploymentsInvokeMessage3$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema:
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole
-  > = z.nativeEnum(PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole);
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200Role
+  > = z.nativeEnum(PostV2DeploymentsInvokeMessageDeploymentsResponse200Role);
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema:
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole
-  > = PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema;
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200Role
+  > = PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$ {
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema` instead. */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema` instead. */
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema;
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$outboundSchema;
 }
 
 /** @internal */
@@ -667,7 +666,7 @@ export const PostV2DeploymentsInvokeMessageDeployments2$inboundSchema:
   z.ZodType<PostV2DeploymentsInvokeMessageDeployments2, z.ZodTypeDef, unknown> =
     z.object({
       role:
-        PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$inboundSchema,
+        PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$inboundSchema,
       content: z.nullable(z.string()),
     });
 
@@ -685,7 +684,7 @@ export const PostV2DeploymentsInvokeMessageDeployments2$outboundSchema:
     PostV2DeploymentsInvokeMessageDeployments2
   > = z.object({
     role:
-      PostV2DeploymentsInvokeMessageDeploymentsPublicResponseRole$outboundSchema,
+      PostV2DeploymentsInvokeMessageDeploymentsResponse200Role$outboundSchema,
     content: z.nullable(z.string()),
   });
 
@@ -705,31 +704,31 @@ export namespace PostV2DeploymentsInvokeMessageDeployments2$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema:
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole
   > = z.nativeEnum(
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole,
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole,
   );
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema:
+export const PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole
   > =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema;
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$ {
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema` instead. */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema` instead. */
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema;
+    PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$outboundSchema;
 }
 
 /** @internal */
@@ -858,7 +857,7 @@ export const PostV2DeploymentsInvokeMessageDeployments1$inboundSchema:
   z.ZodType<PostV2DeploymentsInvokeMessageDeployments1, z.ZodTypeDef, unknown> =
     z.object({
       role:
-        PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$inboundSchema,
+        PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$inboundSchema,
       content: z.nullable(z.string()).optional(),
       tool_calls: z.array(
         z.lazy(() =>
@@ -888,7 +887,7 @@ export const PostV2DeploymentsInvokeMessageDeployments1$outboundSchema:
     PostV2DeploymentsInvokeMessageDeployments1
   > = z.object({
     role:
-      PostV2DeploymentsInvokeMessageDeploymentsPublicResponse200TextEventStreamRole$outboundSchema,
+      PostV2DeploymentsInvokeMessageDeploymentsResponse200TextEventStreamResponseBodyRole$outboundSchema,
     content: z.nullable(z.string()).optional(),
     toolCalls: z.array(
       z.lazy(() =>
@@ -1431,26 +1430,28 @@ export namespace PostV2DeploymentsInvokeMessage2$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicRole$inboundSchema:
-  z.ZodNativeEnum<typeof PostV2DeploymentsInvokeMessageDeploymentsPublicRole> =
-    z.nativeEnum(PostV2DeploymentsInvokeMessageDeploymentsPublicRole);
+export const PostV2DeploymentsInvokeMessageDeploymentsResponseRole$inboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponseRole
+  > = z.nativeEnum(PostV2DeploymentsInvokeMessageDeploymentsResponseRole);
 
 /** @internal */
-export const PostV2DeploymentsInvokeMessageDeploymentsPublicRole$outboundSchema:
-  z.ZodNativeEnum<typeof PostV2DeploymentsInvokeMessageDeploymentsPublicRole> =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicRole$inboundSchema;
+export const PostV2DeploymentsInvokeMessageDeploymentsResponseRole$outboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2DeploymentsInvokeMessageDeploymentsResponseRole
+  > = PostV2DeploymentsInvokeMessageDeploymentsResponseRole$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsInvokeMessageDeploymentsPublicRole$ {
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicRole$inboundSchema` instead. */
+export namespace PostV2DeploymentsInvokeMessageDeploymentsResponseRole$ {
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponseRole$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicRole$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsPublicRole$outboundSchema` instead. */
+    PostV2DeploymentsInvokeMessageDeploymentsResponseRole$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsInvokeMessageDeploymentsResponseRole$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsInvokeMessageDeploymentsPublicRole$outboundSchema;
+    PostV2DeploymentsInvokeMessageDeploymentsResponseRole$outboundSchema;
 }
 
 /** @internal */
@@ -1569,7 +1570,7 @@ export const PostV2DeploymentsInvokeMessage1$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  role: PostV2DeploymentsInvokeMessageDeploymentsPublicRole$inboundSchema,
+  role: PostV2DeploymentsInvokeMessageDeploymentsResponseRole$inboundSchema,
   content: z.nullable(z.string()).optional(),
   tool_calls: z.array(
     z.lazy(() => PostV2DeploymentsInvokeMessageToolCalls$inboundSchema),
@@ -1593,7 +1594,7 @@ export const PostV2DeploymentsInvokeMessage1$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2DeploymentsInvokeMessage1
 > = z.object({
-  role: PostV2DeploymentsInvokeMessageDeploymentsPublicRole$outboundSchema,
+  role: PostV2DeploymentsInvokeMessageDeploymentsResponseRole$outboundSchema,
   content: z.nullable(z.string()).optional(),
   toolCalls: z.array(
     z.lazy(() => PostV2DeploymentsInvokeMessageToolCalls$outboundSchema),
