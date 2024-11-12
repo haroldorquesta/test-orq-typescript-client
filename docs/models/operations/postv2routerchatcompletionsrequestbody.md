@@ -8,15 +8,15 @@ Creates a model response for the given chat conversation.
 import { PostV2RouterChatCompletionsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterChatCompletionsRequestBody = {
-  model: "Model 3",
+  model: "Element",
   messages: [
     {
-      role: "system",
+      role: "user",
       content: [
         {
           type: "image_url",
           imageUrl: {
-            url: "https://hungry-gerbil.net/",
+            url: "https://entire-follower.net/",
           },
         },
       ],

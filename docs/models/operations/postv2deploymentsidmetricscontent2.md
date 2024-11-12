@@ -18,7 +18,7 @@ const value: operations.PostV2DeploymentsIdMetrics21 = {
 const value: operations.PostV2DeploymentsIdMetrics22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://thick-shore.name/",
+    url: "https://salty-breastplate.org",
   },
 };
 ```

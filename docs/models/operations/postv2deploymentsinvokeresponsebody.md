@@ -9,14 +9,14 @@ import { PostV2DeploymentsInvokeResponseBody } from "orq-poc-typescript/models/o
 
 let value: PostV2DeploymentsInvokeResponseBody = {
   id: "<id>",
-  created: new Date("2022-05-29T11:30:35.227Z"),
-  object: "chat",
-  model: "Grand Cherokee",
-  provider: "aws",
+  created: new Date("2024-11-13T20:49:26.140Z"),
+  object: "completion",
+  model: "Escalade",
+  provider: "anyscale",
   isFinal: false,
   choices: [
     {
-      index: 5743.25,
+      index: 191.93,
     },
   ],
 };

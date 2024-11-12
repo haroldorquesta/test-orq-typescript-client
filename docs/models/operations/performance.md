@@ -6,7 +6,7 @@
 import { Performance } from "orq-poc-typescript/models/operations";
 
 let value: Performance = {
-  latency: 8061.94,
+  latency: 5699.65,
 };
 ```
 

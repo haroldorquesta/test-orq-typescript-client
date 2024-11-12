@@ -7,7 +7,7 @@ The format to return the embeddings
 ```typescript
 import { GetV2DeploymentsEncodingFormat } from "orq-poc-typescript/models/operations";
 
-let value: GetV2DeploymentsEncodingFormat = "base64";
+let value: GetV2DeploymentsEncodingFormat = "float";
 ```
 
 ## Values

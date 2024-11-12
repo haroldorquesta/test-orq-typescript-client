@@ -16,10 +16,8 @@ const value: string = "<value>";
 ```typescript
 const value: operations.PostV2RouterChatCompletionsContent2[] = [
   {
-    type: "image_url",
-    imageUrl: {
-      url: "https://athletic-department.info",
-    },
+    type: "text",
+    text: "<value>",
   },
 ];
 ```

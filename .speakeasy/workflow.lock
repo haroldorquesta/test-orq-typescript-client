@@ -2,8 +2,8 @@ speakeasyVersion: 1.426.0
 sources:
     orq-OAS:
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:2be053f0a26688848348ea71346f57e175fdd9de7f681c1bc4e534812b4a9fba
-        sourceBlobDigest: sha256:e01b6d04fd770295959465417a3479dffc03c08b7fd2959f6a50f04b3926be1c
+        sourceRevisionDigest: sha256:cb68f578bb46934738aaca337b6ad9e724bc4c7200f58ad6a4320fc38b017a5c
+        sourceBlobDigest: sha256:990fc6a7764271b193ce8afa3d4cd083d164f2b5b1e1c9333c496293d4247b0d
         tags:
             - latest
             - main
@@ -11,10 +11,10 @@ targets:
     orq:
         source: orq-OAS
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:2be053f0a26688848348ea71346f57e175fdd9de7f681c1bc4e534812b4a9fba
-        sourceBlobDigest: sha256:e01b6d04fd770295959465417a3479dffc03c08b7fd2959f6a50f04b3926be1c
+        sourceRevisionDigest: sha256:cb68f578bb46934738aaca337b6ad9e724bc4c7200f58ad6a4320fc38b017a5c
+        sourceBlobDigest: sha256:990fc6a7764271b193ce8afa3d4cd083d164f2b5b1e1c9333c496293d4247b0d
         codeSamplesNamespace: orq-oas-code-samples
-        codeSamplesRevisionDigest: sha256:ee863ce4102bbc3d16e90f581f7e5dcc0cc700071cbcf79c683c718c3e0d8223
+        codeSamplesRevisionDigest: sha256:87056eb835da3e239f86bd234b59edc6402ee8e289b8eded096109d100efc5da
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -22,6 +22,8 @@ workflow:
         orq-OAS:
             inputs:
                 - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi.json
+            overlays:
+                - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi-overlay.yaml
             registry:
                 location: registry.speakeasyapi.dev/orq/orq/orq-oas
     targets:

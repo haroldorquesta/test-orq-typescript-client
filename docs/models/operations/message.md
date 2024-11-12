@@ -7,7 +7,7 @@
 
 ```typescript
 const value: operations.Message1 = {
-  role: "assistant",
+  role: "correction",
   toolCalls: [
     {
       type: "function",
@@ -33,8 +33,8 @@ const value: operations.Message2 = {
 
 ```typescript
 const value: operations.Three = {
-  role: "correction",
-  url: "https://grubby-trash.net/",
+  role: "user",
+  url: "https://decent-lender.com",
 };
 ```
 

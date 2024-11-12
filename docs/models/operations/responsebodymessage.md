@@ -20,7 +20,7 @@ let value: ResponseBodyMessage = {
       },
     },
   ],
-  role: "prompt",
+  role: "exception",
 };
 ```
 

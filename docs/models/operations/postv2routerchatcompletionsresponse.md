@@ -10,22 +10,22 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "stop",
-      index: 396.16,
+      finishReason: "tool_calls",
+      index: 9682.86,
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 599.44,
+            logprob: 9197.83,
             bytes: [
-              610.79,
+              360.34,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 9077.33,
+                logprob: 1747.72,
                 bytes: [
-                  7398.84,
+                  3891.35,
                 ],
               },
             ],
@@ -34,16 +34,16 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
         refusal: [
           {
             token: "<value>",
-            logprob: 8980.62,
+            logprob: 9521.43,
             bytes: [
-              6725.82,
+              3000.29,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 5289.40,
+                logprob: 1604.68,
                 bytes: [
-                  3044.46,
+                  8863.05,
                 ],
               },
             ],
@@ -63,12 +63,12 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
             },
           },
         ],
-        role: "expected_output",
+        role: "exception",
       },
     },
   ],
-  created: 3621.89,
-  model: "F-150",
+  created: 9078.76,
+  model: "Aventador",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

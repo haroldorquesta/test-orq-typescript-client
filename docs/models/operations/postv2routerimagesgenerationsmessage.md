@@ -7,7 +7,7 @@
 
 ```typescript
 const value: operations.PostV2RouterImagesGenerationsMessage1 = {
-  role: "correction",
+  role: "user",
   content: "<value>",
 };
 ```
@@ -16,8 +16,8 @@ const value: operations.PostV2RouterImagesGenerationsMessage1 = {
 
 ```typescript
 const value: operations.PostV2RouterImagesGenerationsMessage2 = {
-  role: "prompt",
-  url: "https://crazy-barge.biz/",
+  role: "exception",
+  url: "https://wilted-certification.com/",
 };
 ```
 
@@ -25,7 +25,7 @@ const value: operations.PostV2RouterImagesGenerationsMessage2 = {
 
 ```typescript
 const value: operations.PostV2RouterImagesGenerationsMessage3 = {
-  role: "exception",
+  role: "user",
   toolCalls: [
     {
       type: "function",

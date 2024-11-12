@@ -7,9 +7,9 @@ import { ResponseBodyTopLogprobs } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBodyTopLogprobs = {
   token: "<value>",
-  logprob: 5436.78,
+  logprob: 7505.95,
   bytes: [
-    2827.00,
+    3335.07,
   ],
 };
 ```

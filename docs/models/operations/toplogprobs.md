@@ -7,9 +7,9 @@ import { TopLogprobs } from "orq-poc-typescript/models/operations";
 
 let value: TopLogprobs = {
   token: "<value>",
-  logprob: 6223.84,
+  logprob: 4017.14,
   bytes: [
-    7105.28,
+    2484.13,
   ],
 };
 ```

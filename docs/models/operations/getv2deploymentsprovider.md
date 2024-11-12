@@ -5,7 +5,7 @@
 ```typescript
 import { GetV2DeploymentsProvider } from "orq-poc-typescript/models/operations";
 
-let value: GetV2DeploymentsProvider = "aws";
+let value: GetV2DeploymentsProvider = "anthropic";
 ```
 
 ## Values

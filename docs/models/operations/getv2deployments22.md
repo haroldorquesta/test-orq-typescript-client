@@ -10,7 +10,7 @@ import { GetV2Deployments22 } from "orq-poc-typescript/models/operations";
 let value: GetV2Deployments22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://showy-jungle.biz",
+    url: "https://overcooked-ravioli.biz",
   },
 };
 ```

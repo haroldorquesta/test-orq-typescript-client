@@ -7,16 +7,16 @@ import { PostV2RouterChatCompletionsResponseBodyContent } from "orq-poc-typescri
 
 let value: PostV2RouterChatCompletionsResponseBodyContent = {
   token: "<value>",
-  logprob: 3044.68,
+  logprob: 2965.56,
   bytes: [
-    8391.89,
+    9920.11,
   ],
   topLogprobs: [
     {
       token: "<value>",
-      logprob: 2377.42,
+      logprob: 2494.20,
       bytes: [
-        5023.89,
+        1059.06,
       ],
     },
   ],

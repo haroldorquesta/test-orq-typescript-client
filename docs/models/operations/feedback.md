@@ -8,7 +8,7 @@ Feedback from the user on the completion
 import { Feedback } from "orq-poc-typescript/models/operations";
 
 let value: Feedback = {
-  score: 164694,
+  score: 18521,
 };
 ```
 
