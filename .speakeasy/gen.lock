@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: bf84ba2f1eb9cb7b739ac01a7c6600ce
+  docChecksum: 15ef12c3cc700da9c4d2ad5cf858e92b
   docVersion: "2.0"
   speakeasyVersion: 1.426.0
   generationVersion: 2.446.5
-  releaseVersion: 0.8.1
-  configChecksum: 7734343c8b3f3fabbd7c473b3dd7766d
+  releaseVersion: 0.9.1
+  configChecksum: 4af2d4b6cd4215de8c00314badaf5e93
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -24,6 +24,7 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.4
+    groups: 2.81.2
     inputOutputModels: 2.82.0
     nameOverrides: 2.81.2
     nullables: 0.1.0
@@ -105,7 +106,7 @@ generatedFiles:
   - docs/models/operations/getv2deploymentscontent2.md
   - docs/models/operations/getv2deploymentsdata.md
   - docs/models/operations/getv2deploymentsdeploymentsfunction.md
-  - docs/models/operations/getv2deploymentsdeploymentspublictype.md
+  - docs/models/operations/getv2deploymentsdeploymentsresponsetype.md
   - docs/models/operations/getv2deploymentsdeploymentstype.md
   - docs/models/operations/getv2deploymentsencodingformat.md
   - docs/models/operations/getv2deploymentsformat.md
@@ -159,13 +160,13 @@ generatedFiles:
   - docs/models/operations/parameterst.md
   - docs/models/operations/performance.md
   - docs/models/operations/photorealversion.md
-  - docs/models/operations/postcontactsrequestbody.md
-  - docs/models/operations/postcontactsresponsebody.md
+  - docs/models/operations/postv2contactsrequestbody.md
+  - docs/models/operations/postv2contactsresponsebody.md
   - docs/models/operations/postv2deploymentsgetconfig21.md
   - docs/models/operations/postv2deploymentsgetconfig22.md
   - docs/models/operations/postv2deploymentsgetconfig2deployments2.md
-  - docs/models/operations/postv2deploymentsgetconfig2deploymentspublicresponsetype.md
-  - docs/models/operations/postv2deploymentsgetconfig2deploymentspublictype.md
+  - docs/models/operations/postv2deploymentsgetconfig2deploymentsresponse200type.md
+  - docs/models/operations/postv2deploymentsgetconfig2deploymentsresponsetype.md
   - docs/models/operations/postv2deploymentsgetconfig2deploymentstype.md
   - docs/models/operations/postv2deploymentsgetconfig2imageurl.md
   - docs/models/operations/postv2deploymentsgetconfig2type.md
@@ -173,10 +174,10 @@ generatedFiles:
   - docs/models/operations/postv2deploymentsgetconfigcontent2.md
   - docs/models/operations/postv2deploymentsgetconfigdeploymentscontent.md
   - docs/models/operations/postv2deploymentsgetconfigdeploymentsfunction.md
-  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublicfunction.md
-  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublicresponse200type.md
-  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublicresponsetype.md
-  - docs/models/operations/postv2deploymentsgetconfigdeploymentspublictype.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentsresponse200applicationjsontype.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentsresponse200type.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentsresponsefunction.md
+  - docs/models/operations/postv2deploymentsgetconfigdeploymentsresponsetype.md
   - docs/models/operations/postv2deploymentsgetconfigdeploymentsrole.md
   - docs/models/operations/postv2deploymentsgetconfigdeploymentstoolcalls.md
   - docs/models/operations/postv2deploymentsgetconfigdeploymentstype.md
@@ -221,10 +222,10 @@ generatedFiles:
   - docs/models/operations/postv2deploymentsinvokemessagedeployments1.md
   - docs/models/operations/postv2deploymentsinvokemessagedeployments2.md
   - docs/models/operations/postv2deploymentsinvokemessagedeploymentsfunction.md
-  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicresponse200role.md
-  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicresponse200texteventstreamrole.md
-  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicresponserole.md
-  - docs/models/operations/postv2deploymentsinvokemessagedeploymentspublicrole.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentsresponse200role.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentsresponse200texteventstreamresponsebodyrole.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentsresponse200texteventstreamrole.md
+  - docs/models/operations/postv2deploymentsinvokemessagedeploymentsresponserole.md
   - docs/models/operations/postv2deploymentsinvokemessagedeploymentsrole.md
   - docs/models/operations/postv2deploymentsinvokemessagedeploymentstoolcalls.md
   - docs/models/operations/postv2deploymentsinvokemessagedeploymentstype.md
@@ -257,25 +258,25 @@ generatedFiles:
   - docs/models/operations/postv2routerchatcompletions2routerchatcompletions1.md
   - docs/models/operations/postv2routerchatcompletions2routerchatcompletions2.md
   - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsimageurl.md
-  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionspublic1.md
-  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionspublic2.md
-  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionspublicimageurl.md
-  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionspublicrequestrequestbodymessagestype.md
-  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionspublicrequestrequestbodytype.md
-  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionspublicrequesttype.md
-  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionspublictype.md
+  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsrequest1.md
+  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsrequest2.md
+  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsrequestimageurl.md
+  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsrequestrequestbodymessages4type.md
+  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsrequestrequestbodymessagestype.md
+  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsrequestrequestbodytype.md
+  - docs/models/operations/postv2routerchatcompletions2routerchatcompletionsrequesttype.md
   - docs/models/operations/postv2routerchatcompletions2routerchatcompletionstype.md
   - docs/models/operations/postv2routerchatcompletions2type.md
   - docs/models/operations/postv2routerchatcompletionscontent2.md
   - docs/models/operations/postv2routerchatcompletionscontentrouterchatcompletions2.md
-  - docs/models/operations/postv2routerchatcompletionscontentrouterchatcompletionspublic2.md
+  - docs/models/operations/postv2routerchatcompletionscontentrouterchatcompletionsrequest2.md
   - docs/models/operations/postv2routerchatcompletionsfunction.md
   - docs/models/operations/postv2routerchatcompletionsmessages.md
   - docs/models/operations/postv2routerchatcompletionsmessagescontent.md
   - docs/models/operations/postv2routerchatcompletionsmessagesrole.md
   - docs/models/operations/postv2routerchatcompletionsmessagesrouterchatcompletionscontent.md
-  - docs/models/operations/postv2routerchatcompletionsmessagesrouterchatcompletionspubliccontent.md
-  - docs/models/operations/postv2routerchatcompletionsmessagesrouterchatcompletionspublicrole.md
+  - docs/models/operations/postv2routerchatcompletionsmessagesrouterchatcompletionsrequestcontent.md
+  - docs/models/operations/postv2routerchatcompletionsmessagesrouterchatcompletionsrequestrole.md
   - docs/models/operations/postv2routerchatcompletionsmessagesrouterchatcompletionsrole.md
   - docs/models/operations/postv2routerchatcompletionsrequestbody.md
   - docs/models/operations/postv2routerchatcompletionsresponse.md
@@ -310,8 +311,8 @@ generatedFiles:
   - docs/models/operations/postv2routerimagesgenerationsmessage3.md
   - docs/models/operations/postv2routerimagesgenerationsmessagefunction.md
   - docs/models/operations/postv2routerimagesgenerationsmessagerole.md
-  - docs/models/operations/postv2routerimagesgenerationsmessagerouterimagespublicrole.md
-  - docs/models/operations/postv2routerimagesgenerationsmessagerouterimagesrole.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagerouterpublicrole.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagerouterrole.md
   - docs/models/operations/postv2routerimagesgenerationsmessagetoolcalls.md
   - docs/models/operations/postv2routerimagesgenerationsmessagetype.md
   - docs/models/operations/postv2routerimagesgenerationsrequestbody.md
@@ -372,7 +373,6 @@ generatedFiles:
   - docs/sdks/embeddings/README.md
   - docs/sdks/feedback/README.md
   - docs/sdks/files/README.md
-  - docs/sdks/images/README.md
   - docs/sdks/orq/README.md
   - docs/sdks/orqcompletions/README.md
   - docs/sdks/public/README.md
@@ -381,31 +381,21 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
-  - src/funcs/contactsPostContacts.ts
+  - src/funcs/contactsCreate.ts
   - src/funcs/deploymentsAddMetrics.ts
   - src/funcs/deploymentsGetConfig.ts
   - src/funcs/deploymentsInvoke.ts
   - src/funcs/deploymentsList.ts
-  - src/funcs/feedbackCreate5.ts
-  - src/funcs/filesBulkUpload.ts
-  - src/funcs/filesUpload.ts
-  - src/funcs/publicAddMetrics.ts
-  - src/funcs/publicBulkUpload.ts
-  - src/funcs/publicCreate.ts
-  - src/funcs/publicCreate2.ts
-  - src/funcs/publicCreate3.ts
-  - src/funcs/publicCreate4.ts
-  - src/funcs/publicGenerate.ts
-  - src/funcs/publicGetConfig.ts
-  - src/funcs/publicInvoke.ts
-  - src/funcs/publicList.ts
-  - src/funcs/publicRerank.ts
-  - src/funcs/publicUpload.ts
-  - src/funcs/remoteconfigCreate4.ts
-  - src/funcs/routerChatCompletionsCreate2.ts
-  - src/funcs/routerCompletionsCreate3.ts
+  - src/funcs/feedbackCreate.ts
+  - src/funcs/filesPostV2Files.ts
+  - src/funcs/publicPostV2Files.ts
+  - src/funcs/publicPostV2FilesBulk.ts
+  - src/funcs/publicPostV2RouterImagesGenerations.ts
+  - src/funcs/remoteconfigPostV2Remoteconfigs.ts
+  - src/funcs/routerChatCompletionsCreate.ts
+  - src/funcs/routerCompletionsCreate.ts
   - src/funcs/routerEmbeddingsCreate.ts
-  - src/funcs/routerImagesGenerate.ts
+  - src/funcs/routerPostV2RouterImagesGenerations.ts
   - src/funcs/routerRerank.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
@@ -438,7 +428,7 @@ generatedFiles:
   - src/models/errors/sdkvalidationerror.ts
   - src/models/operations/getv2deployments.ts
   - src/models/operations/index.ts
-  - src/models/operations/postcontacts.ts
+  - src/models/operations/postv2contacts.ts
   - src/models/operations/postv2deploymentsgetconfig.ts
   - src/models/operations/postv2deploymentsidmetrics.ts
   - src/models/operations/postv2deploymentsinvoke.ts
@@ -458,7 +448,6 @@ generatedFiles:
   - src/sdk/embeddings.ts
   - src/sdk/feedback.ts
   - src/sdk/files.ts
-  - src/sdk/images.ts
   - src/sdk/index.ts
   - src/sdk/orqcompletions.ts
   - src/sdk/public.ts
@@ -536,7 +525,7 @@ examples:
         application/json: {"model": "Land Cruiser", "messages": [{"role": "tool", "tool_call_id": "<id>", "content": "<value>"}]}
       responses:
         "200":
-          application/json: {"id": "<id>", "choices": [{"finish_reason": "tool_calls", "index": "9494.83", "logprobs": {"content": [{"token": "<value>", "logprob": "6895.86", "bytes": ["9745.72", "3657.08", "9097.33"], "top_logprobs": [{"token": "<value>", "logprob": "3235.05", "bytes": ["3341.48", "1305.91"]}]}], "refusal": [{"token": "<value>", "logprob": "2385.20", "bytes": ["2672.08", "6748.06"], "top_logprobs": [{"token": "<value>", "logprob": "8172.72", "bytes": ["2236.00", "9322.43", "7327.16"]}, {"token": "<value>", "logprob": "4518.31", "bytes": ["5114.68", "1148.80", "3215.59"]}]}, {"token": "<value>", "logprob": "6057.65", "bytes": ["4146.85", "4017.96", "7230.13"], "top_logprobs": []}]}, "delta": {"content": "<value>", "refusal": "<value>", "tool_calls": [{"id": "<id>", "type": "function", "function": {"name": "<value>", "arguments": "<value>"}}, {"id": "<id>", "type": "function", "function": {"name": "<value>", "arguments": "<value>"}}, {"id": "<id>", "type": "function", "function": {"name": "<value>", "arguments": "<value>"}}], "role": "expected_output"}}, {"finish_reason": "stop", "index": "4435.28", "logprobs": {"content": [{"token": "<value>", "logprob": "9985.32", "bytes": ["6591.07", "393.48", "1614.22"], "top_logprobs": [{"token": "<value>", "logprob": "279.90", "bytes": []}, {"token": "<value>", "logprob": "1248.31", "bytes": ["4668.89", "3711.82", "6209.38"]}]}, {"token": "<value>", "logprob": "6524.94", "bytes": ["5764.02", "6381.44"], "top_logprobs": [{"token": "<value>", "logprob": "9675.72", "bytes": ["931.94", "8180.07"]}]}, {"token": "<value>", "logprob": "8418.75", "bytes": ["2406.68"], "top_logprobs": [{"token": "<value>", "logprob": "3074.34", "bytes": ["5859.59", "1983.52", "2328.48"]}]}], "refusal": []}, "delta": {"content": "<value>", "refusal": "<value>", "tool_calls": [{"id": "<id>", "type": "function", "function": {"name": "<value>", "arguments": "<value>"}}, {"id": "<id>", "type": "function", "function": {"name": "<value>", "arguments": "<value>"}}, {"id": "<id>", "type": "function", "function": {"name": "<value>", "arguments": "<value>"}}], "role": "assistant"}}], "created": "7072.07", "model": "Civic", "system_fingerprint": "<value>", "object": "<value>"}
+          application/json: {"id": "<id>", "choices": [{"finish_reason": "length", "index": "1343.65", "message": {"content": "<value>", "refusal": "<value>", "tool_calls": [], "role": "correction"}, "logprobs": {"content": [{"token": "<value>", "logprob": "0.87", "bytes": [], "top_logprobs": []}, {"token": "<value>", "logprob": "7926.20", "bytes": ["5862.20", "7524.37", "9574.08"], "top_logprobs": [{"token": "<value>", "logprob": "2596.30", "bytes": []}]}, {"token": "<value>", "logprob": "2303.13", "bytes": [], "top_logprobs": []}], "refusal": [{"token": "<value>", "logprob": "1856.93", "bytes": [], "top_logprobs": []}]}}, {"finish_reason": "content_filter", "index": "3392.36", "message": {"content": "<value>", "refusal": "<value>", "tool_calls": [], "role": "tool"}, "logprobs": {"content": [{"token": "<value>", "logprob": "2006.64", "bytes": [], "top_logprobs": [{"token": "<value>", "logprob": "276.20", "bytes": ["5504.83", "9065.37"]}, {"token": "<value>", "logprob": "4522.24", "bytes": ["2597.72"]}]}, {"token": "<value>", "logprob": "7823.67", "bytes": [], "top_logprobs": [{"token": "<value>", "logprob": "9209.94", "bytes": ["7602.58", "2199.75", "4492.21"]}, {"token": "<value>", "logprob": "4278.87", "bytes": ["934.71", "4914.27"]}]}], "refusal": [{"token": "<value>", "logprob": "3254.63", "bytes": ["454.16", "1296.63", "2881.04"], "top_logprobs": [{"token": "<value>", "logprob": "5193.59", "bytes": ["4078.33"]}, {"token": "<value>", "logprob": "1012.51", "bytes": []}]}]}}], "created": "8133.97", "model": "Spyder", "system_fingerprint": "<value>", "object": "<value>"}
   post_/v2/router/completions:
     speakeasy-default-post-/v2-/router/completions:
       responses:
@@ -662,3 +651,10 @@ examples:
       responses:
         "200":
           application/json: {"type": "integer"}
+  post_/v2/contacts:
+    speakeasy-default-post-/v2-/contacts:
+      requestBody:
+        application/json: {"external_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "external_id": "<id>"}

@@ -27,14 +27,14 @@ export class Orq extends ClientSDK {
     return (this._deployments ??= new Deployments(this._options));
   }
 
-  private _public?: Public;
-  get public(): Public {
-    return (this._public ??= new Public(this._options));
-  }
-
   private _files?: Files;
   get files(): Files {
     return (this._files ??= new Files(this._options));
+  }
+
+  private _public?: Public;
+  get public(): Public {
+    return (this._public ??= new Public(this._options));
   }
 
   private _router?: Router;

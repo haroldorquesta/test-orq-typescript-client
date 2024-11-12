@@ -5,7 +5,7 @@
 ```typescript
 import { PostV2RemoteconfigsType } from "orq-poc-typescript/models/operations";
 
-let value: PostV2RemoteconfigsType = "integer";
+let value: PostV2RemoteconfigsType = "deployment";
 ```
 
 ## Values

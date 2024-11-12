@@ -3,7 +3,7 @@
  */
 
 export * from "./getv2deployments.js";
-export * from "./postcontacts.js";
+export * from "./postv2contacts.js";
 export * from "./postv2deploymentsgetconfig.js";
 export * from "./postv2deploymentsidmetrics.js";
 export * from "./postv2deploymentsinvoke.js";

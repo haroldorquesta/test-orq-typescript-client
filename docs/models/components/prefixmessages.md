@@ -6,12 +6,12 @@
 import { PrefixMessages } from "orq-poc-typescript/models/components";
 
 let value: PrefixMessages = {
-  role: "system",
+  role: "correction",
   content: [
     {
       type: "image_url",
       imageUrl: {
-        url: "https://voluminous-whale.info",
+        url: "https://hurtful-chiffonier.net/",
       },
     },
   ],

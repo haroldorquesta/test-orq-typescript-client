@@ -5,9 +5,9 @@
 
 ### Available Operations
 
-* [create4](#create4)
+* [postV2Remoteconfigs](#postv2remoteconfigs)
 
-## create4
+## postV2Remoteconfigs
 
 ### Example Usage
 
@@ -19,7 +19,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.remoteconfig.create4();
+  const result = await orq.remoteconfig.postV2Remoteconfigs();
 
   // Handle the result
   console.log(result);
@@ -34,7 +34,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { remoteconfigCreate4 } from "orq-poc-typescript/funcs/remoteconfigCreate4.js";
+import { remoteconfigPostV2Remoteconfigs } from "orq-poc-typescript/funcs/remoteconfigPostV2Remoteconfigs.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -43,7 +43,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await remoteconfigCreate4(orq);
+  const res = await remoteconfigPostV2Remoteconfigs(orq);
 
   if (!res.ok) {
     throw res.error;

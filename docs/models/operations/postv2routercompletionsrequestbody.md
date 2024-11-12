@@ -8,7 +8,7 @@ A request body that follows the official OpenAI schema
 import { PostV2RouterCompletionsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: PostV2RouterCompletionsRequestBody = {
-  model: "Malibu",
+  model: "Explorer",
   prompt: "<value>",
 };
 ```
