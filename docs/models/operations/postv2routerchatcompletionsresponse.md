@@ -75,9 +75,9 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
 };
 ```
 
-### `EventStream<operations.PostV2RouterChatCompletionsRouterResponseBody>`
+### `EventStream<operations.PostV2RouterChatCompletionsRouterChatCompletionsResponseBody>`
 
 ```typescript
-const value: EventStream<operations.PostV2RouterChatCompletionsRouterResponseBody> = ;
+const value: EventStream<operations.PostV2RouterChatCompletionsRouterChatCompletionsResponseBody> = ;
 ```
 
