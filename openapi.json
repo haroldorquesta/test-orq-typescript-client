@@ -36132,6 +36132,7 @@
     },
     "/v2/deployments/get_config": {
       "post": {
+        "x-speakeasy-name-override": "config.get",
         "tags": [
           "Deployments",
           "public"
@@ -37970,6 +37971,7 @@
     },
     "/v2/deployments": {
       "get": {
+        "x-speakeasy-name-override": "list",
         "tags": [
           "Deployments",
           "public"
