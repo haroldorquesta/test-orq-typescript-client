@@ -4,9 +4,6 @@
     "version": "2.0",
     "description": "The Orquesta API"
   },
-  "x-speakeasy-ignore": [
-    "public"
-  ],
   "security": [
     {
       "Bearer": []
@@ -3067,9 +3064,210 @@
                               "semantic"
                             ]
                           },
-                          "model": {
-                            "type": "string",
-                            "description": "Embedding model to use"
+                          "model_config": {
+                            "type": "object",
+                            "properties": {
+                              "model": {
+                                "type": "string"
+                              },
+                              "model_db_id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "description": "The id of the resource",
+                                "readOnly": true
+                              },
+                              "model_type": {
+                                "type": "string",
+                                "enum": [
+                                  "chat",
+                                  "completion",
+                                  "embedding",
+                                  "vision",
+                                  "image",
+                                  "tts",
+                                  "stt",
+                                  "rerank"
+                                ],
+                                "description": "The type of the model"
+                              },
+                              "model_parameters": {
+                                "type": "object",
+                                "properties": {
+                                  "temperature": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "maxTokens": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "topK": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "topP": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "frequencyPenalty": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "presencePenalty": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "numImages": {
+                                    "type": "number",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "seed": {
+                                    "type": "number",
+                                    "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                  },
+                                  "format": {
+                                    "type": "string",
+                                    "enum": [
+                                      "url",
+                                      "b64_json",
+                                      "text",
+                                      "json_object"
+                                    ],
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "dimensions": {
+                                    "type": "string",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "quality": {
+                                    "type": "string",
+                                    "enum": [
+                                      "standard",
+                                      "hd"
+                                    ],
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "style": {
+                                    "type": "string",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "responseFormat": {
+                                    "oneOf": [
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "json_schema"
+                                            ]
+                                          },
+                                          "json_schema": {
+                                            "type": "object",
+                                            "properties": {
+                                              "name": {
+                                                "type": "string"
+                                              },
+                                              "strict": {
+                                                "type": "boolean"
+                                              },
+                                              "schema": {
+                                                "type": "object",
+                                                "additionalProperties": {}
+                                              }
+                                            },
+                                            "required": [
+                                              "name",
+                                              "strict",
+                                              "schema"
+                                            ]
+                                          }
+                                        },
+                                        "required": [
+                                          "type",
+                                          "json_schema"
+                                        ]
+                                      },
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "json_object"
+                                            ]
+                                          }
+                                        },
+                                        "required": [
+                                          "type"
+                                        ]
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ],
+                                    "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                  },
+                                  "photoRealVersion": {
+                                    "type": "string",
+                                    "enum": [
+                                      "v1",
+                                      "v2"
+                                    ],
+                                    "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                  },
+                                  "encoding_format": {
+                                    "type": "string",
+                                    "enum": [
+                                      "float",
+                                      "base64"
+                                    ],
+                                    "description": "The format to return the embeddings"
+                                  }
+                                },
+                                "description": "Model Parameters: Not all parameters apply to every model"
+                              },
+                              "provider": {
+                                "type": "string",
+                                "enum": [
+                                  "cohere",
+                                  "openai",
+                                  "anthropic",
+                                  "huggingface",
+                                  "replicate",
+                                  "google",
+                                  "google-ai",
+                                  "azure",
+                                  "aws",
+                                  "anyscale",
+                                  "perplexity",
+                                  "groq",
+                                  "fal",
+                                  "leonardoai",
+                                  "nvidia"
+                                ]
+                              },
+                              "integration_id": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "uuid",
+                                "description": "The id of the resource",
+                                "readOnly": true
+                              },
+                              "version": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "model",
+                              "model_db_id",
+                              "model_type",
+                              "model_parameters",
+                              "provider"
+                            ],
+                            "description": "Configuration of embedding model to be used"
                           },
                           "ttl": {
                             "type": "number",
@@ -3084,7 +3282,7 @@
                         },
                         "required": [
                           "type",
-                          "model"
+                          "model_config"
                         ],
                         "description": "Schema for exact matching type of cache."
                       },
@@ -3101,7 +3299,7 @@
                         "id": {
                           "type": "string",
                           "format": "ulid",
-                          "default": "01JCDDT88Q8DNJ63DQD13GVZWV",
+                          "default": "01JCG93DBK5FMQC6Q3CQB6927R",
                           "description": "The id of the resource",
                           "readOnly": true
                         },
@@ -3212,9 +3410,210 @@
                               "semantic"
                             ]
                           },
-                          "model": {
-                            "type": "string",
-                            "description": "Embedding model to use"
+                          "model_config": {
+                            "type": "object",
+                            "properties": {
+                              "model": {
+                                "type": "string"
+                              },
+                              "model_db_id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "description": "The id of the resource",
+                                "readOnly": true
+                              },
+                              "model_type": {
+                                "type": "string",
+                                "enum": [
+                                  "chat",
+                                  "completion",
+                                  "embedding",
+                                  "vision",
+                                  "image",
+                                  "tts",
+                                  "stt",
+                                  "rerank"
+                                ],
+                                "description": "The type of the model"
+                              },
+                              "model_parameters": {
+                                "type": "object",
+                                "properties": {
+                                  "temperature": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "maxTokens": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "topK": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "topP": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "frequencyPenalty": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "presencePenalty": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "numImages": {
+                                    "type": "number",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "seed": {
+                                    "type": "number",
+                                    "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                  },
+                                  "format": {
+                                    "type": "string",
+                                    "enum": [
+                                      "url",
+                                      "b64_json",
+                                      "text",
+                                      "json_object"
+                                    ],
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "dimensions": {
+                                    "type": "string",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "quality": {
+                                    "type": "string",
+                                    "enum": [
+                                      "standard",
+                                      "hd"
+                                    ],
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "style": {
+                                    "type": "string",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "responseFormat": {
+                                    "oneOf": [
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "json_schema"
+                                            ]
+                                          },
+                                          "json_schema": {
+                                            "type": "object",
+                                            "properties": {
+                                              "name": {
+                                                "type": "string"
+                                              },
+                                              "strict": {
+                                                "type": "boolean"
+                                              },
+                                              "schema": {
+                                                "type": "object",
+                                                "additionalProperties": {}
+                                              }
+                                            },
+                                            "required": [
+                                              "name",
+                                              "strict",
+                                              "schema"
+                                            ]
+                                          }
+                                        },
+                                        "required": [
+                                          "type",
+                                          "json_schema"
+                                        ]
+                                      },
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "json_object"
+                                            ]
+                                          }
+                                        },
+                                        "required": [
+                                          "type"
+                                        ]
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ],
+                                    "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                  },
+                                  "photoRealVersion": {
+                                    "type": "string",
+                                    "enum": [
+                                      "v1",
+                                      "v2"
+                                    ],
+                                    "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                  },
+                                  "encoding_format": {
+                                    "type": "string",
+                                    "enum": [
+                                      "float",
+                                      "base64"
+                                    ],
+                                    "description": "The format to return the embeddings"
+                                  }
+                                },
+                                "description": "Model Parameters: Not all parameters apply to every model"
+                              },
+                              "provider": {
+                                "type": "string",
+                                "enum": [
+                                  "cohere",
+                                  "openai",
+                                  "anthropic",
+                                  "huggingface",
+                                  "replicate",
+                                  "google",
+                                  "google-ai",
+                                  "azure",
+                                  "aws",
+                                  "anyscale",
+                                  "perplexity",
+                                  "groq",
+                                  "fal",
+                                  "leonardoai",
+                                  "nvidia"
+                                ]
+                              },
+                              "integration_id": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "uuid",
+                                "description": "The id of the resource",
+                                "readOnly": true
+                              },
+                              "version": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "model",
+                              "model_db_id",
+                              "model_type",
+                              "model_parameters",
+                              "provider"
+                            ],
+                            "description": "Configuration of embedding model to be used"
                           },
                           "ttl": {
                             "type": "number",
@@ -3229,7 +3628,7 @@
                         },
                         "required": [
                           "type",
-                          "model"
+                          "model_config"
                         ],
                         "description": "Schema for exact matching type of cache."
                       },
@@ -3246,7 +3645,7 @@
                         "id": {
                           "type": "string",
                           "format": "ulid",
-                          "default": "01JCDDT88RS2SG1EE94T77GZ82",
+                          "default": "01JCG93DBM796MM798MMN5BVBA",
                           "description": "The id of the resource",
                           "readOnly": true
                         },
@@ -3442,9 +3841,210 @@
                           "semantic"
                         ]
                       },
-                      "model": {
-                        "type": "string",
-                        "description": "Embedding model to use"
+                      "model_config": {
+                        "type": "object",
+                        "properties": {
+                          "model": {
+                            "type": "string"
+                          },
+                          "model_db_id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "The id of the resource",
+                            "readOnly": true
+                          },
+                          "model_type": {
+                            "type": "string",
+                            "enum": [
+                              "chat",
+                              "completion",
+                              "embedding",
+                              "vision",
+                              "image",
+                              "tts",
+                              "stt",
+                              "rerank"
+                            ],
+                            "description": "The type of the model"
+                          },
+                          "model_parameters": {
+                            "type": "object",
+                            "properties": {
+                              "temperature": {
+                                "type": "number",
+                                "description": "Only supported on `chat` and `completion` models."
+                              },
+                              "maxTokens": {
+                                "type": "number",
+                                "description": "Only supported on `chat` and `completion` models."
+                              },
+                              "topK": {
+                                "type": "number",
+                                "description": "Only supported on `chat` and `completion` models."
+                              },
+                              "topP": {
+                                "type": "number",
+                                "description": "Only supported on `chat` and `completion` models."
+                              },
+                              "frequencyPenalty": {
+                                "type": "number",
+                                "description": "Only supported on `chat` and `completion` models."
+                              },
+                              "presencePenalty": {
+                                "type": "number",
+                                "description": "Only supported on `chat` and `completion` models."
+                              },
+                              "numImages": {
+                                "type": "number",
+                                "description": "Only supported on `image` models."
+                              },
+                              "seed": {
+                                "type": "number",
+                                "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                              },
+                              "format": {
+                                "type": "string",
+                                "enum": [
+                                  "url",
+                                  "b64_json",
+                                  "text",
+                                  "json_object"
+                                ],
+                                "description": "Only supported on `image` models."
+                              },
+                              "dimensions": {
+                                "type": "string",
+                                "description": "Only supported on `image` models."
+                              },
+                              "quality": {
+                                "type": "string",
+                                "enum": [
+                                  "standard",
+                                  "hd"
+                                ],
+                                "description": "Only supported on `image` models."
+                              },
+                              "style": {
+                                "type": "string",
+                                "description": "Only supported on `image` models."
+                              },
+                              "responseFormat": {
+                                "oneOf": [
+                                  {
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "json_schema"
+                                        ]
+                                      },
+                                      "json_schema": {
+                                        "type": "object",
+                                        "properties": {
+                                          "name": {
+                                            "type": "string"
+                                          },
+                                          "strict": {
+                                            "type": "boolean"
+                                          },
+                                          "schema": {
+                                            "type": "object",
+                                            "additionalProperties": {}
+                                          }
+                                        },
+                                        "required": [
+                                          "name",
+                                          "strict",
+                                          "schema"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "type",
+                                      "json_schema"
+                                    ]
+                                  },
+                                  {
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "json_object"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "type"
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                              },
+                              "photoRealVersion": {
+                                "type": "string",
+                                "enum": [
+                                  "v1",
+                                  "v2"
+                                ],
+                                "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                              },
+                              "encoding_format": {
+                                "type": "string",
+                                "enum": [
+                                  "float",
+                                  "base64"
+                                ],
+                                "description": "The format to return the embeddings"
+                              }
+                            },
+                            "description": "Model Parameters: Not all parameters apply to every model"
+                          },
+                          "provider": {
+                            "type": "string",
+                            "enum": [
+                              "cohere",
+                              "openai",
+                              "anthropic",
+                              "huggingface",
+                              "replicate",
+                              "google",
+                              "google-ai",
+                              "azure",
+                              "aws",
+                              "anyscale",
+                              "perplexity",
+                              "groq",
+                              "fal",
+                              "leonardoai",
+                              "nvidia"
+                            ]
+                          },
+                          "integration_id": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "uuid",
+                            "description": "The id of the resource",
+                            "readOnly": true
+                          },
+                          "version": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "model",
+                          "model_db_id",
+                          "model_type",
+                          "model_parameters",
+                          "provider"
+                        ],
+                        "description": "Configuration of embedding model to be used"
                       },
                       "ttl": {
                         "type": "number",
@@ -3459,7 +4059,7 @@
                     },
                     "required": [
                       "type",
-                      "model"
+                      "model_config"
                     ],
                     "description": "Schema for exact matching type of cache."
                   }
@@ -3523,7 +4123,7 @@
           "created": {
             "type": "string",
             "format": "date-time",
-            "default": "2024-11-11T10:55:18.446Z",
+            "default": "2024-11-12T13:30:37.644Z",
             "description": "The date and time the resource was created",
             "readOnly": true
           }
@@ -3582,7 +4182,7 @@
             "created": {
               "type": "string",
               "format": "date-time",
-              "default": "2024-11-11T10:55:18.446Z",
+              "default": "2024-11-12T13:30:37.644Z",
               "description": "The date and time the resource was created",
               "readOnly": true
             }
@@ -5596,7 +6196,7 @@
                               "type": "string"
                             }
                           ],
-                          "default": "2024-11-11T10:55:18.233Z",
+                          "default": "2024-11-12T13:30:37.087Z",
                           "description": "The date and time the resource was created",
                           "readOnly": true,
                           "format": "date-time"
@@ -5606,7 +6206,7 @@
                             {
                               "type": "string",
                               "format": "date-time",
-                              "default": "2024-11-11T10:55:18.235Z"
+                              "default": "2024-11-12T13:30:37.087Z"
                             },
                             {
                               "type": "string"
@@ -5646,7 +6246,7 @@
                     "type": "string"
                   }
                 ],
-                "default": "2024-11-11T10:55:18.233Z",
+                "default": "2024-11-12T13:30:37.087Z",
                 "description": "The date and time the resource was created",
                 "readOnly": true,
                 "format": "date-time"
@@ -5656,7 +6256,7 @@
                   {
                     "type": "string",
                     "format": "date-time",
-                    "default": "2024-11-11T10:55:18.235Z"
+                    "default": "2024-11-12T13:30:37.087Z"
                   },
                   {
                     "type": "string"
@@ -6443,7 +7043,7 @@
                     "type": "string"
                   }
                 ],
-                "default": "2024-11-11T10:55:18.233Z",
+                "default": "2024-11-12T13:30:37.087Z",
                 "description": "The date and time the resource was created",
                 "readOnly": true,
                 "format": "date-time"
@@ -6453,7 +7053,7 @@
                   {
                     "type": "string",
                     "format": "date-time",
-                    "default": "2024-11-11T10:55:18.235Z"
+                    "default": "2024-11-12T13:30:37.087Z"
                   },
                   {
                     "type": "string"
@@ -6684,7 +7284,7 @@
                           "type": "string"
                         }
                       ],
-                      "default": "2024-11-11T10:55:18.233Z",
+                      "default": "2024-11-12T13:30:37.087Z",
                       "description": "The date and time the resource was created",
                       "readOnly": true,
                       "format": "date-time"
@@ -6694,7 +7294,7 @@
                         {
                           "type": "string",
                           "format": "date-time",
-                          "default": "2024-11-11T10:55:18.235Z"
+                          "default": "2024-11-12T13:30:37.087Z"
                         },
                         {
                           "type": "string"
@@ -13126,9 +13726,210 @@
                                   "semantic"
                                 ]
                               },
-                              "model": {
-                                "type": "string",
-                                "description": "Embedding model to use"
+                              "model_config": {
+                                "type": "object",
+                                "properties": {
+                                  "model": {
+                                    "type": "string"
+                                  },
+                                  "model_db_id": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "The id of the resource",
+                                    "readOnly": true
+                                  },
+                                  "model_type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "chat",
+                                      "completion",
+                                      "embedding",
+                                      "vision",
+                                      "image",
+                                      "tts",
+                                      "stt",
+                                      "rerank"
+                                    ],
+                                    "description": "The type of the model"
+                                  },
+                                  "model_parameters": {
+                                    "type": "object",
+                                    "properties": {
+                                      "temperature": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "maxTokens": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "topK": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "topP": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "frequencyPenalty": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "presencePenalty": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "numImages": {
+                                        "type": "number",
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "seed": {
+                                        "type": "number",
+                                        "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                      },
+                                      "format": {
+                                        "type": "string",
+                                        "enum": [
+                                          "url",
+                                          "b64_json",
+                                          "text",
+                                          "json_object"
+                                        ],
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "dimensions": {
+                                        "type": "string",
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "quality": {
+                                        "type": "string",
+                                        "enum": [
+                                          "standard",
+                                          "hd"
+                                        ],
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "style": {
+                                        "type": "string",
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "responseFormat": {
+                                        "oneOf": [
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "json_schema"
+                                                ]
+                                              },
+                                              "json_schema": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "name": {
+                                                    "type": "string"
+                                                  },
+                                                  "strict": {
+                                                    "type": "boolean"
+                                                  },
+                                                  "schema": {
+                                                    "type": "object",
+                                                    "additionalProperties": {}
+                                                  }
+                                                },
+                                                "required": [
+                                                  "name",
+                                                  "strict",
+                                                  "schema"
+                                                ]
+                                              }
+                                            },
+                                            "required": [
+                                              "type",
+                                              "json_schema"
+                                            ]
+                                          },
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "json_object"
+                                                ]
+                                              }
+                                            },
+                                            "required": [
+                                              "type"
+                                            ]
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ],
+                                        "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                      },
+                                      "photoRealVersion": {
+                                        "type": "string",
+                                        "enum": [
+                                          "v1",
+                                          "v2"
+                                        ],
+                                        "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                      },
+                                      "encoding_format": {
+                                        "type": "string",
+                                        "enum": [
+                                          "float",
+                                          "base64"
+                                        ],
+                                        "description": "The format to return the embeddings"
+                                      }
+                                    },
+                                    "description": "Model Parameters: Not all parameters apply to every model"
+                                  },
+                                  "provider": {
+                                    "type": "string",
+                                    "enum": [
+                                      "cohere",
+                                      "openai",
+                                      "anthropic",
+                                      "huggingface",
+                                      "replicate",
+                                      "google",
+                                      "google-ai",
+                                      "azure",
+                                      "aws",
+                                      "anyscale",
+                                      "perplexity",
+                                      "groq",
+                                      "fal",
+                                      "leonardoai",
+                                      "nvidia"
+                                    ]
+                                  },
+                                  "integration_id": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "uuid",
+                                    "description": "The id of the resource",
+                                    "readOnly": true
+                                  },
+                                  "version": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "model",
+                                  "model_db_id",
+                                  "model_type",
+                                  "model_parameters",
+                                  "provider"
+                                ],
+                                "description": "Configuration of embedding model to be used"
                               },
                               "ttl": {
                                 "type": "number",
@@ -13143,7 +13944,7 @@
                             },
                             "required": [
                               "type",
-                              "model"
+                              "model_config"
                             ],
                             "description": "Schema for exact matching type of cache."
                           },
@@ -13160,7 +13961,7 @@
                             "id": {
                               "type": "string",
                               "format": "ulid",
-                              "default": "01JCDDT89ZTFGM5AW0DZFK5GDM",
+                              "default": "01JCG93DCJMEXFPANX0ZTMF3K9",
                               "description": "The id of the resource",
                               "readOnly": true
                             },
@@ -13271,9 +14072,210 @@
                                   "semantic"
                                 ]
                               },
-                              "model": {
-                                "type": "string",
-                                "description": "Embedding model to use"
+                              "model_config": {
+                                "type": "object",
+                                "properties": {
+                                  "model": {
+                                    "type": "string"
+                                  },
+                                  "model_db_id": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "The id of the resource",
+                                    "readOnly": true
+                                  },
+                                  "model_type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "chat",
+                                      "completion",
+                                      "embedding",
+                                      "vision",
+                                      "image",
+                                      "tts",
+                                      "stt",
+                                      "rerank"
+                                    ],
+                                    "description": "The type of the model"
+                                  },
+                                  "model_parameters": {
+                                    "type": "object",
+                                    "properties": {
+                                      "temperature": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "maxTokens": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "topK": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "topP": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "frequencyPenalty": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "presencePenalty": {
+                                        "type": "number",
+                                        "description": "Only supported on `chat` and `completion` models."
+                                      },
+                                      "numImages": {
+                                        "type": "number",
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "seed": {
+                                        "type": "number",
+                                        "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                      },
+                                      "format": {
+                                        "type": "string",
+                                        "enum": [
+                                          "url",
+                                          "b64_json",
+                                          "text",
+                                          "json_object"
+                                        ],
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "dimensions": {
+                                        "type": "string",
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "quality": {
+                                        "type": "string",
+                                        "enum": [
+                                          "standard",
+                                          "hd"
+                                        ],
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "style": {
+                                        "type": "string",
+                                        "description": "Only supported on `image` models."
+                                      },
+                                      "responseFormat": {
+                                        "oneOf": [
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "json_schema"
+                                                ]
+                                              },
+                                              "json_schema": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "name": {
+                                                    "type": "string"
+                                                  },
+                                                  "strict": {
+                                                    "type": "boolean"
+                                                  },
+                                                  "schema": {
+                                                    "type": "object",
+                                                    "additionalProperties": {}
+                                                  }
+                                                },
+                                                "required": [
+                                                  "name",
+                                                  "strict",
+                                                  "schema"
+                                                ]
+                                              }
+                                            },
+                                            "required": [
+                                              "type",
+                                              "json_schema"
+                                            ]
+                                          },
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "json_object"
+                                                ]
+                                              }
+                                            },
+                                            "required": [
+                                              "type"
+                                            ]
+                                          },
+                                          {
+                                            "type": "null"
+                                          }
+                                        ],
+                                        "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                      },
+                                      "photoRealVersion": {
+                                        "type": "string",
+                                        "enum": [
+                                          "v1",
+                                          "v2"
+                                        ],
+                                        "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                      },
+                                      "encoding_format": {
+                                        "type": "string",
+                                        "enum": [
+                                          "float",
+                                          "base64"
+                                        ],
+                                        "description": "The format to return the embeddings"
+                                      }
+                                    },
+                                    "description": "Model Parameters: Not all parameters apply to every model"
+                                  },
+                                  "provider": {
+                                    "type": "string",
+                                    "enum": [
+                                      "cohere",
+                                      "openai",
+                                      "anthropic",
+                                      "huggingface",
+                                      "replicate",
+                                      "google",
+                                      "google-ai",
+                                      "azure",
+                                      "aws",
+                                      "anyscale",
+                                      "perplexity",
+                                      "groq",
+                                      "fal",
+                                      "leonardoai",
+                                      "nvidia"
+                                    ]
+                                  },
+                                  "integration_id": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "format": "uuid",
+                                    "description": "The id of the resource",
+                                    "readOnly": true
+                                  },
+                                  "version": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "model",
+                                  "model_db_id",
+                                  "model_type",
+                                  "model_parameters",
+                                  "provider"
+                                ],
+                                "description": "Configuration of embedding model to be used"
                               },
                               "ttl": {
                                 "type": "number",
@@ -13288,7 +14290,7 @@
                             },
                             "required": [
                               "type",
-                              "model"
+                              "model_config"
                             ],
                             "description": "Schema for exact matching type of cache."
                           },
@@ -13305,7 +14307,7 @@
                             "id": {
                               "type": "string",
                               "format": "ulid",
-                              "default": "01JCDDT8A05P2ZWNT5XVX8REG5",
+                              "default": "01JCG93DCKXH1QCVBN5F09PFF3",
                               "description": "The id of the resource",
                               "readOnly": true
                             },
@@ -13501,9 +14503,210 @@
                               "semantic"
                             ]
                           },
-                          "model": {
-                            "type": "string",
-                            "description": "Embedding model to use"
+                          "model_config": {
+                            "type": "object",
+                            "properties": {
+                              "model": {
+                                "type": "string"
+                              },
+                              "model_db_id": {
+                                "type": "string",
+                                "format": "uuid",
+                                "description": "The id of the resource",
+                                "readOnly": true
+                              },
+                              "model_type": {
+                                "type": "string",
+                                "enum": [
+                                  "chat",
+                                  "completion",
+                                  "embedding",
+                                  "vision",
+                                  "image",
+                                  "tts",
+                                  "stt",
+                                  "rerank"
+                                ],
+                                "description": "The type of the model"
+                              },
+                              "model_parameters": {
+                                "type": "object",
+                                "properties": {
+                                  "temperature": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "maxTokens": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "topK": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "topP": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "frequencyPenalty": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "presencePenalty": {
+                                    "type": "number",
+                                    "description": "Only supported on `chat` and `completion` models."
+                                  },
+                                  "numImages": {
+                                    "type": "number",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "seed": {
+                                    "type": "number",
+                                    "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                  },
+                                  "format": {
+                                    "type": "string",
+                                    "enum": [
+                                      "url",
+                                      "b64_json",
+                                      "text",
+                                      "json_object"
+                                    ],
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "dimensions": {
+                                    "type": "string",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "quality": {
+                                    "type": "string",
+                                    "enum": [
+                                      "standard",
+                                      "hd"
+                                    ],
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "style": {
+                                    "type": "string",
+                                    "description": "Only supported on `image` models."
+                                  },
+                                  "responseFormat": {
+                                    "oneOf": [
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "json_schema"
+                                            ]
+                                          },
+                                          "json_schema": {
+                                            "type": "object",
+                                            "properties": {
+                                              "name": {
+                                                "type": "string"
+                                              },
+                                              "strict": {
+                                                "type": "boolean"
+                                              },
+                                              "schema": {
+                                                "type": "object",
+                                                "additionalProperties": {}
+                                              }
+                                            },
+                                            "required": [
+                                              "name",
+                                              "strict",
+                                              "schema"
+                                            ]
+                                          }
+                                        },
+                                        "required": [
+                                          "type",
+                                          "json_schema"
+                                        ]
+                                      },
+                                      {
+                                        "type": "object",
+                                        "properties": {
+                                          "type": {
+                                            "type": "string",
+                                            "enum": [
+                                              "json_object"
+                                            ]
+                                          }
+                                        },
+                                        "required": [
+                                          "type"
+                                        ]
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ],
+                                    "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                  },
+                                  "photoRealVersion": {
+                                    "type": "string",
+                                    "enum": [
+                                      "v1",
+                                      "v2"
+                                    ],
+                                    "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                  },
+                                  "encoding_format": {
+                                    "type": "string",
+                                    "enum": [
+                                      "float",
+                                      "base64"
+                                    ],
+                                    "description": "The format to return the embeddings"
+                                  }
+                                },
+                                "description": "Model Parameters: Not all parameters apply to every model"
+                              },
+                              "provider": {
+                                "type": "string",
+                                "enum": [
+                                  "cohere",
+                                  "openai",
+                                  "anthropic",
+                                  "huggingface",
+                                  "replicate",
+                                  "google",
+                                  "google-ai",
+                                  "azure",
+                                  "aws",
+                                  "anyscale",
+                                  "perplexity",
+                                  "groq",
+                                  "fal",
+                                  "leonardoai",
+                                  "nvidia"
+                                ]
+                              },
+                              "integration_id": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "uuid",
+                                "description": "The id of the resource",
+                                "readOnly": true
+                              },
+                              "version": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "model",
+                              "model_db_id",
+                              "model_type",
+                              "model_parameters",
+                              "provider"
+                            ],
+                            "description": "Configuration of embedding model to be used"
                           },
                           "ttl": {
                             "type": "number",
@@ -13518,7 +14721,7 @@
                         },
                         "required": [
                           "type",
-                          "model"
+                          "model_config"
                         ],
                         "description": "Schema for exact matching type of cache."
                       }
@@ -28100,9 +29303,210 @@
                                         "semantic"
                                       ]
                                     },
-                                    "model": {
-                                      "type": "string",
-                                      "description": "Embedding model to use"
+                                    "model_config": {
+                                      "type": "object",
+                                      "properties": {
+                                        "model": {
+                                          "type": "string"
+                                        },
+                                        "model_db_id": {
+                                          "type": "string",
+                                          "format": "uuid",
+                                          "description": "The id of the resource",
+                                          "readOnly": true
+                                        },
+                                        "model_type": {
+                                          "type": "string",
+                                          "enum": [
+                                            "chat",
+                                            "completion",
+                                            "embedding",
+                                            "vision",
+                                            "image",
+                                            "tts",
+                                            "stt",
+                                            "rerank"
+                                          ],
+                                          "description": "The type of the model"
+                                        },
+                                        "model_parameters": {
+                                          "type": "object",
+                                          "properties": {
+                                            "temperature": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "maxTokens": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "topK": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "topP": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "frequencyPenalty": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "presencePenalty": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "numImages": {
+                                              "type": "number",
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "seed": {
+                                              "type": "number",
+                                              "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                            },
+                                            "format": {
+                                              "type": "string",
+                                              "enum": [
+                                                "url",
+                                                "b64_json",
+                                                "text",
+                                                "json_object"
+                                              ],
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "dimensions": {
+                                              "type": "string",
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "quality": {
+                                              "type": "string",
+                                              "enum": [
+                                                "standard",
+                                                "hd"
+                                              ],
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "style": {
+                                              "type": "string",
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "responseFormat": {
+                                              "oneOf": [
+                                                {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "type": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "json_schema"
+                                                      ]
+                                                    },
+                                                    "json_schema": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "name": {
+                                                          "type": "string"
+                                                        },
+                                                        "strict": {
+                                                          "type": "boolean"
+                                                        },
+                                                        "schema": {
+                                                          "type": "object",
+                                                          "additionalProperties": {}
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "name",
+                                                        "strict",
+                                                        "schema"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "type",
+                                                    "json_schema"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "type": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "json_object"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "type"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ],
+                                              "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                            },
+                                            "photoRealVersion": {
+                                              "type": "string",
+                                              "enum": [
+                                                "v1",
+                                                "v2"
+                                              ],
+                                              "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                            },
+                                            "encoding_format": {
+                                              "type": "string",
+                                              "enum": [
+                                                "float",
+                                                "base64"
+                                              ],
+                                              "description": "The format to return the embeddings"
+                                            }
+                                          },
+                                          "description": "Model Parameters: Not all parameters apply to every model"
+                                        },
+                                        "provider": {
+                                          "type": "string",
+                                          "enum": [
+                                            "cohere",
+                                            "openai",
+                                            "anthropic",
+                                            "huggingface",
+                                            "replicate",
+                                            "google",
+                                            "google-ai",
+                                            "azure",
+                                            "aws",
+                                            "anyscale",
+                                            "perplexity",
+                                            "groq",
+                                            "fal",
+                                            "leonardoai",
+                                            "nvidia"
+                                          ]
+                                        },
+                                        "integration_id": {
+                                          "type": [
+                                            "string",
+                                            "null"
+                                          ],
+                                          "format": "uuid",
+                                          "description": "The id of the resource",
+                                          "readOnly": true
+                                        },
+                                        "version": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "model",
+                                        "model_db_id",
+                                        "model_type",
+                                        "model_parameters",
+                                        "provider"
+                                      ],
+                                      "description": "Configuration of embedding model to be used"
                                     },
                                     "ttl": {
                                       "type": "number",
@@ -28117,7 +29521,7 @@
                                   },
                                   "required": [
                                     "type",
-                                    "model"
+                                    "model_config"
                                   ],
                                   "description": "Schema for exact matching type of cache."
                                 },
@@ -28134,7 +29538,7 @@
                                   "id": {
                                     "type": "string",
                                     "format": "ulid",
-                                    "default": "01JCDDT8CD1P26KTG4034G88E8",
+                                    "default": "01JCG93DDQN3A95YPCJ19R1T6Z",
                                     "description": "The id of the resource",
                                     "readOnly": true
                                   },
@@ -28245,9 +29649,210 @@
                                         "semantic"
                                       ]
                                     },
-                                    "model": {
-                                      "type": "string",
-                                      "description": "Embedding model to use"
+                                    "model_config": {
+                                      "type": "object",
+                                      "properties": {
+                                        "model": {
+                                          "type": "string"
+                                        },
+                                        "model_db_id": {
+                                          "type": "string",
+                                          "format": "uuid",
+                                          "description": "The id of the resource",
+                                          "readOnly": true
+                                        },
+                                        "model_type": {
+                                          "type": "string",
+                                          "enum": [
+                                            "chat",
+                                            "completion",
+                                            "embedding",
+                                            "vision",
+                                            "image",
+                                            "tts",
+                                            "stt",
+                                            "rerank"
+                                          ],
+                                          "description": "The type of the model"
+                                        },
+                                        "model_parameters": {
+                                          "type": "object",
+                                          "properties": {
+                                            "temperature": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "maxTokens": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "topK": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "topP": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "frequencyPenalty": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "presencePenalty": {
+                                              "type": "number",
+                                              "description": "Only supported on `chat` and `completion` models."
+                                            },
+                                            "numImages": {
+                                              "type": "number",
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "seed": {
+                                              "type": "number",
+                                              "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                            },
+                                            "format": {
+                                              "type": "string",
+                                              "enum": [
+                                                "url",
+                                                "b64_json",
+                                                "text",
+                                                "json_object"
+                                              ],
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "dimensions": {
+                                              "type": "string",
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "quality": {
+                                              "type": "string",
+                                              "enum": [
+                                                "standard",
+                                                "hd"
+                                              ],
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "style": {
+                                              "type": "string",
+                                              "description": "Only supported on `image` models."
+                                            },
+                                            "responseFormat": {
+                                              "oneOf": [
+                                                {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "type": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "json_schema"
+                                                      ]
+                                                    },
+                                                    "json_schema": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "name": {
+                                                          "type": "string"
+                                                        },
+                                                        "strict": {
+                                                          "type": "boolean"
+                                                        },
+                                                        "schema": {
+                                                          "type": "object",
+                                                          "additionalProperties": {}
+                                                        }
+                                                      },
+                                                      "required": [
+                                                        "name",
+                                                        "strict",
+                                                        "schema"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "type",
+                                                    "json_schema"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "type": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "json_object"
+                                                      ]
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "type"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ],
+                                              "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                            },
+                                            "photoRealVersion": {
+                                              "type": "string",
+                                              "enum": [
+                                                "v1",
+                                                "v2"
+                                              ],
+                                              "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                            },
+                                            "encoding_format": {
+                                              "type": "string",
+                                              "enum": [
+                                                "float",
+                                                "base64"
+                                              ],
+                                              "description": "The format to return the embeddings"
+                                            }
+                                          },
+                                          "description": "Model Parameters: Not all parameters apply to every model"
+                                        },
+                                        "provider": {
+                                          "type": "string",
+                                          "enum": [
+                                            "cohere",
+                                            "openai",
+                                            "anthropic",
+                                            "huggingface",
+                                            "replicate",
+                                            "google",
+                                            "google-ai",
+                                            "azure",
+                                            "aws",
+                                            "anyscale",
+                                            "perplexity",
+                                            "groq",
+                                            "fal",
+                                            "leonardoai",
+                                            "nvidia"
+                                          ]
+                                        },
+                                        "integration_id": {
+                                          "type": [
+                                            "string",
+                                            "null"
+                                          ],
+                                          "format": "uuid",
+                                          "description": "The id of the resource",
+                                          "readOnly": true
+                                        },
+                                        "version": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "model",
+                                        "model_db_id",
+                                        "model_type",
+                                        "model_parameters",
+                                        "provider"
+                                      ],
+                                      "description": "Configuration of embedding model to be used"
                                     },
                                     "ttl": {
                                       "type": "number",
@@ -28262,7 +29867,7 @@
                                   },
                                   "required": [
                                     "type",
-                                    "model"
+                                    "model_config"
                                   ],
                                   "description": "Schema for exact matching type of cache."
                                 },
@@ -28279,7 +29884,7 @@
                                   "id": {
                                     "type": "string",
                                     "format": "ulid",
-                                    "default": "01JCDDT8CET39JFE9FFVCDF1J9",
+                                    "default": "01JCG93DDRPN7EZ58DVYK1RQG5",
                                     "description": "The id of the resource",
                                     "readOnly": true
                                   },
@@ -28475,9 +30080,210 @@
                                     "semantic"
                                   ]
                                 },
-                                "model": {
-                                  "type": "string",
-                                  "description": "Embedding model to use"
+                                "model_config": {
+                                  "type": "object",
+                                  "properties": {
+                                    "model": {
+                                      "type": "string"
+                                    },
+                                    "model_db_id": {
+                                      "type": "string",
+                                      "format": "uuid",
+                                      "description": "The id of the resource",
+                                      "readOnly": true
+                                    },
+                                    "model_type": {
+                                      "type": "string",
+                                      "enum": [
+                                        "chat",
+                                        "completion",
+                                        "embedding",
+                                        "vision",
+                                        "image",
+                                        "tts",
+                                        "stt",
+                                        "rerank"
+                                      ],
+                                      "description": "The type of the model"
+                                    },
+                                    "model_parameters": {
+                                      "type": "object",
+                                      "properties": {
+                                        "temperature": {
+                                          "type": "number",
+                                          "description": "Only supported on `chat` and `completion` models."
+                                        },
+                                        "maxTokens": {
+                                          "type": "number",
+                                          "description": "Only supported on `chat` and `completion` models."
+                                        },
+                                        "topK": {
+                                          "type": "number",
+                                          "description": "Only supported on `chat` and `completion` models."
+                                        },
+                                        "topP": {
+                                          "type": "number",
+                                          "description": "Only supported on `chat` and `completion` models."
+                                        },
+                                        "frequencyPenalty": {
+                                          "type": "number",
+                                          "description": "Only supported on `chat` and `completion` models."
+                                        },
+                                        "presencePenalty": {
+                                          "type": "number",
+                                          "description": "Only supported on `chat` and `completion` models."
+                                        },
+                                        "numImages": {
+                                          "type": "number",
+                                          "description": "Only supported on `image` models."
+                                        },
+                                        "seed": {
+                                          "type": "number",
+                                          "description": "Best effort deterministic seed for the model. Currently only OpenAI models support these"
+                                        },
+                                        "format": {
+                                          "type": "string",
+                                          "enum": [
+                                            "url",
+                                            "b64_json",
+                                            "text",
+                                            "json_object"
+                                          ],
+                                          "description": "Only supported on `image` models."
+                                        },
+                                        "dimensions": {
+                                          "type": "string",
+                                          "description": "Only supported on `image` models."
+                                        },
+                                        "quality": {
+                                          "type": "string",
+                                          "enum": [
+                                            "standard",
+                                            "hd"
+                                          ],
+                                          "description": "Only supported on `image` models."
+                                        },
+                                        "style": {
+                                          "type": "string",
+                                          "description": "Only supported on `image` models."
+                                        },
+                                        "responseFormat": {
+                                          "oneOf": [
+                                            {
+                                              "type": "object",
+                                              "properties": {
+                                                "type": {
+                                                  "type": "string",
+                                                  "enum": [
+                                                    "json_schema"
+                                                  ]
+                                                },
+                                                "json_schema": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "name": {
+                                                      "type": "string"
+                                                    },
+                                                    "strict": {
+                                                      "type": "boolean"
+                                                    },
+                                                    "schema": {
+                                                      "type": "object",
+                                                      "additionalProperties": {}
+                                                    }
+                                                  },
+                                                  "required": [
+                                                    "name",
+                                                    "strict",
+                                                    "schema"
+                                                  ]
+                                                }
+                                              },
+                                              "required": [
+                                                "type",
+                                                "json_schema"
+                                              ]
+                                            },
+                                            {
+                                              "type": "object",
+                                              "properties": {
+                                                "type": {
+                                                  "type": "string",
+                                                  "enum": [
+                                                    "json_object"
+                                                  ]
+                                                }
+                                              },
+                                              "required": [
+                                                "type"
+                                              ]
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ],
+                                          "description": "An object specifying the format that the model must output. \n\n Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema \n\n Setting to `{ \"type\": \"json_object\" }` enables JSON mode, which ensures the message the model generates is valid JSON.\n\nImportant: when using JSON mode, you must also instruct the model to produce JSON yourself via a system or user message. Without this, the model may generate an unending stream of whitespace until the generation reaches the token limit, resulting in a long-running and seemingly \"stuck\" request. Also note that the message content may be partially cut off if finish_reason=\"length\", which indicates the generation exceeded max_tokens or the conversation exceeded the max context length."
+                                        },
+                                        "photoRealVersion": {
+                                          "type": "string",
+                                          "enum": [
+                                            "v1",
+                                            "v2"
+                                          ],
+                                          "description": "The version of photoReal to use. Must be v1 or v2. Only available for `leonardoai` provider"
+                                        },
+                                        "encoding_format": {
+                                          "type": "string",
+                                          "enum": [
+                                            "float",
+                                            "base64"
+                                          ],
+                                          "description": "The format to return the embeddings"
+                                        }
+                                      },
+                                      "description": "Model Parameters: Not all parameters apply to every model"
+                                    },
+                                    "provider": {
+                                      "type": "string",
+                                      "enum": [
+                                        "cohere",
+                                        "openai",
+                                        "anthropic",
+                                        "huggingface",
+                                        "replicate",
+                                        "google",
+                                        "google-ai",
+                                        "azure",
+                                        "aws",
+                                        "anyscale",
+                                        "perplexity",
+                                        "groq",
+                                        "fal",
+                                        "leonardoai",
+                                        "nvidia"
+                                      ]
+                                    },
+                                    "integration_id": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "format": "uuid",
+                                      "description": "The id of the resource",
+                                      "readOnly": true
+                                    },
+                                    "version": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "model",
+                                    "model_db_id",
+                                    "model_type",
+                                    "model_parameters",
+                                    "provider"
+                                  ],
+                                  "description": "Configuration of embedding model to be used"
                                 },
                                 "ttl": {
                                   "type": "number",
@@ -28492,7 +30298,7 @@
                               },
                               "required": [
                                 "type",
-                                "model"
+                                "model_config"
                               ],
                               "description": "Schema for exact matching type of cache."
                             }
@@ -35944,11 +37750,12 @@
     "parameters": {}
   },
   "paths": {
-    "/contacts": {
+    "/v2/contacts": {
       "post": {
         "tags": [
           "Contacts"
         ],
+        "x-speakeasy-name-override": "create",
         "description": "Update or add user information to workspace",
         "summary": "Update user information",
         "requestBody": {
@@ -36014,13 +37821,83 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "success": {
-                      "type": "boolean",
-                      "description": "Indicate whether the contact have been added or updated."
+                    "id": {
+                      "type": "string",
+                      "description": "Unique ULID (Universally Unique Lexicographically Sortable Identifier) for the user"
+                    },
+                    "external_id": {
+                      "type": "string",
+                      "description": "Unique string value to identify the contact user in the customer's system"
+                    },
+                    "display_name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Display name or nickname of the user"
+                    },
+                    "email": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "email",
+                      "description": "Email address of the user"
+                    },
+                    "avatar_url": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "URL linking to the user's avatar image"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "description": "Array of UUIDs representing tags associated with the user"
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "additionalProperties": {},
+                      "description": "Additional custom metadata associated with the user as key-value pairs"
+                    },
+                    "created": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ],
+                      "default": "2024-11-12T13:30:37.087Z",
+                      "description": "The date and time the resource was created",
+                      "readOnly": true,
+                      "format": "date-time"
+                    },
+                    "updated": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "format": "date-time",
+                          "default": "2024-11-12T13:30:37.087Z"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ],
+                      "description": "The date and time the resource was last updated",
+                      "readOnly": true,
+                      "format": "date-time"
                     }
                   },
                   "required": [
-                    "success"
+                    "id",
+                    "external_id"
                   ]
                 }
               }
@@ -36031,10 +37908,10 @@
     },
     "/v2/feedback": {
       "post": {
-        "x-speakeasy-name-override": "create5",
         "tags": [
           "Feedback"
         ],
+        "x-speakeasy-name-override": "create",
         "description": "Submit feedback for the LLM transaction via the API",
         "summary": "Submit feedback",
         "requestBody": {
@@ -36133,11 +38010,12 @@
     },
     "/v2/deployments/get_config": {
       "post": {
-        "x-speakeasy-name-override": "getConfig",
         "tags": [
           "Deployments",
           "public"
         ],
+        "x-speakeasy-group": "deployments",
+        "x-speakeasy-name-override": "getConfig",
         "security": [
           {
             "Bearer": []
@@ -36933,11 +38811,12 @@
     },
     "/v2/deployments/invoke": {
       "post": {
-        "x-speakeasy-name-override": "invoke",
         "tags": [
           "Deployments",
           "public"
         ],
+        "x-speakeasy-group": "deployments",
+        "x-speakeasy-name-override": "invoke",
         "description": "Invoke a deployment with a given payload",
         "summary": "Invoke",
         "security": [
@@ -37542,11 +39421,12 @@
     },
     "/v2/deployments/{id}/metrics": {
       "post": {
-        "x-speakeasy-name-override": "addMetrics",
         "tags": [
           "Deployments",
           "public"
         ],
+        "x-speakeasy-group": "deployments",
+        "x-speakeasy-name-override": "addMetrics",
         "description": "Add metrics to a deployment",
         "summary": "Add metrics",
         "security": [
@@ -37973,11 +39853,12 @@
     },
     "/v2/deployments": {
       "get": {
-        "x-speakeasy-name-override": "list",
         "tags": [
           "Deployments",
           "public"
         ],
+        "x-speakeasy-group": "deployments",
+        "x-speakeasy-name-override": "list",
         "description": "Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.",
         "summary": "List all deployments",
         "parameters": [
@@ -38509,7 +40390,6 @@
     },
     "/v2/files": {
       "post": {
-        "x-speakeasy-name-override": "upload",
         "tags": [
           "Files",
           "public"
@@ -38577,7 +40457,7 @@
                     "created": {
                       "type": "string",
                       "format": "date-time",
-                      "default": "2024-11-11T10:55:18.446Z",
+                      "default": "2024-11-12T13:30:37.644Z",
                       "description": "The date and time the resource was created",
                       "readOnly": true
                     }
@@ -38601,7 +40481,6 @@
     },
     "/v2/files/bulk": {
       "post": {
-        "x-speakeasy-name-override": "bulkUpload",
         "tags": [
           "Files",
           "public"
@@ -38677,7 +40556,7 @@
                       "created": {
                         "type": "string",
                         "format": "date-time",
-                        "default": "2024-11-11T10:55:18.446Z",
+                        "default": "2024-11-12T13:30:37.644Z",
                         "description": "The date and time the resource was created",
                         "readOnly": true
                       }
@@ -38702,11 +40581,12 @@
     },
     "/v2/router/embeddings": {
       "post": {
-        "x-speakeasy-name-override": "create",
         "tags": [
-          "router.embeddings",
+          "router",
           "public"
         ],
+        "x-speakeasy-group": "router.embeddings",
+        "x-speakeasy-name-override": "create",
         "description": "Creates an embedding vector representing the input text.",
         "summary": "Embeddings",
         "requestBody": {
@@ -38856,11 +40736,12 @@
     },
     "/v2/router/chat/completions": {
       "post": {
-        "x-speakeasy-name-override": "create2",
         "tags": [
-          "router.chat.completions",
+          "router",
           "public"
         ],
+        "x-speakeasy-group": "router.chat.completions",
+        "x-speakeasy-name-override": "create",
         "description": "For sending requests to chat completion models",
         "summary": "Chat",
         "requestBody": {
@@ -40025,11 +41906,12 @@
     },
     "/v2/router/completions": {
       "post": {
-        "x-speakeasy-name-override": "create3",
         "tags": [
-          "router.completions",
+          "router",
           "public"
         ],
+        "x-speakeasy-group": "router.completions",
+        "x-speakeasy-name-override": "create",
         "security": [
           {
             "Bearer": []
@@ -40253,11 +42135,12 @@
     },
     "/v2/router/rerank": {
       "post": {
-        "x-speakeasy-name-override": "rerank",
         "tags": [
           "router",
           "public"
         ],
+        "x-speakeasy-group": "router",
+        "x-speakeasy-name-override": "rerank",
         "security": [
           {
             "Bearer": []
@@ -40437,9 +42320,8 @@
     },
     "/v2/router/images/generations": {
       "post": {
-        "x-speakeasy-name-override": "generate",
         "tags": [
-          "router.images",
+          "router",
           "public"
         ],
         "security": [
@@ -40707,11 +42589,11 @@
     },
     "/v2/remoteconfigs": {
       "post": {
-        "x-speakeasy-name-override": "create4",
         "tags": [
           "remoteconfig",
           "public"
         ],
+        "x-speakeasy-group": "remoteconfig",
         "security": [
           {
             "Bearer": []
