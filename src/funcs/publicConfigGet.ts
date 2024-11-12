@@ -27,7 +27,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Retrieve the deployment configuration
  */
-export async function deploymentsPostV2DeploymentsGetConfig(
+export async function publicConfigGet(
   client: OrqCore,
   request: operations.PostV2DeploymentsGetConfigRequestBody,
   options?: RequestOptions,
