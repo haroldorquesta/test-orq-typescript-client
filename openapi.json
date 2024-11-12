@@ -38856,7 +38856,7 @@
     },
     "/v2/router/chat/completions": {
       "post": {
-        "x-speakeasy-name-override": "create",
+        "x-speakeasy-name-override": "create2",
         "tags": [
           "router.chat.completions",
           "public"
@@ -40025,7 +40025,7 @@
     },
     "/v2/router/completions": {
       "post": {
-        "x-speakeasy-name-override": "create",
+        "x-speakeasy-name-override": "create3",
         "tags": [
           "router.completions",
           "public"
