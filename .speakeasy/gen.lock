@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 15ef12c3cc700da9c4d2ad5cf858e92b
+  docChecksum: 351bd5b815efe8e5c203695747e55a00
   docVersion: "2.0"
   speakeasyVersion: 1.426.0
   generationVersion: 2.446.5
-  releaseVersion: 0.9.1
-  configChecksum: 4af2d4b6cd4215de8c00314badaf5e93
+  releaseVersion: 0.10.1
+  configChecksum: 55888137e56e3796c17f4b77f1dfa3e7
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -311,8 +311,8 @@ generatedFiles:
   - docs/models/operations/postv2routerimagesgenerationsmessage3.md
   - docs/models/operations/postv2routerimagesgenerationsmessagefunction.md
   - docs/models/operations/postv2routerimagesgenerationsmessagerole.md
-  - docs/models/operations/postv2routerimagesgenerationsmessagerouterpublicrole.md
-  - docs/models/operations/postv2routerimagesgenerationsmessagerouterrole.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagerouterimagesresponserole.md
+  - docs/models/operations/postv2routerimagesgenerationsmessagerouterimagesrole.md
   - docs/models/operations/postv2routerimagesgenerationsmessagetoolcalls.md
   - docs/models/operations/postv2routerimagesgenerationsmessagetype.md
   - docs/models/operations/postv2routerimagesgenerationsrequestbody.md
@@ -373,9 +373,9 @@ generatedFiles:
   - docs/sdks/embeddings/README.md
   - docs/sdks/feedback/README.md
   - docs/sdks/files/README.md
+  - docs/sdks/images/README.md
   - docs/sdks/orq/README.md
   - docs/sdks/orqcompletions/README.md
-  - docs/sdks/public/README.md
   - docs/sdks/remoteconfig/README.md
   - docs/sdks/router/README.md
   - jsr.json
@@ -387,15 +387,13 @@ generatedFiles:
   - src/funcs/deploymentsInvoke.ts
   - src/funcs/deploymentsList.ts
   - src/funcs/feedbackCreate.ts
-  - src/funcs/filesPostV2Files.ts
-  - src/funcs/publicPostV2Files.ts
-  - src/funcs/publicPostV2FilesBulk.ts
-  - src/funcs/publicPostV2RouterImagesGenerations.ts
-  - src/funcs/remoteconfigPostV2Remoteconfigs.ts
+  - src/funcs/filesBulkUpload.ts
+  - src/funcs/filesUpload.ts
+  - src/funcs/remoteconfigGetConfig.ts
   - src/funcs/routerChatCompletionsCreate.ts
   - src/funcs/routerCompletionsCreate.ts
   - src/funcs/routerEmbeddingsCreate.ts
-  - src/funcs/routerPostV2RouterImagesGenerations.ts
+  - src/funcs/routerImagesGenerate.ts
   - src/funcs/routerRerank.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
@@ -448,9 +446,9 @@ generatedFiles:
   - src/sdk/embeddings.ts
   - src/sdk/feedback.ts
   - src/sdk/files.ts
+  - src/sdk/images.ts
   - src/sdk/index.ts
   - src/sdk/orqcompletions.ts
-  - src/sdk/public.ts
   - src/sdk/remoteconfig.ts
   - src/sdk/router.ts
   - src/sdk/sdk.ts

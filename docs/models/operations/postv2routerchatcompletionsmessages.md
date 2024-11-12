@@ -45,7 +45,14 @@ const value: operations.Messages3 = {
 const value: operations.Four = {
   role: "tool",
   toolCallId: "<id>",
-  content: "<value>",
+  content: [
+    {
+      type: "image_url",
+      imageUrl: {
+        url: "https://entire-follower.net/",
+      },
+    },
+  ],
 };
 ```
 

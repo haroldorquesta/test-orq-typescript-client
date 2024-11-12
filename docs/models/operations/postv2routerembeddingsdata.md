@@ -7,10 +7,8 @@ import { PostV2RouterEmbeddingsData } from "orq-poc-typescript/models/operations
 
 let value: PostV2RouterEmbeddingsData = {
   object: "embedding",
-  embedding: [
-    9292.91,
-  ],
-  index: 996.15,
+  embedding: "<value>",
+  index: 9591.67,
 };
 ```
 

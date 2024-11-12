@@ -8,7 +8,7 @@ import { PostV2RouterChatCompletions2RouterChatCompletionsRequest2 } from "orq-p
 let value: PostV2RouterChatCompletions2RouterChatCompletionsRequest2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://affectionate-captain.name/",
+    url: "https://insistent-disk.org/",
   },
 };
 ```

@@ -18,7 +18,7 @@ const value: components.Two[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://celebrated-mountain.net/",
+      url: "https://clear-cut-bungalow.name",
     },
   },
 ];

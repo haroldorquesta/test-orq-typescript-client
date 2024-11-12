@@ -7,7 +7,7 @@ The format of the image
 ```typescript
 import { ResponseFormat } from "orq-poc-typescript/models/operations";
 
-let value: ResponseFormat = "url";
+let value: ResponseFormat = "b64_json";
 ```
 
 ## Values

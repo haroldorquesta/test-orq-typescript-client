@@ -7,8 +7,7 @@ The reason the model stopped generating tokens.
 ```typescript
 import { PostV2RouterChatCompletionsResponseBodyFinishReason } from "orq-poc-typescript/models/operations";
 
-let value: PostV2RouterChatCompletionsResponseBodyFinishReason =
-  "content_filter";
+let value: PostV2RouterChatCompletionsResponseBodyFinishReason = "stop";
 ```
 
 ## Values

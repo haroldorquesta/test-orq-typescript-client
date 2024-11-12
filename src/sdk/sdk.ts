@@ -7,7 +7,6 @@ import { Contacts } from "./contacts.js";
 import { Deployments } from "./deployments.js";
 import { Feedback } from "./feedback.js";
 import { Files } from "./files.js";
-import { Public } from "./public.js";
 import { Remoteconfig } from "./remoteconfig.js";
 import { Router } from "./router.js";
 
@@ -30,11 +29,6 @@ export class Orq extends ClientSDK {
   private _files?: Files;
   get files(): Files {
     return (this._files ??= new Files(this._options));
-  }
-
-  private _public?: Public;
-  get public(): Public {
-    return (this._public ??= new Public(this._options));
   }
 
   private _router?: Router;

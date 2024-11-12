@@ -18,10 +18,8 @@ const value:
   operations.PostV2RouterChatCompletionsContentRouterChatCompletionsRequest2[] =
     [
       {
-        type: "image_url",
-        imageUrl: {
-          url: "https://wrong-baseboard.net/",
-        },
+        type: "text",
+        text: "<value>",
       },
     ];
 ```

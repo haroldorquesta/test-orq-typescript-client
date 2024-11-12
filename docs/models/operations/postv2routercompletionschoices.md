@@ -7,7 +7,7 @@ import { PostV2RouterCompletionsChoices } from "orq-poc-typescript/models/operat
 
 let value: PostV2RouterCompletionsChoices = {
   finishReason: "stop",
-  index: 968.04,
+  index: 9077.33,
   text: "<value>",
 };
 ```

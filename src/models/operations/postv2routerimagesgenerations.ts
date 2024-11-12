@@ -84,7 +84,7 @@ export type PostV2RouterImagesGenerationsRequestBody = {
 /**
  * The role of the prompt message
  */
-export const PostV2RouterImagesGenerationsMessageRouterPublicRole = {
+export const PostV2RouterImagesGenerationsMessageRouterImagesResponseRole = {
   System: "system",
   Assistant: "assistant",
   User: "user",
@@ -97,9 +97,10 @@ export const PostV2RouterImagesGenerationsMessageRouterPublicRole = {
 /**
  * The role of the prompt message
  */
-export type PostV2RouterImagesGenerationsMessageRouterPublicRole = ClosedEnum<
-  typeof PostV2RouterImagesGenerationsMessageRouterPublicRole
->;
+export type PostV2RouterImagesGenerationsMessageRouterImagesResponseRole =
+  ClosedEnum<
+    typeof PostV2RouterImagesGenerationsMessageRouterImagesResponseRole
+  >;
 
 export const PostV2RouterImagesGenerationsMessageType = {
   Function: "function",
@@ -127,14 +128,14 @@ export type PostV2RouterImagesGenerationsMessage3 = {
   /**
    * The role of the prompt message
    */
-  role: PostV2RouterImagesGenerationsMessageRouterPublicRole;
+  role: PostV2RouterImagesGenerationsMessageRouterImagesResponseRole;
   toolCalls: Array<PostV2RouterImagesGenerationsMessageToolCalls>;
 };
 
 /**
  * The role of the prompt message
  */
-export const PostV2RouterImagesGenerationsMessageRouterRole = {
+export const PostV2RouterImagesGenerationsMessageRouterImagesRole = {
   System: "system",
   Assistant: "assistant",
   User: "user",
@@ -147,15 +148,15 @@ export const PostV2RouterImagesGenerationsMessageRouterRole = {
 /**
  * The role of the prompt message
  */
-export type PostV2RouterImagesGenerationsMessageRouterRole = ClosedEnum<
-  typeof PostV2RouterImagesGenerationsMessageRouterRole
+export type PostV2RouterImagesGenerationsMessageRouterImagesRole = ClosedEnum<
+  typeof PostV2RouterImagesGenerationsMessageRouterImagesRole
 >;
 
 export type PostV2RouterImagesGenerationsMessage2 = {
   /**
    * The role of the prompt message
    */
-  role: PostV2RouterImagesGenerationsMessageRouterRole;
+  role: PostV2RouterImagesGenerationsMessageRouterImagesRole;
   url: string;
 };
 
@@ -359,26 +360,31 @@ export namespace PostV2RouterImagesGenerationsRequestBody$ {
 }
 
 /** @internal */
-export const PostV2RouterImagesGenerationsMessageRouterPublicRole$inboundSchema:
-  z.ZodNativeEnum<typeof PostV2RouterImagesGenerationsMessageRouterPublicRole> =
-    z.nativeEnum(PostV2RouterImagesGenerationsMessageRouterPublicRole);
+export const PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$inboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2RouterImagesGenerationsMessageRouterImagesResponseRole
+  > = z.nativeEnum(
+    PostV2RouterImagesGenerationsMessageRouterImagesResponseRole,
+  );
 
 /** @internal */
-export const PostV2RouterImagesGenerationsMessageRouterPublicRole$outboundSchema:
-  z.ZodNativeEnum<typeof PostV2RouterImagesGenerationsMessageRouterPublicRole> =
-    PostV2RouterImagesGenerationsMessageRouterPublicRole$inboundSchema;
+export const PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$outboundSchema:
+  z.ZodNativeEnum<
+    typeof PostV2RouterImagesGenerationsMessageRouterImagesResponseRole
+  > =
+    PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterImagesGenerationsMessageRouterPublicRole$ {
-  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterPublicRole$inboundSchema` instead. */
+export namespace PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$ {
+  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterImagesGenerationsMessageRouterPublicRole$inboundSchema;
-  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterPublicRole$outboundSchema` instead. */
+    PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$inboundSchema;
+  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterImagesGenerationsMessageRouterPublicRole$outboundSchema;
+    PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$outboundSchema;
 }
 
 /** @internal */
@@ -506,7 +512,8 @@ export const PostV2RouterImagesGenerationsMessage3$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  role: PostV2RouterImagesGenerationsMessageRouterPublicRole$inboundSchema,
+  role:
+    PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$inboundSchema,
   tool_calls: z.array(
     z.lazy(() => PostV2RouterImagesGenerationsMessageToolCalls$inboundSchema),
   ),
@@ -528,7 +535,8 @@ export const PostV2RouterImagesGenerationsMessage3$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2RouterImagesGenerationsMessage3
 > = z.object({
-  role: PostV2RouterImagesGenerationsMessageRouterPublicRole$outboundSchema,
+  role:
+    PostV2RouterImagesGenerationsMessageRouterImagesResponseRole$outboundSchema,
   toolCalls: z.array(
     z.lazy(() => PostV2RouterImagesGenerationsMessageToolCalls$outboundSchema),
   ),
@@ -554,26 +562,26 @@ export namespace PostV2RouterImagesGenerationsMessage3$ {
 }
 
 /** @internal */
-export const PostV2RouterImagesGenerationsMessageRouterRole$inboundSchema:
-  z.ZodNativeEnum<typeof PostV2RouterImagesGenerationsMessageRouterRole> = z
-    .nativeEnum(PostV2RouterImagesGenerationsMessageRouterRole);
+export const PostV2RouterImagesGenerationsMessageRouterImagesRole$inboundSchema:
+  z.ZodNativeEnum<typeof PostV2RouterImagesGenerationsMessageRouterImagesRole> =
+    z.nativeEnum(PostV2RouterImagesGenerationsMessageRouterImagesRole);
 
 /** @internal */
-export const PostV2RouterImagesGenerationsMessageRouterRole$outboundSchema:
-  z.ZodNativeEnum<typeof PostV2RouterImagesGenerationsMessageRouterRole> =
-    PostV2RouterImagesGenerationsMessageRouterRole$inboundSchema;
+export const PostV2RouterImagesGenerationsMessageRouterImagesRole$outboundSchema:
+  z.ZodNativeEnum<typeof PostV2RouterImagesGenerationsMessageRouterImagesRole> =
+    PostV2RouterImagesGenerationsMessageRouterImagesRole$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2RouterImagesGenerationsMessageRouterRole$ {
-  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterRole$inboundSchema` instead. */
+export namespace PostV2RouterImagesGenerationsMessageRouterImagesRole$ {
+  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterImagesRole$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2RouterImagesGenerationsMessageRouterRole$inboundSchema;
-  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterRole$outboundSchema` instead. */
+    PostV2RouterImagesGenerationsMessageRouterImagesRole$inboundSchema;
+  /** @deprecated use `PostV2RouterImagesGenerationsMessageRouterImagesRole$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2RouterImagesGenerationsMessageRouterRole$outboundSchema;
+    PostV2RouterImagesGenerationsMessageRouterImagesRole$outboundSchema;
 }
 
 /** @internal */
@@ -582,7 +590,7 @@ export const PostV2RouterImagesGenerationsMessage2$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  role: PostV2RouterImagesGenerationsMessageRouterRole$inboundSchema,
+  role: PostV2RouterImagesGenerationsMessageRouterImagesRole$inboundSchema,
   url: z.string(),
 });
 
@@ -598,7 +606,7 @@ export const PostV2RouterImagesGenerationsMessage2$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2RouterImagesGenerationsMessage2
 > = z.object({
-  role: PostV2RouterImagesGenerationsMessageRouterRole$outboundSchema,
+  role: PostV2RouterImagesGenerationsMessageRouterImagesRole$outboundSchema,
   url: z.string(),
 });
 

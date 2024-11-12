@@ -27,7 +27,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
  */
-export async function publicPostV2FilesBulk(
+export async function filesBulkUpload(
   client: OrqCore,
   request: operations.PostV2FilesBulkRequestBody,
   options?: RequestOptions,
