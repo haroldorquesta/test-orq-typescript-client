@@ -8,9 +8,9 @@ import { PostV2RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs
 let value:
   PostV2RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs = {
     token: "<value>",
-    logprob: 4174.86,
+    logprob: 7307.09,
     bytes: [
-      1312.89,
+      8817.20,
     ],
   };
 ```

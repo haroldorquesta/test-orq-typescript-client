@@ -7,16 +7,16 @@ import { ResponseBodyRefusal } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBodyRefusal = {
   token: "<value>",
-  logprob: 6041.18,
+  logprob: 2724.37,
   bytes: [
-    3828.08,
+    3790.57,
   ],
   topLogprobs: [
     {
       token: "<value>",
-      logprob: 8953.86,
+      logprob: 3742.96,
       bytes: [
-        9677.95,
+        7487.88,
       ],
     },
   ],

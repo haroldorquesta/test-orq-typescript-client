@@ -10,8 +10,8 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "length",
-      index: 3782.45,
+      finishReason: "stop",
+      index: 3891.35,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -31,16 +31,16 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
         content: [
           {
             token: "<value>",
-            logprob: 1746.58,
+            logprob: 3000.29,
             bytes: [
-              3279.88,
+              1604.68,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 6803.49,
+                logprob: 8863.05,
                 bytes: [
-                  632.08,
+                  4463.94,
                 ],
               },
             ],
@@ -49,16 +49,16 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
         refusal: [
           {
             token: "<value>",
-            logprob: 6072.49,
+            logprob: 9078.76,
             bytes: [
-              4776.47,
+              1602.30,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 2840.00,
+                logprob: 6611.18,
                 bytes: [
-                  2384.13,
+                  4402.64,
                 ],
               },
             ],
@@ -67,8 +67,8 @@ const value: operations.PostV2RouterChatCompletionsResponseBody = {
       },
     },
   ],
-  created: 5145.13,
-  model: "Durango",
+  created: 764.87,
+  model: "Model 3",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

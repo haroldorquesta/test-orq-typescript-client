@@ -7,7 +7,7 @@ Specifies the detail level of the image.
 ```typescript
 import { PostV2RouterChatCompletions2Detail } from "orq-poc-typescript/models/operations";
 
-let value: PostV2RouterChatCompletions2Detail = "high";
+let value: PostV2RouterChatCompletions2Detail = "auto";
 ```
 
 ## Values

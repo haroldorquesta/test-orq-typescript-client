@@ -7,7 +7,7 @@ Type of the document element
 ```typescript
 import { EncodingFormat } from "orq-poc-typescript/models/operations";
 
-let value: EncodingFormat = "base64";
+let value: EncodingFormat = "float";
 ```
 
 ## Values

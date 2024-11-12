@@ -11,8 +11,8 @@ let value: ResponseBody1 = {
   id: "<id>",
   choices: [
     {
-      finishReason: "length",
-      index: 6232.95,
+      finishReason: "content_filter",
+      index: 2790.68,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -26,22 +26,22 @@ let value: ResponseBody1 = {
             },
           },
         ],
-        role: "expected_output",
+        role: "assistant",
       },
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 6188.26,
+            logprob: 1157.03,
             bytes: [
-              1334.61,
+              5771.40,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 9805.80,
+                logprob: 6952.70,
                 bytes: [
-                  8717.86,
+                  6719.57,
                 ],
               },
             ],
@@ -50,16 +50,16 @@ let value: ResponseBody1 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 5027.21,
+            logprob: 9488.61,
             bytes: [
-              9223.48,
+              27.03,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 5413.81,
+                logprob: 6471.97,
                 bytes: [
-                  9233.06,
+                  6003.92,
                 ],
               },
             ],
@@ -68,8 +68,8 @@ let value: ResponseBody1 = {
       },
     },
   ],
-  created: 8298.97,
-  model: "XC90",
+  created: 5887.40,
+  model: "Wrangler",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

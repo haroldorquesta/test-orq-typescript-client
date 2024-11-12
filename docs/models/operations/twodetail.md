@@ -7,7 +7,7 @@ Specifies the detail level of the image.
 ```typescript
 import { TwoDetail } from "orq-poc-typescript/models/operations";
 
-let value: TwoDetail = "low";
+let value: TwoDetail = "high";
 ```
 
 ## Values
