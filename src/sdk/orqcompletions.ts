@@ -3,14 +3,14 @@
  */
 
 import {
-  Create2AcceptEnum,
-  routerChatCompletionsCreate2,
-} from "../funcs/routerChatCompletionsCreate2.js";
+  CreateAcceptEnum,
+  routerChatCompletionsCreate,
+} from "../funcs/routerChatCompletionsCreate.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
-export { Create2AcceptEnum } from "../funcs/routerChatCompletionsCreate2.js";
+export { CreateAcceptEnum } from "../funcs/routerChatCompletionsCreate.js";
 
 export class OrqCompletions extends ClientSDK {
   /**
@@ -19,11 +19,11 @@ export class OrqCompletions extends ClientSDK {
    * @remarks
    * For sending requests to chat completion models
    */
-  async create2(
+  async create(
     request: operations.PostV2RouterChatCompletionsRequestBody,
-    options?: RequestOptions & { acceptHeaderOverride?: Create2AcceptEnum },
+    options?: RequestOptions & { acceptHeaderOverride?: CreateAcceptEnum },
   ): Promise<operations.PostV2RouterChatCompletionsResponse> {
-    return unwrapAsync(routerChatCompletionsCreate2(
+    return unwrapAsync(routerChatCompletionsCreate(
       this,
       request,
       options,

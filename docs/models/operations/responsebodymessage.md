@@ -20,7 +20,7 @@ let value: ResponseBodyMessage = {
       },
     },
   ],
-  role: "exception",
+  role: "user",
 };
 ```
 

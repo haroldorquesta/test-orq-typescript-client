@@ -5,7 +5,7 @@
 ```typescript
 import { PostV2RouterChatCompletionsResponseBodyRole } from "orq-poc-typescript/models/operations";
 
-let value: PostV2RouterChatCompletionsResponseBodyRole = "correction";
+let value: PostV2RouterChatCompletionsResponseBodyRole = "exception";
 ```
 
 ## Values

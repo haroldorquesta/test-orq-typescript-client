@@ -7,7 +7,7 @@ import { PostV2RouterEmbeddingsRequestBody } from "orq-poc-typescript/models/ope
 
 let value: PostV2RouterEmbeddingsRequestBody = {
   input: "<value>",
-  model: "Taurus",
+  model: "1",
 };
 ```
 

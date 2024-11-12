@@ -279,7 +279,7 @@ export type PostV2DeploymentsGetConfigRequestBody = {
 /**
  * The type of the model. Current `chat`,`completion` and `image` are supported
  */
-export const PostV2DeploymentsGetConfigDeploymentsPublicType = {
+export const PostV2DeploymentsGetConfigDeploymentsResponseType = {
   Chat: "chat",
   Completion: "completion",
   Embedding: "embedding",
@@ -292,8 +292,8 @@ export const PostV2DeploymentsGetConfigDeploymentsPublicType = {
 /**
  * The type of the model. Current `chat`,`completion` and `image` are supported
  */
-export type PostV2DeploymentsGetConfigDeploymentsPublicType = ClosedEnum<
-  typeof PostV2DeploymentsGetConfigDeploymentsPublicType
+export type PostV2DeploymentsGetConfigDeploymentsResponseType = ClosedEnum<
+  typeof PostV2DeploymentsGetConfigDeploymentsResponseType
 >;
 
 /**
@@ -316,11 +316,12 @@ export type PostV2DeploymentsGetConfigDeploymentsRole = ClosedEnum<
   typeof PostV2DeploymentsGetConfigDeploymentsRole
 >;
 
-export const PostV2DeploymentsGetConfig2DeploymentsPublicResponseType = {
+export const PostV2DeploymentsGetConfig2DeploymentsResponse200Type = {
   ImageUrl: "image_url",
 } as const;
-export type PostV2DeploymentsGetConfig2DeploymentsPublicResponseType =
-  ClosedEnum<typeof PostV2DeploymentsGetConfig2DeploymentsPublicResponseType>;
+export type PostV2DeploymentsGetConfig2DeploymentsResponse200Type = ClosedEnum<
+  typeof PostV2DeploymentsGetConfig2DeploymentsResponse200Type
+>;
 
 export type PostV2DeploymentsGetConfig2ImageUrl = {
   /**
@@ -341,22 +342,22 @@ export type PostV2DeploymentsGetConfig2ImageUrl = {
  * The image part of the prompt message. Only supported with vision models.
  */
 export type PostV2DeploymentsGetConfig2Deployments2 = {
-  type: PostV2DeploymentsGetConfig2DeploymentsPublicResponseType;
+  type: PostV2DeploymentsGetConfig2DeploymentsResponse200Type;
   imageUrl: PostV2DeploymentsGetConfig2ImageUrl;
 };
 
-export const PostV2DeploymentsGetConfig2DeploymentsPublicType = {
+export const PostV2DeploymentsGetConfig2DeploymentsResponseType = {
   Text: "text",
 } as const;
-export type PostV2DeploymentsGetConfig2DeploymentsPublicType = ClosedEnum<
-  typeof PostV2DeploymentsGetConfig2DeploymentsPublicType
+export type PostV2DeploymentsGetConfig2DeploymentsResponseType = ClosedEnum<
+  typeof PostV2DeploymentsGetConfig2DeploymentsResponseType
 >;
 
 /**
  * Text content part of a prompt message
  */
 export type PostV2DeploymentsGetConfig21 = {
-  type: PostV2DeploymentsGetConfig2DeploymentsPublicType;
+  type: PostV2DeploymentsGetConfig2DeploymentsResponseType;
   text: string;
 };
 
@@ -373,13 +374,16 @@ export type PostV2DeploymentsGetConfigDeploymentsContent =
     PostV2DeploymentsGetConfig21 | PostV2DeploymentsGetConfig2Deployments2
   >;
 
-export const PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type = {
-  Function: "function",
-} as const;
-export type PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type =
-  ClosedEnum<typeof PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type>;
+export const PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType =
+  {
+    Function: "function",
+  } as const;
+export type PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType =
+  ClosedEnum<
+    typeof PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType
+  >;
 
-export type PostV2DeploymentsGetConfigDeploymentsPublicFunction = {
+export type PostV2DeploymentsGetConfigDeploymentsResponseFunction = {
   name: string;
   /**
    * JSON string arguments for the functions
@@ -390,8 +394,8 @@ export type PostV2DeploymentsGetConfigDeploymentsPublicFunction = {
 export type PostV2DeploymentsGetConfigDeploymentsToolCalls = {
   id?: string | undefined;
   index?: number | undefined;
-  type: PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type;
-  function: PostV2DeploymentsGetConfigDeploymentsPublicFunction;
+  type: PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType;
+  function: PostV2DeploymentsGetConfigDeploymentsResponseFunction;
 };
 
 export type PostV2DeploymentsGetConfigMessages = {
@@ -583,14 +587,15 @@ export type PostV2DeploymentsGetConfigParameters = {
 /**
  * The type of the tool. Currently, only `function` is supported.
  */
-export const PostV2DeploymentsGetConfigDeploymentsPublicResponseType = {
+export const PostV2DeploymentsGetConfigDeploymentsResponse200Type = {
   Function: "function",
 } as const;
 /**
  * The type of the tool. Currently, only `function` is supported.
  */
-export type PostV2DeploymentsGetConfigDeploymentsPublicResponseType =
-  ClosedEnum<typeof PostV2DeploymentsGetConfigDeploymentsPublicResponseType>;
+export type PostV2DeploymentsGetConfigDeploymentsResponse200Type = ClosedEnum<
+  typeof PostV2DeploymentsGetConfigDeploymentsResponse200Type
+>;
 
 export type PostV2DeploymentsGetConfigDeploymentsFunction = {
   /**
@@ -615,7 +620,7 @@ export type PostV2DeploymentsGetConfigTools = {
   /**
    * The type of the tool. Currently, only `function` is supported.
    */
-  type: PostV2DeploymentsGetConfigDeploymentsPublicResponseType;
+  type: PostV2DeploymentsGetConfigDeploymentsResponse200Type;
   function: PostV2DeploymentsGetConfigDeploymentsFunction;
 };
 
@@ -638,7 +643,7 @@ export type PostV2DeploymentsGetConfigResponseBody = {
   /**
    * The type of the model. Current `chat`,`completion` and `image` are supported
    */
-  type?: PostV2DeploymentsGetConfigDeploymentsPublicType | undefined;
+  type?: PostV2DeploymentsGetConfigDeploymentsResponseType | undefined;
   /**
    * The current version of the deployment
    */
@@ -1704,26 +1709,26 @@ export namespace PostV2DeploymentsGetConfigRequestBody$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicType$inboundSchema:
-  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfigDeploymentsPublicType> = z
-    .nativeEnum(PostV2DeploymentsGetConfigDeploymentsPublicType);
+export const PostV2DeploymentsGetConfigDeploymentsResponseType$inboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfigDeploymentsResponseType> = z
+    .nativeEnum(PostV2DeploymentsGetConfigDeploymentsResponseType);
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicType$outboundSchema:
-  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfigDeploymentsPublicType> =
-    PostV2DeploymentsGetConfigDeploymentsPublicType$inboundSchema;
+export const PostV2DeploymentsGetConfigDeploymentsResponseType$outboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfigDeploymentsResponseType> =
+    PostV2DeploymentsGetConfigDeploymentsResponseType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsGetConfigDeploymentsPublicType$ {
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicType$inboundSchema` instead. */
+export namespace PostV2DeploymentsGetConfigDeploymentsResponseType$ {
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponseType$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicType$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicType$outboundSchema` instead. */
+    PostV2DeploymentsGetConfigDeploymentsResponseType$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponseType$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicType$outboundSchema;
+    PostV2DeploymentsGetConfigDeploymentsResponseType$outboundSchema;
 }
 
 /** @internal */
@@ -1750,28 +1755,28 @@ export namespace PostV2DeploymentsGetConfigDeploymentsRole$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$inboundSchema:
+export const PostV2DeploymentsGetConfig2DeploymentsResponse200Type$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsGetConfig2DeploymentsPublicResponseType
-  > = z.nativeEnum(PostV2DeploymentsGetConfig2DeploymentsPublicResponseType);
+    typeof PostV2DeploymentsGetConfig2DeploymentsResponse200Type
+  > = z.nativeEnum(PostV2DeploymentsGetConfig2DeploymentsResponse200Type);
 
 /** @internal */
-export const PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$outboundSchema:
+export const PostV2DeploymentsGetConfig2DeploymentsResponse200Type$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsGetConfig2DeploymentsPublicResponseType
-  > = PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$inboundSchema;
+    typeof PostV2DeploymentsGetConfig2DeploymentsResponse200Type
+  > = PostV2DeploymentsGetConfig2DeploymentsResponse200Type$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$ {
-  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$inboundSchema` instead. */
+export namespace PostV2DeploymentsGetConfig2DeploymentsResponse200Type$ {
+  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsResponse200Type$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$outboundSchema` instead. */
+    PostV2DeploymentsGetConfig2DeploymentsResponse200Type$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsResponse200Type$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$outboundSchema;
+    PostV2DeploymentsGetConfig2DeploymentsResponse200Type$outboundSchema;
 }
 
 /** @internal */
@@ -1824,7 +1829,7 @@ export const PostV2DeploymentsGetConfig2Deployments2$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  type: PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$inboundSchema,
+  type: PostV2DeploymentsGetConfig2DeploymentsResponse200Type$inboundSchema,
   image_url: z.lazy(() => PostV2DeploymentsGetConfig2ImageUrl$inboundSchema),
 }).transform((v) => {
   return remap$(v, {
@@ -1844,7 +1849,7 @@ export const PostV2DeploymentsGetConfig2Deployments2$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2DeploymentsGetConfig2Deployments2
 > = z.object({
-  type: PostV2DeploymentsGetConfig2DeploymentsPublicResponseType$outboundSchema,
+  type: PostV2DeploymentsGetConfig2DeploymentsResponse200Type$outboundSchema,
   imageUrl: z.lazy(() => PostV2DeploymentsGetConfig2ImageUrl$outboundSchema),
 }).transform((v) => {
   return remap$(v, {
@@ -1868,26 +1873,26 @@ export namespace PostV2DeploymentsGetConfig2Deployments2$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsGetConfig2DeploymentsPublicType$inboundSchema:
-  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfig2DeploymentsPublicType> = z
-    .nativeEnum(PostV2DeploymentsGetConfig2DeploymentsPublicType);
+export const PostV2DeploymentsGetConfig2DeploymentsResponseType$inboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfig2DeploymentsResponseType> = z
+    .nativeEnum(PostV2DeploymentsGetConfig2DeploymentsResponseType);
 
 /** @internal */
-export const PostV2DeploymentsGetConfig2DeploymentsPublicType$outboundSchema:
-  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfig2DeploymentsPublicType> =
-    PostV2DeploymentsGetConfig2DeploymentsPublicType$inboundSchema;
+export const PostV2DeploymentsGetConfig2DeploymentsResponseType$outboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfig2DeploymentsResponseType> =
+    PostV2DeploymentsGetConfig2DeploymentsResponseType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsGetConfig2DeploymentsPublicType$ {
-  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsPublicType$inboundSchema` instead. */
+export namespace PostV2DeploymentsGetConfig2DeploymentsResponseType$ {
+  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsResponseType$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsGetConfig2DeploymentsPublicType$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsPublicType$outboundSchema` instead. */
+    PostV2DeploymentsGetConfig2DeploymentsResponseType$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsGetConfig2DeploymentsResponseType$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsGetConfig2DeploymentsPublicType$outboundSchema;
+    PostV2DeploymentsGetConfig2DeploymentsResponseType$outboundSchema;
 }
 
 /** @internal */
@@ -1896,7 +1901,7 @@ export const PostV2DeploymentsGetConfig21$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  type: PostV2DeploymentsGetConfig2DeploymentsPublicType$inboundSchema,
+  type: PostV2DeploymentsGetConfig2DeploymentsResponseType$inboundSchema,
   text: z.string(),
 });
 
@@ -1912,7 +1917,7 @@ export const PostV2DeploymentsGetConfig21$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2DeploymentsGetConfig21
 > = z.object({
-  type: PostV2DeploymentsGetConfig2DeploymentsPublicType$outboundSchema,
+  type: PostV2DeploymentsGetConfig2DeploymentsResponseType$outboundSchema,
   text: z.string(),
 });
 
@@ -2020,34 +2025,37 @@ export namespace PostV2DeploymentsGetConfigDeploymentsContent$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$inboundSchema:
+export const PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$inboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type
-  > = z.nativeEnum(PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type);
+    typeof PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType
+  > = z.nativeEnum(
+    PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType,
+  );
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$outboundSchema:
+export const PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$outboundSchema:
   z.ZodNativeEnum<
-    typeof PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type
-  > = PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$inboundSchema;
+    typeof PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType
+  > =
+    PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$ {
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$inboundSchema` instead. */
+export namespace PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$ {
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$outboundSchema` instead. */
+    PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$outboundSchema;
+    PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$outboundSchema;
 }
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicFunction$inboundSchema:
+export const PostV2DeploymentsGetConfigDeploymentsResponseFunction$inboundSchema:
   z.ZodType<
-    PostV2DeploymentsGetConfigDeploymentsPublicFunction,
+    PostV2DeploymentsGetConfigDeploymentsResponseFunction,
     z.ZodTypeDef,
     unknown
   > = z.object({
@@ -2056,17 +2064,17 @@ export const PostV2DeploymentsGetConfigDeploymentsPublicFunction$inboundSchema:
   });
 
 /** @internal */
-export type PostV2DeploymentsGetConfigDeploymentsPublicFunction$Outbound = {
+export type PostV2DeploymentsGetConfigDeploymentsResponseFunction$Outbound = {
   name: string;
   arguments: string;
 };
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicFunction$outboundSchema:
+export const PostV2DeploymentsGetConfigDeploymentsResponseFunction$outboundSchema:
   z.ZodType<
-    PostV2DeploymentsGetConfigDeploymentsPublicFunction$Outbound,
+    PostV2DeploymentsGetConfigDeploymentsResponseFunction$Outbound,
     z.ZodTypeDef,
-    PostV2DeploymentsGetConfigDeploymentsPublicFunction
+    PostV2DeploymentsGetConfigDeploymentsResponseFunction
   > = z.object({
     name: z.string(),
     arguments: z.string(),
@@ -2076,16 +2084,16 @@ export const PostV2DeploymentsGetConfigDeploymentsPublicFunction$outboundSchema:
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsGetConfigDeploymentsPublicFunction$ {
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicFunction$inboundSchema` instead. */
+export namespace PostV2DeploymentsGetConfigDeploymentsResponseFunction$ {
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponseFunction$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicFunction$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicFunction$outboundSchema` instead. */
+    PostV2DeploymentsGetConfigDeploymentsResponseFunction$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponseFunction$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicFunction$outboundSchema;
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicFunction$Outbound` instead. */
+    PostV2DeploymentsGetConfigDeploymentsResponseFunction$outboundSchema;
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponseFunction$Outbound` instead. */
   export type Outbound =
-    PostV2DeploymentsGetConfigDeploymentsPublicFunction$Outbound;
+    PostV2DeploymentsGetConfigDeploymentsResponseFunction$Outbound;
 }
 
 /** @internal */
@@ -2098,9 +2106,9 @@ export const PostV2DeploymentsGetConfigDeploymentsToolCalls$inboundSchema:
     id: z.string().optional(),
     index: z.number().optional(),
     type:
-      PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$inboundSchema,
+      PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$inboundSchema,
     function: z.lazy(() =>
-      PostV2DeploymentsGetConfigDeploymentsPublicFunction$inboundSchema
+      PostV2DeploymentsGetConfigDeploymentsResponseFunction$inboundSchema
     ),
   });
 
@@ -2109,7 +2117,7 @@ export type PostV2DeploymentsGetConfigDeploymentsToolCalls$Outbound = {
   id?: string | undefined;
   index?: number | undefined;
   type: string;
-  function: PostV2DeploymentsGetConfigDeploymentsPublicFunction$Outbound;
+  function: PostV2DeploymentsGetConfigDeploymentsResponseFunction$Outbound;
 };
 
 /** @internal */
@@ -2122,9 +2130,9 @@ export const PostV2DeploymentsGetConfigDeploymentsToolCalls$outboundSchema:
     id: z.string().optional(),
     index: z.number().optional(),
     type:
-      PostV2DeploymentsGetConfigDeploymentsPublicResponse200Type$outboundSchema,
+      PostV2DeploymentsGetConfigDeploymentsResponse200ApplicationJSONType$outboundSchema,
     function: z.lazy(() =>
-      PostV2DeploymentsGetConfigDeploymentsPublicFunction$outboundSchema
+      PostV2DeploymentsGetConfigDeploymentsResponseFunction$outboundSchema
     ),
   });
 
@@ -2617,28 +2625,26 @@ export namespace PostV2DeploymentsGetConfigParameters$ {
 }
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicResponseType$inboundSchema:
-  z.ZodNativeEnum<
-    typeof PostV2DeploymentsGetConfigDeploymentsPublicResponseType
-  > = z.nativeEnum(PostV2DeploymentsGetConfigDeploymentsPublicResponseType);
+export const PostV2DeploymentsGetConfigDeploymentsResponse200Type$inboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfigDeploymentsResponse200Type> =
+    z.nativeEnum(PostV2DeploymentsGetConfigDeploymentsResponse200Type);
 
 /** @internal */
-export const PostV2DeploymentsGetConfigDeploymentsPublicResponseType$outboundSchema:
-  z.ZodNativeEnum<
-    typeof PostV2DeploymentsGetConfigDeploymentsPublicResponseType
-  > = PostV2DeploymentsGetConfigDeploymentsPublicResponseType$inboundSchema;
+export const PostV2DeploymentsGetConfigDeploymentsResponse200Type$outboundSchema:
+  z.ZodNativeEnum<typeof PostV2DeploymentsGetConfigDeploymentsResponse200Type> =
+    PostV2DeploymentsGetConfigDeploymentsResponse200Type$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2DeploymentsGetConfigDeploymentsPublicResponseType$ {
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicResponseType$inboundSchema` instead. */
+export namespace PostV2DeploymentsGetConfigDeploymentsResponse200Type$ {
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponse200Type$inboundSchema` instead. */
   export const inboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicResponseType$inboundSchema;
-  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsPublicResponseType$outboundSchema` instead. */
+    PostV2DeploymentsGetConfigDeploymentsResponse200Type$inboundSchema;
+  /** @deprecated use `PostV2DeploymentsGetConfigDeploymentsResponse200Type$outboundSchema` instead. */
   export const outboundSchema =
-    PostV2DeploymentsGetConfigDeploymentsPublicResponseType$outboundSchema;
+    PostV2DeploymentsGetConfigDeploymentsResponse200Type$outboundSchema;
 }
 
 /** @internal */
@@ -2693,7 +2699,7 @@ export const PostV2DeploymentsGetConfigTools$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  type: PostV2DeploymentsGetConfigDeploymentsPublicResponseType$inboundSchema,
+  type: PostV2DeploymentsGetConfigDeploymentsResponse200Type$inboundSchema,
   function: z.lazy(() =>
     PostV2DeploymentsGetConfigDeploymentsFunction$inboundSchema
   ),
@@ -2711,7 +2717,7 @@ export const PostV2DeploymentsGetConfigTools$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PostV2DeploymentsGetConfigTools
 > = z.object({
-  type: PostV2DeploymentsGetConfigDeploymentsPublicResponseType$outboundSchema,
+  type: PostV2DeploymentsGetConfigDeploymentsResponse200Type$outboundSchema,
   function: z.lazy(() =>
     PostV2DeploymentsGetConfigDeploymentsFunction$outboundSchema
   ),
@@ -2739,7 +2745,7 @@ export const PostV2DeploymentsGetConfigResponseBody$inboundSchema: z.ZodType<
   id: z.string(),
   provider: z.string(),
   model: z.string(),
-  type: PostV2DeploymentsGetConfigDeploymentsPublicType$inboundSchema
+  type: PostV2DeploymentsGetConfigDeploymentsResponseType$inboundSchema
     .optional(),
   version: z.string(),
   messages: z.array(
@@ -2771,7 +2777,7 @@ export const PostV2DeploymentsGetConfigResponseBody$outboundSchema: z.ZodType<
   id: z.string(),
   provider: z.string(),
   model: z.string(),
-  type: PostV2DeploymentsGetConfigDeploymentsPublicType$outboundSchema
+  type: PostV2DeploymentsGetConfigDeploymentsResponseType$outboundSchema
     .optional(),
   version: z.string(),
   messages: z.array(

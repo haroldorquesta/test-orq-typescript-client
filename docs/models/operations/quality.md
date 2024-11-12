@@ -7,7 +7,7 @@ The quality of the image
 ```typescript
 import { Quality } from "orq-poc-typescript/models/operations";
 
-let value: Quality = "standard";
+let value: Quality = "hd";
 ```
 
 ## Values

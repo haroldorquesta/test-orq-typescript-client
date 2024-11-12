@@ -5,10 +5,10 @@
 
 ### Available Operations
 
-* [upload](#upload) - Upload file
-* [bulkUpload](#bulkupload) - Bulk upload file
+* [postV2Files](#postv2files) - Upload file
+* [postV2FilesBulk](#postv2filesbulk) - Bulk upload file
 
-## upload
+## postV2Files
 
 Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
 
@@ -22,7 +22,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.files.upload({});
+  const result = await orq.files.postV2Files({});
 
   // Handle the result
   console.log(result);
@@ -37,7 +37,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { filesUpload } from "orq-poc-typescript/funcs/filesUpload.js";
+import { filesPostV2Files } from "orq-poc-typescript/funcs/filesPostV2Files.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -46,7 +46,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await filesUpload(orq, {});
+  const res = await filesPostV2Files(orq, {});
 
   if (!res.ok) {
     throw res.error;
@@ -80,7 +80,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## bulkUpload
+## postV2FilesBulk
 
 Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
 
@@ -95,7 +95,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.files.bulkUpload({
+  const result = await orq.files.postV2FilesBulk({
     files: [
       {
         fileName: "example.file",
@@ -119,7 +119,7 @@ The standalone function version of this method:
 ```typescript
 import { openAsBlob } from "node:fs";
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { filesBulkUpload } from "orq-poc-typescript/funcs/filesBulkUpload.js";
+import { filesPostV2FilesBulk } from "orq-poc-typescript/funcs/filesPostV2FilesBulk.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -128,7 +128,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await filesBulkUpload(orq, {
+  const res = await filesPostV2FilesBulk(orq, {
     files: [
       {
         fileName: "example.file",

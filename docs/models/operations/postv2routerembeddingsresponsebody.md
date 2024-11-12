@@ -13,15 +13,15 @@ let value: PostV2RouterEmbeddingsResponseBody = {
     {
       object: "embedding",
       embedding: [
-        1605.39,
+        3267.01,
       ],
-      index: 7963.91,
+      index: 2327.44,
     },
   ],
-  model: "Wrangler",
+  model: "Jetta",
   usage: {
-    promptTokens: 4581.39,
-    totalTokens: 5909.84,
+    promptTokens: 330.75,
+    totalTokens: 156.06,
   },
 };
 ```

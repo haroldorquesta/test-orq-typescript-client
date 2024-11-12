@@ -5,9 +5,9 @@
 
 ### Available Operations
 
-* [create2](#create2) - Chat
+* [create](#create) - Chat
 
-## create2
+## create
 
 For sending requests to chat completion models
 
@@ -21,7 +21,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.router.chat.completions.create2({
+  const result = await orq.router.chat.completions.create({
     model: "Land Cruiser",
     messages: [
       {
@@ -47,7 +47,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { routerChatCompletionsCreate2 } from "orq-poc-typescript/funcs/routerChatCompletionsCreate2.js";
+import { routerChatCompletionsCreate } from "orq-poc-typescript/funcs/routerChatCompletionsCreate.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -56,7 +56,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await routerChatCompletionsCreate2(orq, {
+  const res = await routerChatCompletionsCreate(orq, {
     model: "Land Cruiser",
     messages: [
       {
