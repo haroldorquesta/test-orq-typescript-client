@@ -22,7 +22,7 @@ import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
-export enum PostV2DeploymentsInvokeAcceptEnum {
+export enum InvokeAcceptEnum {
   applicationJson = "application/json",
   textEventStream = "text/event-stream",
 }
@@ -33,12 +33,10 @@ export enum PostV2DeploymentsInvokeAcceptEnum {
  * @remarks
  * Invoke a deployment with a given payload
  */
-export async function deploymentsPostV2DeploymentsInvoke(
+export async function publicInvoke(
   client: OrqCore,
   request: components.Deployments,
-  options?: RequestOptions & {
-    acceptHeaderOverride?: PostV2DeploymentsInvokeAcceptEnum;
-  },
+  options?: RequestOptions & { acceptHeaderOverride?: InvokeAcceptEnum },
 ): Promise<
   Result<
     operations.PostV2DeploymentsInvokeResponse | undefined,
