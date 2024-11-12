@@ -3,7 +3,7 @@
  */
 
 import { OrqCore } from "../core.js";
-import { encodeFormQuery } from "../lib/encodings.js";
+import { encodeJSON } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
@@ -16,26 +16,24 @@ import {
   RequestTimeoutError,
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
-import * as errors from "../models/errors/index.js";
 import { SDKError } from "../models/errors/sdkerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 /**
- * List all deployments
+ * Get config
  *
  * @remarks
- * Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
+ * Retrieve the deployment configuration
  */
-export async function publicGetV2Deployments(
+export async function deploymentsConfigGet(
   client: OrqCore,
-  request: operations.GetV2DeploymentsRequest,
+  request: operations.PostV2DeploymentsGetConfigRequestBody,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.GetV2DeploymentsResponseBody,
-    | errors.HonoApiError
+    operations.PostV2DeploymentsGetConfigResponseBody | undefined,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -47,30 +45,29 @@ export async function publicGetV2Deployments(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.GetV2DeploymentsRequest$outboundSchema.parse(value),
+    (value) =>
+      operations.PostV2DeploymentsGetConfigRequestBody$outboundSchema.parse(
+        value,
+      ),
     "Input validation failed",
   );
   if (!parsed.ok) {
     return parsed;
   }
   const payload = parsed.value;
-  const body = null;
+  const body = encodeJSON("body", payload, { explode: true });
 
-  const path = pathToFunc("/v2/deployments")();
-
-  const query = encodeFormQuery({
-    "after": payload.after,
-    "limit": payload.limit,
-  });
+  const path = pathToFunc("/v2/deployments/get_config")();
 
   const headers = new Headers({
+    "Content-Type": "application/json",
     Accept: "application/json",
   });
 
   const secConfig = await extractSecurity(client._options.bearer);
   const securityInput = secConfig == null ? {} : { bearer: secConfig };
   const context = {
-    operationID: "get_/v2/deployments",
+    operationID: "post_/v2/deployments/get_config",
     oAuth2Scopes: [],
     securitySource: client._options.bearer,
   };
@@ -78,10 +75,9 @@ export async function publicGetV2Deployments(
 
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
-    method: "GET",
+    method: "POST",
     path: path,
     headers: headers,
-    query: query,
     body: body,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
@@ -92,7 +88,7 @@ export async function publicGetV2Deployments(
 
   const doResult = await client._do(req, {
     context,
-    errorCodes: ["4XX", "500", "5XX"],
+    errorCodes: ["401", "4XX", "5XX"],
     retryConfig: options?.retries
       || client._options.retryConfig,
     retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
@@ -102,13 +98,8 @@ export async function publicGetV2Deployments(
   }
   const response = doResult.value;
 
-  const responseFields = {
-    HttpMeta: { Response: response, Request: req },
-  };
-
   const [result] = await M.match<
-    operations.GetV2DeploymentsResponseBody,
-    | errors.HonoApiError
+    operations.PostV2DeploymentsGetConfigResponseBody | undefined,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -117,10 +108,18 @@ export async function publicGetV2Deployments(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.GetV2DeploymentsResponseBody$inboundSchema),
-    M.jsonErr(500, errors.HonoApiError$inboundSchema),
-    M.fail(["4XX", "5XX"]),
-  )(response, { extraFields: responseFields });
+    M.json(
+      200,
+      operations.PostV2DeploymentsGetConfigResponseBody$inboundSchema
+        .optional(),
+    ),
+    M.nil(
+      204,
+      operations.PostV2DeploymentsGetConfigResponseBody$inboundSchema
+        .optional(),
+    ),
+    M.fail([401, "4XX", "5XX"]),
+  )(response);
   if (!result.ok) {
     return result;
   }

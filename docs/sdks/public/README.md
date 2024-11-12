@@ -5,10 +5,10 @@
 
 ### Available Operations
 
-* [postV2DeploymentsGetConfig](#postv2deploymentsgetconfig) - Get config
+* [configGet](#configget) - Get config
 * [invoke](#invoke) - Invoke
 * [postV2DeploymentsIdMetrics](#postv2deploymentsidmetrics) - Add metrics
-* [getV2Deployments](#getv2deployments) - List all deployments
+* [list](#list) - List all deployments
 * [postV2Files](#postv2files) - Upload file
 * [postV2FilesBulk](#postv2filesbulk) - Bulk upload file
 * [postV2RouterEmbeddings](#postv2routerembeddings) - Embeddings
@@ -18,7 +18,7 @@
 * [postV2RouterImagesGenerations](#postv2routerimagesgenerations)
 * [postV2Remoteconfigs](#postv2remoteconfigs)
 
-## postV2DeploymentsGetConfig
+## configGet
 
 Retrieve the deployment configuration
 
@@ -32,7 +32,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.postV2DeploymentsGetConfig({
+  const result = await orq.public.configGet({
     key: "<key>",
   });
 
@@ -49,7 +49,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicPostV2DeploymentsGetConfig } from "orq-poc-typescript/funcs/publicPostV2DeploymentsGetConfig.js";
+import { publicConfigGet } from "orq-poc-typescript/funcs/publicConfigGet.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -58,7 +58,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicPostV2DeploymentsGetConfig(orq, {
+  const res = await publicConfigGet(orq, {
     key: "<key>",
   });
 
@@ -252,7 +252,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## getV2Deployments
+## list
 
 Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
 
@@ -266,7 +266,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.public.getV2Deployments({});
+  const result = await orq.public.list({});
 
   // Handle the result
   console.log(result);
@@ -281,7 +281,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { publicGetV2Deployments } from "orq-poc-typescript/funcs/publicGetV2Deployments.js";
+import { publicList } from "orq-poc-typescript/funcs/publicList.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -290,7 +290,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await publicGetV2Deployments(orq, {});
+  const res = await publicList(orq, {});
 
   if (!res.ok) {
     throw res.error;

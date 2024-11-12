@@ -117,10 +117,10 @@ run();
 
 ### [deployments](docs/sdks/deployments/README.md)
 
-* [postV2DeploymentsGetConfig](docs/sdks/deployments/README.md#postv2deploymentsgetconfig) - Get config
+* [configGet](docs/sdks/deployments/README.md#configget) - Get config
 * [invoke](docs/sdks/deployments/README.md#invoke) - Invoke
 * [postV2DeploymentsIdMetrics](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
-* [getV2Deployments](docs/sdks/deployments/README.md#getv2deployments) - List all deployments
+* [list](docs/sdks/deployments/README.md#list) - List all deployments
 
 ### [feedback](docs/sdks/feedback/README.md)
 
@@ -134,10 +134,10 @@ run();
 
 ### [public](docs/sdks/public/README.md)
 
-* [postV2DeploymentsGetConfig](docs/sdks/public/README.md#postv2deploymentsgetconfig) - Get config
+* [configGet](docs/sdks/public/README.md#configget) - Get config
 * [invoke](docs/sdks/public/README.md#invoke) - Invoke
 * [postV2DeploymentsIdMetrics](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
-* [getV2Deployments](docs/sdks/public/README.md#getv2deployments) - List all deployments
+* [list](docs/sdks/public/README.md#list) - List all deployments
 * [postV2Files](docs/sdks/public/README.md#postv2files) - Upload file
 * [postV2FilesBulk](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
 * [postV2RouterEmbeddings](docs/sdks/public/README.md#postv2routerembeddings) - Embeddings
@@ -178,16 +178,16 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 <summary>Available standalone functions</summary>
 
 - [`contactsPostContacts`](docs/sdks/contacts/README.md#postcontacts) - Update user information
-- [`deploymentsGetV2Deployments`](docs/sdks/deployments/README.md#getv2deployments) - List all deployments
+- [`deploymentsConfigGet`](docs/sdks/deployments/README.md#configget) - Get config
 - [`deploymentsInvoke`](docs/sdks/deployments/README.md#invoke) - Invoke
-- [`deploymentsPostV2DeploymentsGetConfig`](docs/sdks/deployments/README.md#postv2deploymentsgetconfig) - Get config
+- [`deploymentsList`](docs/sdks/deployments/README.md#list) - List all deployments
 - [`deploymentsPostV2DeploymentsIdMetrics`](docs/sdks/deployments/README.md#postv2deploymentsidmetrics) - Add metrics
 - [`feedbackPostV2Feedback`](docs/sdks/feedback/README.md#postv2feedback) - Submit feedback
 - [`filesPostV2Files`](docs/sdks/files/README.md#postv2files) - Upload file
 - [`filesPostV2FilesBulk`](docs/sdks/files/README.md#postv2filesbulk) - Bulk upload file
-- [`publicGetV2Deployments`](docs/sdks/public/README.md#getv2deployments) - List all deployments
+- [`publicConfigGet`](docs/sdks/public/README.md#configget) - Get config
 - [`publicInvoke`](docs/sdks/public/README.md#invoke) - Invoke
-- [`publicPostV2DeploymentsGetConfig`](docs/sdks/public/README.md#postv2deploymentsgetconfig) - Get config
+- [`publicList`](docs/sdks/public/README.md#list) - List all deployments
 - [`publicPostV2DeploymentsIdMetrics`](docs/sdks/public/README.md#postv2deploymentsidmetrics) - Add metrics
 - [`publicPostV2Files`](docs/sdks/public/README.md#postv2files) - Upload file
 - [`publicPostV2FilesBulk`](docs/sdks/public/README.md#postv2filesbulk) - Bulk upload file
@@ -359,7 +359,7 @@ If a HTTP request fails, an operation my also throw an error from the `models/er
 | InvalidRequestError                                  | Any input used to create a request is invalid        |
 | UnexpectedClientError                                | Unrecognised or unexpected error                     |
 
-In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `getV2Deployments` method may throw the following errors:
+In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `list` method may throw the following errors:
 
 | Error Type          | Status Code         | Content Type        |
 | ------------------- | ------------------- | ------------------- |
@@ -380,7 +380,7 @@ const orq = new Orq({
 async function run() {
   let result;
   try {
-    result = await orq.deployments.getV2Deployments({});
+    result = await orq.deployments.list({});
 
     // Handle the result
     console.log(result);
