@@ -38704,7 +38704,7 @@
       "post": {
         "x-speakeasy-name-override": "create",
         "tags": [
-          "router",
+          "router.embeddings",
           "public"
         ],
         "description": "Creates an embedding vector representing the input text.",
@@ -38858,7 +38858,7 @@
       "post": {
         "x-speakeasy-name-override": "create",
         "tags": [
-          "router",
+          "router.chat.completions",
           "public"
         ],
         "description": "For sending requests to chat completion models",
@@ -40027,7 +40027,7 @@
       "post": {
         "x-speakeasy-name-override": "create",
         "tags": [
-          "router",
+          "router.completions",
           "public"
         ],
         "security": [
