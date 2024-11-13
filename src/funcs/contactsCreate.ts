@@ -61,14 +61,22 @@ export async function contactsCreate(
     Accept: "application/json",
   });
 
-  const secConfig = await extractSecurity(client._options.bearer);
-  const securityInput = secConfig == null ? {} : { bearer: secConfig };
+  const secConfig = await extractSecurity(client._options.openAI);
+  const securityInput = secConfig == null ? {} : { openAI: secConfig };
+  const requestSecurity = resolveGlobalSecurity(securityInput);
+
   const context = {
     operationID: "post_/v2/contacts",
     oAuth2Scopes: [],
-    securitySource: client._options.bearer,
+
+    resolvedSecurity: requestSecurity,
+
+    securitySource: client._options.openAI,
+    retryConfig: options?.retries
+      || client._options.retryConfig
+      || { strategy: "none" },
+    retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
   };
-  const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
@@ -86,9 +94,8 @@ export async function contactsCreate(
   const doResult = await client._do(req, {
     context,
     errorCodes: ["4XX", "5XX"],
-    retryConfig: options?.retries
-      || client._options.retryConfig,
-    retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
+    retryConfig: context.retryConfig,
+    retryCodes: context.retryCodes,
   });
   if (!doResult.ok) {
     return doResult;

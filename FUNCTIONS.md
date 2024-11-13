@@ -26,7 +26,7 @@ import { SDKValidationError } from "orq-poc-typescript/models/errors/sdkvalidati
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const orq = new OrqCore({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
