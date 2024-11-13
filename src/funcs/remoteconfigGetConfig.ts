@@ -60,8 +60,8 @@ export async function remoteconfigGetConfig(
     Accept: "application/json",
   });
 
-  const secConfig = await extractSecurity(client._options.openAI);
-  const securityInput = secConfig == null ? {} : { openAI: secConfig };
+  const secConfig = await extractSecurity(client._options.apiKey);
+  const securityInput = secConfig == null ? {} : { apiKey: secConfig };
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
@@ -70,7 +70,7 @@ export async function remoteconfigGetConfig(
 
     resolvedSecurity: requestSecurity,
 
-    securitySource: client._options.openAI,
+    securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig
       || { strategy: "none" },

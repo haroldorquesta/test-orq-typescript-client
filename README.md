@@ -88,7 +88,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -208,7 +208,7 @@ underlying connection.
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -248,7 +248,7 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -273,7 +273,7 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -315,7 +315,7 @@ const orq = new Orq({
     },
     retryConnectionErrors: false,
   },
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -362,7 +362,7 @@ import {
 } from "orq-poc-typescript/models/errors";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -411,7 +411,7 @@ import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   serverURL: "https://my.dev.orq.ai",
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -486,14 +486,14 @@ This SDK supports the following security scheme globally:
 
 | Name     | Type | Scheme      | Environment Variable |
 | -------- | ---- | ----------- | -------------------- |
-| `openAI` | http | HTTP Bearer | `ORQ_OPEN_AI`        |
+| `apiKey` | http | HTTP Bearer | `ORQ_API_KEY`        |
 
-To authenticate with the API the `openAI` parameter must be set when initializing the SDK client instance. For example:
+To authenticate with the API the `apiKey` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
