@@ -88,7 +88,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -208,7 +208,7 @@ underlying connection.
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -248,7 +248,7 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -273,7 +273,7 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -315,7 +315,7 @@ const orq = new Orq({
     },
     retryConnectionErrors: false,
   },
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -349,10 +349,10 @@ If a HTTP request fails, an operation my also throw an error from the `models/er
 
 In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `list` method may throw the following errors:
 
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| errors.HonoApiError | 500                 | application/json    |
-| errors.SDKError     | 4XX, 5XX            | \*/\*               |
+| Error Type          | Status Code | Content Type     |
+| ------------------- | ----------- | ---------------- |
+| errors.HonoApiError | 500         | application/json |
+| errors.SDKError     | 4XX, 5XX    | \*/\*            |
 
 ```typescript
 import { Orq } from "orq-poc-typescript";
@@ -362,7 +362,7 @@ import {
 } from "orq-poc-typescript/models/errors";
 
 const orq = new Orq({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -403,46 +403,15 @@ Validation errors can also occur when either method arguments or data returned f
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-### Select Server by Index
-
-You can override the default server globally by passing a server index to the `serverIdx` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
-
-| # | Server | Variables |
-| - | ------ | --------- |
-| 0 | `https://my.dev.orq.ai` | None |
-
-```typescript
-import { Orq } from "orq-poc-typescript";
-
-const orq = new Orq({
-  serverIdx: 0,
-  bearer: process.env["ORQ_BEARER"] ?? "",
-});
-
-async function run() {
-  const result = await orq.contacts.create({
-    externalId: "<id>",
-  });
-
-  // Handle the result
-  console.log(result);
-}
-
-run();
-
-```
-
-
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
-
+The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
   serverURL: "https://my.dev.orq.ai",
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -515,16 +484,16 @@ const sdk = new Orq({ httpClient });
 
 This SDK supports the following security scheme globally:
 
-| Name                 | Type                 | Scheme               | Environment Variable |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `bearer`             | http                 | HTTP Bearer          | `ORQ_BEARER`         |
+| Name     | Type | Scheme      | Environment Variable |
+| -------- | ---- | ----------- | -------------------- |
+| `openAI` | http | HTTP Bearer | `ORQ_OPEN_AI`        |
 
-To authenticate with the API the `bearer` parameter must be set when initializing the SDK client instance. For example:
+To authenticate with the API the `openAI` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {

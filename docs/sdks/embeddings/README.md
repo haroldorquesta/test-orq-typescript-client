@@ -17,7 +17,7 @@ Creates an embedding vector representing the input text.
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {
@@ -44,7 +44,7 @@ import { routerEmbeddingsCreate } from "orq-poc-typescript/funcs/routerEmbedding
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const orq = new OrqCore({
-  bearer: process.env["ORQ_BEARER"] ?? "",
+  openAI: process.env["ORQ_OPEN_AI"] ?? "",
 });
 
 async function run() {

@@ -15,7 +15,7 @@ export const ServerList = [
 ] as const;
 
 export type SDKOptions = {
-  bearer?: string | (() => Promise<string>);
+  openAI?: string | (() => Promise<string>);
 
   httpClient?: HTTPClient;
   /**
@@ -54,7 +54,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "2.0",
-  sdkVersion: "0.10.1",
-  genVersion: "2.446.5",
-  userAgent: "speakeasy-sdk/typescript 0.10.1 2.446.5 2.0 orq-poc-typescript",
+  sdkVersion: "0.11.0",
+  genVersion: "2.457.2",
+  userAgent: "speakeasy-sdk/typescript 0.11.0 2.457.2 2.0 orq-poc-typescript",
 } as const;
