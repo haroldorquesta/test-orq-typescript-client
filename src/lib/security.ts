@@ -237,7 +237,7 @@ export function resolveGlobalSecurity(
       {
         fieldName: "Authorization",
         type: "http:bearer",
-        value: security?.openAI ?? env().ORQ_OPEN_AI,
+        value: security?.apiKey ?? env().ORQ_API_KEY,
       },
     ],
   );

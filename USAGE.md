@@ -3,7 +3,7 @@
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
