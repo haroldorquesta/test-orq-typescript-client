@@ -6,8 +6,8 @@
 import { ResponseBodyChoices } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBodyChoices = {
-  finishReason: "content_filter",
-  index: 8136.79,
+  finishReason: "length",
+  index: 302.35,
   message: {
     content: "<value>",
     refusal: "<value>",
@@ -21,22 +21,22 @@ let value: ResponseBodyChoices = {
         },
       },
     ],
-    role: "tool",
+    role: "prompt",
   },
   logprobs: {
     content: [
       {
         token: "<value>",
-        logprob: 3339.65,
+        logprob: 78.84,
         bytes: [
-          7908.40,
+          3726.79,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 972.43,
+            logprob: 5305.37,
             bytes: [
-              4420.36,
+              9221.11,
             ],
           },
         ],
@@ -45,16 +45,16 @@ let value: ResponseBodyChoices = {
     refusal: [
       {
         token: "<value>",
-        logprob: 5199.52,
+        logprob: 894.95,
         bytes: [
-          6939.56,
+          4059.42,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 908.86,
+            logprob: 243.13,
             bytes: [
-              2277.60,
+              3426.11,
             ],
           },
         ],

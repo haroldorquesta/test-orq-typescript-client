@@ -8,7 +8,7 @@ import { PostV2RouterChatCompletions2RouterChatCompletions2 } from "orq-poc-type
 let value: PostV2RouterChatCompletions2RouterChatCompletions2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://nifty-eggplant.net/",
+    url: "https://good-department.name/",
   },
 };
 ```

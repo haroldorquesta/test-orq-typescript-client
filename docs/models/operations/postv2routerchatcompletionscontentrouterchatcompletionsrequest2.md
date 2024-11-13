@@ -20,7 +20,7 @@ const value:
   operations.PostV2RouterChatCompletions2RouterChatCompletionsRequest2 = {
     type: "image_url",
     imageUrl: {
-      url: "https://wry-handful.com",
+      url: "https://which-fork.info/",
     },
   };
 ```

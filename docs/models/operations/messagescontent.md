@@ -18,7 +18,7 @@ const value: operations.PostV2RouterChatCompletionsContent2[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://first-glider.info",
+      url: "https://excellent-petticoat.biz/",
     },
   },
 ];

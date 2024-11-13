@@ -18,7 +18,7 @@ const value: operations.PostV2RouterChatCompletions2RouterChatCompletions1 = {
 const value: operations.PostV2RouterChatCompletions2RouterChatCompletions2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://haunting-solvency.org/",
+    url: "https://aggravating-horde.com/",
   },
 };
 ```

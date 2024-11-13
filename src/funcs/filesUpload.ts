@@ -3,7 +3,7 @@
  */
 
 import { OrqCore } from "../core.js";
-import { encodeJSON } from "../lib/encodings.js";
+import { readableStreamToArrayBuffer } from "../lib/files.js";
 import * as M from "../lib/matchers.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
@@ -19,15 +19,23 @@ import {
 import { SDKError } from "../models/errors/sdkerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
+import { isBlobLike } from "../types/blobs.js";
 import { Result } from "../types/fp.js";
+import { isReadableStream } from "../types/streams.js";
 
-export async function publicPostV2RouterImagesGenerations(
+/**
+ * Upload file
+ *
+ * @remarks
+ * Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
+ */
+export async function filesUpload(
   client: OrqCore,
-  request?: operations.PostV2RouterImagesGenerationsRequestBody | undefined,
+  request: operations.PostV2FilesRequestBody,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.PostV2RouterImagesGenerationsResponseBody,
+    operations.PostV2FilesResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -39,30 +47,44 @@ export async function publicPostV2RouterImagesGenerations(
 > {
   const parsed = safeParse(
     request,
-    (value) =>
-      operations.PostV2RouterImagesGenerationsRequestBody$outboundSchema
-        .optional().parse(value),
+    (value) => operations.PostV2FilesRequestBody$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
     return parsed;
   }
   const payload = parsed.value;
-  const body = payload === undefined
-    ? null
-    : encodeJSON("body", payload, { explode: true });
+  const body = new FormData();
 
-  const path = pathToFunc("/v2/router/images/generations")();
+  if (payload.file !== undefined) {
+    if (isBlobLike(payload.file)) {
+      body.append("file", payload.file);
+    } else if (isReadableStream(payload.file.content)) {
+      const buffer = await readableStreamToArrayBuffer(payload.file.content);
+      const blob = new Blob([buffer], { type: "application/octet-stream" });
+      body.append("file", blob);
+    } else {
+      body.append(
+        "file",
+        new Blob([payload.file.content], { type: "application/octet-stream" }),
+        payload.file.fileName,
+      );
+    }
+  }
+  if (payload.purpose !== undefined) {
+    body.append("purpose", payload.purpose);
+  }
+
+  const path = pathToFunc("/v2/files")();
 
   const headers = new Headers({
-    "Content-Type": "application/json",
     Accept: "application/json",
   });
 
   const secConfig = await extractSecurity(client._options.bearer);
   const securityInput = secConfig == null ? {} : { bearer: secConfig };
   const context = {
-    operationID: "post_/v2/router/images/generations",
+    operationID: "post_/v2/files",
     oAuth2Scopes: [],
     securitySource: client._options.bearer,
   };
@@ -83,7 +105,7 @@ export async function publicPostV2RouterImagesGenerations(
 
   const doResult = await client._do(req, {
     context,
-    errorCodes: ["400", "401", "4XX", "500", "5XX"],
+    errorCodes: ["400", "4XX", "5XX"],
     retryConfig: options?.retries
       || client._options.retryConfig,
     retryCodes: options?.retryCodes || ["429", "500", "502", "503", "504"],
@@ -94,7 +116,7 @@ export async function publicPostV2RouterImagesGenerations(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.PostV2RouterImagesGenerationsResponseBody,
+    operations.PostV2FilesResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -103,11 +125,8 @@ export async function publicPostV2RouterImagesGenerations(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(
-      200,
-      operations.PostV2RouterImagesGenerationsResponseBody$inboundSchema,
-    ),
-    M.fail([400, 401, "4XX", 500, "5XX"]),
+    M.json(200, operations.PostV2FilesResponseBody$inboundSchema),
+    M.fail([400, "4XX", "5XX"]),
   )(response);
   if (!result.ok) {
     return result;
