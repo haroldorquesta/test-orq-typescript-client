@@ -6,7 +6,7 @@ import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
 
 export type Security = {
-  openAI?: string | undefined;
+  apiKey?: string | undefined;
 };
 
 /** @internal */
@@ -15,16 +15,16 @@ export const Security$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  OpenAI: z.string().optional(),
+  ApiKey: z.string().optional(),
 }).transform((v) => {
   return remap$(v, {
-    "OpenAI": "openAI",
+    "ApiKey": "apiKey",
   });
 });
 
 /** @internal */
 export type Security$Outbound = {
-  OpenAI?: string | undefined;
+  ApiKey?: string | undefined;
 };
 
 /** @internal */
@@ -33,10 +33,10 @@ export const Security$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   Security
 > = z.object({
-  openAI: z.string().optional(),
+  apiKey: z.string().optional(),
 }).transform((v) => {
   return remap$(v, {
-    openAI: "OpenAI",
+    apiKey: "ApiKey",
   });
 });
 

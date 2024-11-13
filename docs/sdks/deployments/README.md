@@ -20,7 +20,7 @@ Retrieve the deployment configuration
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -46,7 +46,7 @@ import { deploymentsGetConfig } from "orq-poc-typescript/funcs/deploymentsGetCon
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const orq = new OrqCore({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -96,7 +96,7 @@ Invoke a deployment with a given payload
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -124,7 +124,7 @@ import { deploymentsInvoke } from "orq-poc-typescript/funcs/deploymentsInvoke.js
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const orq = new OrqCore({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -176,7 +176,7 @@ Add metrics to a deployment
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -203,7 +203,7 @@ import { deploymentsAddMetrics } from "orq-poc-typescript/funcs/deploymentsAddMe
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const orq = new OrqCore({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -254,7 +254,7 @@ Returns a list of your deployments. The deployments are returned sorted by creat
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -278,7 +278,7 @@ import { deploymentsList } from "orq-poc-typescript/funcs/deploymentsList.js";
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const orq = new OrqCore({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {

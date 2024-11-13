@@ -17,7 +17,7 @@ Submit feedback for the LLM transaction via the API
 import { Orq } from "orq-poc-typescript";
 
 const orq = new Orq({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
@@ -47,7 +47,7 @@ import { feedbackCreate } from "orq-poc-typescript/funcs/feedbackCreate.js";
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const orq = new OrqCore({
-  openAI: process.env["ORQ_OPEN_AI"] ?? "",
+  apiKey: process.env["ORQ_API_KEY"] ?? "",
 });
 
 async function run() {
