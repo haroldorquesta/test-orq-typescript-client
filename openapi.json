@@ -6,9 +6,6 @@
   },
   "security": [
     {
-      "Bearer": []
-    },
-    {
       "OpenAI": []
     }
   ],
@@ -24,11 +21,6 @@
   },
   "components": {
     "securitySchemes": {
-      "Bearer": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
-      },
       "OpenAI": {
         "type": "http",
         "scheme": "bearer",
@@ -38026,7 +38018,7 @@
         "x-speakeasy-name-override": "getConfig",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "description": "Retrieve the deployment configuration",
@@ -38829,7 +38821,7 @@
         "summary": "Invoke",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "requestBody": {
@@ -39439,7 +39431,7 @@
         "summary": "Add metrics",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "parameters": [
@@ -40408,7 +40400,7 @@
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "requestBody": {
@@ -40501,7 +40493,7 @@
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "requestBody": {
@@ -41926,7 +41918,7 @@
         "x-speakeasy-name-override": "create",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "description": "For sending requests to legacy completion models",
@@ -42155,7 +42147,7 @@
         "x-speakeasy-name-override": "rerank",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "description": "For sending requests to rerank models",
@@ -42340,7 +42332,7 @@
         "x-speakeasy-name-override": "generate",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "requestBody": {
@@ -42611,7 +42603,7 @@
         "x-speakeasy-group": "remoteconfig",
         "security": [
           {
-            "Bearer": []
+            "OpenAI": []
           }
         ],
         "requestBody": {
