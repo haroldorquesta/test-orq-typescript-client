@@ -89,7 +89,7 @@ export async function routerRerank(
     path: path,
     headers: headers,
     body: body,
-    timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
+    timeoutMs: options?.timeoutMs || client._options.timeoutMs || 600000,
   }, options);
   if (!requestRes.ok) {
     return requestRes;
