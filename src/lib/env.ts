@@ -7,17 +7,16 @@ import { dlv } from "./dlv.js";
 import * as z from "zod";
 
 export interface Env {
-  ORQ_BEARER?: string | undefined;
+  ORQ_OPEN_AI?: string | undefined;
 
   ORQ_DEBUG?: boolean | undefined;
 }
 
 export const envSchema: z.ZodType<Env, z.ZodTypeDef, unknown> = z.object({
-  ORQ_BEARER: z.string(),
+  ORQ_OPEN_AI: z.string().optional(),
 
-  ORQ_DEBUG: z.coerce.boolean(),
-})
-  .partial();
+  ORQ_DEBUG: z.coerce.boolean().optional(),
+});
 
 let envMemo: Env | undefined = undefined;
 /**
