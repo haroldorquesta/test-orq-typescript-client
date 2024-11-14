@@ -119,8 +119,11 @@ run();
 
 * [getConfig](docs/sdks/deployments/README.md#getconfig) - Get config
 * [invoke](docs/sdks/deployments/README.md#invoke) - Invoke
-* [addMetrics](docs/sdks/deployments/README.md#addmetrics) - Add metrics
 * [list](docs/sdks/deployments/README.md#list) - List all deployments
+
+#### [deployments.metrics](docs/sdks/metrics/README.md)
+
+* [create](docs/sdks/metrics/README.md#create) - Add metrics
 
 ### [feedback](docs/sdks/feedback/README.md)
 
@@ -178,10 +181,10 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 <summary>Available standalone functions</summary>
 
 - [`contactsCreate`](docs/sdks/contacts/README.md#create) - Update user information
-- [`deploymentsAddMetrics`](docs/sdks/deployments/README.md#addmetrics) - Add metrics
 - [`deploymentsGetConfig`](docs/sdks/deployments/README.md#getconfig) - Get config
 - [`deploymentsInvoke`](docs/sdks/deployments/README.md#invoke) - Invoke
 - [`deploymentsList`](docs/sdks/deployments/README.md#list) - List all deployments
+- [`deploymentsMetricsCreate`](docs/sdks/metrics/README.md#create) - Add metrics
 - [`feedbackCreate`](docs/sdks/feedback/README.md#create) - Submit feedback
 - [`filesBulkUpload`](docs/sdks/files/README.md#bulkupload) - Bulk upload file
 - [`filesUpload`](docs/sdks/files/README.md#upload) - Upload file

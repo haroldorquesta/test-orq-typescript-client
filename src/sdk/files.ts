@@ -33,7 +33,7 @@ export class Files extends ClientSDK {
    * Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).
    */
   async bulkUpload(
-    request: operations.FileBulkUploadRequestBody,
+    request: operations.BulkFileUploadRequestBody,
     options?: RequestOptions,
   ): Promise<Array<operations.ResponseBody>> {
     return unwrapAsync(filesBulkUpload(

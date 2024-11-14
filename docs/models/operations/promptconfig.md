@@ -20,14 +20,21 @@ let value: PromptConfig = {
       },
     },
   ],
-  model: "Model 3",
-  modelType: "vision",
+  model: "A8",
+  modelType: "tts",
   modelParameters: {},
-  provider: "anthropic",
+  provider: "google-ai",
   messages: [
     {
-      role: "system",
-      content: "<value>",
+      role: "prompt",
+      content: [
+        {
+          type: "image_url",
+          imageUrl: {
+            url: "https://advanced-fort.net",
+          },
+        },
+      ],
     },
   ],
 };
@@ -35,11 +42,11 @@ let value: PromptConfig = {
 
 ## Fields
 
-| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `tools`                                                                                  | [operations.DeploymentListTools](../../models/operations/deploymentlisttools.md)[]       | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `model`                                                                                  | *string*                                                                                 | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `modelType`                                                                              | [operations.ModelType](../../models/operations/modeltype.md)                             | :heavy_check_mark:                                                                       | The type of the model                                                                    |
-| `modelParameters`                                                                        | [operations.ModelParameters](../../models/operations/modelparameters.md)                 | :heavy_check_mark:                                                                       | Model Parameters: Not all parameters apply to every model                                |
-| `provider`                                                                               | [operations.DeploymentListProvider](../../models/operations/deploymentlistprovider.md)   | :heavy_check_mark:                                                                       | N/A                                                                                      |
-| `messages`                                                                               | [operations.DeploymentListMessages](../../models/operations/deploymentlistmessages.md)[] | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `tools`                                                                            | [operations.DeploymentsTools](../../models/operations/deploymentstools.md)[]       | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `model`                                                                            | *string*                                                                           | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `modelType`                                                                        | [operations.ModelType](../../models/operations/modeltype.md)                       | :heavy_check_mark:                                                                 | The type of the model                                                              |
+| `modelParameters`                                                                  | [operations.ModelParameters](../../models/operations/modelparameters.md)           | :heavy_check_mark:                                                                 | Model Parameters: Not all parameters apply to every model                          |
+| `provider`                                                                         | [operations.DeploymentsProvider](../../models/operations/deploymentsprovider.md)   | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `messages`                                                                         | [operations.DeploymentsMessages](../../models/operations/deploymentsmessages.md)[] | :heavy_check_mark:                                                                 | N/A                                                                                |

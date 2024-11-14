@@ -2,8 +2,8 @@ speakeasyVersion: 1.439.0
 sources:
     orq-OAS:
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:76670132fa38c3f0478dad45f5c60b2a482ea37cc1d7593ef7b9d718b52ca6ed
-        sourceBlobDigest: sha256:e90ceb5855429ceef7f894211bfc6c10395f4d01560bd999b116e1a402bcd38c
+        sourceRevisionDigest: sha256:89dbed9e42cfbdb784102177a849ef7d8a1f4cd0f73204faad9e3308baf2125c
+        sourceBlobDigest: sha256:4de52a66321edefb9070858792b2e87b125f37d40076bd8257fb844a5d90ce70
         tags:
             - latest
             - main
@@ -11,10 +11,10 @@ targets:
     orq:
         source: orq-OAS
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:76670132fa38c3f0478dad45f5c60b2a482ea37cc1d7593ef7b9d718b52ca6ed
-        sourceBlobDigest: sha256:e90ceb5855429ceef7f894211bfc6c10395f4d01560bd999b116e1a402bcd38c
+        sourceRevisionDigest: sha256:89dbed9e42cfbdb784102177a849ef7d8a1f4cd0f73204faad9e3308baf2125c
+        sourceBlobDigest: sha256:4de52a66321edefb9070858792b2e87b125f37d40076bd8257fb844a5d90ce70
         codeSamplesNamespace: orq-oas-code-samples
-        codeSamplesRevisionDigest: sha256:f7ef62885be7b1bef8a01319d3e21daf5743661586f2d174eaf7e7ae14660058
+        codeSamplesRevisionDigest: sha256:58acdc53df22fb2fe6d6535d56ef64fcac694c8a9968e55696dde344efbc39a0
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

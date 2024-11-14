@@ -20,9 +20,9 @@ export class OrqCompletions extends ClientSDK {
    * For sending requests to chat completion models
    */
   async create(
-    request: operations.CreateChatCompletionsRequestBody,
+    request: operations.RouterChatCompletionsRequestBody,
     options?: RequestOptions & { acceptHeaderOverride?: CreateAcceptEnum },
-  ): Promise<operations.CreateChatCompletionsResponse> {
+  ): Promise<operations.RouterChatCompletionsResponse> {
     return unwrapAsync(routerChatCompletionsCreate(
       this,
       request,

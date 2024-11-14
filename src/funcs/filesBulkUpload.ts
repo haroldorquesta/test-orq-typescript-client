@@ -29,7 +29,7 @@ import { Result } from "../types/fp.js";
  */
 export async function filesBulkUpload(
   client: OrqCore,
-  request: operations.FileBulkUploadRequestBody,
+  request: operations.BulkFileUploadRequestBody,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -45,7 +45,7 @@ export async function filesBulkUpload(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.FileBulkUploadRequestBody$outboundSchema.parse(value),
+    (value) => operations.BulkFileUploadRequestBody$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -68,7 +68,7 @@ export async function filesBulkUpload(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "FileBulkUpload",
+    operationID: "BulkFileUpload",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,

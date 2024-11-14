@@ -7,7 +7,7 @@ The size of the image
 ```typescript
 import { Size } from "orq-poc-typescript/models/operations";
 
-let value: Size = "512x512";
+let value: Size = "256x256";
 ```
 
 ## Values

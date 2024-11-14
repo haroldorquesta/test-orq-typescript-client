@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 4c83bd649d59bd3cd4f8eac8821626bd
+  docChecksum: e80653395f272eb06247ecfb2696e3d2
   docVersion: "2.0"
   speakeasyVersion: 1.439.0
   generationVersion: 2.457.9
-  releaseVersion: 0.13.2
-  configChecksum: 704aee0abebea33eb50197c6a0d1c468
+  releaseVersion: 0.13.3
+  configChecksum: dc737d1c0de31b89d0ab25d4d38b8aca
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -82,64 +82,14 @@ generatedFiles:
   - docs/models/errors/honoapierror.md
   - docs/models/operations/apiversion.md
   - docs/models/operations/billedunits.md
+  - docs/models/operations/bulkfileuploadfilespurpose.md
+  - docs/models/operations/bulkfileuploadpurpose.md
+  - docs/models/operations/bulkfileuploadrequestbody.md
   - docs/models/operations/choices.md
   - docs/models/operations/content.md
   - docs/models/operations/content2.md
-  - docs/models/operations/createchatcompletions21.md
-  - docs/models/operations/createchatcompletions22.md
-  - docs/models/operations/createchatcompletions2detail.md
-  - docs/models/operations/createchatcompletions2imageurl.md
-  - docs/models/operations/createchatcompletions2routerchatcompletions1.md
-  - docs/models/operations/createchatcompletions2routerchatcompletions2.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsimageurl.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsrequest1.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsrequest2.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsrequestimageurl.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsrequestrequestbodymessages4type.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsrequestrequestbodymessagestype.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsrequestrequestbodytype.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionsrequesttype.md
-  - docs/models/operations/createchatcompletions2routerchatcompletionstype.md
-  - docs/models/operations/createchatcompletions2type.md
-  - docs/models/operations/createchatcompletionscontent2.md
-  - docs/models/operations/createchatcompletionscontentrouterchatcompletions2.md
-  - docs/models/operations/createchatcompletionscontentrouterchatcompletionsrequest2.md
-  - docs/models/operations/createchatcompletionsfunction.md
-  - docs/models/operations/createchatcompletionsmessages.md
-  - docs/models/operations/createchatcompletionsmessagescontent.md
-  - docs/models/operations/createchatcompletionsmessagesrole.md
-  - docs/models/operations/createchatcompletionsmessagesrouterchatcompletionscontent.md
-  - docs/models/operations/createchatcompletionsmessagesrouterchatcompletionsrequestcontent.md
-  - docs/models/operations/createchatcompletionsmessagesrouterchatcompletionsrequestrole.md
-  - docs/models/operations/createchatcompletionsmessagesrouterchatcompletionsrole.md
-  - docs/models/operations/createchatcompletionsrequestbody.md
-  - docs/models/operations/createchatcompletionsresponse.md
-  - docs/models/operations/createchatcompletionsresponsebody.md
-  - docs/models/operations/createchatcompletionsresponsebodychoices.md
-  - docs/models/operations/createchatcompletionsresponsebodycontent.md
-  - docs/models/operations/createchatcompletionsresponsebodyfinishreason.md
-  - docs/models/operations/createchatcompletionsresponsebodyfunction.md
-  - docs/models/operations/createchatcompletionsresponsebodyrole.md
-  - docs/models/operations/createchatcompletionsresponsebodyrouterchatcompletionstoplogprobs.md
-  - docs/models/operations/createchatcompletionsresponsebodytoolcalls.md
-  - docs/models/operations/createchatcompletionsresponsebodytoplogprobs.md
-  - docs/models/operations/createchatcompletionsresponsebodytype.md
-  - docs/models/operations/createchatcompletionsresponsebodyusage.md
-  - docs/models/operations/createchatcompletionsrouterchatcompletionsresponsebody.md
-  - docs/models/operations/createchatcompletionsrouterchatcompletionstype.md
-  - docs/models/operations/createchatcompletionstype.md
-  - docs/models/operations/createcompletionschoices.md
-  - docs/models/operations/createcompletionsrequestbody.md
-  - docs/models/operations/createcompletionsresponsebody.md
-  - docs/models/operations/createcompletionsusage.md
   - docs/models/operations/createcontactrequestbody.md
   - docs/models/operations/createcontactresponsebody.md
-  - docs/models/operations/createembeddingsdata.md
-  - docs/models/operations/createembeddingsobject.md
-  - docs/models/operations/createembeddingsrequestbody.md
-  - docs/models/operations/createembeddingsresponsebody.md
-  - docs/models/operations/createembeddingsrouterembeddingsobject.md
-  - docs/models/operations/createembeddingsusage.md
   - docs/models/operations/createfeedbackrequestbody.md
   - docs/models/operations/createfeedbackresponsebody.md
   - docs/models/operations/createfeedbackvalue.md
@@ -147,13 +97,13 @@ generatedFiles:
   - docs/models/operations/delta.md
   - docs/models/operations/deploymentcreatemetric21.md
   - docs/models/operations/deploymentcreatemetric22.md
-  - docs/models/operations/deploymentcreatemetric2deploymentstype.md
+  - docs/models/operations/deploymentcreatemetric2deploymentsmetricstype.md
   - docs/models/operations/deploymentcreatemetric2imageurl.md
   - docs/models/operations/deploymentcreatemetric2type.md
   - docs/models/operations/deploymentcreatemetriccontent.md
   - docs/models/operations/deploymentcreatemetriccontent2.md
   - docs/models/operations/deploymentcreatemetricfunction.md
-  - docs/models/operations/deploymentcreatemetricmessagedeploymentsrole.md
+  - docs/models/operations/deploymentcreatemetricmessagedeploymentsmetricsrole.md
   - docs/models/operations/deploymentcreatemetricmessagerole.md
   - docs/models/operations/deploymentcreatemetricmessages.md
   - docs/models/operations/deploymentcreatemetricrequest.md
@@ -222,46 +172,43 @@ generatedFiles:
   - docs/models/operations/deploymentinvokeresponse.md
   - docs/models/operations/deploymentinvokeresponsebody.md
   - docs/models/operations/deploymentinvokeretrievals.md
-  - docs/models/operations/deploymentlist21.md
-  - docs/models/operations/deploymentlist22.md
-  - docs/models/operations/deploymentlist2deploymentstype.md
-  - docs/models/operations/deploymentlist2imageurl.md
-  - docs/models/operations/deploymentlist2type.md
-  - docs/models/operations/deploymentlistcontent.md
-  - docs/models/operations/deploymentlistcontent2.md
-  - docs/models/operations/deploymentlistdata.md
-  - docs/models/operations/deploymentlistdeploymentsfunction.md
-  - docs/models/operations/deploymentlistdeploymentsresponsetype.md
-  - docs/models/operations/deploymentlistdeploymentstype.md
-  - docs/models/operations/deploymentlistencodingformat.md
-  - docs/models/operations/deploymentlistformat.md
-  - docs/models/operations/deploymentlistfunction.md
-  - docs/models/operations/deploymentlistmessages.md
-  - docs/models/operations/deploymentlistobject.md
-  - docs/models/operations/deploymentlistparameters.md
-  - docs/models/operations/deploymentlistphotorealversion.md
-  - docs/models/operations/deploymentlistprovider.md
-  - docs/models/operations/deploymentlistquality.md
-  - docs/models/operations/deploymentlistrequest.md
-  - docs/models/operations/deploymentlistresponsebody.md
-  - docs/models/operations/deploymentlistresponseformat.md
-  - docs/models/operations/deploymentlistresponseformat1.md
-  - docs/models/operations/deploymentlistresponseformat2.md
-  - docs/models/operations/deploymentlistresponseformatdeploymentstype.md
-  - docs/models/operations/deploymentlistresponseformattype.md
-  - docs/models/operations/deploymentlistrole.md
-  - docs/models/operations/deploymentlisttoolcalls.md
-  - docs/models/operations/deploymentlisttools.md
-  - docs/models/operations/deploymentlisttype.md
+  - docs/models/operations/deployments21.md
+  - docs/models/operations/deployments22.md
+  - docs/models/operations/deployments2deploymentstype.md
+  - docs/models/operations/deployments2imageurl.md
+  - docs/models/operations/deployments2type.md
+  - docs/models/operations/deploymentscontent.md
+  - docs/models/operations/deploymentscontent2.md
+  - docs/models/operations/deploymentsdata.md
+  - docs/models/operations/deploymentsdeploymentsfunction.md
+  - docs/models/operations/deploymentsdeploymentsresponsetype.md
+  - docs/models/operations/deploymentsdeploymentstype.md
+  - docs/models/operations/deploymentsencodingformat.md
+  - docs/models/operations/deploymentsformat.md
+  - docs/models/operations/deploymentsfunction.md
+  - docs/models/operations/deploymentsmessages.md
+  - docs/models/operations/deploymentsobject.md
+  - docs/models/operations/deploymentsparameters.md
+  - docs/models/operations/deploymentsphotorealversion.md
+  - docs/models/operations/deploymentsprovider.md
+  - docs/models/operations/deploymentsquality.md
+  - docs/models/operations/deploymentsrequest.md
+  - docs/models/operations/deploymentsresponsebody.md
+  - docs/models/operations/deploymentsresponseformat.md
+  - docs/models/operations/deploymentsresponseformat1.md
+  - docs/models/operations/deploymentsresponseformat2.md
+  - docs/models/operations/deploymentsresponseformatdeploymentstype.md
+  - docs/models/operations/deploymentsresponseformattype.md
+  - docs/models/operations/deploymentsrole.md
+  - docs/models/operations/deploymentstoolcalls.md
+  - docs/models/operations/deploymentstools.md
+  - docs/models/operations/deploymentstype.md
   - docs/models/operations/detail.md
   - docs/models/operations/document.md
   - docs/models/operations/documents.md
   - docs/models/operations/embedding.md
   - docs/models/operations/encodingformat.md
   - docs/models/operations/feedback.md
-  - docs/models/operations/filebulkuploadfilespurpose.md
-  - docs/models/operations/filebulkuploadpurpose.md
-  - docs/models/operations/filebulkuploadrequestbody.md
   - docs/models/operations/files.md
   - docs/models/operations/filet.md
   - docs/models/operations/fileuploadpurpose.md
@@ -271,19 +218,6 @@ generatedFiles:
   - docs/models/operations/format.md
   - docs/models/operations/four.md
   - docs/models/operations/functiont.md
-  - docs/models/operations/imagegenerationschoices.md
-  - docs/models/operations/imagegenerationsmessage.md
-  - docs/models/operations/imagegenerationsmessage1.md
-  - docs/models/operations/imagegenerationsmessage2.md
-  - docs/models/operations/imagegenerationsmessage3.md
-  - docs/models/operations/imagegenerationsmessagefunction.md
-  - docs/models/operations/imagegenerationsmessagerole.md
-  - docs/models/operations/imagegenerationsmessagerouterimagesresponserole.md
-  - docs/models/operations/imagegenerationsmessagerouterimagesrole.md
-  - docs/models/operations/imagegenerationsmessagetoolcalls.md
-  - docs/models/operations/imagegenerationsmessagetype.md
-  - docs/models/operations/imagegenerationsrequestbody.md
-  - docs/models/operations/imagegenerationsresponsebody.md
   - docs/models/operations/imageurl.md
   - docs/models/operations/input.md
   - docs/models/operations/inputs.md
@@ -326,8 +260,6 @@ generatedFiles:
   - docs/models/operations/remoteconfigsgetconfigrequestbody.md
   - docs/models/operations/remoteconfigsgetconfigresponsebody.md
   - docs/models/operations/remoteconfigsgetconfigtype.md
-  - docs/models/operations/rerankrequestbody.md
-  - docs/models/operations/rerankresponsebody.md
   - docs/models/operations/responsebody.md
   - docs/models/operations/responsebody1.md
   - docs/models/operations/responsebody2.md
@@ -351,6 +283,74 @@ generatedFiles:
   - docs/models/operations/results.md
   - docs/models/operations/retrievals.md
   - docs/models/operations/role.md
+  - docs/models/operations/routerchatcompletions21.md
+  - docs/models/operations/routerchatcompletions22.md
+  - docs/models/operations/routerchatcompletions2detail.md
+  - docs/models/operations/routerchatcompletions2imageurl.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletions1.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletions2.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsimageurl.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsrequest1.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsrequest2.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsrequestimageurl.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsrequestrequestbodymessages4type.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsrequestrequestbodymessagestype.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsrequestrequestbodytype.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionsrequesttype.md
+  - docs/models/operations/routerchatcompletions2routerchatcompletionstype.md
+  - docs/models/operations/routerchatcompletions2type.md
+  - docs/models/operations/routerchatcompletionscontent2.md
+  - docs/models/operations/routerchatcompletionscontentrouterchatcompletions2.md
+  - docs/models/operations/routerchatcompletionscontentrouterchatcompletionsrequest2.md
+  - docs/models/operations/routerchatcompletionsfunction.md
+  - docs/models/operations/routerchatcompletionsmessages.md
+  - docs/models/operations/routerchatcompletionsmessagescontent.md
+  - docs/models/operations/routerchatcompletionsmessagesrole.md
+  - docs/models/operations/routerchatcompletionsmessagesrouterchatcompletionscontent.md
+  - docs/models/operations/routerchatcompletionsmessagesrouterchatcompletionsrequestcontent.md
+  - docs/models/operations/routerchatcompletionsmessagesrouterchatcompletionsrequestrole.md
+  - docs/models/operations/routerchatcompletionsmessagesrouterchatcompletionsrole.md
+  - docs/models/operations/routerchatcompletionsrequestbody.md
+  - docs/models/operations/routerchatcompletionsresponse.md
+  - docs/models/operations/routerchatcompletionsresponsebody.md
+  - docs/models/operations/routerchatcompletionsresponsebodychoices.md
+  - docs/models/operations/routerchatcompletionsresponsebodycontent.md
+  - docs/models/operations/routerchatcompletionsresponsebodyfinishreason.md
+  - docs/models/operations/routerchatcompletionsresponsebodyfunction.md
+  - docs/models/operations/routerchatcompletionsresponsebodyrole.md
+  - docs/models/operations/routerchatcompletionsresponsebodyrouterchatcompletionstoplogprobs.md
+  - docs/models/operations/routerchatcompletionsresponsebodytoolcalls.md
+  - docs/models/operations/routerchatcompletionsresponsebodytoplogprobs.md
+  - docs/models/operations/routerchatcompletionsresponsebodytype.md
+  - docs/models/operations/routerchatcompletionsresponsebodyusage.md
+  - docs/models/operations/routerchatcompletionsrouterchatcompletionsresponsebody.md
+  - docs/models/operations/routerchatcompletionsrouterchatcompletionstype.md
+  - docs/models/operations/routerchatcompletionstype.md
+  - docs/models/operations/routercompletionschoices.md
+  - docs/models/operations/routercompletionsrequestbody.md
+  - docs/models/operations/routercompletionsresponsebody.md
+  - docs/models/operations/routercompletionsusage.md
+  - docs/models/operations/routerembeddingdata.md
+  - docs/models/operations/routerembeddingobject.md
+  - docs/models/operations/routerembeddingrequestbody.md
+  - docs/models/operations/routerembeddingresponsebody.md
+  - docs/models/operations/routerembeddingrouterembeddingsobject.md
+  - docs/models/operations/routerembeddingusage.md
+  - docs/models/operations/routerimagegenerationschoices.md
+  - docs/models/operations/routerimagegenerationsmessage.md
+  - docs/models/operations/routerimagegenerationsmessage1.md
+  - docs/models/operations/routerimagegenerationsmessage2.md
+  - docs/models/operations/routerimagegenerationsmessage3.md
+  - docs/models/operations/routerimagegenerationsmessagefunction.md
+  - docs/models/operations/routerimagegenerationsmessagerole.md
+  - docs/models/operations/routerimagegenerationsmessagerouterimagesresponserole.md
+  - docs/models/operations/routerimagegenerationsmessagerouterimagesrole.md
+  - docs/models/operations/routerimagegenerationsmessagetoolcalls.md
+  - docs/models/operations/routerimagegenerationsmessagetype.md
+  - docs/models/operations/routerimagegenerationsrequestbody.md
+  - docs/models/operations/routerimagegenerationsresponsebody.md
+  - docs/models/operations/routerrerankrequestbody.md
+  - docs/models/operations/routerrerankresponsebody.md
   - docs/models/operations/size.md
   - docs/models/operations/stop.md
   - docs/models/operations/three.md
@@ -376,6 +376,7 @@ generatedFiles:
   - docs/sdks/feedback/README.md
   - docs/sdks/files/README.md
   - docs/sdks/images/README.md
+  - docs/sdks/metrics/README.md
   - docs/sdks/orq/README.md
   - docs/sdks/orqcompletions/README.md
   - docs/sdks/remoteconfig/README.md
@@ -384,10 +385,10 @@ generatedFiles:
   - package.json
   - src/core.ts
   - src/funcs/contactsCreate.ts
-  - src/funcs/deploymentsAddMetrics.ts
   - src/funcs/deploymentsGetConfig.ts
   - src/funcs/deploymentsInvoke.ts
   - src/funcs/deploymentsList.ts
+  - src/funcs/deploymentsMetricsCreate.ts
   - src/funcs/feedbackCreate.ts
   - src/funcs/filesBulkUpload.ts
   - src/funcs/filesUpload.ts
@@ -426,21 +427,21 @@ generatedFiles:
   - src/models/errors/index.ts
   - src/models/errors/sdkerror.ts
   - src/models/errors/sdkvalidationerror.ts
-  - src/models/operations/createchatcompletions.ts
-  - src/models/operations/createcompletions.ts
+  - src/models/operations/bulkfileupload.ts
   - src/models/operations/createcontact.ts
-  - src/models/operations/createembeddings.ts
   - src/models/operations/createfeedback.ts
   - src/models/operations/deploymentcreatemetric.ts
   - src/models/operations/deploymentgetconfig.ts
   - src/models/operations/deploymentinvoke.ts
-  - src/models/operations/deploymentlist.ts
-  - src/models/operations/filebulkupload.ts
+  - src/models/operations/deployments.ts
   - src/models/operations/fileupload.ts
-  - src/models/operations/imagegenerations.ts
   - src/models/operations/index.ts
   - src/models/operations/remoteconfigsgetconfig.ts
-  - src/models/operations/rerank.ts
+  - src/models/operations/routerchatcompletions.ts
+  - src/models/operations/routercompletions.ts
+  - src/models/operations/routerembedding.ts
+  - src/models/operations/routerimagegenerations.ts
+  - src/models/operations/routerrerank.ts
   - src/sdk/chat.ts
   - src/sdk/completions.ts
   - src/sdk/contacts.ts
@@ -450,6 +451,7 @@ generatedFiles:
   - src/sdk/files.ts
   - src/sdk/images.ts
   - src/sdk/index.ts
+  - src/sdk/metrics.ts
   - src/sdk/orqcompletions.ts
   - src/sdk/remoteconfig.ts
   - src/sdk/router.ts
@@ -747,3 +749,46 @@ examples:
       responses:
         "200":
           application/json: {"type": "boolean"}
+  Deployments:
+    speakeasy-default-deployments:
+      responses:
+        "200":
+          application/json: {"object": "list", "data": [{"id": "8a232aa0-b11b-48a0-8057-1e9e705d0e6e", "created": "<value>", "updated": "<value>", "key": "<key>", "description": "brook cleverly blossom", "prompt_config": {"tools": [{"type": "function", "function": {"name": "<value>", "parameters": {"type": "object", "properties": {"key": "<value>", "key1": "<value>"}}}}, {"type": "function", "function": {"name": "<value>", "parameters": {"type": "object", "properties": {"key": "<value>", "key1": "<value>", "key2": "<value>"}}}}], "model": "Prius", "model_type": "rerank", "provider": "openai", "messages": []}, "version": "<value>"}, {"id": "1dc2a4c8-104f-4b45-91a7-0cfc8fe07fbc", "created": "<value>", "updated": "<value>", "key": "<key>", "description": "inasmuch irritably finally", "prompt_config": {"tools": [], "model": "Camaro", "model_type": "chat", "provider": "perplexity", "messages": [{"role": "exception", "content": []}, {"role": "exception", "content": [{"type": "text", "text": "<value>"}, {"type": "image_url", "image_url": {"url": "https://parched-merit.com/"}}, {"type": "text", "text": "<value>"}]}, {"role": "tool", "content": "<value>"}]}, "version": "<value>"}, {"id": "ebd834b7-d8c2-4236-be08-5944ebceb27b", "created": "<value>", "updated": "<value>", "key": "<key>", "description": "along energetic oddball pasta thread", "prompt_config": {"tools": [], "model": "Element", "model_type": "image", "provider": "cohere", "messages": [{"role": "assistant", "content": [{"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}]}, {"role": "expected_output", "content": "<value>"}]}, "version": "<value>"}], "has_more": false}
+        "500":
+          application/json: {"message": "<value>"}
+  BulkFileUpload:
+    speakeasy-default-bulk-file-upload:
+      requestBody:
+        multipart/form-data: {"files": [{}], "purpose": "retrieval"}
+      responses:
+        "200":
+          application/json: [{"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "4883.89", "file_name": "example.file"}, {"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "9335.52", "file_name": "example.file"}, {"_id": "<id>", "object_name": "<value>", "purpose": "retrieval", "bytes": "561.36", "file_name": "example.file"}]
+  RouterRerank:
+    speakeasy-default-router-rerank:
+      responses:
+        "200":
+          application/json: {"results": [{"index": "1967.56", "relevance_score": "3138.23"}, {"index": "5345.26", "relevance_score": "8653.00"}, {"index": "4463.38", "relevance_score": "1381.46"}]}
+  RouterEmbedding:
+    speakeasy-default-router-embedding:
+      requestBody:
+        application/json: {"input": "<value>", "model": "LeBaron"}
+      responses:
+        "200":
+          application/json: {"object": "list", "data": [{"object": "embedding", "embedding": [], "index": "7964.74"}], "model": "Wrangler", "usage": {"prompt_tokens": "0.87", "total_tokens": "1697.27"}}
+  RouterChatCompletions:
+    speakeasy-default-router-chat-completions:
+      requestBody:
+        application/json: {"model": "Fiesta", "messages": [{"role": "user", "content": "<value>"}, {"role": "system", "content": [{"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}, {"type": "text", "text": "<value>"}]}]}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "choices": [{"finish_reason": "content_filter", "index": "7524.37", "logprobs": {"content": [{"token": "<value>", "logprob": "3570.21", "bytes": ["177.60"], "top_logprobs": []}, {"token": "<value>", "logprob": "2113.38", "bytes": [], "top_logprobs": [{"token": "<value>", "logprob": "1856.93", "bytes": []}]}, {"token": "<value>", "logprob": "1009.67", "bytes": ["3392.36", "365.22"], "top_logprobs": [{"token": "<value>", "logprob": "6502.37", "bytes": []}, {"token": "<value>", "logprob": "155.53", "bytes": ["276.20", "6596.82"]}]}], "refusal": [{"token": "<value>", "logprob": "9065.37", "bytes": ["4963.23"], "top_logprobs": [{"token": "<value>", "logprob": "7823.67", "bytes": []}]}, {"token": "<value>", "logprob": "7034.40", "bytes": ["7804.86", "7602.58", "2199.75"], "top_logprobs": [{"token": "<value>", "logprob": "4278.87", "bytes": ["934.71", "4914.27"]}]}]}, "delta": {"content": "<value>", "refusal": "<value>", "tool_calls": [{"id": "<id>", "type": "function", "function": {"name": "<value>", "arguments": "<value>"}}], "role": "user"}}, {"finish_reason": "tool_calls", "index": "454.16", "logprobs": {"content": [], "refusal": [{"token": "<value>", "logprob": "5833.53", "bytes": ["3259.90", "4078.33"], "top_logprobs": []}]}, "delta": {"content": "<value>", "refusal": "<value>", "tool_calls": [], "role": "correction"}}, {"finish_reason": "tool_calls", "index": "54.36", "logprobs": {"content": [{"token": "<value>", "logprob": "8988.41", "bytes": ["172.08", "1981.75"], "top_logprobs": [{"token": "<value>", "logprob": "3535.31", "bytes": ["6798.85"]}, {"token": "<value>", "logprob": "724.37", "bytes": ["9517.81", "5665.12", "2955.58"]}, {"token": "<value>", "logprob": "2032.57", "bytes": ["7122.13"]}]}, {"token": "<value>", "logprob": "9958.51", "bytes": ["2127.75", "6207.47", "2841.20"], "top_logprobs": [{"token": "<value>", "logprob": "2710.82", "bytes": ["6097.55"]}, {"token": "<value>", "logprob": "5200.49", "bytes": ["8007.59", "1177.47"]}]}, {"token": "<value>", "logprob": "5898.12", "bytes": ["2773.21", "7703.70", "3505.87"], "top_logprobs": []}], "refusal": [{"token": "<value>", "logprob": "6177.60", "bytes": ["8142.21", "9843.62"], "top_logprobs": [{"token": "<value>", "logprob": "2824.36", "bytes": []}, {"token": "<value>", "logprob": "6794.44", "bytes": ["7413.83", "9349.59", "9477.80"]}, {"token": "<value>", "logprob": "9387.56", "bytes": ["785.23"]}]}, {"token": "<value>", "logprob": "7216.58", "bytes": ["3718.85", "1621.36", "2965.97"], "top_logprobs": []}, {"token": "<value>", "logprob": "8254.61", "bytes": ["2398.72", "9049.17", "9959.72"], "top_logprobs": [{"token": "<value>", "logprob": "3589.66", "bytes": ["1267.14", "2906.13", "6778.78"]}]}]}, "delta": {"content": "<value>", "refusal": "<value>", "tool_calls": [], "role": "exception"}}], "created": "6290.63", "model": "PT Cruiser", "system_fingerprint": "<value>", "object": "<value>"}
+  RouterCompletions:
+    speakeasy-default-router-completions:
+      responses:
+        "200":
+          application/json: {"id": "<id>", "choices": [{"finish_reason": "content_filter", "index": "4174.58", "text": "<value>"}], "created": "1343.65", "model": "A8", "system_fingerprint": "<value>", "object": "<value>"}
+  RouterImageGenerations:
+    speakeasy-default-router-image-generations:
+      responses:
+        "200":
+          application/json: {"id": "<id>", "created": "7401.98", "choices": [{"index": "3310.48"}], "model": "Challenger", "object": "<value>"}

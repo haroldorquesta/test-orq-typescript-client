@@ -12,21 +12,21 @@ let value: ResponseBody2 = {
   choices: [
     {
       finishReason: "content_filter",
-      index: 3828.08,
+      index: 2827.00,
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 8953.86,
+            logprob: 302.35,
             bytes: [
-              9677.95,
+              7103.37,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 5468.85,
+                logprob: 78.84,
                 bytes: [
-                  2748.24,
+                  3726.79,
                 ],
               },
             ],
@@ -35,16 +35,16 @@ let value: ResponseBody2 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 5922.30,
+            logprob: 5305.37,
             bytes: [
-              8967.61,
+              9221.11,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 4067.33,
+                logprob: 894.95,
                 bytes: [
-                  5520.78,
+                  4059.42,
                 ],
               },
             ],
@@ -64,12 +64,12 @@ let value: ResponseBody2 = {
             },
           },
         ],
-        role: "user",
+        role: "system",
       },
     },
   ],
-  created: 4554.44,
-  model: "Element",
+  created: 3426.11,
+  model: "Land Cruiser",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},
@@ -81,9 +81,9 @@ let value: ResponseBody2 = {
 | Field                                                                                                                                                                                  | Type                                                                                                                                                                                   | Required                                                                                                                                                                               | Description                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`                                                                                                                                                                                   | *string*                                                                                                                                                                               | :heavy_check_mark:                                                                                                                                                                     | A unique identifier for the chat completion.                                                                                                                                           |
-| `choices`                                                                                                                                                                              | [operations.CreateChatCompletionsResponseBodyChoices](../../models/operations/createchatcompletionsresponsebodychoices.md)[]                                                           | :heavy_check_mark:                                                                                                                                                                     | A list of chat completion choices. Can contain more than one elements if n is greater than 1. Can also be empty for the last chunk if you set stream_options: {"include_usage": true}. |
+| `choices`                                                                                                                                                                              | [operations.RouterChatCompletionsResponseBodyChoices](../../models/operations/routerchatcompletionsresponsebodychoices.md)[]                                                           | :heavy_check_mark:                                                                                                                                                                     | A list of chat completion choices. Can contain more than one elements if n is greater than 1. Can also be empty for the last chunk if you set stream_options: {"include_usage": true}. |
 | `created`                                                                                                                                                                              | *number*                                                                                                                                                                               | :heavy_check_mark:                                                                                                                                                                     | The Unix timestamp (in seconds) of when the chat completion was created.                                                                                                               |
 | `model`                                                                                                                                                                                | *string*                                                                                                                                                                               | :heavy_check_mark:                                                                                                                                                                     | The model used for the chat completion.                                                                                                                                                |
 | `systemFingerprint`                                                                                                                                                                    | *string*                                                                                                                                                                               | :heavy_check_mark:                                                                                                                                                                     | This fingerprint represents the backend configuration that the model runs with.                                                                                                        |
 | `object`                                                                                                                                                                               | *string*                                                                                                                                                                               | :heavy_check_mark:                                                                                                                                                                     | The object type                                                                                                                                                                        |
-| `usage`                                                                                                                                                                                | [operations.CreateChatCompletionsResponseBodyUsage](../../models/operations/createchatcompletionsresponsebodyusage.md)                                                                 | :heavy_check_mark:                                                                                                                                                                     | Usage statistics for the completion request.                                                                                                                                           |
+| `usage`                                                                                                                                                                                | [operations.RouterChatCompletionsResponseBodyUsage](../../models/operations/routerchatcompletionsresponsebodyusage.md)                                                                 | :heavy_check_mark:                                                                                                                                                                     | Usage statistics for the completion request.                                                                                                                                           |

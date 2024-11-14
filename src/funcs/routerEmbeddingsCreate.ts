@@ -29,11 +29,11 @@ import { Result } from "../types/fp.js";
  */
 export async function routerEmbeddingsCreate(
   client: OrqCore,
-  request: operations.CreateEmbeddingsRequestBody,
+  request: operations.RouterEmbeddingRequestBody,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.CreateEmbeddingsResponseBody,
+    operations.RouterEmbeddingResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -46,7 +46,7 @@ export async function routerEmbeddingsCreate(
   const parsed = safeParse(
     request,
     (value) =>
-      operations.CreateEmbeddingsRequestBody$outboundSchema.parse(value),
+      operations.RouterEmbeddingRequestBody$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -67,7 +67,7 @@ export async function routerEmbeddingsCreate(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "CreateEmbeddings",
+    operationID: "RouterEmbedding",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
@@ -104,7 +104,7 @@ export async function routerEmbeddingsCreate(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.CreateEmbeddingsResponseBody,
+    operations.RouterEmbeddingResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -113,7 +113,7 @@ export async function routerEmbeddingsCreate(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.CreateEmbeddingsResponseBody$inboundSchema),
+    M.json(200, operations.RouterEmbeddingResponseBody$inboundSchema),
     M.fail([400, 401, "4XX", 500, "5XX"]),
   )(response);
   if (!result.ok) {

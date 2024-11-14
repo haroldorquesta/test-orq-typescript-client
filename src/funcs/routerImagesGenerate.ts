@@ -23,11 +23,11 @@ import { Result } from "../types/fp.js";
 
 export async function routerImagesGenerate(
   client: OrqCore,
-  request?: operations.ImageGenerationsRequestBody | undefined,
+  request?: operations.RouterImageGenerationsRequestBody | undefined,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.ImageGenerationsResponseBody,
+    operations.RouterImageGenerationsResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -40,9 +40,8 @@ export async function routerImagesGenerate(
   const parsed = safeParse(
     request,
     (value) =>
-      operations.ImageGenerationsRequestBody$outboundSchema.optional().parse(
-        value,
-      ),
+      operations.RouterImageGenerationsRequestBody$outboundSchema.optional()
+        .parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -65,7 +64,7 @@ export async function routerImagesGenerate(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "ImageGenerations",
+    operationID: "RouterImageGenerations",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
@@ -102,7 +101,7 @@ export async function routerImagesGenerate(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.ImageGenerationsResponseBody,
+    operations.RouterImageGenerationsResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -111,7 +110,7 @@ export async function routerImagesGenerate(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.ImageGenerationsResponseBody$inboundSchema),
+    M.json(200, operations.RouterImageGenerationsResponseBody$inboundSchema),
     M.fail([400, 401, "4XX", 500, "5XX"]),
   )(response);
   if (!result.ok) {
