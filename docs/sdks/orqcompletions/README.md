@@ -22,12 +22,28 @@ const orq = new Orq({
 
 async function run() {
   const result = await orq.router.chat.completions.create({
-    model: "Land Cruiser",
+    model: "Fiesta",
     messages: [
       {
-        role: "tool",
-        toolCallId: "<id>",
+        role: "user",
         content: "<value>",
+      },
+      {
+        role: "system",
+        content: [
+          {
+            type: "text",
+            text: "<value>",
+          },
+          {
+            type: "text",
+            text: "<value>",
+          },
+          {
+            type: "text",
+            text: "<value>",
+          },
+        ],
       },
     ],
   });
@@ -57,12 +73,28 @@ const orq = new OrqCore({
 
 async function run() {
   const res = await routerChatCompletionsCreate(orq, {
-    model: "Land Cruiser",
+    model: "Fiesta",
     messages: [
       {
-        role: "tool",
-        toolCallId: "<id>",
+        role: "user",
         content: "<value>",
+      },
+      {
+        role: "system",
+        content: [
+          {
+            type: "text",
+            text: "<value>",
+          },
+          {
+            type: "text",
+            text: "<value>",
+          },
+          {
+            type: "text",
+            text: "<value>",
+          },
+        ],
       },
     ],
   });
@@ -86,14 +118,14 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.PostV2RouterChatCompletionsRequestBody](../../models/operations/postv2routerchatcompletionsrequestbody.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.CreateChatCompletionsRequestBody](../../models/operations/createchatcompletionsrequestbody.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.PostV2RouterChatCompletionsResponse](../../models/operations/postv2routerchatcompletionsresponse.md)\>**
+**Promise\<[operations.CreateChatCompletionsResponse](../../models/operations/createchatcompletionsresponse.md)\>**
 
 ### Errors
 
