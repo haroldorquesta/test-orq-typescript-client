@@ -34,11 +34,11 @@ export enum CreateAcceptEnum {
  */
 export async function routerChatCompletionsCreate(
   client: OrqCore,
-  request: operations.CreateChatCompletionsRequestBody,
+  request: operations.RouterChatCompletionsRequestBody,
   options?: RequestOptions & { acceptHeaderOverride?: CreateAcceptEnum },
 ): Promise<
   Result<
-    operations.CreateChatCompletionsResponse,
+    operations.RouterChatCompletionsResponse,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -51,7 +51,7 @@ export async function routerChatCompletionsCreate(
   const parsed = safeParse(
     request,
     (value) =>
-      operations.CreateChatCompletionsRequestBody$outboundSchema.parse(value),
+      operations.RouterChatCompletionsRequestBody$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -73,7 +73,7 @@ export async function routerChatCompletionsCreate(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "CreateChatCompletions",
+    operationID: "RouterChatCompletions",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
@@ -110,7 +110,7 @@ export async function routerChatCompletionsCreate(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.CreateChatCompletionsResponse,
+    operations.RouterChatCompletionsResponse,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -119,8 +119,8 @@ export async function routerChatCompletionsCreate(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.CreateChatCompletionsResponse$inboundSchema),
-    M.sse(200, operations.CreateChatCompletionsResponse$inboundSchema, {
+    M.json(200, operations.RouterChatCompletionsResponse$inboundSchema),
+    M.sse(200, operations.RouterChatCompletionsResponse$inboundSchema, {
       sseSentinel: "[DONE]",
     }),
     M.fail(["4XX", "5XX"]),

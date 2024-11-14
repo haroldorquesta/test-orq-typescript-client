@@ -7,7 +7,7 @@
 
 ```typescript
 const value: operations.Message1 = {
-  role: "correction",
+  role: "user",
   toolCalls: [
     {
       type: "function",
@@ -24,7 +24,7 @@ const value: operations.Message1 = {
 
 ```typescript
 const value: operations.Message2 = {
-  role: "system",
+  role: "correction",
   content: "<value>",
 };
 ```
@@ -33,8 +33,8 @@ const value: operations.Message2 = {
 
 ```typescript
 const value: operations.Three = {
-  role: "user",
-  url: "https://decent-lender.com",
+  role: "system",
+  url: "https://happy-go-lucky-formamide.com",
 };
 ```
 

@@ -29,11 +29,11 @@ import { Result } from "../types/fp.js";
  */
 export async function routerRerank(
   client: OrqCore,
-  request?: operations.RerankRequestBody | undefined,
+  request?: operations.RouterRerankRequestBody | undefined,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.RerankResponseBody,
+    operations.RouterRerankResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -46,7 +46,7 @@ export async function routerRerank(
   const parsed = safeParse(
     request,
     (value) =>
-      operations.RerankRequestBody$outboundSchema.optional().parse(value),
+      operations.RouterRerankRequestBody$outboundSchema.optional().parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -69,7 +69,7 @@ export async function routerRerank(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "Rerank",
+    operationID: "RouterRerank",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
@@ -106,7 +106,7 @@ export async function routerRerank(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.RerankResponseBody,
+    operations.RouterRerankResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -115,7 +115,7 @@ export async function routerRerank(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.RerankResponseBody$inboundSchema),
+    M.json(200, operations.RouterRerankResponseBody$inboundSchema),
     M.fail(["4XX", "5XX"]),
   )(response);
   if (!result.ok) {

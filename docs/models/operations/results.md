@@ -6,8 +6,8 @@
 import { Results } from "orq-poc-typescript/models/operations";
 
 let value: Results = {
-  index: 9040.44,
-  relevanceScore: 6900.25,
+  index: 3267.01,
+  relevanceScore: 2327.44,
 };
 ```
 

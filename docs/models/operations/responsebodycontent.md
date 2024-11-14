@@ -7,16 +7,16 @@ import { ResponseBodyContent } from "orq-poc-typescript/models/operations";
 
 let value: ResponseBodyContent = {
   token: "<value>",
-  logprob: 7505.95,
+  logprob: 6719.57,
   bytes: [
-    3335.07,
+    9488.61,
   ],
   topLogprobs: [
     {
       token: "<value>",
-      logprob: 9241.59,
+      logprob: 27.03,
       bytes: [
-        8623.19,
+        6471.97,
       ],
     },
   ],

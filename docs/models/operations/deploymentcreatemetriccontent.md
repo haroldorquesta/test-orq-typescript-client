@@ -18,7 +18,7 @@ const value: operations.DeploymentCreateMetricContent2[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://creative-summary.com",
+      url: "https://slushy-ownership.biz/",
     },
   },
 ];

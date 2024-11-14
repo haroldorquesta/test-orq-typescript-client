@@ -15,9 +15,9 @@ export class Completions extends ClientSDK {
    * For sending requests to legacy completion models
    */
   async create(
-    request?: operations.CreateCompletionsRequestBody | undefined,
+    request?: operations.RouterCompletionsRequestBody | undefined,
     options?: RequestOptions,
-  ): Promise<operations.CreateCompletionsResponseBody> {
+  ): Promise<operations.RouterCompletionsResponseBody> {
     return unwrapAsync(routerCompletionsCreate(
       this,
       request,
