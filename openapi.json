@@ -37758,6 +37758,7 @@
           "Contacts"
         ],
         "x-speakeasy-name-override": "create",
+        "operationId": "CreateContact",
         "description": "Update or add user information to workspace",
         "summary": "Update user information",
         "requestBody": {
