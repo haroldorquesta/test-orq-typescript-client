@@ -2,7 +2,7 @@ speakeasyVersion: 1.439.0
 sources:
     orq-OAS:
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:0db14b69432d95f35225bd1d56c2776f2e813aef4227c3d0f8f2f565c72fc098
+        sourceRevisionDigest: sha256:bf93a64a06754ea83bcd7cb8abdaeb2ced3c75e53bfb826fd1f8b838f307c4ad
         sourceBlobDigest: sha256:779c979eef46f2c5c8175383bc276eafda719ddaaebf6cc1a17ae9223755704b
         tags:
             - latest
@@ -11,10 +11,10 @@ targets:
     orq:
         source: orq-OAS
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:0db14b69432d95f35225bd1d56c2776f2e813aef4227c3d0f8f2f565c72fc098
+        sourceRevisionDigest: sha256:bf93a64a06754ea83bcd7cb8abdaeb2ced3c75e53bfb826fd1f8b838f307c4ad
         sourceBlobDigest: sha256:779c979eef46f2c5c8175383bc276eafda719ddaaebf6cc1a17ae9223755704b
         codeSamplesNamespace: orq-oas-code-samples
-        codeSamplesRevisionDigest: sha256:2a38d3f07f8dfdbd9548ce7172d9bf968ff88bf23ff0e7d840e3ec17fe191e2f
+        codeSamplesRevisionDigest: sha256:45559fb089e7cf97ffadca5c0876ef004b4ec43ec8256c5c4aa3aaed4fe85eb7
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
