@@ -39852,7 +39852,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "list",
-        "operationId": "DeploymentList",
+        "operationId": "Deployments",
         "description": "Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.",
         "summary": "List all deployments",
         "parameters": [
