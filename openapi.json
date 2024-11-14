@@ -37915,6 +37915,7 @@
           "Feedback"
         ],
         "x-speakeasy-name-override": "create",
+        "operationId": "CreateFeedback",
         "description": "Submit feedback for the LLM transaction via the API",
         "summary": "Submit feedback",
         "requestBody": {
@@ -38019,6 +38020,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "getConfig",
+        "operationId": "GetConfig",
         "description": "Retrieve the deployment configuration",
         "summary": "Get config",
         "requestBody": {
@@ -38815,6 +38817,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "invoke",
+        "operationId": "Invoke",
         "description": "Invoke a deployment with a given payload",
         "summary": "Invoke",
         "requestBody": {
@@ -39420,6 +39423,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "addMetrics",
+        "operationId": "CreateMetric",
         "description": "Add metrics to a deployment",
         "summary": "Add metrics",
         "parameters": [
@@ -39847,6 +39851,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "list",
+        "operationId": "ListDeployments",
         "description": "Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.",
         "summary": "List all deployments",
         "parameters": [
@@ -40384,6 +40389,7 @@
         ],
         "x-speakeasy-group": "files",
         "x-speakeasy-name-override": "upload",
+        "operationId": "UploadFile",
         "summary": "Upload file",
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "requestBody": {
@@ -40472,6 +40478,7 @@
         ],
         "x-speakeasy-group": "files",
         "x-speakeasy-name-override": "bulkUpload",
+        "operationId": "BulkUploadFile",
         "summary": "Bulk upload file",
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "requestBody": {
@@ -40569,6 +40576,7 @@
         ],
         "x-speakeasy-group": "router.embeddings",
         "x-speakeasy-name-override": "create",
+        "operationId": "CreateEmbeddings",
         "description": "Creates an embedding vector representing the input text.",
         "summary": "Embeddings",
         "requestBody": {
@@ -40724,6 +40732,7 @@
         ],
         "x-speakeasy-group": "router.chat.completions",
         "x-speakeasy-name-override": "create",
+        "operationId": "CreateChatCompletions",
         "description": "For sending requests to chat completion models",
         "summary": "Chat",
         "requestBody": {
@@ -41894,6 +41903,7 @@
         ],
         "x-speakeasy-group": "router.completions",
         "x-speakeasy-name-override": "create",
+        "operationId": "CreateCompletions",
         "description": "For sending requests to legacy completion models",
         "summary": "legacy completions route",
         "requestBody": {
@@ -42118,6 +42128,7 @@
         ],
         "x-speakeasy-group": "router",
         "x-speakeasy-name-override": "rerank",
+        "operationId": "Rerank",
         "description": "For sending requests to rerank models",
         "summary": "rerank route",
         "requestBody": {
@@ -42298,6 +42309,7 @@
         ],
         "x-speakeasy-group": "router.images",
         "x-speakeasy-name-override": "generate",
+        "operationId": "ImageGenerations",
         "requestBody": {
           "description": "A request body that follows the official OpenAI schema",
           "content": {
@@ -42564,6 +42576,7 @@
         ],
         "x-speakeasy-name-override": "getConfig",
         "x-speakeasy-group": "remoteconfig",
+        "operationId": "GetConfig",
         "requestBody": {
           "content": {
             "application/json": {
