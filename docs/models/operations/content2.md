@@ -12,10 +12,10 @@ const value: operations.Two1 = {
 };
 ```
 
-### `operations.PostV2DeploymentsGetConfig22`
+### `operations.DeploymentGetConfig22`
 
 ```typescript
-const value: operations.PostV2DeploymentsGetConfig22 = {
+const value: operations.DeploymentGetConfig22 = {
   type: "image_url",
   imageUrl: {
     url: "https://agitated-ocelot.name",
