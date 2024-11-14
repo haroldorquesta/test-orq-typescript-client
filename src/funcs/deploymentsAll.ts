@@ -28,7 +28,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
  */
-export async function deploymentsList(
+export async function deploymentsAll(
   client: OrqCore,
   limit?: number | undefined,
   after?: string | undefined,
