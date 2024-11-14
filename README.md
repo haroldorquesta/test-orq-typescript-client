@@ -368,7 +368,7 @@ const orq = new Orq({
 async function run() {
   let result;
   try {
-    result = await orq.deployments.list({});
+    result = await orq.deployments.list();
 
     // Handle the result
     console.log(result);
