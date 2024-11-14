@@ -29,7 +29,8 @@ import { Result } from "../types/fp.js";
  */
 export async function deploymentsAddMetrics(
   client: OrqCore,
-  request: operations.PostV2DeploymentsIdMetricsRequest,
+  id: string,
+  requestBody: operations.PostV2DeploymentsIdMetricsRequestBody,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -43,8 +44,13 @@ export async function deploymentsAddMetrics(
     | ConnectionError
   >
 > {
+  const input: operations.PostV2DeploymentsIdMetricsRequest = {
+    id: id,
+    requestBody: requestBody,
+  };
+
   const parsed = safeParse(
-    request,
+    input,
     (value) =>
       operations.PostV2DeploymentsIdMetricsRequest$outboundSchema.parse(value),
     "Input validation failed",

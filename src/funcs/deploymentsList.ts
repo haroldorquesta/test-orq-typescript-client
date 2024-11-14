@@ -30,7 +30,8 @@ import { Result } from "../types/fp.js";
  */
 export async function deploymentsList(
   client: OrqCore,
-  request: operations.GetV2DeploymentsRequest,
+  limit?: number | undefined,
+  after?: string | undefined,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -45,8 +46,13 @@ export async function deploymentsList(
     | ConnectionError
   >
 > {
+  const input: operations.GetV2DeploymentsRequest = {
+    limit: limit,
+    after: after,
+  };
+
   const parsed = safeParse(
-    request,
+    input,
     (value) => operations.GetV2DeploymentsRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

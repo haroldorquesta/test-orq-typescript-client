@@ -58,12 +58,14 @@ export class Deployments extends ClientSDK {
    * Add metrics to a deployment
    */
   async addMetrics(
-    request: operations.PostV2DeploymentsIdMetricsRequest,
+    id: string,
+    requestBody: operations.PostV2DeploymentsIdMetricsRequestBody,
     options?: RequestOptions,
   ): Promise<operations.PostV2DeploymentsIdMetricsResponseBody> {
     return unwrapAsync(deploymentsAddMetrics(
       this,
-      request,
+      id,
+      requestBody,
       options,
     ));
   }
@@ -75,12 +77,14 @@ export class Deployments extends ClientSDK {
    * Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
    */
   async list(
-    request: operations.GetV2DeploymentsRequest,
+    limit?: number | undefined,
+    after?: string | undefined,
     options?: RequestOptions,
   ): Promise<operations.GetV2DeploymentsResponseBody> {
     return unwrapAsync(deploymentsList(
       this,
-      request,
+      limit,
+      after,
       options,
     ));
   }
