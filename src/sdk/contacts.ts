@@ -15,9 +15,9 @@ export class Contacts extends ClientSDK {
    * Update or add user information to workspace
    */
   async create(
-    request: operations.PostV2ContactsRequestBody,
+    request: operations.CreateContactRequestBody,
     options?: RequestOptions,
-  ): Promise<operations.PostV2ContactsResponseBody> {
+  ): Promise<operations.CreateContactResponseBody> {
     return unwrapAsync(contactsCreate(
       this,
       request,

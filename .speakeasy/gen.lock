@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 3c7184adc83eb838f6973a542e2e7d8f
+  docChecksum: f0e2252721dc398251f41af38189941b
   docVersion: "2.0"
   speakeasyVersion: 1.439.0
   generationVersion: 2.457.9
-  releaseVersion: 0.13.0
-  configChecksum: 631d3b07fbc6058d8c03c47475841ecb
+  releaseVersion: 0.13.1
+  configChecksum: 041310e5f07a6bb706e0e2ae2dce9f79
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -85,6 +85,8 @@ generatedFiles:
   - docs/models/operations/choices.md
   - docs/models/operations/content.md
   - docs/models/operations/content2.md
+  - docs/models/operations/createcontactrequestbody.md
+  - docs/models/operations/createcontactresponsebody.md
   - docs/models/operations/data.md
   - docs/models/operations/delta.md
   - docs/models/operations/detail.md
@@ -162,8 +164,6 @@ generatedFiles:
   - docs/models/operations/parameterst.md
   - docs/models/operations/performance.md
   - docs/models/operations/photorealversion.md
-  - docs/models/operations/postv2contactsrequestbody.md
-  - docs/models/operations/postv2contactsresponsebody.md
   - docs/models/operations/postv2deploymentsgetconfig21.md
   - docs/models/operations/postv2deploymentsgetconfig22.md
   - docs/models/operations/postv2deploymentsgetconfig2deployments2.md
@@ -426,9 +426,9 @@ generatedFiles:
   - src/models/errors/index.ts
   - src/models/errors/sdkerror.ts
   - src/models/errors/sdkvalidationerror.ts
+  - src/models/operations/createcontact.ts
   - src/models/operations/getv2deployments.ts
   - src/models/operations/index.ts
-  - src/models/operations/postv2contacts.ts
   - src/models/operations/postv2deploymentsgetconfig.ts
   - src/models/operations/postv2deploymentsidmetrics.ts
   - src/models/operations/postv2deploymentsinvoke.ts
@@ -653,6 +653,13 @@ examples:
           application/json: {"type": "integer"}
   post_/v2/contacts:
     speakeasy-default-post-/v2-/contacts:
+      requestBody:
+        application/json: {"external_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "external_id": "<id>"}
+  CreateContact:
+    speakeasy-default-create-contact:
       requestBody:
         application/json: {"external_id": "<id>"}
       responses:

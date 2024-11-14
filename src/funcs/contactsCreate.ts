@@ -29,11 +29,11 @@ import { Result } from "../types/fp.js";
  */
 export async function contactsCreate(
   client: OrqCore,
-  request: operations.PostV2ContactsRequestBody,
+  request: operations.CreateContactRequestBody,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.PostV2ContactsResponseBody,
+    operations.CreateContactResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -45,7 +45,7 @@ export async function contactsCreate(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.PostV2ContactsRequestBody$outboundSchema.parse(value),
+    (value) => operations.CreateContactRequestBody$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -66,7 +66,7 @@ export async function contactsCreate(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "post_/v2/contacts",
+    operationID: "CreateContact",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
@@ -103,7 +103,7 @@ export async function contactsCreate(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.PostV2ContactsResponseBody,
+    operations.CreateContactResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -112,7 +112,7 @@ export async function contactsCreate(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.PostV2ContactsResponseBody$inboundSchema),
+    M.json(200, operations.CreateContactResponseBody$inboundSchema),
     M.fail(["4XX", "5XX"]),
   )(response);
   if (!result.ok) {

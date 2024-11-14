@@ -1,13 +1,13 @@
-# PostV2ContactsResponseBody
+# CreateContactResponseBody
 
 Successful operation
 
 ## Example Usage
 
 ```typescript
-import { PostV2ContactsResponseBody } from "orq-poc-typescript/models/operations";
+import { CreateContactResponseBody } from "orq-poc-typescript/models/operations";
 
-let value: PostV2ContactsResponseBody = {
+let value: CreateContactResponseBody = {
   id: "<id>",
   externalId: "<id>",
 };

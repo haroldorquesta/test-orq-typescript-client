@@ -8,7 +8,7 @@ import { remap as remap$ } from "../../lib/primitives.js";
 /**
  * Update user information payload
  */
-export type PostV2ContactsRequestBody = {
+export type CreateContactRequestBody = {
   /**
    * Unique string value to identify the contact user in the customer's system
    */
@@ -38,7 +38,7 @@ export type PostV2ContactsRequestBody = {
 /**
  * Successful operation
  */
-export type PostV2ContactsResponseBody = {
+export type CreateContactResponseBody = {
   /**
    * Unique ULID (Universally Unique Lexicographically Sortable Identifier) for the user
    */
@@ -78,8 +78,8 @@ export type PostV2ContactsResponseBody = {
 };
 
 /** @internal */
-export const PostV2ContactsRequestBody$inboundSchema: z.ZodType<
-  PostV2ContactsRequestBody,
+export const CreateContactRequestBody$inboundSchema: z.ZodType<
+  CreateContactRequestBody,
   z.ZodTypeDef,
   unknown
 > = z.object({
@@ -98,7 +98,7 @@ export const PostV2ContactsRequestBody$inboundSchema: z.ZodType<
 });
 
 /** @internal */
-export type PostV2ContactsRequestBody$Outbound = {
+export type CreateContactRequestBody$Outbound = {
   external_id: string;
   display_name?: string | null | undefined;
   email?: string | null | undefined;
@@ -108,10 +108,10 @@ export type PostV2ContactsRequestBody$Outbound = {
 };
 
 /** @internal */
-export const PostV2ContactsRequestBody$outboundSchema: z.ZodType<
-  PostV2ContactsRequestBody$Outbound,
+export const CreateContactRequestBody$outboundSchema: z.ZodType<
+  CreateContactRequestBody$Outbound,
   z.ZodTypeDef,
-  PostV2ContactsRequestBody
+  CreateContactRequestBody
 > = z.object({
   externalId: z.string(),
   displayName: z.nullable(z.string()).optional(),
@@ -131,18 +131,18 @@ export const PostV2ContactsRequestBody$outboundSchema: z.ZodType<
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2ContactsRequestBody$ {
-  /** @deprecated use `PostV2ContactsRequestBody$inboundSchema` instead. */
-  export const inboundSchema = PostV2ContactsRequestBody$inboundSchema;
-  /** @deprecated use `PostV2ContactsRequestBody$outboundSchema` instead. */
-  export const outboundSchema = PostV2ContactsRequestBody$outboundSchema;
-  /** @deprecated use `PostV2ContactsRequestBody$Outbound` instead. */
-  export type Outbound = PostV2ContactsRequestBody$Outbound;
+export namespace CreateContactRequestBody$ {
+  /** @deprecated use `CreateContactRequestBody$inboundSchema` instead. */
+  export const inboundSchema = CreateContactRequestBody$inboundSchema;
+  /** @deprecated use `CreateContactRequestBody$outboundSchema` instead. */
+  export const outboundSchema = CreateContactRequestBody$outboundSchema;
+  /** @deprecated use `CreateContactRequestBody$Outbound` instead. */
+  export type Outbound = CreateContactRequestBody$Outbound;
 }
 
 /** @internal */
-export const PostV2ContactsResponseBody$inboundSchema: z.ZodType<
-  PostV2ContactsResponseBody,
+export const CreateContactResponseBody$inboundSchema: z.ZodType<
+  CreateContactResponseBody,
   z.ZodTypeDef,
   unknown
 > = z.object({
@@ -167,7 +167,7 @@ export const PostV2ContactsResponseBody$inboundSchema: z.ZodType<
 });
 
 /** @internal */
-export type PostV2ContactsResponseBody$Outbound = {
+export type CreateContactResponseBody$Outbound = {
   id: string;
   external_id: string;
   display_name?: string | null | undefined;
@@ -180,10 +180,10 @@ export type PostV2ContactsResponseBody$Outbound = {
 };
 
 /** @internal */
-export const PostV2ContactsResponseBody$outboundSchema: z.ZodType<
-  PostV2ContactsResponseBody$Outbound,
+export const CreateContactResponseBody$outboundSchema: z.ZodType<
+  CreateContactResponseBody$Outbound,
   z.ZodTypeDef,
-  PostV2ContactsResponseBody
+  CreateContactResponseBody
 > = z.object({
   id: z.string(),
   externalId: z.string(),
@@ -207,11 +207,11 @@ export const PostV2ContactsResponseBody$outboundSchema: z.ZodType<
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PostV2ContactsResponseBody$ {
-  /** @deprecated use `PostV2ContactsResponseBody$inboundSchema` instead. */
-  export const inboundSchema = PostV2ContactsResponseBody$inboundSchema;
-  /** @deprecated use `PostV2ContactsResponseBody$outboundSchema` instead. */
-  export const outboundSchema = PostV2ContactsResponseBody$outboundSchema;
-  /** @deprecated use `PostV2ContactsResponseBody$Outbound` instead. */
-  export type Outbound = PostV2ContactsResponseBody$Outbound;
+export namespace CreateContactResponseBody$ {
+  /** @deprecated use `CreateContactResponseBody$inboundSchema` instead. */
+  export const inboundSchema = CreateContactResponseBody$inboundSchema;
+  /** @deprecated use `CreateContactResponseBody$outboundSchema` instead. */
+  export const outboundSchema = CreateContactResponseBody$outboundSchema;
+  /** @deprecated use `CreateContactResponseBody$Outbound` instead. */
+  export type Outbound = CreateContactResponseBody$Outbound;
 }

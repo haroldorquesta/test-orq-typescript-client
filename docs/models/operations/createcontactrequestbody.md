@@ -1,13 +1,13 @@
-# PostV2ContactsRequestBody
+# CreateContactRequestBody
 
 Update user information payload
 
 ## Example Usage
 
 ```typescript
-import { PostV2ContactsRequestBody } from "orq-poc-typescript/models/operations";
+import { CreateContactRequestBody } from "orq-poc-typescript/models/operations";
 
-let value: PostV2ContactsRequestBody = {
+let value: CreateContactRequestBody = {
   externalId: "<id>",
 };
 ```
