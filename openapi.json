@@ -37914,7 +37914,7 @@
         "tags": [
           "Feedback"
         ],
-        "x-speakeasy-max-method-params": 4,
+        "x-speakeasy-max-method-params": 6,
         "x-speakeasy-name-override": "create",
         "operationId": "CreateFeedback",
         "description": "Submit feedback for the LLM transaction via the API",
