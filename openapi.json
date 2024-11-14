@@ -16,6 +16,7 @@
   ],
   "openapi": "3.1.0",
   "x-speakeasy-timeout": 600000,
+  "x-speakeasy-max-method-params": 20,
   "externalDocs": {
     "url": "https://docs.orq.ai",
     "description": "orq.ai Documentation"

@@ -38,7 +38,7 @@ typescript:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  maxMethodParams: 4
+  maxMethodParams: 0
   methodArguments: require-security-and-request
   moduleFormat: commonjs
   outputModelSuffix: output
