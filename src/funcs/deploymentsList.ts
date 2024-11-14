@@ -35,7 +35,7 @@ export async function deploymentsList(
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.DeploymentListResponseBody,
+    operations.DeploymentsResponseBody,
     | errors.HonoApiError
     | SDKError
     | SDKValidationError
@@ -46,14 +46,14 @@ export async function deploymentsList(
     | ConnectionError
   >
 > {
-  const input: operations.DeploymentListRequest = {
+  const input: operations.DeploymentsRequest = {
     limit: limit,
     after: after,
   };
 
   const parsed = safeParse(
     input,
-    (value) => operations.DeploymentListRequest$outboundSchema.parse(value),
+    (value) => operations.DeploymentsRequest$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -78,7 +78,7 @@ export async function deploymentsList(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "DeploymentList",
+    operationID: "Deployments",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
@@ -120,7 +120,7 @@ export async function deploymentsList(
   };
 
   const [result] = await M.match<
-    operations.DeploymentListResponseBody,
+    operations.DeploymentsResponseBody,
     | errors.HonoApiError
     | SDKError
     | SDKValidationError
@@ -130,7 +130,7 @@ export async function deploymentsList(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.DeploymentListResponseBody$inboundSchema),
+    M.json(200, operations.DeploymentsResponseBody$inboundSchema),
     M.jsonErr(500, errors.HonoApiError$inboundSchema),
     M.fail(["4XX", "5XX"]),
   )(response, { extraFields: responseFields });

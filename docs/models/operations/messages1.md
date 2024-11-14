@@ -11,7 +11,7 @@ let value: Messages1 = {
     {
       type: "image_url",
       imageUrl: {
-        url: "https://nifty-eggplant.net/",
+        url: "https://trim-tusk.net",
       },
     },
   ],

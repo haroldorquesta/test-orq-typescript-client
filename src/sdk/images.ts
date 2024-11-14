@@ -9,9 +9,9 @@ import { unwrapAsync } from "../types/fp.js";
 
 export class Images extends ClientSDK {
   async generate(
-    request?: operations.ImageGenerationsRequestBody | undefined,
+    request?: operations.RouterImageGenerationsRequestBody | undefined,
     options?: RequestOptions,
-  ): Promise<operations.ImageGenerationsResponseBody> {
+  ): Promise<operations.RouterImageGenerationsResponseBody> {
     return unwrapAsync(routerImagesGenerate(
       this,
       request,

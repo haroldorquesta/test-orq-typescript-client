@@ -29,11 +29,11 @@ import { Result } from "../types/fp.js";
  */
 export async function routerCompletionsCreate(
   client: OrqCore,
-  request?: operations.CreateCompletionsRequestBody | undefined,
+  request?: operations.RouterCompletionsRequestBody | undefined,
   options?: RequestOptions,
 ): Promise<
   Result<
-    operations.CreateCompletionsResponseBody,
+    operations.RouterCompletionsResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -46,7 +46,7 @@ export async function routerCompletionsCreate(
   const parsed = safeParse(
     request,
     (value) =>
-      operations.CreateCompletionsRequestBody$outboundSchema.optional().parse(
+      operations.RouterCompletionsRequestBody$outboundSchema.optional().parse(
         value,
       ),
     "Input validation failed",
@@ -71,7 +71,7 @@ export async function routerCompletionsCreate(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "CreateCompletions",
+    operationID: "RouterCompletions",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
@@ -108,7 +108,7 @@ export async function routerCompletionsCreate(
   const response = doResult.value;
 
   const [result] = await M.match<
-    operations.CreateCompletionsResponseBody,
+    operations.RouterCompletionsResponseBody,
     | SDKError
     | SDKValidationError
     | UnexpectedClientError
@@ -117,7 +117,7 @@ export async function routerCompletionsCreate(
     | RequestTimeoutError
     | ConnectionError
   >(
-    M.json(200, operations.CreateCompletionsResponseBody$inboundSchema),
+    M.json(200, operations.RouterCompletionsResponseBody$inboundSchema),
     M.fail(["4XX", "5XX"]),
   )(response);
   if (!result.ok) {

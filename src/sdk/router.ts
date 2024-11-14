@@ -39,9 +39,9 @@ export class Router extends ClientSDK {
    * For sending requests to rerank models
    */
   async rerank(
-    request?: operations.RerankRequestBody | undefined,
+    request?: operations.RouterRerankRequestBody | undefined,
     options?: RequestOptions,
-  ): Promise<operations.RerankResponseBody> {
+  ): Promise<operations.RouterRerankResponseBody> {
     return unwrapAsync(routerRerank(
       this,
       request,

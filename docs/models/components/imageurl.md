@@ -6,7 +6,7 @@
 import { ImageUrl } from "orq-poc-typescript/models/components";
 
 let value: ImageUrl = {
-  url: "https://stylish-wallaby.org",
+  url: "https://late-waterspout.info/",
 };
 ```
 

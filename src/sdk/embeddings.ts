@@ -15,9 +15,9 @@ export class Embeddings extends ClientSDK {
    * Creates an embedding vector representing the input text.
    */
   async create(
-    request: operations.CreateEmbeddingsRequestBody,
+    request: operations.RouterEmbeddingRequestBody,
     options?: RequestOptions,
-  ): Promise<operations.CreateEmbeddingsResponseBody> {
+  ): Promise<operations.RouterEmbeddingResponseBody> {
     return unwrapAsync(routerEmbeddingsCreate(
       this,
       request,

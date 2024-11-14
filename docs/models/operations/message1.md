@@ -6,7 +6,7 @@
 import { Message1 } from "orq-poc-typescript/models/operations";
 
 let value: Message1 = {
-  role: "expected_output",
+  role: "exception",
   toolCalls: [
     {
       type: "function",

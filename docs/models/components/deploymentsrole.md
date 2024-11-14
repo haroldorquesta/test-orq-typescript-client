@@ -7,7 +7,7 @@ The role of the prompt message
 ```typescript
 import { DeploymentsRole } from "orq-poc-typescript/models/components";
 
-let value: DeploymentsRole = "prompt";
+let value: DeploymentsRole = "user";
 ```
 
 ## Values

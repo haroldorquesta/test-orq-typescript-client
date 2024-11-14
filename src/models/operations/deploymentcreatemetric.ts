@@ -55,11 +55,11 @@ export type DeploymentCreateMetricRole = ClosedEnum<
   typeof DeploymentCreateMetricRole
 >;
 
-export const DeploymentCreateMetric2DeploymentsType = {
+export const DeploymentCreateMetric2DeploymentsMetricsType = {
   ImageUrl: "image_url",
 } as const;
-export type DeploymentCreateMetric2DeploymentsType = ClosedEnum<
-  typeof DeploymentCreateMetric2DeploymentsType
+export type DeploymentCreateMetric2DeploymentsMetricsType = ClosedEnum<
+  typeof DeploymentCreateMetric2DeploymentsMetricsType
 >;
 
 export type DeploymentCreateMetric2ImageUrl = {
@@ -77,7 +77,7 @@ export type DeploymentCreateMetric2ImageUrl = {
  * The image part of the prompt message. Only supported with vision models.
  */
 export type DeploymentCreateMetric22 = {
-  type: DeploymentCreateMetric2DeploymentsType;
+  type: DeploymentCreateMetric2DeploymentsMetricsType;
   imageUrl: DeploymentCreateMetric2ImageUrl;
 };
 
@@ -144,7 +144,7 @@ export type DeploymentCreateMetricMessages = {
 /**
  * The role of the prompt message
  */
-export const DeploymentCreateMetricMessageDeploymentsRole = {
+export const DeploymentCreateMetricMessageDeploymentsMetricsRole = {
   System: "system",
   Assistant: "assistant",
   User: "user",
@@ -157,15 +157,15 @@ export const DeploymentCreateMetricMessageDeploymentsRole = {
 /**
  * The role of the prompt message
  */
-export type DeploymentCreateMetricMessageDeploymentsRole = ClosedEnum<
-  typeof DeploymentCreateMetricMessageDeploymentsRole
+export type DeploymentCreateMetricMessageDeploymentsMetricsRole = ClosedEnum<
+  typeof DeploymentCreateMetricMessageDeploymentsMetricsRole
 >;
 
 export type Three = {
   /**
    * The role of the prompt message
    */
-  role: DeploymentCreateMetricMessageDeploymentsRole;
+  role: DeploymentCreateMetricMessageDeploymentsMetricsRole;
   url: string;
 };
 
@@ -434,27 +434,26 @@ export namespace DeploymentCreateMetricRole$ {
 }
 
 /** @internal */
-export const DeploymentCreateMetric2DeploymentsType$inboundSchema:
-  z.ZodNativeEnum<typeof DeploymentCreateMetric2DeploymentsType> = z.nativeEnum(
-    DeploymentCreateMetric2DeploymentsType,
-  );
+export const DeploymentCreateMetric2DeploymentsMetricsType$inboundSchema:
+  z.ZodNativeEnum<typeof DeploymentCreateMetric2DeploymentsMetricsType> = z
+    .nativeEnum(DeploymentCreateMetric2DeploymentsMetricsType);
 
 /** @internal */
-export const DeploymentCreateMetric2DeploymentsType$outboundSchema:
-  z.ZodNativeEnum<typeof DeploymentCreateMetric2DeploymentsType> =
-    DeploymentCreateMetric2DeploymentsType$inboundSchema;
+export const DeploymentCreateMetric2DeploymentsMetricsType$outboundSchema:
+  z.ZodNativeEnum<typeof DeploymentCreateMetric2DeploymentsMetricsType> =
+    DeploymentCreateMetric2DeploymentsMetricsType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace DeploymentCreateMetric2DeploymentsType$ {
-  /** @deprecated use `DeploymentCreateMetric2DeploymentsType$inboundSchema` instead. */
+export namespace DeploymentCreateMetric2DeploymentsMetricsType$ {
+  /** @deprecated use `DeploymentCreateMetric2DeploymentsMetricsType$inboundSchema` instead. */
   export const inboundSchema =
-    DeploymentCreateMetric2DeploymentsType$inboundSchema;
-  /** @deprecated use `DeploymentCreateMetric2DeploymentsType$outboundSchema` instead. */
+    DeploymentCreateMetric2DeploymentsMetricsType$inboundSchema;
+  /** @deprecated use `DeploymentCreateMetric2DeploymentsMetricsType$outboundSchema` instead. */
   export const outboundSchema =
-    DeploymentCreateMetric2DeploymentsType$outboundSchema;
+    DeploymentCreateMetric2DeploymentsMetricsType$outboundSchema;
 }
 
 /** @internal */
@@ -502,7 +501,7 @@ export const DeploymentCreateMetric22$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  type: DeploymentCreateMetric2DeploymentsType$inboundSchema,
+  type: DeploymentCreateMetric2DeploymentsMetricsType$inboundSchema,
   image_url: z.lazy(() => DeploymentCreateMetric2ImageUrl$inboundSchema),
 }).transform((v) => {
   return remap$(v, {
@@ -522,7 +521,7 @@ export const DeploymentCreateMetric22$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   DeploymentCreateMetric22
 > = z.object({
-  type: DeploymentCreateMetric2DeploymentsType$outboundSchema,
+  type: DeploymentCreateMetric2DeploymentsMetricsType$outboundSchema,
   imageUrl: z.lazy(() => DeploymentCreateMetric2ImageUrl$outboundSchema),
 }).transform((v) => {
   return remap$(v, {
@@ -863,32 +862,32 @@ export namespace DeploymentCreateMetricMessages$ {
 }
 
 /** @internal */
-export const DeploymentCreateMetricMessageDeploymentsRole$inboundSchema:
-  z.ZodNativeEnum<typeof DeploymentCreateMetricMessageDeploymentsRole> = z
-    .nativeEnum(DeploymentCreateMetricMessageDeploymentsRole);
+export const DeploymentCreateMetricMessageDeploymentsMetricsRole$inboundSchema:
+  z.ZodNativeEnum<typeof DeploymentCreateMetricMessageDeploymentsMetricsRole> =
+    z.nativeEnum(DeploymentCreateMetricMessageDeploymentsMetricsRole);
 
 /** @internal */
-export const DeploymentCreateMetricMessageDeploymentsRole$outboundSchema:
-  z.ZodNativeEnum<typeof DeploymentCreateMetricMessageDeploymentsRole> =
-    DeploymentCreateMetricMessageDeploymentsRole$inboundSchema;
+export const DeploymentCreateMetricMessageDeploymentsMetricsRole$outboundSchema:
+  z.ZodNativeEnum<typeof DeploymentCreateMetricMessageDeploymentsMetricsRole> =
+    DeploymentCreateMetricMessageDeploymentsMetricsRole$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace DeploymentCreateMetricMessageDeploymentsRole$ {
-  /** @deprecated use `DeploymentCreateMetricMessageDeploymentsRole$inboundSchema` instead. */
+export namespace DeploymentCreateMetricMessageDeploymentsMetricsRole$ {
+  /** @deprecated use `DeploymentCreateMetricMessageDeploymentsMetricsRole$inboundSchema` instead. */
   export const inboundSchema =
-    DeploymentCreateMetricMessageDeploymentsRole$inboundSchema;
-  /** @deprecated use `DeploymentCreateMetricMessageDeploymentsRole$outboundSchema` instead. */
+    DeploymentCreateMetricMessageDeploymentsMetricsRole$inboundSchema;
+  /** @deprecated use `DeploymentCreateMetricMessageDeploymentsMetricsRole$outboundSchema` instead. */
   export const outboundSchema =
-    DeploymentCreateMetricMessageDeploymentsRole$outboundSchema;
+    DeploymentCreateMetricMessageDeploymentsMetricsRole$outboundSchema;
 }
 
 /** @internal */
 export const Three$inboundSchema: z.ZodType<Three, z.ZodTypeDef, unknown> = z
   .object({
-    role: DeploymentCreateMetricMessageDeploymentsRole$inboundSchema,
+    role: DeploymentCreateMetricMessageDeploymentsMetricsRole$inboundSchema,
     url: z.string(),
   });
 
@@ -904,7 +903,7 @@ export const Three$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   Three
 > = z.object({
-  role: DeploymentCreateMetricMessageDeploymentsRole$outboundSchema,
+  role: DeploymentCreateMetricMessageDeploymentsMetricsRole$outboundSchema,
   url: z.string(),
 });
 
