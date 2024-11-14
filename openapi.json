@@ -38020,7 +38020,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "getConfig",
-        "operationId": "GetConfig",
+        "operationId": "DeploymentGetConfig",
         "description": "Retrieve the deployment configuration",
         "summary": "Get config",
         "requestBody": {
@@ -38817,7 +38817,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "invoke",
-        "operationId": "Invoke",
+        "operationId": "DeploymentInvoke",
         "description": "Invoke a deployment with a given payload",
         "summary": "Invoke",
         "requestBody": {
@@ -39423,7 +39423,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "addMetrics",
-        "operationId": "CreateMetric",
+        "operationId": "DeploymentCreateMetric",
         "description": "Add metrics to a deployment",
         "summary": "Add metrics",
         "parameters": [
@@ -39851,7 +39851,7 @@
         ],
         "x-speakeasy-group": "deployments",
         "x-speakeasy-name-override": "list",
-        "operationId": "ListDeployments",
+        "operationId": "DeploymentList",
         "description": "Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.",
         "summary": "List all deployments",
         "parameters": [
@@ -40389,7 +40389,7 @@
         ],
         "x-speakeasy-group": "files",
         "x-speakeasy-name-override": "upload",
-        "operationId": "UploadFile",
+        "operationId": "FileUpload",
         "summary": "Upload file",
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "requestBody": {
@@ -40478,7 +40478,7 @@
         ],
         "x-speakeasy-group": "files",
         "x-speakeasy-name-override": "bulkUpload",
-        "operationId": "BulkUploadFile",
+        "operationId": "FileBulkUpload",
         "summary": "Bulk upload file",
         "description": "Files are used to upload documents that can be used with features like [Deployments](https://docs.orq.ai/reference/post_v2-deployments-get-config).",
         "requestBody": {
@@ -42576,7 +42576,7 @@
         ],
         "x-speakeasy-name-override": "getConfig",
         "x-speakeasy-group": "remoteconfig",
-        "operationId": "GetConfig",
+        "operationId": "RemoteConfigsGetConfig",
         "requestBody": {
           "content": {
             "application/json": {
