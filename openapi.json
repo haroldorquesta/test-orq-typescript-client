@@ -37756,6 +37756,7 @@
         "tags": [
           "Contacts"
         ],
+        "x-speakeasy-max-method-params": 7,
         "x-speakeasy-name-override": "create",
         "operationId": "CreateContact",
         "description": "Update or add user information to workspace",
@@ -37913,6 +37914,7 @@
         "tags": [
           "Feedback"
         ],
+        "x-speakeasy-max-method-params": 4,
         "x-speakeasy-name-override": "create",
         "operationId": "CreateFeedback",
         "description": "Submit feedback for the LLM transaction via the API",
