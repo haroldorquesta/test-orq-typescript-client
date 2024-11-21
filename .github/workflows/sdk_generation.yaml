@@ -10,7 +10,7 @@ permissions:
       force:
         description: Force generation of SDKs
         type: boolean
-        default: false
+        default: true
       set_version:
         description: optionally set a specific SDK version
         type: string
@@ -30,12 +30,12 @@ jobs:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
-  publish:
-    needs: generate
-    uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15
-    with:
-      target: orq
-    secrets:
-      github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      npm_token: ${{ secrets.NPM_TOKEN }}
-      speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
+  # publish:
+  #   needs: generate
+  #   uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15
+  #   with:
+  #     target: orq
+  #   secrets:
+  #     github_access_token: ${{ secrets.GITHUB_TOKEN }}
+  #     npm_token: ${{ secrets.NPM_TOKEN }}
+  #     speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
