@@ -7,7 +7,7 @@ security:
 servers:
   - url: "https://my.dev.orq.ai"
 openapi: "3.1.0"
-x-speakeasy-timeout: 600000
+x-speakeasy-timeout: 610000
 externalDocs:
   url: "https://docs.orq.ai"
   description: "orq.ai Documentation"
