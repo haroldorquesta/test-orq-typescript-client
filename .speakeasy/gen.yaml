@@ -16,7 +16,7 @@ generation:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: false
 typescript:
-  version: 1.30.5
+  version: 1.30.5-rc.0
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -42,7 +42,7 @@ typescript:
   methodArguments: require-security-and-request
   moduleFormat: commonjs
   outputModelSuffix: output
-  packageName: orq-poc-typescript
+  packageName: orq-poc-typescript2
   responseFormat: flat
   templateVersion: v2
   useIndexModules: true

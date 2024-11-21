@@ -25,23 +25,13 @@ jobs:
         id: target
         run: |
           SDK_TARGET_VERSION=$(yq '.typescript.version' .speakeasy/gen.yaml)
-          if [[ $SDK_TARGET_VERSION == *alpha* ]]; then
+          if [[ $SDK_TARGET_VERSION == *rc* ]]; then
              echo "target=orq-prerelease" >> "$GITHUB_OUTPUT"
           else
             echo "target=orq" >> "$GITHUB_OUTPUT"
           fi
   generate:
     needs: get_target
-    uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15
-    with:
-      mode: direct
-      target: ${{ needs.get_target.outputs.target }}
-    secrets:
-      github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      npm_token: ${{ secrets.NPM_TOKEN }}
-      speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
-  publish:
-    needs: [get_target, generate]
     uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15
     with:
       mode: direct
