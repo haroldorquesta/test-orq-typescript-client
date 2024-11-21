@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterCompletionsChoices } from "orq-poc-typescript/models/operations";
+import { RouterCompletionsChoices } from "orq-poc-typescript2/models/operations";
 
 let value: RouterCompletionsChoices = {
   finishReason: "stop",

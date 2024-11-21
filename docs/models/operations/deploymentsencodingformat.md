@@ -5,7 +5,7 @@ The format to return the embeddings
 ## Example Usage
 
 ```typescript
-import { DeploymentsEncodingFormat } from "orq-poc-typescript/models/operations";
+import { DeploymentsEncodingFormat } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentsEncodingFormat = "base64";
 ```

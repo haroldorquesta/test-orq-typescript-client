@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBodyRole } from "orq-poc-typescript/models/operations";
+import { ResponseBodyRole } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseBodyRole = "tool";
 ```

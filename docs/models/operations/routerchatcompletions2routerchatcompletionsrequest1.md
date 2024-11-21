@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterChatCompletions2RouterChatCompletionsRequest1 } from "orq-poc-typescript/models/operations";
+import { RouterChatCompletions2RouterChatCompletionsRequest1 } from "orq-poc-typescript2/models/operations";
 
 let value: RouterChatCompletions2RouterChatCompletionsRequest1 = {
   type: "text",

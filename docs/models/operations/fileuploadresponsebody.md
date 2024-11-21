@@ -5,7 +5,7 @@ File uploaded successfully
 ## Example Usage
 
 ```typescript
-import { FileUploadResponseBody } from "orq-poc-typescript/models/operations";
+import { FileUploadResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: FileUploadResponseBody = {
   id: "<id>",

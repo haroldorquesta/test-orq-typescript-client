@@ -5,7 +5,7 @@ Usage statistics for the completion request.
 ## Example Usage
 
 ```typescript
-import { RouterChatCompletionsResponseBodyUsage } from "orq-poc-typescript/models/operations";
+import { RouterChatCompletionsResponseBodyUsage } from "orq-poc-typescript2/models/operations";
 
 let value: RouterChatCompletionsResponseBodyUsage = {};
 ```

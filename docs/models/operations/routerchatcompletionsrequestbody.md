@@ -5,7 +5,7 @@ Creates a model response for the given chat conversation.
 ## Example Usage
 
 ```typescript
-import { RouterChatCompletionsRequestBody } from "orq-poc-typescript/models/operations";
+import { RouterChatCompletionsRequestBody } from "orq-poc-typescript2/models/operations";
 
 let value: RouterChatCompletionsRequestBody = {
   model: "Expedition",

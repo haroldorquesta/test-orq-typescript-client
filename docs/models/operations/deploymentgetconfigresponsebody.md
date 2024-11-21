@@ -5,7 +5,7 @@ The deployment configuration
 ## Example Usage
 
 ```typescript
-import { DeploymentGetConfigResponseBody } from "orq-poc-typescript/models/operations";
+import { DeploymentGetConfigResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentGetConfigResponseBody = {
   id: "<id>",

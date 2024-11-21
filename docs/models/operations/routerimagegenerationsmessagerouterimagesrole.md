@@ -5,7 +5,7 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { RouterImageGenerationsMessageRouterImagesRole } from "orq-poc-typescript/models/operations";
+import { RouterImageGenerationsMessageRouterImagesRole } from "orq-poc-typescript2/models/operations";
 
 let value: RouterImageGenerationsMessageRouterImagesRole = "exception";
 ```

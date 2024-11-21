@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterEmbeddingRequestBody } from "orq-poc-typescript/models/operations";
+import { RouterEmbeddingRequestBody } from "orq-poc-typescript2/models/operations";
 
 let value: RouterEmbeddingRequestBody = {
   input: "<value>",

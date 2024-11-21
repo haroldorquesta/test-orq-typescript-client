@@ -5,7 +5,7 @@ Text content part of a prompt message
 ## Example Usage
 
 ```typescript
-import { DeploymentGetConfig21 } from "orq-poc-typescript/models/operations";
+import { DeploymentGetConfig21 } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentGetConfig21 = {
   type: "text",

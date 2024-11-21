@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiVersion } from "orq-poc-typescript/models/operations";
+import { ApiVersion } from "orq-poc-typescript2/models/operations";
 
 let value: ApiVersion = {
   version: "<value>",

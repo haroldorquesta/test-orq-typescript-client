@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResponseFormatJsonSchema } from "orq-poc-typescript/models/operations";
+import { ResponseFormatJsonSchema } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseFormatJsonSchema = {
   name: "<value>",

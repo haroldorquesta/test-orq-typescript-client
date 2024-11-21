@@ -5,7 +5,7 @@ Feedback submission payload
 ## Example Usage
 
 ```typescript
-import { CreateFeedbackRequestBody } from "orq-poc-typescript/models/operations";
+import { CreateFeedbackRequestBody } from "orq-poc-typescript2/models/operations";
 
 let value: CreateFeedbackRequestBody = {
   property: "<value>",

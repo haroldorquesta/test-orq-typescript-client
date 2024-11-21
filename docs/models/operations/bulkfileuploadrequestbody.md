@@ -4,7 +4,7 @@
 
 ```typescript
 import { openAsBlob } from "node:fs";
-import { BulkFileUploadRequestBody } from "orq-poc-typescript/models/operations";
+import { BulkFileUploadRequestBody } from "orq-poc-typescript2/models/operations";
 
 let value: BulkFileUploadRequestBody = {
   files: [

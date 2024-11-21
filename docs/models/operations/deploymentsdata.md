@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentsData } from "orq-poc-typescript/models/operations";
+import { DeploymentsData } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentsData = {
   id: "28030c35-eb02-4993-9e98-9b4632fb7340",

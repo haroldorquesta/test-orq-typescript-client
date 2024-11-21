@@ -5,7 +5,7 @@ Usage statistics to add to the deployment
 ## Example Usage
 
 ```typescript
-import { Usage } from "orq-poc-typescript/models/operations";
+import { Usage } from "orq-poc-typescript2/models/operations";
 
 let value: Usage = {
   promptTokens: 9088.44,

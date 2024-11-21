@@ -5,7 +5,7 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { Role } from "orq-poc-typescript/models/operations";
+import { Role } from "orq-poc-typescript2/models/operations";
 
 let value: Role = "tool";
 ```

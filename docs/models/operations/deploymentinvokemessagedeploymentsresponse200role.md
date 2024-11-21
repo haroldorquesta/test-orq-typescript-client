@@ -5,7 +5,7 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { DeploymentInvokeMessageDeploymentsResponse200Role } from "orq-poc-typescript/models/operations";
+import { DeploymentInvokeMessageDeploymentsResponse200Role } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentInvokeMessageDeploymentsResponse200Role = "user";
 ```

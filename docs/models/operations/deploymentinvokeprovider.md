@@ -5,7 +5,7 @@ The provider used to generate the response
 ## Example Usage
 
 ```typescript
-import { DeploymentInvokeProvider } from "orq-poc-typescript/models/operations";
+import { DeploymentInvokeProvider } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentInvokeProvider = "azure";
 ```

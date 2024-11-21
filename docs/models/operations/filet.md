@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FileT } from "orq-poc-typescript/models/operations";
+import { FileT } from "orq-poc-typescript2/models/operations";
 
 // No examples available for this model
 ```

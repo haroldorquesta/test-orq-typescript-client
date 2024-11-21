@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Choices } from "orq-poc-typescript/models/operations";
+import { Choices } from "orq-poc-typescript2/models/operations";
 
 let value: Choices = {
   index: 4903.05,

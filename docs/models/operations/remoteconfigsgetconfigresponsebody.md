@@ -5,7 +5,7 @@ An individual remote config
 ## Example Usage
 
 ```typescript
-import { RemoteConfigsGetConfigResponseBody } from "orq-poc-typescript/models/operations";
+import { RemoteConfigsGetConfigResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: RemoteConfigsGetConfigResponseBody = {
   type: "integer",

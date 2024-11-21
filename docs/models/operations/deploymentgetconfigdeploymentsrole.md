@@ -5,7 +5,7 @@ The role of the prompt message
 ## Example Usage
 
 ```typescript
-import { DeploymentGetConfigDeploymentsRole } from "orq-poc-typescript/models/operations";
+import { DeploymentGetConfigDeploymentsRole } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentGetConfigDeploymentsRole = "assistant";
 ```

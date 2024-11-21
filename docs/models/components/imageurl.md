@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ImageUrl } from "orq-poc-typescript/models/components";
+import { ImageUrl } from "orq-poc-typescript2/models/components";
 
 let value: ImageUrl = {
   url: "https://cheap-noon.net",

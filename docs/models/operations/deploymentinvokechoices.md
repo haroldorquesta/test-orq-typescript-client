@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentInvokeChoices } from "orq-poc-typescript/models/operations";
+import { DeploymentInvokeChoices } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentInvokeChoices = {
   index: 3965.06,

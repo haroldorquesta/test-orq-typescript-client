@@ -5,7 +5,7 @@ The deployment request payload
 ## Example Usage
 
 ```typescript
-import { DeploymentCreateMetricRequestBody } from "orq-poc-typescript/models/operations";
+import { DeploymentCreateMetricRequestBody } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentCreateMetricRequestBody = {};
 ```

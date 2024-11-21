@@ -19,9 +19,9 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { contactsCreate3 } from "orq-poc-typescript/funcs/contactsCreate3.js";
-import { SDKValidationError } from "orq-poc-typescript/models/errors/sdkvalidationerror.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { contactsCreate3 } from "orq-poc-typescript2/funcs/contactsCreate3.js";
+import { SDKValidationError } from "orq-poc-typescript2/models/errors/sdkvalidationerror.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

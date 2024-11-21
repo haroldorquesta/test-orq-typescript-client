@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBodyChoices } from "orq-poc-typescript/models/operations";
+import { ResponseBodyChoices } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseBodyChoices = {
   finishReason: "length",

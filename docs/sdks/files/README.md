@@ -15,7 +15,7 @@ Files are used to upload documents that can be used with features like [Deployme
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",
@@ -36,8 +36,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { filesUpload } from "orq-poc-typescript/funcs/filesUpload.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { filesUpload } from "orq-poc-typescript2/funcs/filesUpload.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -88,7 +88,7 @@ Files are used to upload documents that can be used with features like [Deployme
 
 ```typescript
 import { openAsBlob } from "node:fs";
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",
@@ -118,8 +118,8 @@ The standalone function version of this method:
 
 ```typescript
 import { openAsBlob } from "node:fs";
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { filesBulkUpload } from "orq-poc-typescript/funcs/filesBulkUpload.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { filesBulkUpload } from "orq-poc-typescript2/funcs/filesBulkUpload.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

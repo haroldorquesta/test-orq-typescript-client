@@ -5,7 +5,7 @@ A request body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { RouterCompletionsRequestBody } from "orq-poc-typescript/models/operations";
+import { RouterCompletionsRequestBody } from "orq-poc-typescript2/models/operations";
 
 let value: RouterCompletionsRequestBody = {
   model: "Model 3",

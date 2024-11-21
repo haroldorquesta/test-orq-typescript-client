@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentCreateMetric2Type } from "orq-poc-typescript/models/operations";
+import { DeploymentCreateMetric2Type } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentCreateMetric2Type = "text";
 ```

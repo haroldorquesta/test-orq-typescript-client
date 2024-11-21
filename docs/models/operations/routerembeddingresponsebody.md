@@ -5,7 +5,7 @@ Embeddings created
 ## Example Usage
 
 ```typescript
-import { RouterEmbeddingResponseBody } from "orq-poc-typescript/models/operations";
+import { RouterEmbeddingResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: RouterEmbeddingResponseBody = {
   object: "list",

@@ -5,7 +5,7 @@ The function that the model called.
 ## Example Usage
 
 ```typescript
-import { RouterChatCompletionsResponseBodyFunction } from "orq-poc-typescript/models/operations";
+import { RouterChatCompletionsResponseBodyFunction } from "orq-poc-typescript2/models/operations";
 
 let value: RouterChatCompletionsResponseBodyFunction = {
   name: "<value>",

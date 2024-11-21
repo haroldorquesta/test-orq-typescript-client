@@ -5,7 +5,7 @@ List of deployments
 ## Example Usage
 
 ```typescript
-import { DeploymentsResponseBody } from "orq-poc-typescript/models/operations";
+import { DeploymentsResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentsResponseBody = {
   object: "list",

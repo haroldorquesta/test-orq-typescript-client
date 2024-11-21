@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentInvokeMessageDeploymentsToolCalls } from "orq-poc-typescript/models/operations";
+import { DeploymentInvokeMessageDeploymentsToolCalls } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentInvokeMessageDeploymentsToolCalls = {
   type: "function",

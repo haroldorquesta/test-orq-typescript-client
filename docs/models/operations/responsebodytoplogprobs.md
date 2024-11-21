@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBodyTopLogprobs } from "orq-poc-typescript/models/operations";
+import { ResponseBodyTopLogprobs } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseBodyTopLogprobs = {
   token: "<value>",

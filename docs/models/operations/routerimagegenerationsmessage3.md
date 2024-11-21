@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterImageGenerationsMessage3 } from "orq-poc-typescript/models/operations";
+import { RouterImageGenerationsMessage3 } from "orq-poc-typescript2/models/operations";
 
 let value: RouterImageGenerationsMessage3 = {
   role: "expected_output",

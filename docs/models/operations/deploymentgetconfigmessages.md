@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentGetConfigMessages } from "orq-poc-typescript/models/operations";
+import { DeploymentGetConfigMessages } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentGetConfigMessages = {
   role: "assistant",

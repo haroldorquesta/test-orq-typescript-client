@@ -5,7 +5,7 @@ Successful operation
 ## Example Usage
 
 ```typescript
-import { CreateContactResponseBody } from "orq-poc-typescript/models/operations";
+import { CreateContactResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: CreateContactResponseBody = {
   id: "<id>",

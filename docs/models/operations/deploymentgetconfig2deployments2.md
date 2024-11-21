@@ -5,7 +5,7 @@ The image part of the prompt message. Only supported with vision models.
 ## Example Usage
 
 ```typescript
-import { DeploymentGetConfig2Deployments2 } from "orq-poc-typescript/models/operations";
+import { DeploymentGetConfig2Deployments2 } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentGetConfig2Deployments2 = {
   type: "image_url",

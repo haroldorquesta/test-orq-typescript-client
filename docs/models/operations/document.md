@@ -5,7 +5,7 @@ If return_documents is set as false this will return none, if true it will retur
 ## Example Usage
 
 ```typescript
-import { Document } from "orq-poc-typescript/models/operations";
+import { Document } from "orq-poc-typescript2/models/operations";
 
 let value: Document = {
   text: "<value>",

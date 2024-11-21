@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterImageGenerationsChoices } from "orq-poc-typescript/models/operations";
+import { RouterImageGenerationsChoices } from "orq-poc-typescript2/models/operations";
 
 let value: RouterImageGenerationsChoices = {
   index: 6534.21,

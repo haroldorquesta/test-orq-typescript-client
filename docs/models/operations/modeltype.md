@@ -5,7 +5,7 @@ The type of the model
 ## Example Usage
 
 ```typescript
-import { ModelType } from "orq-poc-typescript/models/operations";
+import { ModelType } from "orq-poc-typescript2/models/operations";
 
 let value: ModelType = "completion";
 ```

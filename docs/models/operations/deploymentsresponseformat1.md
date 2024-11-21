@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentsResponseFormat1 } from "orq-poc-typescript/models/operations";
+import { DeploymentsResponseFormat1 } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentsResponseFormat1 = {
   type: "json_schema",

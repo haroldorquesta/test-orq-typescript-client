@@ -5,7 +5,7 @@ The provider used to generate the response
 ## Example Usage
 
 ```typescript
-import { Provider } from "orq-poc-typescript/models/operations";
+import { Provider } from "orq-poc-typescript2/models/operations";
 
 let value: Provider = "cohere";
 ```

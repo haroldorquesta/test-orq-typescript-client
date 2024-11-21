@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Performance } from "orq-poc-typescript/models/operations";
+import { Performance } from "orq-poc-typescript2/models/operations";
 
 let value: Performance = {
   latency: 1594.14,

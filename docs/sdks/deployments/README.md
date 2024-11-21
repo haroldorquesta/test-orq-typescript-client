@@ -17,7 +17,7 @@ Retrieve the deployment configuration
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",
@@ -40,8 +40,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { deploymentsGetConfig } from "orq-poc-typescript/funcs/deploymentsGetConfig.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { deploymentsGetConfig } from "orq-poc-typescript2/funcs/deploymentsGetConfig.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -93,7 +93,7 @@ Invoke a deployment with a given payload
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",
@@ -118,8 +118,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { deploymentsInvoke } from "orq-poc-typescript/funcs/deploymentsInvoke.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { deploymentsInvoke } from "orq-poc-typescript2/funcs/deploymentsInvoke.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -173,7 +173,7 @@ Returns a list of your deployments. The deployments are returned sorted by creat
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",
@@ -194,8 +194,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { deploymentsAll } from "orq-poc-typescript/funcs/deploymentsAll.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { deploymentsAll } from "orq-poc-typescript2/funcs/deploymentsAll.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -247,7 +247,7 @@ Explicitly invalidate a cache of a deployment
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",
@@ -267,8 +267,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { deploymentsDeleteV2DeploymentsInvalidateDeploymentId } from "orq-poc-typescript/funcs/deploymentsDeleteV2DeploymentsInvalidateDeploymentId.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { deploymentsDeleteV2DeploymentsInvalidateDeploymentId } from "orq-poc-typescript2/funcs/deploymentsDeleteV2DeploymentsInvalidateDeploymentId.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterEmbeddingData } from "orq-poc-typescript/models/operations";
+import { RouterEmbeddingData } from "orq-poc-typescript2/models/operations";
 
 let value: RouterEmbeddingData = {
   object: "embedding",

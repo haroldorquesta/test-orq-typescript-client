@@ -5,7 +5,7 @@ Log probability information for the choice.
 ## Example Usage
 
 ```typescript
-import { Logprobs } from "orq-poc-typescript/models/operations";
+import { Logprobs } from "orq-poc-typescript2/models/operations";
 
 let value: Logprobs = {
   content: [

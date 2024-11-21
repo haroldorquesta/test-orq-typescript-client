@@ -5,8 +5,8 @@ management:
   docVersion: "2.0"
   speakeasyVersion: 1.441.1
   generationVersion: 2.461.2
-  releaseVersion: 1.30.5
-  configChecksum: 6890a42e38c755ba97d104fe0eed8ba4
+  releaseVersion: 1.30.5-rc.0
+  configChecksum: 1c7c7bbfe7d06e7d37c67b261623d943
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
