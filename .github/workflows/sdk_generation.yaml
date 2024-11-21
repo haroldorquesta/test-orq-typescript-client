@@ -25,6 +25,8 @@ jobs:
         id: target
         shell: bash
         run: |
+          yq --version
+          yq '.typescript.version' .speakeasy/gen.yaml
           SDK_TARGET_VERSION=$(yq '.typescript.version' .speakeasy/gen.yaml)
           echo "$SDK_TARGET_VERSION" | grep -q "-rc"
           if [[ $? -eq 0 ]] ; then
