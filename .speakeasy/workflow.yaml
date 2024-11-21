@@ -1,21 +1,24 @@
 workflowVersion: 1.0.0
 speakeasyVersion: latest
 sources:
-    orq-OAS:
+    orq-prerelease:
         inputs:
-            - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi.json
-        overlays:
-            - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi-overlay.yaml
-        registry:
-            location: registry.speakeasyapi.dev/orq/orq/orq-oas
-targets:
+            - location: ../openapi-prerelease.yaml
     orq:
+        inputs:
+            - location: ../openapi.yaml
+targets:
+    orq-prerelease:
         target: typescript
-        source: orq-OAS
-        publish:
-            npm:
-                token: $npm_token
+        source: orq-prerelease
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/orq/orq/orq-oas-code-samples
+                location: registry.speakeasyapi.dev/orq/orq/orq-prerelease-code-samples
+            blocking: false
+    orq:
+        target: typescript
+        source: orq
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/orq/orq/orq-code-samples
             blocking: false
