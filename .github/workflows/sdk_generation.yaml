@@ -15,6 +15,9 @@ permissions:
       set_version:
         description: optionally set a specific SDK version
         type: string
+  push:
+    branches:
+      - main
 jobs:
   get_target:
     runs-on: ubuntu-latest
