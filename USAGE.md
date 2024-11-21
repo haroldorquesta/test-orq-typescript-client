@@ -7,7 +7,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.create2({
+  const result = await orq.contacts.create3({
     externalId: "<id>",
   });
 
