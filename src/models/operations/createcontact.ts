@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * Update user information payload
@@ -140,6 +143,24 @@ export namespace CreateContactRequestBody$ {
   export type Outbound = CreateContactRequestBody$Outbound;
 }
 
+export function createContactRequestBodyToJSON(
+  createContactRequestBody: CreateContactRequestBody,
+): string {
+  return JSON.stringify(
+    CreateContactRequestBody$outboundSchema.parse(createContactRequestBody),
+  );
+}
+
+export function createContactRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateContactRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateContactRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateContactRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateContactResponseBody$inboundSchema: z.ZodType<
   CreateContactResponseBody,
@@ -214,4 +235,22 @@ export namespace CreateContactResponseBody$ {
   export const outboundSchema = CreateContactResponseBody$outboundSchema;
   /** @deprecated use `CreateContactResponseBody$Outbound` instead. */
   export type Outbound = CreateContactResponseBody$Outbound;
+}
+
+export function createContactResponseBodyToJSON(
+  createContactResponseBody: CreateContactResponseBody,
+): string {
+  return JSON.stringify(
+    CreateContactResponseBody$outboundSchema.parse(createContactResponseBody),
+  );
+}
+
+export function createContactResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateContactResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateContactResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateContactResponseBody' from JSON`,
+  );
 }

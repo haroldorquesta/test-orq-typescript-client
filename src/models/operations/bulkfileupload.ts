@@ -4,7 +4,10 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Files = {
   fileName: string;
@@ -107,6 +110,20 @@ export namespace Files$ {
   export type Outbound = Files$Outbound;
 }
 
+export function filesToJSON(files: Files): string {
+  return JSON.stringify(Files$outboundSchema.parse(files));
+}
+
+export function filesFromJSON(
+  jsonString: string,
+): SafeParseResult<Files, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Files$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Files' from JSON`,
+  );
+}
+
 /** @internal */
 export const BulkFileUploadPurpose$inboundSchema: z.ZodNativeEnum<
   typeof BulkFileUploadPurpose
@@ -165,6 +182,24 @@ export namespace BulkFileUploadRequestBody$ {
   export const outboundSchema = BulkFileUploadRequestBody$outboundSchema;
   /** @deprecated use `BulkFileUploadRequestBody$Outbound` instead. */
   export type Outbound = BulkFileUploadRequestBody$Outbound;
+}
+
+export function bulkFileUploadRequestBodyToJSON(
+  bulkFileUploadRequestBody: BulkFileUploadRequestBody,
+): string {
+  return JSON.stringify(
+    BulkFileUploadRequestBody$outboundSchema.parse(bulkFileUploadRequestBody),
+  );
+}
+
+export function bulkFileUploadRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<BulkFileUploadRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BulkFileUploadRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BulkFileUploadRequestBody' from JSON`,
+  );
 }
 
 /** @internal */
@@ -252,4 +287,18 @@ export namespace ResponseBody$ {
   export const outboundSchema = ResponseBody$outboundSchema;
   /** @deprecated use `ResponseBody$Outbound` instead. */
   export type Outbound = ResponseBody$Outbound;
+}
+
+export function responseBodyToJSON(responseBody: ResponseBody): string {
+  return JSON.stringify(ResponseBody$outboundSchema.parse(responseBody));
+}
+
+export function responseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBody' from JSON`,
+  );
 }

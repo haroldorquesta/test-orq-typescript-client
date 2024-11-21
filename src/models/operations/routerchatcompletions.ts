@@ -5,7 +5,10 @@
 import * as z from "zod";
 import { EventStream } from "../../lib/event-streams.js";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * The role of the messages author, in this case **tool**.
@@ -1068,6 +1071,31 @@ export namespace RouterChatCompletions2RouterChatCompletionsRequestImageUrl$ {
     RouterChatCompletions2RouterChatCompletionsRequestImageUrl$Outbound;
 }
 
+export function routerChatCompletions2RouterChatCompletionsRequestImageUrlToJSON(
+  routerChatCompletions2RouterChatCompletionsRequestImageUrl:
+    RouterChatCompletions2RouterChatCompletionsRequestImageUrl,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions2RouterChatCompletionsRequestImageUrl$outboundSchema
+      .parse(routerChatCompletions2RouterChatCompletionsRequestImageUrl),
+  );
+}
+
+export function routerChatCompletions2RouterChatCompletionsRequestImageUrlFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletions2RouterChatCompletionsRequestImageUrl,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletions2RouterChatCompletionsRequestImageUrl$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletions2RouterChatCompletionsRequestImageUrl' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema:
   z.ZodType<
@@ -1125,6 +1153,33 @@ export namespace RouterChatCompletions2RouterChatCompletionsRequest2$ {
   /** @deprecated use `RouterChatCompletions2RouterChatCompletionsRequest2$Outbound` instead. */
   export type Outbound =
     RouterChatCompletions2RouterChatCompletionsRequest2$Outbound;
+}
+
+export function routerChatCompletions2RouterChatCompletionsRequest2ToJSON(
+  routerChatCompletions2RouterChatCompletionsRequest2:
+    RouterChatCompletions2RouterChatCompletionsRequest2,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions2RouterChatCompletionsRequest2$outboundSchema.parse(
+      routerChatCompletions2RouterChatCompletionsRequest2,
+    ),
+  );
+}
+
+export function routerChatCompletions2RouterChatCompletionsRequest2FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletions2RouterChatCompletionsRequest2,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletions2RouterChatCompletionsRequest2$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletions2RouterChatCompletionsRequest2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1201,6 +1256,33 @@ export namespace RouterChatCompletions2RouterChatCompletionsRequest1$ {
     RouterChatCompletions2RouterChatCompletionsRequest1$Outbound;
 }
 
+export function routerChatCompletions2RouterChatCompletionsRequest1ToJSON(
+  routerChatCompletions2RouterChatCompletionsRequest1:
+    RouterChatCompletions2RouterChatCompletionsRequest1,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions2RouterChatCompletionsRequest1$outboundSchema.parse(
+      routerChatCompletions2RouterChatCompletionsRequest1,
+    ),
+  );
+}
+
+export function routerChatCompletions2RouterChatCompletionsRequest1FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletions2RouterChatCompletionsRequest1,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletions2RouterChatCompletionsRequest1$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletions2RouterChatCompletionsRequest1' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsContentRouterChatCompletionsRequest2$inboundSchema:
   z.ZodType<
@@ -1250,6 +1332,31 @@ export namespace RouterChatCompletionsContentRouterChatCompletionsRequest2$ {
   /** @deprecated use `RouterChatCompletionsContentRouterChatCompletionsRequest2$Outbound` instead. */
   export type Outbound =
     RouterChatCompletionsContentRouterChatCompletionsRequest2$Outbound;
+}
+
+export function routerChatCompletionsContentRouterChatCompletionsRequest2ToJSON(
+  routerChatCompletionsContentRouterChatCompletionsRequest2:
+    RouterChatCompletionsContentRouterChatCompletionsRequest2,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsContentRouterChatCompletionsRequest2$outboundSchema
+      .parse(routerChatCompletionsContentRouterChatCompletionsRequest2),
+  );
+}
+
+export function routerChatCompletionsContentRouterChatCompletionsRequest2FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsContentRouterChatCompletionsRequest2,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsContentRouterChatCompletionsRequest2$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsContentRouterChatCompletionsRequest2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1310,6 +1417,31 @@ export namespace RouterChatCompletionsMessagesRouterChatCompletionsRequestConten
   /** @deprecated use `RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$Outbound` instead. */
   export type Outbound =
     RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$Outbound;
+}
+
+export function routerChatCompletionsMessagesRouterChatCompletionsRequestContentToJSON(
+  routerChatCompletionsMessagesRouterChatCompletionsRequestContent:
+    RouterChatCompletionsMessagesRouterChatCompletionsRequestContent,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$outboundSchema
+      .parse(routerChatCompletionsMessagesRouterChatCompletionsRequestContent),
+  );
+}
+
+export function routerChatCompletionsMessagesRouterChatCompletionsRequestContentFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsMessagesRouterChatCompletionsRequestContent,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsMessagesRouterChatCompletionsRequestContent$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsMessagesRouterChatCompletionsRequestContent' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1383,6 +1515,20 @@ export namespace Four$ {
   export type Outbound = Four$Outbound;
 }
 
+export function fourToJSON(four: Four): string {
+  return JSON.stringify(Four$outboundSchema.parse(four));
+}
+
+export function fourFromJSON(
+  jsonString: string,
+): SafeParseResult<Four, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Four$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Four' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsMessagesRouterChatCompletionsRole$inboundSchema:
   z.ZodNativeEnum<
@@ -1445,6 +1591,31 @@ export namespace RouterChatCompletionsMessagesRouterChatCompletionsContent$ {
     RouterChatCompletionsMessagesRouterChatCompletionsContent$Outbound;
 }
 
+export function routerChatCompletionsMessagesRouterChatCompletionsContentToJSON(
+  routerChatCompletionsMessagesRouterChatCompletionsContent:
+    RouterChatCompletionsMessagesRouterChatCompletionsContent,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsMessagesRouterChatCompletionsContent$outboundSchema
+      .parse(routerChatCompletionsMessagesRouterChatCompletionsContent),
+  );
+}
+
+export function routerChatCompletionsMessagesRouterChatCompletionsContentFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsMessagesRouterChatCompletionsContent,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsMessagesRouterChatCompletionsContent$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsMessagesRouterChatCompletionsContent' from JSON`,
+  );
+}
+
 /** @internal */
 export const MessagesType$inboundSchema: z.ZodNativeEnum<typeof MessagesType> =
   z.nativeEnum(MessagesType);
@@ -1503,6 +1674,24 @@ export namespace MessagesFunction$ {
   export type Outbound = MessagesFunction$Outbound;
 }
 
+export function messagesFunctionToJSON(
+  messagesFunction: MessagesFunction,
+): string {
+  return JSON.stringify(
+    MessagesFunction$outboundSchema.parse(messagesFunction),
+  );
+}
+
+export function messagesFunctionFromJSON(
+  jsonString: string,
+): SafeParseResult<MessagesFunction, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MessagesFunction$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MessagesFunction' from JSON`,
+  );
+}
+
 /** @internal */
 export const MessagesToolCalls$inboundSchema: z.ZodType<
   MessagesToolCalls,
@@ -1543,6 +1732,24 @@ export namespace MessagesToolCalls$ {
   export const outboundSchema = MessagesToolCalls$outboundSchema;
   /** @deprecated use `MessagesToolCalls$Outbound` instead. */
   export type Outbound = MessagesToolCalls$Outbound;
+}
+
+export function messagesToolCallsToJSON(
+  messagesToolCalls: MessagesToolCalls,
+): string {
+  return JSON.stringify(
+    MessagesToolCalls$outboundSchema.parse(messagesToolCalls),
+  );
+}
+
+export function messagesToolCallsFromJSON(
+  jsonString: string,
+): SafeParseResult<MessagesToolCalls, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MessagesToolCalls$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MessagesToolCalls' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1599,6 +1806,20 @@ export namespace Messages3$ {
   export const outboundSchema = Messages3$outboundSchema;
   /** @deprecated use `Messages3$Outbound` instead. */
   export type Outbound = Messages3$Outbound;
+}
+
+export function messages3ToJSON(messages3: Messages3): string {
+  return JSON.stringify(Messages3$outboundSchema.parse(messages3));
+}
+
+export function messages3FromJSON(
+  jsonString: string,
+): SafeParseResult<Messages3, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Messages3$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Messages3' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1714,6 +1935,33 @@ export namespace RouterChatCompletions2RouterChatCompletionsImageUrl$ {
     RouterChatCompletions2RouterChatCompletionsImageUrl$Outbound;
 }
 
+export function routerChatCompletions2RouterChatCompletionsImageUrlToJSON(
+  routerChatCompletions2RouterChatCompletionsImageUrl:
+    RouterChatCompletions2RouterChatCompletionsImageUrl,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions2RouterChatCompletionsImageUrl$outboundSchema.parse(
+      routerChatCompletions2RouterChatCompletionsImageUrl,
+    ),
+  );
+}
+
+export function routerChatCompletions2RouterChatCompletionsImageUrlFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletions2RouterChatCompletionsImageUrl,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletions2RouterChatCompletionsImageUrl$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletions2RouterChatCompletionsImageUrl' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletions2RouterChatCompletions2$inboundSchema:
   z.ZodType<
@@ -1769,6 +2017,33 @@ export namespace RouterChatCompletions2RouterChatCompletions2$ {
     RouterChatCompletions2RouterChatCompletions2$outboundSchema;
   /** @deprecated use `RouterChatCompletions2RouterChatCompletions2$Outbound` instead. */
   export type Outbound = RouterChatCompletions2RouterChatCompletions2$Outbound;
+}
+
+export function routerChatCompletions2RouterChatCompletions2ToJSON(
+  routerChatCompletions2RouterChatCompletions2:
+    RouterChatCompletions2RouterChatCompletions2,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions2RouterChatCompletions2$outboundSchema.parse(
+      routerChatCompletions2RouterChatCompletions2,
+    ),
+  );
+}
+
+export function routerChatCompletions2RouterChatCompletions2FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletions2RouterChatCompletions2,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletions2RouterChatCompletions2$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletions2RouterChatCompletions2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1839,6 +2114,33 @@ export namespace RouterChatCompletions2RouterChatCompletions1$ {
   export type Outbound = RouterChatCompletions2RouterChatCompletions1$Outbound;
 }
 
+export function routerChatCompletions2RouterChatCompletions1ToJSON(
+  routerChatCompletions2RouterChatCompletions1:
+    RouterChatCompletions2RouterChatCompletions1,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions2RouterChatCompletions1$outboundSchema.parse(
+      routerChatCompletions2RouterChatCompletions1,
+    ),
+  );
+}
+
+export function routerChatCompletions2RouterChatCompletions1FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletions2RouterChatCompletions1,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletions2RouterChatCompletions1$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletions2RouterChatCompletions1' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsContentRouterChatCompletions2$inboundSchema:
   z.ZodType<
@@ -1880,6 +2182,33 @@ export namespace RouterChatCompletionsContentRouterChatCompletions2$ {
   /** @deprecated use `RouterChatCompletionsContentRouterChatCompletions2$Outbound` instead. */
   export type Outbound =
     RouterChatCompletionsContentRouterChatCompletions2$Outbound;
+}
+
+export function routerChatCompletionsContentRouterChatCompletions2ToJSON(
+  routerChatCompletionsContentRouterChatCompletions2:
+    RouterChatCompletionsContentRouterChatCompletions2,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsContentRouterChatCompletions2$outboundSchema.parse(
+      routerChatCompletionsContentRouterChatCompletions2,
+    ),
+  );
+}
+
+export function routerChatCompletionsContentRouterChatCompletions2FromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsContentRouterChatCompletions2,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsContentRouterChatCompletions2$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletionsContentRouterChatCompletions2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1929,6 +2258,27 @@ export namespace RouterChatCompletionsMessagesContent$ {
     RouterChatCompletionsMessagesContent$outboundSchema;
   /** @deprecated use `RouterChatCompletionsMessagesContent$Outbound` instead. */
   export type Outbound = RouterChatCompletionsMessagesContent$Outbound;
+}
+
+export function routerChatCompletionsMessagesContentToJSON(
+  routerChatCompletionsMessagesContent: RouterChatCompletionsMessagesContent,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsMessagesContent$outboundSchema.parse(
+      routerChatCompletionsMessagesContent,
+    ),
+  );
+}
+
+export function routerChatCompletionsMessagesContentFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsMessagesContent, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsMessagesContent$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsMessagesContent' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1992,6 +2342,20 @@ export namespace Messages2$ {
   export const outboundSchema = Messages2$outboundSchema;
   /** @deprecated use `Messages2$Outbound` instead. */
   export type Outbound = Messages2$Outbound;
+}
+
+export function messages2ToJSON(messages2: Messages2): string {
+  return JSON.stringify(Messages2$outboundSchema.parse(messages2));
+}
+
+export function messages2FromJSON(
+  jsonString: string,
+): SafeParseResult<Messages2, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Messages2$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Messages2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2094,6 +2458,26 @@ export namespace RouterChatCompletions2ImageUrl$ {
   export type Outbound = RouterChatCompletions2ImageUrl$Outbound;
 }
 
+export function routerChatCompletions2ImageUrlToJSON(
+  routerChatCompletions2ImageUrl: RouterChatCompletions2ImageUrl,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions2ImageUrl$outboundSchema.parse(
+      routerChatCompletions2ImageUrl,
+    ),
+  );
+}
+
+export function routerChatCompletions2ImageUrlFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletions2ImageUrl, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletions2ImageUrl$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletions2ImageUrl' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletions22$inboundSchema: z.ZodType<
   RouterChatCompletions22,
@@ -2139,6 +2523,24 @@ export namespace RouterChatCompletions22$ {
   export const outboundSchema = RouterChatCompletions22$outboundSchema;
   /** @deprecated use `RouterChatCompletions22$Outbound` instead. */
   export type Outbound = RouterChatCompletions22$Outbound;
+}
+
+export function routerChatCompletions22ToJSON(
+  routerChatCompletions22: RouterChatCompletions22,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions22$outboundSchema.parse(routerChatCompletions22),
+  );
+}
+
+export function routerChatCompletions22FromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletions22, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletions22$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletions22' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2201,6 +2603,24 @@ export namespace RouterChatCompletions21$ {
   export type Outbound = RouterChatCompletions21$Outbound;
 }
 
+export function routerChatCompletions21ToJSON(
+  routerChatCompletions21: RouterChatCompletions21,
+): string {
+  return JSON.stringify(
+    RouterChatCompletions21$outboundSchema.parse(routerChatCompletions21),
+  );
+}
+
+export function routerChatCompletions21FromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletions21, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletions21$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletions21' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsContent2$inboundSchema: z.ZodType<
   RouterChatCompletionsContent2,
@@ -2237,6 +2657,26 @@ export namespace RouterChatCompletionsContent2$ {
   export const outboundSchema = RouterChatCompletionsContent2$outboundSchema;
   /** @deprecated use `RouterChatCompletionsContent2$Outbound` instead. */
   export type Outbound = RouterChatCompletionsContent2$Outbound;
+}
+
+export function routerChatCompletionsContent2ToJSON(
+  routerChatCompletionsContent2: RouterChatCompletionsContent2,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsContent2$outboundSchema.parse(
+      routerChatCompletionsContent2,
+    ),
+  );
+}
+
+export function routerChatCompletionsContent2FromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsContent2, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletionsContent2$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsContent2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2281,6 +2721,22 @@ export namespace MessagesContent$ {
   export const outboundSchema = MessagesContent$outboundSchema;
   /** @deprecated use `MessagesContent$Outbound` instead. */
   export type Outbound = MessagesContent$Outbound;
+}
+
+export function messagesContentToJSON(
+  messagesContent: MessagesContent,
+): string {
+  return JSON.stringify(MessagesContent$outboundSchema.parse(messagesContent));
+}
+
+export function messagesContentFromJSON(
+  jsonString: string,
+): SafeParseResult<MessagesContent, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MessagesContent$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MessagesContent' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2341,6 +2797,20 @@ export namespace Messages1$ {
   export type Outbound = Messages1$Outbound;
 }
 
+export function messages1ToJSON(messages1: Messages1): string {
+  return JSON.stringify(Messages1$outboundSchema.parse(messages1));
+}
+
+export function messages1FromJSON(
+  jsonString: string,
+): SafeParseResult<Messages1, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Messages1$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Messages1' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsMessages$inboundSchema: z.ZodType<
   RouterChatCompletionsMessages,
@@ -2383,6 +2853,26 @@ export namespace RouterChatCompletionsMessages$ {
   export const outboundSchema = RouterChatCompletionsMessages$outboundSchema;
   /** @deprecated use `RouterChatCompletionsMessages$Outbound` instead. */
   export type Outbound = RouterChatCompletionsMessages$Outbound;
+}
+
+export function routerChatCompletionsMessagesToJSON(
+  routerChatCompletionsMessages: RouterChatCompletionsMessages,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsMessages$outboundSchema.parse(
+      routerChatCompletionsMessages,
+    ),
+  );
+}
+
+export function routerChatCompletionsMessagesFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsMessages, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletionsMessages$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsMessages' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2471,6 +2961,20 @@ export namespace ParametersT$ {
   export type Outbound = ParametersT$Outbound;
 }
 
+export function parametersTToJSON(parametersT: ParametersT): string {
+  return JSON.stringify(ParametersT$outboundSchema.parse(parametersT));
+}
+
+export function parametersTFromJSON(
+  jsonString: string,
+): SafeParseResult<ParametersT, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ParametersT$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ParametersT' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsFunction$inboundSchema: z.ZodType<
   RouterChatCompletionsFunction,
@@ -2516,6 +3020,26 @@ export namespace RouterChatCompletionsFunction$ {
   export type Outbound = RouterChatCompletionsFunction$Outbound;
 }
 
+export function routerChatCompletionsFunctionToJSON(
+  routerChatCompletionsFunction: RouterChatCompletionsFunction,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsFunction$outboundSchema.parse(
+      routerChatCompletionsFunction,
+    ),
+  );
+}
+
+export function routerChatCompletionsFunctionFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsFunction, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletionsFunction$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsFunction' from JSON`,
+  );
+}
+
 /** @internal */
 export const Tools$inboundSchema: z.ZodType<Tools, z.ZodTypeDef, unknown> = z
   .object({
@@ -2550,6 +3074,20 @@ export namespace Tools$ {
   export const outboundSchema = Tools$outboundSchema;
   /** @deprecated use `Tools$Outbound` instead. */
   export type Outbound = Tools$Outbound;
+}
+
+export function toolsToJSON(tools: Tools): string {
+  return JSON.stringify(Tools$outboundSchema.parse(tools));
+}
+
+export function toolsFromJSON(
+  jsonString: string,
+): SafeParseResult<Tools, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Tools$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Tools' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2645,6 +3183,26 @@ export namespace RouterChatCompletionsRequestBody$ {
   export type Outbound = RouterChatCompletionsRequestBody$Outbound;
 }
 
+export function routerChatCompletionsRequestBodyToJSON(
+  routerChatCompletionsRequestBody: RouterChatCompletionsRequestBody,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsRequestBody$outboundSchema.parse(
+      routerChatCompletionsRequestBody,
+    ),
+  );
+}
+
+export function routerChatCompletionsRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletionsRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsRouterChatCompletionsResponseBody$inboundSchema:
   z.ZodType<
@@ -2693,6 +3251,32 @@ export namespace RouterChatCompletionsRouterChatCompletionsResponseBody$ {
   /** @deprecated use `RouterChatCompletionsRouterChatCompletionsResponseBody$Outbound` instead. */
   export type Outbound =
     RouterChatCompletionsRouterChatCompletionsResponseBody$Outbound;
+}
+
+export function routerChatCompletionsRouterChatCompletionsResponseBodyToJSON(
+  routerChatCompletionsRouterChatCompletionsResponseBody:
+    RouterChatCompletionsRouterChatCompletionsResponseBody,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsRouterChatCompletionsResponseBody$outboundSchema.parse(
+      routerChatCompletionsRouterChatCompletionsResponseBody,
+    ),
+  );
+}
+
+export function routerChatCompletionsRouterChatCompletionsResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsRouterChatCompletionsResponseBody,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsRouterChatCompletionsResponseBody$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsRouterChatCompletionsResponseBody' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2762,6 +3346,33 @@ export namespace RouterChatCompletionsResponseBodyTopLogprobs$ {
   export type Outbound = RouterChatCompletionsResponseBodyTopLogprobs$Outbound;
 }
 
+export function routerChatCompletionsResponseBodyTopLogprobsToJSON(
+  routerChatCompletionsResponseBodyTopLogprobs:
+    RouterChatCompletionsResponseBodyTopLogprobs,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBodyTopLogprobs$outboundSchema.parse(
+      routerChatCompletionsResponseBodyTopLogprobs,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseBodyTopLogprobsFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsResponseBodyTopLogprobs,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsResponseBodyTopLogprobs$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletionsResponseBodyTopLogprobs' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsResponseBodyContent$inboundSchema: z.ZodType<
   RouterChatCompletionsResponseBodyContent,
@@ -2821,6 +3432,33 @@ export namespace RouterChatCompletionsResponseBodyContent$ {
   export type Outbound = RouterChatCompletionsResponseBodyContent$Outbound;
 }
 
+export function routerChatCompletionsResponseBodyContentToJSON(
+  routerChatCompletionsResponseBodyContent:
+    RouterChatCompletionsResponseBodyContent,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBodyContent$outboundSchema.parse(
+      routerChatCompletionsResponseBodyContent,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseBodyContentFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsResponseBodyContent,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsResponseBodyContent$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletionsResponseBodyContent' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs$inboundSchema:
   z.ZodType<
@@ -2867,6 +3505,31 @@ export namespace RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogpro
   /** @deprecated use `RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs$Outbound` instead. */
   export type Outbound =
     RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs$Outbound;
+}
+
+export function routerChatCompletionsResponseBodyRouterChatCompletionsTopLogprobsToJSON(
+  routerChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs:
+    RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs$outboundSchema
+      .parse(routerChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs),
+  );
+}
+
+export function routerChatCompletionsResponseBodyRouterChatCompletionsTopLogprobsFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs$inboundSchema
+        .parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs' from JSON`,
+  );
 }
 
 /** @internal */
@@ -2932,6 +3595,24 @@ export namespace ResponseBodyRefusal$ {
   export type Outbound = ResponseBodyRefusal$Outbound;
 }
 
+export function responseBodyRefusalToJSON(
+  responseBodyRefusal: ResponseBodyRefusal,
+): string {
+  return JSON.stringify(
+    ResponseBodyRefusal$outboundSchema.parse(responseBodyRefusal),
+  );
+}
+
+export function responseBodyRefusalFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyRefusal, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyRefusal$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyRefusal' from JSON`,
+  );
+}
+
 /** @internal */
 export const ResponseBodyLogprobs$inboundSchema: z.ZodType<
   ResponseBodyLogprobs,
@@ -2979,6 +3660,24 @@ export namespace ResponseBodyLogprobs$ {
   export const outboundSchema = ResponseBodyLogprobs$outboundSchema;
   /** @deprecated use `ResponseBodyLogprobs$Outbound` instead. */
   export type Outbound = ResponseBodyLogprobs$Outbound;
+}
+
+export function responseBodyLogprobsToJSON(
+  responseBodyLogprobs: ResponseBodyLogprobs,
+): string {
+  return JSON.stringify(
+    ResponseBodyLogprobs$outboundSchema.parse(responseBodyLogprobs),
+  );
+}
+
+export function responseBodyLogprobsFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyLogprobs, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyLogprobs$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyLogprobs' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3047,6 +3746,33 @@ export namespace RouterChatCompletionsResponseBodyFunction$ {
   export type Outbound = RouterChatCompletionsResponseBodyFunction$Outbound;
 }
 
+export function routerChatCompletionsResponseBodyFunctionToJSON(
+  routerChatCompletionsResponseBodyFunction:
+    RouterChatCompletionsResponseBodyFunction,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBodyFunction$outboundSchema.parse(
+      routerChatCompletionsResponseBodyFunction,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseBodyFunctionFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsResponseBodyFunction,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsResponseBodyFunction$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletionsResponseBodyFunction' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsResponseBodyToolCalls$inboundSchema:
   z.ZodType<RouterChatCompletionsResponseBodyToolCalls, z.ZodTypeDef, unknown> =
@@ -3092,6 +3818,33 @@ export namespace RouterChatCompletionsResponseBodyToolCalls$ {
     RouterChatCompletionsResponseBodyToolCalls$outboundSchema;
   /** @deprecated use `RouterChatCompletionsResponseBodyToolCalls$Outbound` instead. */
   export type Outbound = RouterChatCompletionsResponseBodyToolCalls$Outbound;
+}
+
+export function routerChatCompletionsResponseBodyToolCallsToJSON(
+  routerChatCompletionsResponseBodyToolCalls:
+    RouterChatCompletionsResponseBodyToolCalls,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBodyToolCalls$outboundSchema.parse(
+      routerChatCompletionsResponseBodyToolCalls,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseBodyToolCallsFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsResponseBodyToolCalls,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsResponseBodyToolCalls$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletionsResponseBodyToolCalls' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3172,6 +3925,20 @@ export namespace Delta$ {
   export type Outbound = Delta$Outbound;
 }
 
+export function deltaToJSON(delta: Delta): string {
+  return JSON.stringify(Delta$outboundSchema.parse(delta));
+}
+
+export function deltaFromJSON(
+  jsonString: string,
+): SafeParseResult<Delta, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Delta$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Delta' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsResponseBodyChoices$inboundSchema: z.ZodType<
   RouterChatCompletionsResponseBodyChoices,
@@ -3225,6 +3992,33 @@ export namespace RouterChatCompletionsResponseBodyChoices$ {
     RouterChatCompletionsResponseBodyChoices$outboundSchema;
   /** @deprecated use `RouterChatCompletionsResponseBodyChoices$Outbound` instead. */
   export type Outbound = RouterChatCompletionsResponseBodyChoices$Outbound;
+}
+
+export function routerChatCompletionsResponseBodyChoicesToJSON(
+  routerChatCompletionsResponseBodyChoices:
+    RouterChatCompletionsResponseBodyChoices,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBodyChoices$outboundSchema.parse(
+      routerChatCompletionsResponseBodyChoices,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseBodyChoicesFromJSON(
+  jsonString: string,
+): SafeParseResult<
+  RouterChatCompletionsResponseBodyChoices,
+  SDKValidationError
+> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsResponseBodyChoices$inboundSchema.parse(
+        JSON.parse(x),
+      ),
+    `Failed to parse 'RouterChatCompletionsResponseBodyChoices' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3281,6 +4075,28 @@ export namespace RouterChatCompletionsResponseBodyUsage$ {
     RouterChatCompletionsResponseBodyUsage$outboundSchema;
   /** @deprecated use `RouterChatCompletionsResponseBodyUsage$Outbound` instead. */
   export type Outbound = RouterChatCompletionsResponseBodyUsage$Outbound;
+}
+
+export function routerChatCompletionsResponseBodyUsageToJSON(
+  routerChatCompletionsResponseBodyUsage:
+    RouterChatCompletionsResponseBodyUsage,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBodyUsage$outboundSchema.parse(
+      routerChatCompletionsResponseBodyUsage,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseBodyUsageFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsResponseBodyUsage, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterChatCompletionsResponseBodyUsage$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsResponseBodyUsage' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3347,6 +4163,20 @@ export namespace ResponseBody2$ {
   export const outboundSchema = ResponseBody2$outboundSchema;
   /** @deprecated use `ResponseBody2$Outbound` instead. */
   export type Outbound = ResponseBody2$Outbound;
+}
+
+export function responseBody2ToJSON(responseBody2: ResponseBody2): string {
+  return JSON.stringify(ResponseBody2$outboundSchema.parse(responseBody2));
+}
+
+export function responseBody2FromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBody2, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBody2$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBody2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3432,6 +4262,24 @@ export namespace ResponseBodyFunction$ {
   export type Outbound = ResponseBodyFunction$Outbound;
 }
 
+export function responseBodyFunctionToJSON(
+  responseBodyFunction: ResponseBodyFunction,
+): string {
+  return JSON.stringify(
+    ResponseBodyFunction$outboundSchema.parse(responseBodyFunction),
+  );
+}
+
+export function responseBodyFunctionFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyFunction, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyFunction$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyFunction' from JSON`,
+  );
+}
+
 /** @internal */
 export const ResponseBodyToolCalls$inboundSchema: z.ZodType<
   ResponseBodyToolCalls,
@@ -3472,6 +4320,24 @@ export namespace ResponseBodyToolCalls$ {
   export const outboundSchema = ResponseBodyToolCalls$outboundSchema;
   /** @deprecated use `ResponseBodyToolCalls$Outbound` instead. */
   export type Outbound = ResponseBodyToolCalls$Outbound;
+}
+
+export function responseBodyToolCallsToJSON(
+  responseBodyToolCalls: ResponseBodyToolCalls,
+): string {
+  return JSON.stringify(
+    ResponseBodyToolCalls$outboundSchema.parse(responseBodyToolCalls),
+  );
+}
+
+export function responseBodyToolCallsFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyToolCalls, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyToolCalls$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyToolCalls' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3548,6 +4414,24 @@ export namespace ResponseBodyMessage$ {
   export type Outbound = ResponseBodyMessage$Outbound;
 }
 
+export function responseBodyMessageToJSON(
+  responseBodyMessage: ResponseBodyMessage,
+): string {
+  return JSON.stringify(
+    ResponseBodyMessage$outboundSchema.parse(responseBodyMessage),
+  );
+}
+
+export function responseBodyMessageFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyMessage, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyMessage$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyMessage' from JSON`,
+  );
+}
+
 /** @internal */
 export const TopLogprobs$inboundSchema: z.ZodType<
   TopLogprobs,
@@ -3588,6 +4472,20 @@ export namespace TopLogprobs$ {
   export const outboundSchema = TopLogprobs$outboundSchema;
   /** @deprecated use `TopLogprobs$Outbound` instead. */
   export type Outbound = TopLogprobs$Outbound;
+}
+
+export function topLogprobsToJSON(topLogprobs: TopLogprobs): string {
+  return JSON.stringify(TopLogprobs$outboundSchema.parse(topLogprobs));
+}
+
+export function topLogprobsFromJSON(
+  jsonString: string,
+): SafeParseResult<TopLogprobs, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TopLogprobs$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TopLogprobs' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3643,6 +4541,24 @@ export namespace ResponseBodyContent$ {
   export type Outbound = ResponseBodyContent$Outbound;
 }
 
+export function responseBodyContentToJSON(
+  responseBodyContent: ResponseBodyContent,
+): string {
+  return JSON.stringify(
+    ResponseBodyContent$outboundSchema.parse(responseBodyContent),
+  );
+}
+
+export function responseBodyContentFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyContent, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyContent$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyContent' from JSON`,
+  );
+}
+
 /** @internal */
 export const ResponseBodyTopLogprobs$inboundSchema: z.ZodType<
   ResponseBodyTopLogprobs,
@@ -3683,6 +4599,24 @@ export namespace ResponseBodyTopLogprobs$ {
   export const outboundSchema = ResponseBodyTopLogprobs$outboundSchema;
   /** @deprecated use `ResponseBodyTopLogprobs$Outbound` instead. */
   export type Outbound = ResponseBodyTopLogprobs$Outbound;
+}
+
+export function responseBodyTopLogprobsToJSON(
+  responseBodyTopLogprobs: ResponseBodyTopLogprobs,
+): string {
+  return JSON.stringify(
+    ResponseBodyTopLogprobs$outboundSchema.parse(responseBodyTopLogprobs),
+  );
+}
+
+export function responseBodyTopLogprobsFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyTopLogprobs, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyTopLogprobs$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyTopLogprobs' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3735,6 +4669,20 @@ export namespace Refusal$ {
   export type Outbound = Refusal$Outbound;
 }
 
+export function refusalToJSON(refusal: Refusal): string {
+  return JSON.stringify(Refusal$outboundSchema.parse(refusal));
+}
+
+export function refusalFromJSON(
+  jsonString: string,
+): SafeParseResult<Refusal, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Refusal$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Refusal' from JSON`,
+  );
+}
+
 /** @internal */
 export const Logprobs$inboundSchema: z.ZodType<
   Logprobs,
@@ -3774,6 +4722,20 @@ export namespace Logprobs$ {
   export const outboundSchema = Logprobs$outboundSchema;
   /** @deprecated use `Logprobs$Outbound` instead. */
   export type Outbound = Logprobs$Outbound;
+}
+
+export function logprobsToJSON(logprobs: Logprobs): string {
+  return JSON.stringify(Logprobs$outboundSchema.parse(logprobs));
+}
+
+export function logprobsFromJSON(
+  jsonString: string,
+): SafeParseResult<Logprobs, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Logprobs$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Logprobs' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3829,6 +4791,24 @@ export namespace ResponseBodyChoices$ {
   export type Outbound = ResponseBodyChoices$Outbound;
 }
 
+export function responseBodyChoicesToJSON(
+  responseBodyChoices: ResponseBodyChoices,
+): string {
+  return JSON.stringify(
+    ResponseBodyChoices$outboundSchema.parse(responseBodyChoices),
+  );
+}
+
+export function responseBodyChoicesFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyChoices, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyChoices$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyChoices' from JSON`,
+  );
+}
+
 /** @internal */
 export const ResponseBodyUsage$inboundSchema: z.ZodType<
   ResponseBodyUsage,
@@ -3881,6 +4861,24 @@ export namespace ResponseBodyUsage$ {
   export const outboundSchema = ResponseBodyUsage$outboundSchema;
   /** @deprecated use `ResponseBodyUsage$Outbound` instead. */
   export type Outbound = ResponseBodyUsage$Outbound;
+}
+
+export function responseBodyUsageToJSON(
+  responseBodyUsage: ResponseBodyUsage,
+): string {
+  return JSON.stringify(
+    ResponseBodyUsage$outboundSchema.parse(responseBodyUsage),
+  );
+}
+
+export function responseBodyUsageFromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBodyUsage, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBodyUsage$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBodyUsage' from JSON`,
+  );
 }
 
 /** @internal */
@@ -3945,6 +4943,20 @@ export namespace ResponseBody1$ {
   export type Outbound = ResponseBody1$Outbound;
 }
 
+export function responseBody1ToJSON(responseBody1: ResponseBody1): string {
+  return JSON.stringify(ResponseBody1$outboundSchema.parse(responseBody1));
+}
+
+export function responseBody1FromJSON(
+  jsonString: string,
+): SafeParseResult<ResponseBody1, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ResponseBody1$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ResponseBody1' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterChatCompletionsResponseBody$inboundSchema: z.ZodType<
   RouterChatCompletionsResponseBody,
@@ -3982,6 +4994,26 @@ export namespace RouterChatCompletionsResponseBody$ {
     RouterChatCompletionsResponseBody$outboundSchema;
   /** @deprecated use `RouterChatCompletionsResponseBody$Outbound` instead. */
   export type Outbound = RouterChatCompletionsResponseBody$Outbound;
+}
+
+export function routerChatCompletionsResponseBodyToJSON(
+  routerChatCompletionsResponseBody: RouterChatCompletionsResponseBody,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponseBody$outboundSchema.parse(
+      routerChatCompletionsResponseBody,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletionsResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsResponseBody' from JSON`,
+  );
 }
 
 /** @internal */
@@ -4037,4 +5069,24 @@ export namespace RouterChatCompletionsResponse$ {
   export const outboundSchema = RouterChatCompletionsResponse$outboundSchema;
   /** @deprecated use `RouterChatCompletionsResponse$Outbound` instead. */
   export type Outbound = RouterChatCompletionsResponse$Outbound;
+}
+
+export function routerChatCompletionsResponseToJSON(
+  routerChatCompletionsResponse: RouterChatCompletionsResponse,
+): string {
+  return JSON.stringify(
+    RouterChatCompletionsResponse$outboundSchema.parse(
+      routerChatCompletionsResponse,
+    ),
+  );
+}
+
+export function routerChatCompletionsResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterChatCompletionsResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterChatCompletionsResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterChatCompletionsResponse' from JSON`,
+  );
 }

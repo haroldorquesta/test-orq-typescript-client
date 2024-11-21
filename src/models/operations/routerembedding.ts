@@ -4,7 +4,10 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * Input text to embed, encoded as a string or array of tokens.
@@ -129,6 +132,20 @@ export namespace Input$ {
   export type Outbound = Input$Outbound;
 }
 
+export function inputToJSON(input: Input): string {
+  return JSON.stringify(Input$outboundSchema.parse(input));
+}
+
+export function inputFromJSON(
+  jsonString: string,
+): SafeParseResult<Input, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Input$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Input' from JSON`,
+  );
+}
+
 /** @internal */
 export const EncodingFormat$inboundSchema: z.ZodNativeEnum<
   typeof EncodingFormat
@@ -206,6 +223,24 @@ export namespace RouterEmbeddingRequestBody$ {
   export type Outbound = RouterEmbeddingRequestBody$Outbound;
 }
 
+export function routerEmbeddingRequestBodyToJSON(
+  routerEmbeddingRequestBody: RouterEmbeddingRequestBody,
+): string {
+  return JSON.stringify(
+    RouterEmbeddingRequestBody$outboundSchema.parse(routerEmbeddingRequestBody),
+  );
+}
+
+export function routerEmbeddingRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterEmbeddingRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterEmbeddingRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterEmbeddingRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterEmbeddingObject$inboundSchema: z.ZodNativeEnum<
   typeof RouterEmbeddingObject
@@ -281,6 +316,20 @@ export namespace Embedding$ {
   export type Outbound = Embedding$Outbound;
 }
 
+export function embeddingToJSON(embedding: Embedding): string {
+  return JSON.stringify(Embedding$outboundSchema.parse(embedding));
+}
+
+export function embeddingFromJSON(
+  jsonString: string,
+): SafeParseResult<Embedding, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Embedding$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Embedding' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterEmbeddingData$inboundSchema: z.ZodType<
   RouterEmbeddingData,
@@ -321,6 +370,24 @@ export namespace RouterEmbeddingData$ {
   export const outboundSchema = RouterEmbeddingData$outboundSchema;
   /** @deprecated use `RouterEmbeddingData$Outbound` instead. */
   export type Outbound = RouterEmbeddingData$Outbound;
+}
+
+export function routerEmbeddingDataToJSON(
+  routerEmbeddingData: RouterEmbeddingData,
+): string {
+  return JSON.stringify(
+    RouterEmbeddingData$outboundSchema.parse(routerEmbeddingData),
+  );
+}
+
+export function routerEmbeddingDataFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterEmbeddingData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterEmbeddingData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterEmbeddingData' from JSON`,
+  );
 }
 
 /** @internal */
@@ -372,6 +439,24 @@ export namespace RouterEmbeddingUsage$ {
   export type Outbound = RouterEmbeddingUsage$Outbound;
 }
 
+export function routerEmbeddingUsageToJSON(
+  routerEmbeddingUsage: RouterEmbeddingUsage,
+): string {
+  return JSON.stringify(
+    RouterEmbeddingUsage$outboundSchema.parse(routerEmbeddingUsage),
+  );
+}
+
+export function routerEmbeddingUsageFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterEmbeddingUsage, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterEmbeddingUsage$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterEmbeddingUsage' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterEmbeddingResponseBody$inboundSchema: z.ZodType<
   RouterEmbeddingResponseBody,
@@ -415,4 +500,24 @@ export namespace RouterEmbeddingResponseBody$ {
   export const outboundSchema = RouterEmbeddingResponseBody$outboundSchema;
   /** @deprecated use `RouterEmbeddingResponseBody$Outbound` instead. */
   export type Outbound = RouterEmbeddingResponseBody$Outbound;
+}
+
+export function routerEmbeddingResponseBodyToJSON(
+  routerEmbeddingResponseBody: RouterEmbeddingResponseBody,
+): string {
+  return JSON.stringify(
+    RouterEmbeddingResponseBody$outboundSchema.parse(
+      routerEmbeddingResponseBody,
+    ),
+  );
+}
+
+export function routerEmbeddingResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterEmbeddingResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterEmbeddingResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterEmbeddingResponseBody' from JSON`,
+  );
 }
