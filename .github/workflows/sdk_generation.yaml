@@ -20,24 +20,24 @@ permissions:
   # schedule:
   #   - cron: 0 0 * * *
 jobs:
-  generate:
-    runs-on: ubuntu-latest
-    name: Setup speakeasy
-    env:
-      SPEAKEASY_API_KEY: ${{ secrets.SPEAKEASY_API_KEY }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+  # generate:
+  #   runs-on: ubuntu-latest
+  #   name: Setup speakeasy
+  #   env:
+  #     SPEAKEASY_API_KEY: ${{ secrets.SPEAKEASY_API_KEY }}
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
 
-      - name: Install speakeasy cli
-        run: curl -fsSL https://raw.githubusercontent.com/speakeasy-api/speakeasy/main/install.sh | sh
+  #     - name: Install speakeasy cli
+  #       run: curl -fsSL https://raw.githubusercontent.com/speakeasy-api/speakeasy/main/install.sh | sh
 
-      - name: Verify
-        run: speakeasy --version
+  #     - name: Verify
+  #       run: speakeasy --version
 
-      - name: Generate
-        run: speakeasy run
+  #     - name: Generate
+  #       run: speakeasy run
   publish:
     needs: generate
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15
