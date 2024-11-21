@@ -33,6 +33,7 @@ jobs:
     with:
       mode: direct
       target: ${{ needs.get_target.outputs.target }}
+      force: true
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
