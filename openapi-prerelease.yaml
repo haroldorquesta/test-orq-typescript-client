@@ -34690,7 +34690,6 @@ paths:
     post:
       tags:
         - Contacts
-      x-internal: true
       x-speakeasy-name-override: create
       operationId: CreateContact
       description: Update or add user information to workspace
@@ -34800,7 +34799,6 @@ paths:
       tags:
         - Feedback
       x-speakeasy-name-override: create
-      x-internal: true
       operationId: CreateFeedback
       description: Submit feedback for the LLM transaction via the API
       summary: Submit feedback

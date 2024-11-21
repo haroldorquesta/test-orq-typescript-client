@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       target: ${{ steps.target.outputs.target }}
-    name: Get sdk release target
+    name: Get target
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Get sdk target base from the version set
+      - name: Get target
         id: target
         run: |
           SDK_TARGET_VERSION=$(yq '.typescript.version' .speakeasy/gen.yaml)
