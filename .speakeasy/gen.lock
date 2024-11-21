@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 4064a3abff1b3c73eda3e58e067eb291
+  docChecksum: 75429dd780d937d2e8851f1eb65151e5
   docVersion: "2.0"
   speakeasyVersion: 1.441.1
   generationVersion: 2.461.2
-  releaseVersion: 1.30.1-rc.21
-  configChecksum: eeacba9dbd8ef0f118f8684ce6a4e27c
+  releaseVersion: 1.30.1-rc.25
+  configChecksum: 683f9515adcd8b1e776a6a7fb8a45211
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
