@@ -23,6 +23,7 @@ jobs:
 
       - name: Get sdk target base from the version set
         id: target
+        shell: bash
         run: |
           SDK_TARGET_VERSION=$(yq ".typescript.version" .speakeasy/gen.yaml)
           echo "$SDK_TARGET_VERSION" | grep -q "-rc"
