@@ -36079,8 +36079,6 @@ paths:
         - "public"
       description: "Explicitly invalidate a cache of a deployment"
       summary: "Invalidates cache"
-      security:
-        - Bearer: []
       parameters:
         - schema:
             anyOf:
