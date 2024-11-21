@@ -14,8 +14,11 @@ permissions:
       set_version:
         description: optionally set a specific SDK version
         type: string
-  schedule:
-    - cron: 0 0 * * *
+  push:
+    paths:
+      - .speakeasy/gen.yaml
+  # schedule:
+  #   - cron: 0 0 * * *
 jobs:
   generate:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15
