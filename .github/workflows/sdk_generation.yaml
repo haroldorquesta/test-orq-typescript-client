@@ -34,9 +34,9 @@ jobs:
         run: |
           SDK_TARGET_VERSION=$(yq '.typescript.version' .speakeasy/gen.yaml)
           if [[ $SDK_TARGET_VERSION == *rc* ]]; then
-             echo "target=orq-prerelease" >> "$GITHUB_OUTPUT"
+             echo "target=orq-prerelease-node" >> "$GITHUB_OUTPUT"
           else
-            echo "target=orq" >> "$GITHUB_OUTPUT"
+            echo "target=orq-node" >> "$GITHUB_OUTPUT"
           fi
   generate:
     needs: get_target
