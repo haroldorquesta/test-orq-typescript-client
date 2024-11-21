@@ -2,19 +2,19 @@ speakeasyVersion: 1.441.1
 sources:
     orq-OAS:
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:6e90e78bb4d60c9f7b94f90714a824ced6437325adb741a3de6dd35c11527dde
-        sourceBlobDigest: sha256:2e123ba4e2d85cc6854164e39e2d99e81b8687535f33a59d7cbf2f76d6c27de4
+        sourceRevisionDigest: sha256:16879d2929b88bc3eab6e6fac5cb1cafff390540ad4227247262a68286dba7aa
+        sourceBlobDigest: sha256:8a538e13795631b9ea5bc2921012882dfa5efd6bcbbe9cf6274feff257bf96c0
         tags:
             - latest
-            - speakeasy-sdk-regen-1732165388
+            - speakeasy-sdk-regen-1732165730
 targets:
     orq:
         source: orq-OAS
         sourceNamespace: orq-oas
-        sourceRevisionDigest: sha256:6e90e78bb4d60c9f7b94f90714a824ced6437325adb741a3de6dd35c11527dde
-        sourceBlobDigest: sha256:2e123ba4e2d85cc6854164e39e2d99e81b8687535f33a59d7cbf2f76d6c27de4
+        sourceRevisionDigest: sha256:16879d2929b88bc3eab6e6fac5cb1cafff390540ad4227247262a68286dba7aa
+        sourceBlobDigest: sha256:8a538e13795631b9ea5bc2921012882dfa5efd6bcbbe9cf6274feff257bf96c0
         codeSamplesNamespace: orq-oas-code-samples
-        codeSamplesRevisionDigest: sha256:1078e2b33525ee4e522cddde3db64f574f67c316aa9372d980351f7e18ef0e56
+        codeSamplesRevisionDigest: sha256:3dc15f7b6e66f357fb0b4f6ba54717c876a86800d3974d26dafc0b65a80db684
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
