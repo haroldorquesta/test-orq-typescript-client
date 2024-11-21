@@ -7,7 +7,7 @@
 
 ```typescript
 const value: operations.RouterImageGenerationsMessage1 = {
-  role: "expected_output",
+  role: "prompt",
   content: "<value>",
 };
 ```
@@ -16,8 +16,8 @@ const value: operations.RouterImageGenerationsMessage1 = {
 
 ```typescript
 const value: operations.RouterImageGenerationsMessage2 = {
-  role: "exception",
-  url: "https://crazy-plumber.name/",
+  role: "prompt",
+  url: "https://intrepid-obesity.com/",
 };
 ```
 

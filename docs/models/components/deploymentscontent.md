@@ -18,7 +18,7 @@ const value: components.Content2[] = [
   {
     type: "image_url",
     imageUrl: {
-      url: "https://different-aftermath.name/",
+      url: "https://lasting-citizen.biz",
     },
   },
 ];

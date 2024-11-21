@@ -6,15 +6,8 @@
 import { PrefixMessages } from "orq-poc-typescript/models/components";
 
 let value: PrefixMessages = {
-  role: "correction",
-  content: [
-    {
-      type: "image_url",
-      imageUrl: {
-        url: "https://cheerful-haircut.info",
-      },
-    },
-  ],
+  role: "assistant",
+  content: "<value>",
 };
 ```
 

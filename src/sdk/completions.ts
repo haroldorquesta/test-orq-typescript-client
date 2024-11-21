@@ -9,7 +9,7 @@ import { unwrapAsync } from "../types/fp.js";
 
 export class Completions extends ClientSDK {
   /**
-   * legacy completions route
+   * Create Completion
    *
    * @remarks
    * For sending requests to legacy completion models

@@ -11,7 +11,7 @@ let value: FileUploadResponseBody = {
   id: "<id>",
   objectName: "<value>",
   purpose: "retrieval",
-  bytes: 996.15,
+  bytes: 7832.34,
   fileName: "example.file",
 };
 ```

@@ -3,6 +3,7 @@
  */
 
 import { deploymentsAll } from "../funcs/deploymentsAll.js";
+import { deploymentsDeleteV2DeploymentsInvalidateDeploymentId } from "../funcs/deploymentsDeleteV2DeploymentsInvalidateDeploymentId.js";
 import { deploymentsGetConfig } from "../funcs/deploymentsGetConfig.js";
 import {
   deploymentsInvoke,
@@ -71,6 +72,23 @@ export class Deployments extends ClientSDK {
       this,
       limit,
       after,
+      options,
+    ));
+  }
+
+  /**
+   * Invalidates cache
+   *
+   * @remarks
+   * Explicitly invalidate a cache of a deployment
+   */
+  async deleteV2DeploymentsInvalidateDeploymentId(
+    deploymentId: string,
+    options?: RequestOptions,
+  ): Promise<void> {
+    return unwrapAsync(deploymentsDeleteV2DeploymentsInvalidateDeploymentId(
+      this,
+      deploymentId,
       options,
     ));
   }

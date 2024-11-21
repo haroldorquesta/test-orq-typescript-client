@@ -9,10 +9,8 @@ let value: Messages1 = {
   role: "system",
   content: [
     {
-      type: "image_url",
-      imageUrl: {
-        url: "https://trim-tusk.net",
-      },
+      type: "text",
+      text: "<value>",
     },
   ],
 };

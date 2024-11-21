@@ -8,7 +8,7 @@ import { RouterChatCompletions22 } from "orq-poc-typescript/models/operations";
 let value: RouterChatCompletions22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://hospitable-republican.biz/",
+    url: "https://unlined-vicinity.name/",
   },
 };
 ```

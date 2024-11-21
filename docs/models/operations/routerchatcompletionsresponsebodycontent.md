@@ -7,16 +7,16 @@ import { RouterChatCompletionsResponseBodyContent } from "orq-poc-typescript/mod
 
 let value: RouterChatCompletionsResponseBodyContent = {
   token: "<value>",
-  logprob: 5468.85,
+  logprob: 7105.28,
   bytes: [
-    2748.24,
+    2049.24,
   ],
   topLogprobs: [
     {
       token: "<value>",
-      logprob: 5922.30,
+      logprob: 3416.98,
       bytes: [
-        8967.61,
+        6762.42,
       ],
     },
   ],

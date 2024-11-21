@@ -8,14 +8,7 @@
 ```typescript
 const value: operations.Messages1 = {
   role: "system",
-  content: [
-    {
-      type: "image_url",
-      imageUrl: {
-        url: "https://known-begonia.biz",
-      },
-    },
-  ],
+  content: "<value>",
 };
 ```
 
@@ -24,7 +17,14 @@ const value: operations.Messages1 = {
 ```typescript
 const value: operations.Messages2 = {
   role: "user",
-  content: "<value>",
+  content: [
+    {
+      type: "image_url",
+      imageUrl: {
+        url: "https://vain-stump.com/",
+      },
+    },
+  ],
 };
 ```
 

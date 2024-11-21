@@ -8,20 +8,11 @@ Creates a model response for the given chat conversation.
 import { RouterChatCompletionsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: RouterChatCompletionsRequestBody = {
-  model: "Alpine",
+  model: "Expedition",
   messages: [
     {
-      role: "assistant",
-      toolCalls: [
-        {
-          id: "<id>",
-          type: "function",
-          function: {
-            name: "<value>",
-            arguments: "<value>",
-          },
-        },
-      ],
+      role: "system",
+      content: "<value>",
     },
   ],
 };

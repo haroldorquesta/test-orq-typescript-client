@@ -10,7 +10,7 @@ import { DeploymentCreateMetric22 } from "orq-poc-typescript/models/operations";
 let value: DeploymentCreateMetric22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://lasting-swing.info",
+    url: "https://animated-velocity.info",
   },
 };
 ```

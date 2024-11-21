@@ -6,22 +6,22 @@
 import { RouterChatCompletionsResponseBodyChoices } from "orq-poc-typescript/models/operations";
 
 let value: RouterChatCompletionsResponseBodyChoices = {
-  finishReason: "length",
-  index: 1046.28,
+  finishReason: "stop",
+  index: 5771.40,
   logprobs: {
     content: [
       {
         token: "<value>",
-        logprob: 3484.76,
+        logprob: 6952.70,
         bytes: [
-          7400.98,
+          6719.57,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 6805.14,
+            logprob: 9488.61,
             bytes: [
-              6223.84,
+              27.03,
             ],
           },
         ],
@@ -30,16 +30,16 @@ let value: RouterChatCompletionsResponseBodyChoices = {
     refusal: [
       {
         token: "<value>",
-        logprob: 7105.28,
+        logprob: 6471.97,
         bytes: [
-          2049.24,
+          6003.92,
         ],
         topLogprobs: [
           {
             token: "<value>",
-            logprob: 3416.98,
+            logprob: 5887.40,
             bytes: [
-              6762.42,
+              9627.70,
             ],
           },
         ],
@@ -59,7 +59,7 @@ let value: RouterChatCompletionsResponseBodyChoices = {
         },
       },
     ],
-    role: "expected_output",
+    role: "system",
   },
 };
 ```

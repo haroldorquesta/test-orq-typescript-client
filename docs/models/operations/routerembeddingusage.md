@@ -6,8 +6,8 @@
 import { RouterEmbeddingUsage } from "orq-poc-typescript/models/operations";
 
 let value: RouterEmbeddingUsage = {
-  promptTokens: 120.36,
-  totalTokens: 1154.84,
+  promptTokens: 460.07,
+  totalTokens: 2326.27,
 };
 ```
 

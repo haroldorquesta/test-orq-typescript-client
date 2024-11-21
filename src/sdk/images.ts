@@ -8,6 +8,9 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Images extends ClientSDK {
+  /**
+   * Create an Image
+   */
   async generate(
     request?: operations.RouterImageGenerationsRequestBody | undefined,
     options?: RequestOptions,

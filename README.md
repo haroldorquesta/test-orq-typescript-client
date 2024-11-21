@@ -120,6 +120,7 @@ run();
 * [getConfig](docs/sdks/deployments/README.md#getconfig) - Get config
 * [invoke](docs/sdks/deployments/README.md#invoke) - Invoke
 * [all](docs/sdks/deployments/README.md#all) - List all deployments
+* [deleteV2DeploymentsInvalidateDeploymentId](docs/sdks/deployments/README.md#deletev2deploymentsinvalidatedeploymentid) - Invalidates cache
 
 #### [deployments.metrics](docs/sdks/metrics/README.md)
 
@@ -135,32 +136,36 @@ run();
 * [bulkUpload](docs/sdks/files/README.md#bulkupload) - Bulk upload file
 
 
+### [public](docs/sdks/public/README.md)
+
+* [deleteV2DeploymentsInvalidateDeploymentId](docs/sdks/public/README.md#deletev2deploymentsinvalidatedeploymentid) - Invalidates cache
+
 ### [remoteconfig](docs/sdks/remoteconfig/README.md)
 
-* [getConfig](docs/sdks/remoteconfig/README.md#getconfig)
+* [getConfig](docs/sdks/remoteconfig/README.md#getconfig) - Get Configurations
 
 ### [router](docs/sdks/router/README.md)
 
-* [rerank](docs/sdks/router/README.md#rerank) - rerank route
+* [rerank](docs/sdks/router/README.md#rerank) - Rerank Documents
 
 #### [router.chat](docs/sdks/chat/README.md)
 
 
 #### [router.chat.completions](docs/sdks/orqcompletions/README.md)
 
-* [create](docs/sdks/orqcompletions/README.md#create) - Chat
+* [create](docs/sdks/orqcompletions/README.md#create) - Create Chat Completion
 
 #### [router.completions](docs/sdks/completions/README.md)
 
-* [create](docs/sdks/completions/README.md#create) - legacy completions route
+* [create](docs/sdks/completions/README.md#create) - Create Completion
 
 #### [router.embeddings](docs/sdks/embeddings/README.md)
 
-* [create](docs/sdks/embeddings/README.md#create) - Embeddings
+* [create](docs/sdks/embeddings/README.md#create) - Create an Embedding
 
 #### [router.images](docs/sdks/images/README.md)
 
-* [generate](docs/sdks/images/README.md#generate)
+* [generate](docs/sdks/images/README.md#generate) - Create an Image
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
@@ -182,18 +187,20 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 - [`contactsCreate`](docs/sdks/contacts/README.md#create) - Update user information
 - [`deploymentsAll`](docs/sdks/deployments/README.md#all) - List all deployments
+- [`deploymentsDeleteV2DeploymentsInvalidateDeploymentId`](docs/sdks/deployments/README.md#deletev2deploymentsinvalidatedeploymentid) - Invalidates cache
 - [`deploymentsGetConfig`](docs/sdks/deployments/README.md#getconfig) - Get config
 - [`deploymentsInvoke`](docs/sdks/deployments/README.md#invoke) - Invoke
 - [`deploymentsMetricsCreate`](docs/sdks/metrics/README.md#create) - Add metrics
 - [`feedbackCreate`](docs/sdks/feedback/README.md#create) - Submit feedback
 - [`filesBulkUpload`](docs/sdks/files/README.md#bulkupload) - Bulk upload file
 - [`filesUpload`](docs/sdks/files/README.md#upload) - Upload file
-- [`remoteconfigGetConfig`](docs/sdks/remoteconfig/README.md#getconfig)
-- [`routerChatCompletionsCreate`](docs/sdks/orqcompletions/README.md#create) - Chat
-- [`routerCompletionsCreate`](docs/sdks/completions/README.md#create) - legacy completions route
-- [`routerEmbeddingsCreate`](docs/sdks/embeddings/README.md#create) - Embeddings
-- [`routerImagesGenerate`](docs/sdks/images/README.md#generate)
-- [`routerRerank`](docs/sdks/router/README.md#rerank) - rerank route
+- [`publicDeleteV2DeploymentsInvalidateDeploymentId`](docs/sdks/public/README.md#deletev2deploymentsinvalidatedeploymentid) - Invalidates cache
+- [`remoteconfigGetConfig`](docs/sdks/remoteconfig/README.md#getconfig) - Get Configurations
+- [`routerChatCompletionsCreate`](docs/sdks/orqcompletions/README.md#create) - Create Chat Completion
+- [`routerCompletionsCreate`](docs/sdks/completions/README.md#create) - Create Completion
+- [`routerEmbeddingsCreate`](docs/sdks/embeddings/README.md#create) - Create an Embedding
+- [`routerImagesGenerate`](docs/sdks/images/README.md#generate) - Create an Image
+- [`routerRerank`](docs/sdks/router/README.md#rerank) - Rerank Documents
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->

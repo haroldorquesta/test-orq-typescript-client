@@ -21,6 +21,9 @@ import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
+/**
+ * Create an Image
+ */
 export async function routerImagesGenerate(
   client: OrqCore,
   request?: operations.RouterImageGenerationsRequestBody | undefined,

@@ -5,7 +5,7 @@
 
 ### Available Operations
 
-* [create](#create) - Embeddings
+* [create](#create) - Create an Embedding
 
 ## create
 

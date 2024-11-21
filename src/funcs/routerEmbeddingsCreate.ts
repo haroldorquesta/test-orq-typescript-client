@@ -22,7 +22,7 @@ import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 /**
- * Embeddings
+ * Create an Embedding
  *
  * @remarks
  * Creates an embedding vector representing the input text.

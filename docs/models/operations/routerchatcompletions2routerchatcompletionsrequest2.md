@@ -8,7 +8,7 @@ import { RouterChatCompletions2RouterChatCompletionsRequest2 } from "orq-poc-typ
 let value: RouterChatCompletions2RouterChatCompletionsRequest2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://excellent-petticoat.biz/",
+    url: "https://baggy-ravioli.org",
   },
 };
 ```

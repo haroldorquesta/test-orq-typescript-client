@@ -12,14 +12,16 @@ let value: RouterEmbeddingResponseBody = {
   data: [
     {
       object: "embedding",
-      embedding: "<value>",
-      index: 9742.56,
+      embedding: [
+        8149.66,
+      ],
+      index: 9854.91,
     },
   ],
-  model: "XTS",
+  model: "XC90",
   usage: {
-    promptTokens: 4090.54,
-    totalTokens: 1629.54,
+    promptTokens: 9049.48,
+    totalTokens: 2965.56,
   },
 };
 ```

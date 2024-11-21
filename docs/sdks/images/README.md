@@ -5,9 +5,11 @@
 
 ### Available Operations
 
-* [generate](#generate)
+* [generate](#generate) - Create an Image
 
 ## generate
+
+Create an Image
 
 ### Example Usage
 

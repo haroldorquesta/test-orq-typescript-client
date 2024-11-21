@@ -11,16 +11,16 @@ let value: Logprobs = {
   content: [
     {
       token: "<value>",
-      logprob: 5098.07,
+      logprob: 9521.43,
       bytes: [
-        3339.65,
+        3000.29,
       ],
       topLogprobs: [
         {
           token: "<value>",
-          logprob: 7908.40,
+          logprob: 1604.68,
           bytes: [
-            972.43,
+            8863.05,
           ],
         },
       ],
@@ -29,16 +29,16 @@ let value: Logprobs = {
   refusal: [
     {
       token: "<value>",
-      logprob: 4420.36,
+      logprob: 4463.94,
       bytes: [
-        5199.52,
+        9078.76,
       ],
       topLogprobs: [
         {
           token: "<value>",
-          logprob: 6939.56,
+          logprob: 1602.30,
           bytes: [
-            908.86,
+            6611.18,
           ],
         },
       ],

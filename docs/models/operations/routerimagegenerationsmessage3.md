@@ -6,7 +6,7 @@
 import { RouterImageGenerationsMessage3 } from "orq-poc-typescript/models/operations";
 
 let value: RouterImageGenerationsMessage3 = {
-  role: "tool",
+  role: "expected_output",
   toolCalls: [
     {
       type: "function",

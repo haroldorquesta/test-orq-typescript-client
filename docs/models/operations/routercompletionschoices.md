@@ -6,8 +6,8 @@
 import { RouterCompletionsChoices } from "orq-poc-typescript/models/operations";
 
 let value: RouterCompletionsChoices = {
-  finishReason: "tool_calls",
-  index: 9762.26,
+  finishReason: "stop",
+  index: 4977.77,
   text: "<value>",
 };
 ```

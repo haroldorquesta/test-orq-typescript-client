@@ -8,7 +8,7 @@ A request body that follows the official OpenAI schema
 import { RouterCompletionsRequestBody } from "orq-poc-typescript/models/operations";
 
 let value: RouterCompletionsRequestBody = {
-  model: "Cruze",
+  model: "Model 3",
   prompt: [
     "<value>",
   ],

@@ -10,8 +10,8 @@ const value: operations.RouterChatCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "stop",
-      index: 5145.13,
+      finishReason: "content_filter",
+      index: 7730.84,
       message: {
         content: "<value>",
         refusal: "<value>",
@@ -25,22 +25,22 @@ const value: operations.RouterChatCompletionsResponseBody = {
             },
           },
         ],
-        role: "user",
+        role: "expected_output",
       },
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 4565.20,
+            logprob: 1173.20,
             bytes: [
-              3374.77,
+              1070.04,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 9704.94,
+                logprob: 5896.95,
                 bytes: [
-                  1334.39,
+                  7453.98,
                 ],
               },
             ],
@@ -49,16 +49,16 @@ const value: operations.RouterChatCompletionsResponseBody = {
         refusal: [
           {
             token: "<value>",
-            logprob: 968.04,
+            logprob: 8481.50,
             bytes: [
-              3433.92,
+              9358.32,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 5910.27,
+                logprob: 9834.26,
                 bytes: [
-                  6591.76,
+                  3998.02,
                 ],
               },
             ],
@@ -67,8 +67,8 @@ const value: operations.RouterChatCompletionsResponseBody = {
       },
     },
   ],
-  created: 3972.57,
-  model: "XTS",
+  created: 3803.35,
+  model: "Altima",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

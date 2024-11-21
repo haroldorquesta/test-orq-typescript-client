@@ -18,7 +18,7 @@ const value: operations.RouterChatCompletions2RouterChatCompletions1 = {
 const value: operations.RouterChatCompletions2RouterChatCompletions2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://frequent-wriggler.biz",
+    url: "https://runny-vicinity.org",
   },
 };
 ```

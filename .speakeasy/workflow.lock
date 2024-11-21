@@ -7,6 +7,13 @@ sources:
         tags:
             - latest
             - speakeasy-sdk-regen-1732167251
+    orq-prerelease:
+        sourceNamespace: orq-prerelease
+        sourceRevisionDigest: sha256:90520d6e6cea026ca7849e194537bb4aa1140439a40e2c12a391d2bfaf6852cd
+        sourceBlobDigest: sha256:b446655df50306f4357fd378fc1e7a665df1a2c1863bafa328e14637b1b03d78
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1732184708
 targets:
     orq:
         source: orq-OAS
@@ -15,25 +22,37 @@ targets:
         sourceBlobDigest: sha256:8a538e13795631b9ea5bc2921012882dfa5efd6bcbbe9cf6274feff257bf96c0
         codeSamplesNamespace: orq-oas-code-samples
         codeSamplesRevisionDigest: sha256:689f9cfa240b08a59f0a34acc4af97b296e181679dc486f5ad5f95d1d96e2910
+    orq-prerelease:
+        source: orq-prerelease
+        sourceNamespace: orq-prerelease
+        sourceRevisionDigest: sha256:90520d6e6cea026ca7849e194537bb4aa1140439a40e2c12a391d2bfaf6852cd
+        sourceBlobDigest: sha256:b446655df50306f4357fd378fc1e7a665df1a2c1863bafa328e14637b1b03d78
+        codeSamplesNamespace: orq-prerelease-code-samples
+        codeSamplesRevisionDigest: sha256:8449e030b2e681735f21f4228466987eb0236a71fee6136465dfd89101aed8eb
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
-        orq-OAS:
+        orq:
             inputs:
-                - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi.json
-            overlays:
-                - location: https://raw.githubusercontent.com/haroldorquesta/test-orq-typescript-client/refs/heads/main/openapi-overlay.yaml
+                - location: ./openapi.yaml
+        orq-prerelease:
+            inputs:
+                - location: ./openapi-prerelease.yaml
             registry:
-                location: registry.speakeasyapi.dev/orq/orq/orq-oas
+                location: registry.speakeasyapi.dev/orq/orq/orq-prerelease
     targets:
         orq:
             target: typescript
-            source: orq-OAS
-            publish:
-                npm:
-                    token: $npm_token
+            source: orq
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/orq/orq/orq-oas-code-samples
+                    location: registry.speakeasyapi.dev/orq/orq/orq-code-samples
+                blocking: false
+        orq-prerelease:
+            target: typescript
+            source: orq-prerelease
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/orq/orq/orq-prerelease-code-samples
                 blocking: false

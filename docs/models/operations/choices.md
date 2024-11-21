@@ -6,7 +6,7 @@
 import { Choices } from "orq-poc-typescript/models/operations";
 
 let value: Choices = {
-  index: 1852.32,
+  index: 4903.05,
 };
 ```
 

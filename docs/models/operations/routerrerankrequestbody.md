@@ -10,11 +10,9 @@ import { RouterRerankRequestBody } from "orq-poc-typescript/models/operations";
 let value: RouterRerankRequestBody = {
   query: "<value>",
   documents: [
-    {
-      "key": "<value>",
-    },
+    "<value>",
   ],
-  model: "Explorer",
+  model: "Malibu",
 };
 ```
 

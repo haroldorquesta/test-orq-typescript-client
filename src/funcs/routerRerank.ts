@@ -22,7 +22,7 @@ import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 /**
- * rerank route
+ * Rerank Documents
  *
  * @remarks
  * For sending requests to rerank models

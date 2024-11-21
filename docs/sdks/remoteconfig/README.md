@@ -5,9 +5,11 @@
 
 ### Available Operations
 
-* [getConfig](#getconfig)
+* [getConfig](#getconfig) - Get Configurations
 
 ## getConfig
+
+Get Configurations
 
 ### Example Usage
 

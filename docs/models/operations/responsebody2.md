@@ -12,21 +12,21 @@ let value: ResponseBody2 = {
   choices: [
     {
       finishReason: "content_filter",
-      index: 2827.00,
+      index: 8136.79,
       logprobs: {
         content: [
           {
             token: "<value>",
-            logprob: 302.35,
+            logprob: 5098.07,
             bytes: [
-              7103.37,
+              3339.65,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 78.84,
+                logprob: 7908.40,
                 bytes: [
-                  3726.79,
+                  972.43,
                 ],
               },
             ],
@@ -35,16 +35,16 @@ let value: ResponseBody2 = {
         refusal: [
           {
             token: "<value>",
-            logprob: 5305.37,
+            logprob: 4420.36,
             bytes: [
-              9221.11,
+              5199.52,
             ],
             topLogprobs: [
               {
                 token: "<value>",
-                logprob: 894.95,
+                logprob: 6939.56,
                 bytes: [
-                  4059.42,
+                  908.86,
                 ],
               },
             ],
@@ -64,11 +64,11 @@ let value: ResponseBody2 = {
             },
           },
         ],
-        role: "system",
+        role: "assistant",
       },
     },
   ],
-  created: 3426.11,
+  created: 4103.02,
   model: "Land Cruiser",
   systemFingerprint: "<value>",
   object: "<value>",

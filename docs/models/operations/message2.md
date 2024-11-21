@@ -6,7 +6,7 @@
 import { Message2 } from "orq-poc-typescript/models/operations";
 
 let value: Message2 = {
-  role: "exception",
+  role: "user",
   content: "<value>",
 };
 ```
