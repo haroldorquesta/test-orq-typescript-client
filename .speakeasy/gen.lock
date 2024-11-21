@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 75b50c455ce5517ceab0153ec898007f
+  docChecksum: 01374bc219bb63df9330ecb14261298a
   docVersion: "2.0"
   speakeasyVersion: 1.441.1
   generationVersion: 2.461.2
-  releaseVersion: 1.30.1-rc.28
-  configChecksum: f09f683a7fc27795f569615c4506584a
+  releaseVersion: 1.30.2-alpha.1
+  configChecksum: 7cf61f5e46be3893b0f1baaa21bf193b
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -386,7 +386,7 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
-  - src/funcs/contactsCreate2.ts
+  - src/funcs/contactsCreate3.ts
   - src/funcs/deploymentsAll.ts
   - src/funcs/deploymentsDeleteV2DeploymentsInvalidateDeploymentId.ts
   - src/funcs/deploymentsGetConfig.ts
