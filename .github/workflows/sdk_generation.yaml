@@ -34,9 +34,8 @@ jobs:
     needs: get_target
     uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15
     with:
-      mode: pr
+      mode: direct
       target: ${{ needs.get_target.outputs.target }}
-      force: true
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
