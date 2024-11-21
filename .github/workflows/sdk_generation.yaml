@@ -19,7 +19,9 @@ jobs:
           fetch-depth: 0
 
       - name: Install yaml parser
-        uses: chrisdickinson/setup-yq@latest
+        uses: Makepad-fr/setup-yq-action@main
+        with:
+          version: '3.4.3'
 
       - name: Get sdk target base from the version set
         id: target
