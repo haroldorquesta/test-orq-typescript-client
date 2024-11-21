@@ -25,7 +25,7 @@ jobs:
         id: target
         run: |
           SDK_TARGET_VERSION=$(yq '.typescript.version' .speakeasy/gen.yaml)
-          if [[ $SDK_TARGET_VERSION == *rc* ]]; then
+          if [[ $SDK_TARGET_VERSION == *alpha* ]]; then
              echo "target=orq-prerelease" >> "$GITHUB_OUTPUT"
           else
             echo "target=orq" >> "$GITHUB_OUTPUT"
