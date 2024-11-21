@@ -18,14 +18,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install yaml parser
-        uses: chrisdickinson/setup-yq@latest
-
       - name: Get sdk target base from the version set
         id: target
-        shell: bash
         run: |
-          SDK_TARGET_VERSION=$(yq r .speakeasy/gen.yaml '.typescript.version')
+          yq --help
+          SDK_TARGET_VERSION=$(yq '.typescript.version' .speakeasy/gen.yaml)
           echo $SDK_TARGET_VERSION
           echo "$SDK_TARGET_VERSION" | grep -q "-rc"
           if [[ $? -eq 0 ]] ; then
