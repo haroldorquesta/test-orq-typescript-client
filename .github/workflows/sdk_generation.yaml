@@ -19,15 +19,13 @@ jobs:
           fetch-depth: 0
 
       - name: Install yaml parser
-        uses: Makepad-fr/setup-yq-action@main
-        with:
-          version: '3.4.3'
+        uses: chrisdickinson/setup-yq@latest
 
       - name: Get sdk target base from the version set
         id: target
         shell: bash
         run: |
-          SDK_TARGET_VERSION=$(yq ".typescript.version" .speakeasy/gen.yaml)
+          SDK_TARGET_VERSION=$(cat .speakeasy/gen.yaml | yq ".typescript.version")
           echo "$SDK_TARGET_VERSION" | grep -q "-rc"
           if [[ $? -eq 0 ]] ; then
             echo "target=orq-prerelease" >> "$GITHUB_OUTPUT"
