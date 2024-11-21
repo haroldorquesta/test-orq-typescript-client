@@ -7,8 +7,6 @@ sources:
     orq-prerelease:
         inputs:
             - location: ./openapi-prerelease.yaml
-        registry:
-            location: registry.speakeasyapi.dev/orq/orq/orq-prerelease
 targets:
     orq:
         target: typescript
