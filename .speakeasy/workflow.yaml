@@ -15,6 +15,9 @@ targets:
     orq:
         target: typescript
         source: orq
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/orq/orq/orq-code-samples
@@ -22,6 +25,9 @@ targets:
     orq-prerelease:
         target: typescript
         source: orq-prerelease
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/orq/orq/orq-prerelease-code-samples
