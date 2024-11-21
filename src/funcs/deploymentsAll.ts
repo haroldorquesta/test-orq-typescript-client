@@ -97,7 +97,7 @@ export async function deploymentsAll(
     headers: headers,
     query: query,
     body: body,
-    timeoutMs: options?.timeoutMs || client._options.timeoutMs || 600000,
+    timeoutMs: options?.timeoutMs || client._options.timeoutMs || 610000,
   }, options);
   if (!requestRes.ok) {
     return requestRes;

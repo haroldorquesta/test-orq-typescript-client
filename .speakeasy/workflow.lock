@@ -14,6 +14,13 @@ sources:
         tags:
             - latest
             - speakeasy-sdk-regen-1732167251
+    orq-node:
+        sourceNamespace: orq-node
+        sourceRevisionDigest: sha256:4b8cb6d35602e6e820cc8733b5a4252d5c8f981414ed31fa475d7fa699b35361
+        sourceBlobDigest: sha256:d7a88f683334ab00afbf0915bd455be1d72ef9991812e98019927acd67c2d2fa
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1732196129
     orq-prerelease:
         sourceNamespace: orq-prerelease
         sourceRevisionDigest: sha256:a65f5574c2bcb8eb30f95911c76117ddeb098241c267925f9593fd19ec649ee9
@@ -29,6 +36,13 @@ targets:
         sourceBlobDigest: sha256:ae6f85d7f218a99e8dadb303a33a08865c2b61b18ffbfd3267e3960bdee9ba24
         codeSamplesNamespace: orq-code-samples
         codeSamplesRevisionDigest: sha256:57160eaf42bafbd19eb304475f6379ffde632897f73e9e5aef5b0672147df4d1
+    orq-node:
+        source: orq-node
+        sourceNamespace: orq-node
+        sourceRevisionDigest: sha256:4b8cb6d35602e6e820cc8733b5a4252d5c8f981414ed31fa475d7fa699b35361
+        sourceBlobDigest: sha256:d7a88f683334ab00afbf0915bd455be1d72ef9991812e98019927acd67c2d2fa
+        codeSamplesNamespace: orq-node-code-samples
+        codeSamplesRevisionDigest: sha256:dbeeb3c82686f76aa624da8438c5bd86268a8d6e8bb5f99df49cedf118c0a4a9
     orq-prerelease:
         source: orq-prerelease
         sourceNamespace: orq-prerelease
@@ -40,34 +54,34 @@ workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
-        orq:
+        orq-node:
             inputs:
                 - location: ./openapi.yaml
             registry:
-                location: registry.speakeasyapi.dev/orq/orq/orq
-        orq-prerelease:
+                location: registry.speakeasyapi.dev/orq/orq/orq-node
+        orq-prerelease-node:
             inputs:
                 - location: ./openapi-prerelease.yaml
             registry:
-                location: registry.speakeasyapi.dev/orq/orq/orq-prerelease
+                location: registry.speakeasyapi.dev/orq/orq/orq-prerelease-node
     targets:
-        orq:
+        orq-node:
             target: typescript
-            source: orq
+            source: orq-node
             publish:
                 npm:
                     token: $npm_token
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/orq/orq/orq-code-samples
+                    location: registry.speakeasyapi.dev/orq/orq/orq-node-code-samples
                 blocking: false
-        orq-prerelease:
+        orq-prerelease-node:
             target: typescript
-            source: orq-prerelease
+            source: orq-prerelease-node
             publish:
                 npm:
                     token: $npm_token
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/orq/orq/orq-prerelease-code-samples
+                    location: registry.speakeasyapi.dev/orq/orq/orq-prerelease-node-code-samples
                 blocking: false

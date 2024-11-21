@@ -84,7 +84,7 @@ export async function feedbackCreate(
     path: path,
     headers: headers,
     body: body,
-    timeoutMs: options?.timeoutMs || client._options.timeoutMs || 600000,
+    timeoutMs: options?.timeoutMs || client._options.timeoutMs || 610000,
   }, options);
   if (!requestRes.ok) {
     return requestRes;

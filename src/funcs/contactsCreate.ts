@@ -27,7 +27,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Update or add user information to workspace
  */
-export async function contactsCreate4(
+export async function contactsCreate(
   client: OrqCore,
   request: operations.CreateContactRequestBody,
   options?: RequestOptions,
@@ -84,7 +84,7 @@ export async function contactsCreate4(
     path: path,
     headers: headers,
     body: body,
-    timeoutMs: options?.timeoutMs || client._options.timeoutMs || 600000,
+    timeoutMs: options?.timeoutMs || client._options.timeoutMs || 610000,
   }, options);
   if (!requestRes.ok) {
     return requestRes;
