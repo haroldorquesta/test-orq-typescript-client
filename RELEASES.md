@@ -229,3 +229,13 @@ Based on:
 - [typescript v0.13.4] .
 ### Releases
 - [NPM v0.13.4] https://www.npmjs.com/package/orq-poc-typescript/v/0.13.4 - .
+
+## 2024-11-21 04:23:22
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.441.1 (2.461.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v1.30.1-rc.1] .
+### Releases
+- [NPM v1.30.1-rc.1] https://www.npmjs.com/package/orq-poc-typescript/v/1.30.1-rc.1 - .

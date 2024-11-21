@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * The feedback value. For single selection of multiple choice, the value should be an array of strings. For `correction`, the value should be a string.
@@ -79,6 +82,20 @@ export namespace Value$ {
   export type Outbound = Value$Outbound;
 }
 
+export function valueToJSON(value: Value): string {
+  return JSON.stringify(Value$outboundSchema.parse(value));
+}
+
+export function valueFromJSON(
+  jsonString: string,
+): SafeParseResult<Value, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Value$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Value' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateFeedbackRequestBody$inboundSchema: z.ZodType<
   CreateFeedbackRequestBody,
@@ -129,6 +146,24 @@ export namespace CreateFeedbackRequestBody$ {
   export type Outbound = CreateFeedbackRequestBody$Outbound;
 }
 
+export function createFeedbackRequestBodyToJSON(
+  createFeedbackRequestBody: CreateFeedbackRequestBody,
+): string {
+  return JSON.stringify(
+    CreateFeedbackRequestBody$outboundSchema.parse(createFeedbackRequestBody),
+  );
+}
+
+export function createFeedbackRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateFeedbackRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateFeedbackRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateFeedbackRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const CreateFeedbackValue$inboundSchema: z.ZodType<
   CreateFeedbackValue,
@@ -157,6 +192,24 @@ export namespace CreateFeedbackValue$ {
   export const outboundSchema = CreateFeedbackValue$outboundSchema;
   /** @deprecated use `CreateFeedbackValue$Outbound` instead. */
   export type Outbound = CreateFeedbackValue$Outbound;
+}
+
+export function createFeedbackValueToJSON(
+  createFeedbackValue: CreateFeedbackValue,
+): string {
+  return JSON.stringify(
+    CreateFeedbackValue$outboundSchema.parse(createFeedbackValue),
+  );
+}
+
+export function createFeedbackValueFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateFeedbackValue, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateFeedbackValue$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateFeedbackValue' from JSON`,
+  );
 }
 
 /** @internal */
@@ -210,4 +263,22 @@ export namespace CreateFeedbackResponseBody$ {
   export const outboundSchema = CreateFeedbackResponseBody$outboundSchema;
   /** @deprecated use `CreateFeedbackResponseBody$Outbound` instead. */
   export type Outbound = CreateFeedbackResponseBody$Outbound;
+}
+
+export function createFeedbackResponseBodyToJSON(
+  createFeedbackResponseBody: CreateFeedbackResponseBody,
+): string {
+  return JSON.stringify(
+    CreateFeedbackResponseBody$outboundSchema.parse(createFeedbackResponseBody),
+  );
+}
+
+export function createFeedbackResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<CreateFeedbackResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => CreateFeedbackResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CreateFeedbackResponseBody' from JSON`,
+  );
 }

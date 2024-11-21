@@ -4,7 +4,10 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * The quality of the image
@@ -357,6 +360,26 @@ export namespace RouterImageGenerationsRequestBody$ {
   export type Outbound = RouterImageGenerationsRequestBody$Outbound;
 }
 
+export function routerImageGenerationsRequestBodyToJSON(
+  routerImageGenerationsRequestBody: RouterImageGenerationsRequestBody,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsRequestBody$outboundSchema.parse(
+      routerImageGenerationsRequestBody,
+    ),
+  );
+}
+
+export function routerImageGenerationsRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterImageGenerationsRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterImageGenerationsMessageRouterImagesResponseRole$inboundSchema:
   z.ZodNativeEnum<
@@ -445,6 +468,27 @@ export namespace RouterImageGenerationsMessageFunction$ {
   export type Outbound = RouterImageGenerationsMessageFunction$Outbound;
 }
 
+export function routerImageGenerationsMessageFunctionToJSON(
+  routerImageGenerationsMessageFunction: RouterImageGenerationsMessageFunction,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsMessageFunction$outboundSchema.parse(
+      routerImageGenerationsMessageFunction,
+    ),
+  );
+}
+
+export function routerImageGenerationsMessageFunctionFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsMessageFunction, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterImageGenerationsMessageFunction$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsMessageFunction' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterImageGenerationsMessageToolCalls$inboundSchema: z.ZodType<
   RouterImageGenerationsMessageToolCalls,
@@ -490,6 +534,28 @@ export namespace RouterImageGenerationsMessageToolCalls$ {
     RouterImageGenerationsMessageToolCalls$outboundSchema;
   /** @deprecated use `RouterImageGenerationsMessageToolCalls$Outbound` instead. */
   export type Outbound = RouterImageGenerationsMessageToolCalls$Outbound;
+}
+
+export function routerImageGenerationsMessageToolCallsToJSON(
+  routerImageGenerationsMessageToolCalls:
+    RouterImageGenerationsMessageToolCalls,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsMessageToolCalls$outboundSchema.parse(
+      routerImageGenerationsMessageToolCalls,
+    ),
+  );
+}
+
+export function routerImageGenerationsMessageToolCallsFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsMessageToolCalls, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterImageGenerationsMessageToolCalls$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsMessageToolCalls' from JSON`,
+  );
 }
 
 /** @internal */
@@ -541,6 +607,26 @@ export namespace RouterImageGenerationsMessage3$ {
   export const outboundSchema = RouterImageGenerationsMessage3$outboundSchema;
   /** @deprecated use `RouterImageGenerationsMessage3$Outbound` instead. */
   export type Outbound = RouterImageGenerationsMessage3$Outbound;
+}
+
+export function routerImageGenerationsMessage3ToJSON(
+  routerImageGenerationsMessage3: RouterImageGenerationsMessage3,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsMessage3$outboundSchema.parse(
+      routerImageGenerationsMessage3,
+    ),
+  );
+}
+
+export function routerImageGenerationsMessage3FromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsMessage3, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterImageGenerationsMessage3$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsMessage3' from JSON`,
+  );
 }
 
 /** @internal */
@@ -605,6 +691,26 @@ export namespace RouterImageGenerationsMessage2$ {
   export type Outbound = RouterImageGenerationsMessage2$Outbound;
 }
 
+export function routerImageGenerationsMessage2ToJSON(
+  routerImageGenerationsMessage2: RouterImageGenerationsMessage2,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsMessage2$outboundSchema.parse(
+      routerImageGenerationsMessage2,
+    ),
+  );
+}
+
+export function routerImageGenerationsMessage2FromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsMessage2, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterImageGenerationsMessage2$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsMessage2' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterImageGenerationsMessageRole$inboundSchema: z.ZodNativeEnum<
   typeof RouterImageGenerationsMessageRole
@@ -666,6 +772,26 @@ export namespace RouterImageGenerationsMessage1$ {
   export type Outbound = RouterImageGenerationsMessage1$Outbound;
 }
 
+export function routerImageGenerationsMessage1ToJSON(
+  routerImageGenerationsMessage1: RouterImageGenerationsMessage1,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsMessage1$outboundSchema.parse(
+      routerImageGenerationsMessage1,
+    ),
+  );
+}
+
+export function routerImageGenerationsMessage1FromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsMessage1, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterImageGenerationsMessage1$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsMessage1' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterImageGenerationsMessage$inboundSchema: z.ZodType<
   RouterImageGenerationsMessage,
@@ -705,6 +831,26 @@ export namespace RouterImageGenerationsMessage$ {
   export const outboundSchema = RouterImageGenerationsMessage$outboundSchema;
   /** @deprecated use `RouterImageGenerationsMessage$Outbound` instead. */
   export type Outbound = RouterImageGenerationsMessage$Outbound;
+}
+
+export function routerImageGenerationsMessageToJSON(
+  routerImageGenerationsMessage: RouterImageGenerationsMessage,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsMessage$outboundSchema.parse(
+      routerImageGenerationsMessage,
+    ),
+  );
+}
+
+export function routerImageGenerationsMessageFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsMessage, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterImageGenerationsMessage$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsMessage' from JSON`,
+  );
 }
 
 /** @internal */
@@ -769,6 +915,26 @@ export namespace RouterImageGenerationsChoices$ {
   export type Outbound = RouterImageGenerationsChoices$Outbound;
 }
 
+export function routerImageGenerationsChoicesToJSON(
+  routerImageGenerationsChoices: RouterImageGenerationsChoices,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsChoices$outboundSchema.parse(
+      routerImageGenerationsChoices,
+    ),
+  );
+}
+
+export function routerImageGenerationsChoicesFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsChoices, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterImageGenerationsChoices$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsChoices' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterImageGenerationsResponseBody$inboundSchema: z.ZodType<
   RouterImageGenerationsResponseBody,
@@ -816,4 +982,25 @@ export namespace RouterImageGenerationsResponseBody$ {
     RouterImageGenerationsResponseBody$outboundSchema;
   /** @deprecated use `RouterImageGenerationsResponseBody$Outbound` instead. */
   export type Outbound = RouterImageGenerationsResponseBody$Outbound;
+}
+
+export function routerImageGenerationsResponseBodyToJSON(
+  routerImageGenerationsResponseBody: RouterImageGenerationsResponseBody,
+): string {
+  return JSON.stringify(
+    RouterImageGenerationsResponseBody$outboundSchema.parse(
+      routerImageGenerationsResponseBody,
+    ),
+  );
+}
+
+export function routerImageGenerationsResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterImageGenerationsResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RouterImageGenerationsResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterImageGenerationsResponseBody' from JSON`,
+  );
 }

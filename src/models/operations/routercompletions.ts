@@ -4,7 +4,10 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.
@@ -175,6 +178,20 @@ export namespace Prompt$ {
   export type Outbound = Prompt$Outbound;
 }
 
+export function promptToJSON(prompt: Prompt): string {
+  return JSON.stringify(Prompt$outboundSchema.parse(prompt));
+}
+
+export function promptFromJSON(
+  jsonString: string,
+): SafeParseResult<Prompt, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Prompt$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Prompt' from JSON`,
+  );
+}
+
 /** @internal */
 export const Stop$inboundSchema: z.ZodType<Stop, z.ZodTypeDef, unknown> = z
   .union([z.string(), z.array(z.string())]);
@@ -197,6 +214,20 @@ export namespace Stop$ {
   export const outboundSchema = Stop$outboundSchema;
   /** @deprecated use `Stop$Outbound` instead. */
   export type Outbound = Stop$Outbound;
+}
+
+export function stopToJSON(stop: Stop): string {
+  return JSON.stringify(Stop$outboundSchema.parse(stop));
+}
+
+export function stopFromJSON(
+  jsonString: string,
+): SafeParseResult<Stop, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Stop$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Stop' from JSON`,
+  );
 }
 
 /** @internal */
@@ -282,6 +313,26 @@ export namespace RouterCompletionsRequestBody$ {
   export type Outbound = RouterCompletionsRequestBody$Outbound;
 }
 
+export function routerCompletionsRequestBodyToJSON(
+  routerCompletionsRequestBody: RouterCompletionsRequestBody,
+): string {
+  return JSON.stringify(
+    RouterCompletionsRequestBody$outboundSchema.parse(
+      routerCompletionsRequestBody,
+    ),
+  );
+}
+
+export function routerCompletionsRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterCompletionsRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterCompletionsRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterCompletionsRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const FinishReason$inboundSchema: z.ZodNativeEnum<typeof FinishReason> =
   z.nativeEnum(FinishReason);
@@ -351,6 +402,24 @@ export namespace RouterCompletionsChoices$ {
   export type Outbound = RouterCompletionsChoices$Outbound;
 }
 
+export function routerCompletionsChoicesToJSON(
+  routerCompletionsChoices: RouterCompletionsChoices,
+): string {
+  return JSON.stringify(
+    RouterCompletionsChoices$outboundSchema.parse(routerCompletionsChoices),
+  );
+}
+
+export function routerCompletionsChoicesFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterCompletionsChoices, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterCompletionsChoices$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterCompletionsChoices' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterCompletionsUsage$inboundSchema: z.ZodType<
   RouterCompletionsUsage,
@@ -403,6 +472,24 @@ export namespace RouterCompletionsUsage$ {
   export const outboundSchema = RouterCompletionsUsage$outboundSchema;
   /** @deprecated use `RouterCompletionsUsage$Outbound` instead. */
   export type Outbound = RouterCompletionsUsage$Outbound;
+}
+
+export function routerCompletionsUsageToJSON(
+  routerCompletionsUsage: RouterCompletionsUsage,
+): string {
+  return JSON.stringify(
+    RouterCompletionsUsage$outboundSchema.parse(routerCompletionsUsage),
+  );
+}
+
+export function routerCompletionsUsageFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterCompletionsUsage, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterCompletionsUsage$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterCompletionsUsage' from JSON`,
+  );
 }
 
 /** @internal */
@@ -465,4 +552,24 @@ export namespace RouterCompletionsResponseBody$ {
   export const outboundSchema = RouterCompletionsResponseBody$outboundSchema;
   /** @deprecated use `RouterCompletionsResponseBody$Outbound` instead. */
   export type Outbound = RouterCompletionsResponseBody$Outbound;
+}
+
+export function routerCompletionsResponseBodyToJSON(
+  routerCompletionsResponseBody: RouterCompletionsResponseBody,
+): string {
+  return JSON.stringify(
+    RouterCompletionsResponseBody$outboundSchema.parse(
+      routerCompletionsResponseBody,
+    ),
+  );
+}
+
+export function routerCompletionsResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterCompletionsResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterCompletionsResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterCompletionsResponseBody' from JSON`,
+  );
 }

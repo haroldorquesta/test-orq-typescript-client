@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Documents = string | { [k: string]: string };
 
@@ -152,6 +155,20 @@ export namespace Documents$ {
   export type Outbound = Documents$Outbound;
 }
 
+export function documentsToJSON(documents: Documents): string {
+  return JSON.stringify(Documents$outboundSchema.parse(documents));
+}
+
+export function documentsFromJSON(
+  jsonString: string,
+): SafeParseResult<Documents, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Documents$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Documents' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterRerankRequestBody$inboundSchema: z.ZodType<
   RouterRerankRequestBody,
@@ -210,6 +227,24 @@ export namespace RouterRerankRequestBody$ {
   export type Outbound = RouterRerankRequestBody$Outbound;
 }
 
+export function routerRerankRequestBodyToJSON(
+  routerRerankRequestBody: RouterRerankRequestBody,
+): string {
+  return JSON.stringify(
+    RouterRerankRequestBody$outboundSchema.parse(routerRerankRequestBody),
+  );
+}
+
+export function routerRerankRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterRerankRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterRerankRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterRerankRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const Document$inboundSchema: z.ZodType<
   Document,
@@ -244,6 +279,20 @@ export namespace Document$ {
   export const outboundSchema = Document$outboundSchema;
   /** @deprecated use `Document$Outbound` instead. */
   export type Outbound = Document$Outbound;
+}
+
+export function documentToJSON(document: Document): string {
+  return JSON.stringify(Document$outboundSchema.parse(document));
+}
+
+export function documentFromJSON(
+  jsonString: string,
+): SafeParseResult<Document, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Document$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Document' from JSON`,
+  );
 }
 
 /** @internal */
@@ -291,6 +340,20 @@ export namespace Results$ {
   export const outboundSchema = Results$outboundSchema;
   /** @deprecated use `Results$Outbound` instead. */
   export type Outbound = Results$Outbound;
+}
+
+export function resultsToJSON(results: Results): string {
+  return JSON.stringify(Results$outboundSchema.parse(results));
+}
+
+export function resultsFromJSON(
+  jsonString: string,
+): SafeParseResult<Results, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Results$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Results' from JSON`,
+  );
 }
 
 /** @internal */
@@ -343,6 +406,20 @@ export namespace ApiVersion$ {
   export const outboundSchema = ApiVersion$outboundSchema;
   /** @deprecated use `ApiVersion$Outbound` instead. */
   export type Outbound = ApiVersion$Outbound;
+}
+
+export function apiVersionToJSON(apiVersion: ApiVersion): string {
+  return JSON.stringify(ApiVersion$outboundSchema.parse(apiVersion));
+}
+
+export function apiVersionFromJSON(
+  jsonString: string,
+): SafeParseResult<ApiVersion, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ApiVersion$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ApiVersion' from JSON`,
+  );
 }
 
 /** @internal */
@@ -402,6 +479,20 @@ export namespace BilledUnits$ {
   export type Outbound = BilledUnits$Outbound;
 }
 
+export function billedUnitsToJSON(billedUnits: BilledUnits): string {
+  return JSON.stringify(BilledUnits$outboundSchema.parse(billedUnits));
+}
+
+export function billedUnitsFromJSON(
+  jsonString: string,
+): SafeParseResult<BilledUnits, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => BilledUnits$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'BilledUnits' from JSON`,
+  );
+}
+
 /** @internal */
 export const Tokens$inboundSchema: z.ZodType<Tokens, z.ZodTypeDef, unknown> = z
   .object({
@@ -446,6 +537,20 @@ export namespace Tokens$ {
   export const outboundSchema = Tokens$outboundSchema;
   /** @deprecated use `Tokens$Outbound` instead. */
   export type Outbound = Tokens$Outbound;
+}
+
+export function tokensToJSON(tokens: Tokens): string {
+  return JSON.stringify(Tokens$outboundSchema.parse(tokens));
+}
+
+export function tokensFromJSON(
+  jsonString: string,
+): SafeParseResult<Tokens, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Tokens$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Tokens' from JSON`,
+  );
 }
 
 /** @internal */
@@ -497,6 +602,20 @@ export namespace Meta$ {
   export type Outbound = Meta$Outbound;
 }
 
+export function metaToJSON(meta: Meta): string {
+  return JSON.stringify(Meta$outboundSchema.parse(meta));
+}
+
+export function metaFromJSON(
+  jsonString: string,
+): SafeParseResult<Meta, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Meta$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Meta' from JSON`,
+  );
+}
+
 /** @internal */
 export const RouterRerankResponseBody$inboundSchema: z.ZodType<
   RouterRerankResponseBody,
@@ -537,4 +656,22 @@ export namespace RouterRerankResponseBody$ {
   export const outboundSchema = RouterRerankResponseBody$outboundSchema;
   /** @deprecated use `RouterRerankResponseBody$Outbound` instead. */
   export type Outbound = RouterRerankResponseBody$Outbound;
+}
+
+export function routerRerankResponseBodyToJSON(
+  routerRerankResponseBody: RouterRerankResponseBody,
+): string {
+  return JSON.stringify(
+    RouterRerankResponseBody$outboundSchema.parse(routerRerankResponseBody),
+  );
+}
+
+export function routerRerankResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RouterRerankResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RouterRerankResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RouterRerankResponseBody' from JSON`,
+  );
 }
