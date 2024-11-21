@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type RemoteConfigsGetConfigRequestBody = {
   /**
@@ -84,6 +87,26 @@ export namespace RemoteConfigsGetConfigRequestBody$ {
   export type Outbound = RemoteConfigsGetConfigRequestBody$Outbound;
 }
 
+export function remoteConfigsGetConfigRequestBodyToJSON(
+  remoteConfigsGetConfigRequestBody: RemoteConfigsGetConfigRequestBody,
+): string {
+  return JSON.stringify(
+    RemoteConfigsGetConfigRequestBody$outboundSchema.parse(
+      remoteConfigsGetConfigRequestBody,
+    ),
+  );
+}
+
+export function remoteConfigsGetConfigRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RemoteConfigsGetConfigRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => RemoteConfigsGetConfigRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RemoteConfigsGetConfigRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const RemoteConfigsGetConfigType$inboundSchema: z.ZodNativeEnum<
   typeof RemoteConfigsGetConfigType
@@ -143,4 +166,25 @@ export namespace RemoteConfigsGetConfigResponseBody$ {
     RemoteConfigsGetConfigResponseBody$outboundSchema;
   /** @deprecated use `RemoteConfigsGetConfigResponseBody$Outbound` instead. */
   export type Outbound = RemoteConfigsGetConfigResponseBody$Outbound;
+}
+
+export function remoteConfigsGetConfigResponseBodyToJSON(
+  remoteConfigsGetConfigResponseBody: RemoteConfigsGetConfigResponseBody,
+): string {
+  return JSON.stringify(
+    RemoteConfigsGetConfigResponseBody$outboundSchema.parse(
+      remoteConfigsGetConfigResponseBody,
+    ),
+  );
+}
+
+export function remoteConfigsGetConfigResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<RemoteConfigsGetConfigResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      RemoteConfigsGetConfigResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'RemoteConfigsGetConfigResponseBody' from JSON`,
+  );
 }

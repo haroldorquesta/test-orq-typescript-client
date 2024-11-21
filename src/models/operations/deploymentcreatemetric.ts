@@ -4,7 +4,10 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * Usage statistics to add to the deployment
@@ -365,6 +368,20 @@ export namespace Usage$ {
   export type Outbound = Usage$Outbound;
 }
 
+export function usageToJSON(usage: Usage): string {
+  return JSON.stringify(Usage$outboundSchema.parse(usage));
+}
+
+export function usageFromJSON(
+  jsonString: string,
+): SafeParseResult<Usage, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Usage$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Usage' from JSON`,
+  );
+}
+
 /** @internal */
 export const Performance$inboundSchema: z.ZodType<
   Performance,
@@ -410,6 +427,20 @@ export namespace Performance$ {
   export const outboundSchema = Performance$outboundSchema;
   /** @deprecated use `Performance$Outbound` instead. */
   export type Outbound = Performance$Outbound;
+}
+
+export function performanceToJSON(performance: Performance): string {
+  return JSON.stringify(Performance$outboundSchema.parse(performance));
+}
+
+export function performanceFromJSON(
+  jsonString: string,
+): SafeParseResult<Performance, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Performance$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Performance' from JSON`,
+  );
 }
 
 /** @internal */
@@ -495,6 +526,26 @@ export namespace DeploymentCreateMetric2ImageUrl$ {
   export type Outbound = DeploymentCreateMetric2ImageUrl$Outbound;
 }
 
+export function deploymentCreateMetric2ImageUrlToJSON(
+  deploymentCreateMetric2ImageUrl: DeploymentCreateMetric2ImageUrl,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetric2ImageUrl$outboundSchema.parse(
+      deploymentCreateMetric2ImageUrl,
+    ),
+  );
+}
+
+export function deploymentCreateMetric2ImageUrlFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetric2ImageUrl, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetric2ImageUrl$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetric2ImageUrl' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeploymentCreateMetric22$inboundSchema: z.ZodType<
   DeploymentCreateMetric22,
@@ -540,6 +591,24 @@ export namespace DeploymentCreateMetric22$ {
   export const outboundSchema = DeploymentCreateMetric22$outboundSchema;
   /** @deprecated use `DeploymentCreateMetric22$Outbound` instead. */
   export type Outbound = DeploymentCreateMetric22$Outbound;
+}
+
+export function deploymentCreateMetric22ToJSON(
+  deploymentCreateMetric22: DeploymentCreateMetric22,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetric22$outboundSchema.parse(deploymentCreateMetric22),
+  );
+}
+
+export function deploymentCreateMetric22FromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetric22, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetric22$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetric22' from JSON`,
+  );
 }
 
 /** @internal */
@@ -602,6 +671,24 @@ export namespace DeploymentCreateMetric21$ {
   export type Outbound = DeploymentCreateMetric21$Outbound;
 }
 
+export function deploymentCreateMetric21ToJSON(
+  deploymentCreateMetric21: DeploymentCreateMetric21,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetric21$outboundSchema.parse(deploymentCreateMetric21),
+  );
+}
+
+export function deploymentCreateMetric21FromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetric21, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetric21$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetric21' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeploymentCreateMetricContent2$inboundSchema: z.ZodType<
   DeploymentCreateMetricContent2,
@@ -638,6 +725,26 @@ export namespace DeploymentCreateMetricContent2$ {
   export const outboundSchema = DeploymentCreateMetricContent2$outboundSchema;
   /** @deprecated use `DeploymentCreateMetricContent2$Outbound` instead. */
   export type Outbound = DeploymentCreateMetricContent2$Outbound;
+}
+
+export function deploymentCreateMetricContent2ToJSON(
+  deploymentCreateMetricContent2: DeploymentCreateMetricContent2,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricContent2$outboundSchema.parse(
+      deploymentCreateMetricContent2,
+    ),
+  );
+}
+
+export function deploymentCreateMetricContent2FromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricContent2, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetricContent2$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricContent2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -684,6 +791,26 @@ export namespace DeploymentCreateMetricContent$ {
   export const outboundSchema = DeploymentCreateMetricContent$outboundSchema;
   /** @deprecated use `DeploymentCreateMetricContent$Outbound` instead. */
   export type Outbound = DeploymentCreateMetricContent$Outbound;
+}
+
+export function deploymentCreateMetricContentToJSON(
+  deploymentCreateMetricContent: DeploymentCreateMetricContent,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricContent$outboundSchema.parse(
+      deploymentCreateMetricContent,
+    ),
+  );
+}
+
+export function deploymentCreateMetricContentFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricContent, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetricContent$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricContent' from JSON`,
+  );
 }
 
 /** @internal */
@@ -746,6 +873,26 @@ export namespace DeploymentCreateMetricFunction$ {
   export type Outbound = DeploymentCreateMetricFunction$Outbound;
 }
 
+export function deploymentCreateMetricFunctionToJSON(
+  deploymentCreateMetricFunction: DeploymentCreateMetricFunction,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricFunction$outboundSchema.parse(
+      deploymentCreateMetricFunction,
+    ),
+  );
+}
+
+export function deploymentCreateMetricFunctionFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricFunction, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetricFunction$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricFunction' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeploymentCreateMetricToolCalls$inboundSchema: z.ZodType<
   DeploymentCreateMetricToolCalls,
@@ -789,6 +936,26 @@ export namespace DeploymentCreateMetricToolCalls$ {
   export const outboundSchema = DeploymentCreateMetricToolCalls$outboundSchema;
   /** @deprecated use `DeploymentCreateMetricToolCalls$Outbound` instead. */
   export type Outbound = DeploymentCreateMetricToolCalls$Outbound;
+}
+
+export function deploymentCreateMetricToolCallsToJSON(
+  deploymentCreateMetricToolCalls: DeploymentCreateMetricToolCalls,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricToolCalls$outboundSchema.parse(
+      deploymentCreateMetricToolCalls,
+    ),
+  );
+}
+
+export function deploymentCreateMetricToolCallsFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricToolCalls, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetricToolCalls$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricToolCalls' from JSON`,
+  );
 }
 
 /** @internal */
@@ -861,6 +1028,26 @@ export namespace DeploymentCreateMetricMessages$ {
   export type Outbound = DeploymentCreateMetricMessages$Outbound;
 }
 
+export function deploymentCreateMetricMessagesToJSON(
+  deploymentCreateMetricMessages: DeploymentCreateMetricMessages,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricMessages$outboundSchema.parse(
+      deploymentCreateMetricMessages,
+    ),
+  );
+}
+
+export function deploymentCreateMetricMessagesFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricMessages, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetricMessages$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricMessages' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeploymentCreateMetricMessageDeploymentsMetricsRole$inboundSchema:
   z.ZodNativeEnum<typeof DeploymentCreateMetricMessageDeploymentsMetricsRole> =
@@ -918,6 +1105,20 @@ export namespace Three$ {
   export const outboundSchema = Three$outboundSchema;
   /** @deprecated use `Three$Outbound` instead. */
   export type Outbound = Three$Outbound;
+}
+
+export function threeToJSON(three: Three): string {
+  return JSON.stringify(Three$outboundSchema.parse(three));
+}
+
+export function threeFromJSON(
+  jsonString: string,
+): SafeParseResult<Three, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Three$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Three' from JSON`,
+  );
 }
 
 /** @internal */
@@ -979,6 +1180,20 @@ export namespace Message2$ {
   export const outboundSchema = Message2$outboundSchema;
   /** @deprecated use `Message2$Outbound` instead. */
   export type Outbound = Message2$Outbound;
+}
+
+export function message2ToJSON(message2: Message2): string {
+  return JSON.stringify(Message2$outboundSchema.parse(message2));
+}
+
+export function message2FromJSON(
+  jsonString: string,
+): SafeParseResult<Message2, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Message2$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Message2' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1058,6 +1273,22 @@ export namespace MessageFunction$ {
   export type Outbound = MessageFunction$Outbound;
 }
 
+export function messageFunctionToJSON(
+  messageFunction: MessageFunction,
+): string {
+  return JSON.stringify(MessageFunction$outboundSchema.parse(messageFunction));
+}
+
+export function messageFunctionFromJSON(
+  jsonString: string,
+): SafeParseResult<MessageFunction, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MessageFunction$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MessageFunction' from JSON`,
+  );
+}
+
 /** @internal */
 export const MessageToolCalls$inboundSchema: z.ZodType<
   MessageToolCalls,
@@ -1101,6 +1332,24 @@ export namespace MessageToolCalls$ {
   export const outboundSchema = MessageToolCalls$outboundSchema;
   /** @deprecated use `MessageToolCalls$Outbound` instead. */
   export type Outbound = MessageToolCalls$Outbound;
+}
+
+export function messageToolCallsToJSON(
+  messageToolCalls: MessageToolCalls,
+): string {
+  return JSON.stringify(
+    MessageToolCalls$outboundSchema.parse(messageToolCalls),
+  );
+}
+
+export function messageToolCallsFromJSON(
+  jsonString: string,
+): SafeParseResult<MessageToolCalls, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => MessageToolCalls$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'MessageToolCalls' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1153,6 +1402,20 @@ export namespace Message1$ {
   export type Outbound = Message1$Outbound;
 }
 
+export function message1ToJSON(message1: Message1): string {
+  return JSON.stringify(Message1$outboundSchema.parse(message1));
+}
+
+export function message1FromJSON(
+  jsonString: string,
+): SafeParseResult<Message1, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Message1$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Message1' from JSON`,
+  );
+}
+
 /** @internal */
 export const Message$inboundSchema: z.ZodType<Message, z.ZodTypeDef, unknown> =
   z.union([
@@ -1189,6 +1452,20 @@ export namespace Message$ {
   export const outboundSchema = Message$outboundSchema;
   /** @deprecated use `Message$Outbound` instead. */
   export type Outbound = Message$Outbound;
+}
+
+export function messageToJSON(message: Message): string {
+  return JSON.stringify(Message$outboundSchema.parse(message));
+}
+
+export function messageFromJSON(
+  jsonString: string,
+): SafeParseResult<Message, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Message$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Message' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1246,6 +1523,20 @@ export namespace Choices$ {
   export type Outbound = Choices$Outbound;
 }
 
+export function choicesToJSON(choices: Choices): string {
+  return JSON.stringify(Choices$outboundSchema.parse(choices));
+}
+
+export function choicesFromJSON(
+  jsonString: string,
+): SafeParseResult<Choices, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Choices$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Choices' from JSON`,
+  );
+}
+
 /** @internal */
 export const Feedback$inboundSchema: z.ZodType<
   Feedback,
@@ -1280,6 +1571,20 @@ export namespace Feedback$ {
   export const outboundSchema = Feedback$outboundSchema;
   /** @deprecated use `Feedback$Outbound` instead. */
   export type Outbound = Feedback$Outbound;
+}
+
+export function feedbackToJSON(feedback: Feedback): string {
+  return JSON.stringify(Feedback$outboundSchema.parse(feedback));
+}
+
+export function feedbackFromJSON(
+  jsonString: string,
+): SafeParseResult<Feedback, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Feedback$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Feedback' from JSON`,
+  );
 }
 
 /** @internal */
@@ -1336,6 +1641,26 @@ export namespace DeploymentCreateMetricRequestBody$ {
   export type Outbound = DeploymentCreateMetricRequestBody$Outbound;
 }
 
+export function deploymentCreateMetricRequestBodyToJSON(
+  deploymentCreateMetricRequestBody: DeploymentCreateMetricRequestBody,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricRequestBody$outboundSchema.parse(
+      deploymentCreateMetricRequestBody,
+    ),
+  );
+}
+
+export function deploymentCreateMetricRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetricRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricRequestBody' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeploymentCreateMetricRequest$inboundSchema: z.ZodType<
   DeploymentCreateMetricRequest,
@@ -1383,6 +1708,26 @@ export namespace DeploymentCreateMetricRequest$ {
   export type Outbound = DeploymentCreateMetricRequest$Outbound;
 }
 
+export function deploymentCreateMetricRequestToJSON(
+  deploymentCreateMetricRequest: DeploymentCreateMetricRequest,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricRequest$outboundSchema.parse(
+      deploymentCreateMetricRequest,
+    ),
+  );
+}
+
+export function deploymentCreateMetricRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeploymentCreateMetricRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const DeploymentCreateMetricResponseBody$inboundSchema: z.ZodType<
   DeploymentCreateMetricResponseBody,
@@ -1421,4 +1766,25 @@ export namespace DeploymentCreateMetricResponseBody$ {
     DeploymentCreateMetricResponseBody$outboundSchema;
   /** @deprecated use `DeploymentCreateMetricResponseBody$Outbound` instead. */
   export type Outbound = DeploymentCreateMetricResponseBody$Outbound;
+}
+
+export function deploymentCreateMetricResponseBodyToJSON(
+  deploymentCreateMetricResponseBody: DeploymentCreateMetricResponseBody,
+): string {
+  return JSON.stringify(
+    DeploymentCreateMetricResponseBody$outboundSchema.parse(
+      deploymentCreateMetricResponseBody,
+    ),
+  );
+}
+
+export function deploymentCreateMetricResponseBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<DeploymentCreateMetricResponseBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) =>
+      DeploymentCreateMetricResponseBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeploymentCreateMetricResponseBody' from JSON`,
+  );
 }
