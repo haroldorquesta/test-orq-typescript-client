@@ -34690,6 +34690,7 @@ paths:
     post:
       tags:
         - Contacts
+      x-speakeasy-internal: true
       x-speakeasy-name-override: create
       operationId: CreateContact
       description: Update or add user information to workspace
