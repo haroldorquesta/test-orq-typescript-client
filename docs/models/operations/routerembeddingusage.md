@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterEmbeddingUsage } from "orq-poc-typescript/models/operations";
+import { RouterEmbeddingUsage } from "orq-poc-typescript2/models/operations";
 
 let value: RouterEmbeddingUsage = {
   promptTokens: 460.07,

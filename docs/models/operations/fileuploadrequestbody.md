@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FileUploadRequestBody } from "orq-poc-typescript/models/operations";
+import { FileUploadRequestBody } from "orq-poc-typescript2/models/operations";
 
 // No examples available for this model
 ```

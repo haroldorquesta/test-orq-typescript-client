@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBodyRefusal } from "orq-poc-typescript/models/operations";
+import { ResponseBodyRefusal } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseBodyRefusal = {
   token: "<value>",

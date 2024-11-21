@@ -5,7 +5,7 @@ Successful operation
 ## Example Usage
 
 ```typescript
-import { DeploymentCreateMetricResponseBody } from "orq-poc-typescript/models/operations";
+import { DeploymentCreateMetricResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentCreateMetricResponseBody = {
   code: 653.04,

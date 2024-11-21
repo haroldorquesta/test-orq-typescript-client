@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentCreateMetricFunction } from "orq-poc-typescript/models/operations";
+import { DeploymentCreateMetricFunction } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentCreateMetricFunction = {
   name: "<value>",

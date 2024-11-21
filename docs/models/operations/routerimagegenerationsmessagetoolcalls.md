@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterImageGenerationsMessageToolCalls } from "orq-poc-typescript/models/operations";
+import { RouterImageGenerationsMessageToolCalls } from "orq-poc-typescript2/models/operations";
 
 let value: RouterImageGenerationsMessageToolCalls = {
   type: "function",

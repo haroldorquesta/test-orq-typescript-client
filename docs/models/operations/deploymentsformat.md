@@ -5,7 +5,7 @@ Only supported on `image` models.
 ## Example Usage
 
 ```typescript
-import { DeploymentsFormat } from "orq-poc-typescript/models/operations";
+import { DeploymentsFormat } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentsFormat = "b64_json";
 ```

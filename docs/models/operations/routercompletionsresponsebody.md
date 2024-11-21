@@ -5,7 +5,7 @@ A response body that follows the official OpenAI schema
 ## Example Usage
 
 ```typescript
-import { RouterCompletionsResponseBody } from "orq-poc-typescript/models/operations";
+import { RouterCompletionsResponseBody } from "orq-poc-typescript2/models/operations";
 
 let value: RouterCompletionsResponseBody = {
   id: "<id>",

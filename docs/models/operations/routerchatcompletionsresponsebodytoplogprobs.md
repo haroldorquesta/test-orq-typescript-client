@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterChatCompletionsResponseBodyTopLogprobs } from "orq-poc-typescript/models/operations";
+import { RouterChatCompletionsResponseBodyTopLogprobs } from "orq-poc-typescript2/models/operations";
 
 let value: RouterChatCompletionsResponseBodyTopLogprobs = {
   token: "<value>",

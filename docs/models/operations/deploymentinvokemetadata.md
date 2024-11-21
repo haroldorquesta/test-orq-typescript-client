@@ -5,7 +5,7 @@ Metadata of the retrieved chunk from the knowledge base
 ## Example Usage
 
 ```typescript
-import { DeploymentInvokeMetadata } from "orq-poc-typescript/models/operations";
+import { DeploymentInvokeMetadata } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentInvokeMetadata = {
   fileName: "example.file",

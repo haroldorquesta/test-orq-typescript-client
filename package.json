@@ -1,6 +1,6 @@
 {
-  "name": "orq-poc-typescript",
-  "version": "1.30.5",
+  "name": "orq-poc-typescript2",
+  "version": "1.30.5-rc.0",
   "author": "Speakeasy",
   "main": "./index.js",
   "sideEffects": false,

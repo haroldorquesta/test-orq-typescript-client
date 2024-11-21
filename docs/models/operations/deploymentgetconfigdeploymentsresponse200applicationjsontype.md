@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentGetConfigDeploymentsResponse200ApplicationJSONType } from "orq-poc-typescript/models/operations";
+import { DeploymentGetConfigDeploymentsResponse200ApplicationJSONType } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentGetConfigDeploymentsResponse200ApplicationJSONType =
   "function";

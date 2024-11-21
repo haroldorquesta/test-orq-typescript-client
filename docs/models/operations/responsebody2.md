@@ -5,7 +5,7 @@ Represents a streamed chunk of a chat completion response returned by model, bas
 ## Example Usage
 
 ```typescript
-import { ResponseBody2 } from "orq-poc-typescript/models/operations";
+import { ResponseBody2 } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseBody2 = {
   id: "<id>",

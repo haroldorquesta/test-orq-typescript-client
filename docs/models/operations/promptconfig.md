@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PromptConfig } from "orq-poc-typescript/models/operations";
+import { PromptConfig } from "orq-poc-typescript2/models/operations";
 
 let value: PromptConfig = {
   tools: [

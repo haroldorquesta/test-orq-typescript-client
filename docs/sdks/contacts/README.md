@@ -14,7 +14,7 @@ Update or add user information to workspace
 ### Example Usage
 
 ```typescript
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",
@@ -37,8 +37,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { OrqCore } from "orq-poc-typescript/core.js";
-import { contactsCreate3 } from "orq-poc-typescript/funcs/contactsCreate3.js";
+import { OrqCore } from "orq-poc-typescript2/core.js";
+import { contactsCreate3 } from "orq-poc-typescript2/funcs/contactsCreate3.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

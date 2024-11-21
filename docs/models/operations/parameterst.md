@@ -5,7 +5,7 @@ The parameters the functions accepts, described as a JSON Schema object
 ## Example Usage
 
 ```typescript
-import { ParametersT } from "orq-poc-typescript/models/operations";
+import { ParametersT } from "orq-poc-typescript2/models/operations";
 
 let value: ParametersT = {
   type: "object",

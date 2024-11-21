@@ -5,7 +5,7 @@ Some information about the response
 ## Example Usage
 
 ```typescript
-import { Meta } from "orq-poc-typescript/models/operations";
+import { Meta } from "orq-poc-typescript2/models/operations";
 
 let value: Meta = {};
 ```

@@ -5,7 +5,7 @@ The version of photoReal to use. Must be v1 or v2. Only available for `leonardoa
 ## Example Usage
 
 ```typescript
-import { PhotoRealVersion } from "orq-poc-typescript/models/operations";
+import { PhotoRealVersion } from "orq-poc-typescript2/models/operations";
 
 let value: PhotoRealVersion = "v1";
 ```

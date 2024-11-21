@@ -1,6 +1,6 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Orq } from "orq-poc-typescript";
+import { Orq } from "orq-poc-typescript2";
 
 const orq = new Orq({
   apiKey: process.env["ORQ_API_KEY"] ?? "",

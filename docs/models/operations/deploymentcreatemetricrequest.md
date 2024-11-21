@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeploymentCreateMetricRequest } from "orq-poc-typescript/models/operations";
+import { DeploymentCreateMetricRequest } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentCreateMetricRequest = {
   id: "<id>",

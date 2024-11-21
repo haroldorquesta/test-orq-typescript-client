@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { HonoApiError } from "orq-poc-typescript/models/errors";
+import { HonoApiError } from "orq-poc-typescript2/models/errors";
 
 // No examples available for this model
 ```

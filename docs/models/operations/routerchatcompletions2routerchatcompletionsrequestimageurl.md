@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RouterChatCompletions2RouterChatCompletionsRequestImageUrl } from "orq-poc-typescript/models/operations";
+import { RouterChatCompletions2RouterChatCompletionsRequestImageUrl } from "orq-poc-typescript2/models/operations";
 
 let value: RouterChatCompletions2RouterChatCompletionsRequestImageUrl = {
   url: "https://cautious-unit.biz/",

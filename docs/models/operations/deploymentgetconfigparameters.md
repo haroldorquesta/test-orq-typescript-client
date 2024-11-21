@@ -5,7 +5,7 @@ Model Parameters: Not all parameters apply to every model
 ## Example Usage
 
 ```typescript
-import { DeploymentGetConfigParameters } from "orq-poc-typescript/models/operations";
+import { DeploymentGetConfigParameters } from "orq-poc-typescript2/models/operations";
 
 let value: DeploymentGetConfigParameters = {};
 ```

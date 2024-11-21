@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResponseBodyType } from "orq-poc-typescript/models/operations";
+import { ResponseBodyType } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseBodyType = "function";
 ```

@@ -5,7 +5,7 @@ The reason the model stopped generating tokens.
 ## Example Usage
 
 ```typescript
-import { ResponseBodyFinishReason } from "orq-poc-typescript/models/operations";
+import { ResponseBodyFinishReason } from "orq-poc-typescript2/models/operations";
 
 let value: ResponseBodyFinishReason = "content_filter";
 ```

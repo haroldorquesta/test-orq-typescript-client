@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RemoteConfigsGetConfigRequestBody } from "orq-poc-typescript/models/operations";
+import { RemoteConfigsGetConfigRequestBody } from "orq-poc-typescript2/models/operations";
 
 let value: RemoteConfigsGetConfigRequestBody = {
   key: "<key>",
