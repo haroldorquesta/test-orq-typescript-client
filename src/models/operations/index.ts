@@ -5,6 +5,7 @@
 export * from "./bulkfileupload.js";
 export * from "./createcontact.js";
 export * from "./createfeedback.js";
+export * from "./deletev2deploymentsinvalidatedeploymentid.js";
 export * from "./deploymentcreatemetric.js";
 export * from "./deploymentgetconfig.js";
 export * from "./deploymentinvoke.js";

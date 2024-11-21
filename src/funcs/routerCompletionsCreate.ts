@@ -22,7 +22,7 @@ import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 /**
- * legacy completions route
+ * Create Completion
  *
  * @remarks
  * For sending requests to legacy completion models

@@ -14,7 +14,7 @@ export { CreateAcceptEnum } from "../funcs/routerChatCompletionsCreate.js";
 
 export class OrqCompletions extends ClientSDK {
   /**
-   * Chat
+   * Create Chat Completion
    *
    * @remarks
    * For sending requests to chat completion models

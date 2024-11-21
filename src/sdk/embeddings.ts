@@ -9,7 +9,7 @@ import { unwrapAsync } from "../types/fp.js";
 
 export class Embeddings extends ClientSDK {
   /**
-   * Embeddings
+   * Create an Embedding
    *
    * @remarks
    * Creates an embedding vector representing the input text.

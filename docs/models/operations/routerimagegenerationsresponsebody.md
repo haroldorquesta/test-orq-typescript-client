@@ -9,13 +9,13 @@ import { RouterImageGenerationsResponseBody } from "orq-poc-typescript/models/op
 
 let value: RouterImageGenerationsResponseBody = {
   id: "<id>",
-  created: 4977.77,
+  created: 7263.42,
   choices: [
     {
-      index: 5810.82,
+      index: 5369.23,
     },
   ],
-  model: "Camry",
+  model: "Accord",
   object: "<value>",
 };
 ```

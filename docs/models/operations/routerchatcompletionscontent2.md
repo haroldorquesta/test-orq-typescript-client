@@ -18,7 +18,7 @@ const value: operations.RouterChatCompletions21 = {
 const value: operations.RouterChatCompletions22 = {
   type: "image_url",
   imageUrl: {
-    url: "https://knotty-exasperation.org/",
+    url: "https://pale-technician.info/",
   },
 };
 ```

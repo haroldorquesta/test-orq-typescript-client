@@ -6,8 +6,13 @@
 import { Messages } from "orq-poc-typescript/models/components";
 
 let value: Messages = {
-  role: "correction",
-  content: "<value>",
+  role: "exception",
+  content: [
+    {
+      type: "text",
+      text: "<value>",
+    },
+  ],
 };
 ```
 

@@ -7,7 +7,7 @@ The reason the model stopped generating tokens.
 ```typescript
 import { RouterChatCompletionsResponseBodyFinishReason } from "orq-poc-typescript/models/operations";
 
-let value: RouterChatCompletionsResponseBodyFinishReason = "length";
+let value: RouterChatCompletionsResponseBodyFinishReason = "tool_calls";
 ```
 
 ## Values

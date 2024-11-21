@@ -8,9 +8,9 @@ import { RouterEmbeddingData } from "orq-poc-typescript/models/operations";
 let value: RouterEmbeddingData = {
   object: "embedding",
   embedding: [
-    2531.91,
+    8286.57,
   ],
-  index: 1310.55,
+  index: 9249.67,
 };
 ```
 

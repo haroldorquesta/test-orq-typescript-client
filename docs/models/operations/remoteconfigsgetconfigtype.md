@@ -5,7 +5,7 @@
 ```typescript
 import { RemoteConfigsGetConfigType } from "orq-poc-typescript/models/operations";
 
-let value: RemoteConfigsGetConfigType = "string";
+let value: RemoteConfigsGetConfigType = "integer";
 ```
 
 ## Values

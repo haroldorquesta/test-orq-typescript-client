@@ -7,7 +7,7 @@ The role of the prompt message
 ```typescript
 import { MessageRole } from "orq-poc-typescript/models/operations";
 
-let value: MessageRole = "system";
+let value: MessageRole = "assistant";
 ```
 
 ## Values

@@ -9,7 +9,7 @@ let value: ResponseBody = {
   id: "<id>",
   objectName: "<value>",
   purpose: "retrieval",
-  bytes: 9453.02,
+  bytes: 2883.98,
   fileName: "example.file",
 };
 ```

@@ -6,15 +6,8 @@
 import { DeploymentCreateMetricMessages } from "orq-poc-typescript/models/operations";
 
 let value: DeploymentCreateMetricMessages = {
-  role: "assistant",
-  content: [
-    {
-      type: "image_url",
-      imageUrl: {
-        url: "https://overdue-story.info/",
-      },
-    },
-  ],
+  role: "user",
+  content: "<value>",
 };
 ```
 

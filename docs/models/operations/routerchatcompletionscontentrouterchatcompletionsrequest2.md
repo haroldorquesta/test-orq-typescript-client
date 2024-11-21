@@ -18,7 +18,7 @@ const value: operations.RouterChatCompletions2RouterChatCompletionsRequest1 = {
 const value: operations.RouterChatCompletions2RouterChatCompletionsRequest2 = {
   type: "image_url",
   imageUrl: {
-    url: "https://minor-hippodrome.name",
+    url: "https://hungry-gerbil.net/",
   },
 };
 ```

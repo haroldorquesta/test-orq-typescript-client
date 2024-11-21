@@ -7,7 +7,7 @@ The role of the prompt message
 ```typescript
 import { RouterImageGenerationsMessageRole } from "orq-poc-typescript/models/operations";
 
-let value: RouterImageGenerationsMessageRole = "correction";
+let value: RouterImageGenerationsMessageRole = "prompt";
 ```
 
 ## Values

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 6e01d37466c10746c52c81002dab432d
+  docChecksum: 4064a3abff1b3c73eda3e58e067eb291
   docVersion: "2.0"
   speakeasyVersion: 1.441.1
   generationVersion: 2.461.2
-  releaseVersion: 1.30.1-rc.10
-  configChecksum: 1c495f9fbe21d37fa62fad4b4b63241e
+  releaseVersion: 1.30.1-rc.11
+  configChecksum: cb3b9a20aa0122e4105ca8a6a6fcc442
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -94,6 +94,7 @@ generatedFiles:
   - docs/models/operations/createfeedbackresponsebody.md
   - docs/models/operations/createfeedbackvalue.md
   - docs/models/operations/data.md
+  - docs/models/operations/deletev2deploymentsinvalidatedeploymentidrequest.md
   - docs/models/operations/delta.md
   - docs/models/operations/deploymentcreatemetric21.md
   - docs/models/operations/deploymentcreatemetric22.md
@@ -379,6 +380,7 @@ generatedFiles:
   - docs/sdks/metrics/README.md
   - docs/sdks/orq/README.md
   - docs/sdks/orqcompletions/README.md
+  - docs/sdks/public/README.md
   - docs/sdks/remoteconfig/README.md
   - docs/sdks/router/README.md
   - jsr.json
@@ -386,12 +388,14 @@ generatedFiles:
   - src/core.ts
   - src/funcs/contactsCreate.ts
   - src/funcs/deploymentsAll.ts
+  - src/funcs/deploymentsDeleteV2DeploymentsInvalidateDeploymentId.ts
   - src/funcs/deploymentsGetConfig.ts
   - src/funcs/deploymentsInvoke.ts
   - src/funcs/deploymentsMetricsCreate.ts
   - src/funcs/feedbackCreate.ts
   - src/funcs/filesBulkUpload.ts
   - src/funcs/filesUpload.ts
+  - src/funcs/publicDeleteV2DeploymentsInvalidateDeploymentId.ts
   - src/funcs/remoteconfigGetConfig.ts
   - src/funcs/routerChatCompletionsCreate.ts
   - src/funcs/routerCompletionsCreate.ts
@@ -430,6 +434,7 @@ generatedFiles:
   - src/models/operations/bulkfileupload.ts
   - src/models/operations/createcontact.ts
   - src/models/operations/createfeedback.ts
+  - src/models/operations/deletev2deploymentsinvalidatedeploymentid.ts
   - src/models/operations/deploymentcreatemetric.ts
   - src/models/operations/deploymentgetconfig.ts
   - src/models/operations/deploymentinvoke.ts
@@ -453,6 +458,7 @@ generatedFiles:
   - src/sdk/index.ts
   - src/sdk/metrics.ts
   - src/sdk/orqcompletions.ts
+  - src/sdk/public.ts
   - src/sdk/remoteconfig.ts
   - src/sdk/router.ts
   - src/sdk/sdk.ts
@@ -792,3 +798,8 @@ examples:
       responses:
         "200":
           application/json: {"id": "<id>", "created": "7401.98", "choices": [{"index": "3310.48"}], "model": "Challenger", "object": "<value>"}
+  delete_/v2/deployments/invalidate/{deployment_id}:
+    speakeasy-default-delete-/v2-/deployments/invalidate/{deployment-id}:
+      parameters:
+        path:
+          deployment_id: "2f8f323e-7a21-40c4-8729-612ffe6e2dcb"

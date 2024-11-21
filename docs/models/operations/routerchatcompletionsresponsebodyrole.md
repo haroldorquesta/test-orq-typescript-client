@@ -5,7 +5,7 @@
 ```typescript
 import { RouterChatCompletionsResponseBodyRole } from "orq-poc-typescript/models/operations";
 
-let value: RouterChatCompletionsResponseBodyRole = "system";
+let value: RouterChatCompletionsResponseBodyRole = "user";
 ```
 
 ## Values

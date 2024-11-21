@@ -7,9 +7,9 @@ import { RouterChatCompletionsResponseBodyTopLogprobs } from "orq-poc-typescript
 
 let value: RouterChatCompletionsResponseBodyTopLogprobs = {
   token: "<value>",
-  logprob: 8953.86,
+  logprob: 6805.14,
   bytes: [
-    9677.95,
+    6223.84,
   ],
 };
 ```

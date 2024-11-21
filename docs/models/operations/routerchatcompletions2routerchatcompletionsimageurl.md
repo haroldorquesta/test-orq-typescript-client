@@ -6,7 +6,7 @@
 import { RouterChatCompletions2RouterChatCompletionsImageUrl } from "orq-poc-typescript/models/operations";
 
 let value: RouterChatCompletions2RouterChatCompletionsImageUrl = {
-  url: "https://vain-archaeology.biz",
+  url: "https://tedious-descendant.name/",
 };
 ```
 

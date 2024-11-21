@@ -7,9 +7,9 @@ import { RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs } fro
 
 let value: RouterChatCompletionsResponseBodyRouterChatCompletionsTopLogprobs = {
   token: "<value>",
-  logprob: 4067.33,
+  logprob: 8792.35,
   bytes: [
-    5520.78,
+    5436.78,
   ],
 };
 ```

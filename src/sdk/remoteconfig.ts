@@ -9,10 +9,7 @@ import { unwrapAsync } from "../types/fp.js";
 
 export class Remoteconfig extends ClientSDK {
   /**
-   * Get config
-   *
-   * @remarks
-   * Retrieve the deployment configuration
+   * Get Configurations
    */
   async getConfig(
     request?: operations.RemoteConfigsGetConfigRequestBody | undefined,

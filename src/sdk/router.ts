@@ -33,7 +33,7 @@ export class Router extends ClientSDK {
   }
 
   /**
-   * rerank route
+   * Rerank Documents
    *
    * @remarks
    * For sending requests to rerank models

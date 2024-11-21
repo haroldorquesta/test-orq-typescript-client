@@ -5,7 +5,7 @@
 
 ### Available Operations
 
-* [create](#create) - legacy completions route
+* [create](#create) - Create Completion
 
 ## create
 

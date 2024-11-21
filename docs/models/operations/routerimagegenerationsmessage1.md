@@ -6,7 +6,7 @@
 import { RouterImageGenerationsMessage1 } from "orq-poc-typescript/models/operations";
 
 let value: RouterImageGenerationsMessage1 = {
-  role: "expected_output",
+  role: "user",
   content: "<value>",
 };
 ```

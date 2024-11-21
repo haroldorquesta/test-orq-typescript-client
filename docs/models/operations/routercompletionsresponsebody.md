@@ -11,13 +11,13 @@ let value: RouterCompletionsResponseBody = {
   id: "<id>",
   choices: [
     {
-      finishReason: "tool_calls",
-      index: 7645.62,
+      finishReason: "content_filter",
+      index: 2415.57,
       text: "<value>",
     },
   ],
-  created: 6982.48,
-  model: "Countach",
+  created: 1690.25,
+  model: "Sentra",
   systemFingerprint: "<value>",
   object: "<value>",
   usage: {},

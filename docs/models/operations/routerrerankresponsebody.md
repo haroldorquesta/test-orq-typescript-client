@@ -10,8 +10,8 @@ import { RouterRerankResponseBody } from "orq-poc-typescript/models/operations";
 let value: RouterRerankResponseBody = {
   results: [
     {
-      index: 6144.65,
-      relevanceScore: 330.75,
+      index: 5173.09,
+      relevanceScore: 4240.89,
     },
   ],
 };

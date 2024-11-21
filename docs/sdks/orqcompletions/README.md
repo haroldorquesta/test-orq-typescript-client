@@ -5,7 +5,7 @@
 
 ### Available Operations
 
-* [create](#create) - Chat
+* [create](#create) - Create Chat Completion
 
 ## create
 

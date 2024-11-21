@@ -7,12 +7,7 @@ import { Messages2 } from "orq-poc-typescript/models/operations";
 
 let value: Messages2 = {
   role: "user",
-  content: [
-    {
-      type: "text",
-      text: "<value>",
-    },
-  ],
+  content: "<value>",
 };
 ```
 

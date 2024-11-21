@@ -8,12 +8,7 @@ import { Four } from "orq-poc-typescript/models/operations";
 let value: Four = {
   role: "tool",
   toolCallId: "<id>",
-  content: [
-    {
-      type: "text",
-      text: "<value>",
-    },
-  ],
+  content: "<value>",
 };
 ```
 

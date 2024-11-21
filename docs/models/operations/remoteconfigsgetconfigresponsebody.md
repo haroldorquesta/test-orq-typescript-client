@@ -8,7 +8,7 @@ An individual remote config
 import { RemoteConfigsGetConfigResponseBody } from "orq-poc-typescript/models/operations";
 
 let value: RemoteConfigsGetConfigResponseBody = {
-  type: "deployment",
+  type: "integer",
 };
 ```
 

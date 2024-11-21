@@ -7,7 +7,7 @@ import { RouterEmbeddingRequestBody } from "orq-poc-typescript/models/operations
 
 let value: RouterEmbeddingRequestBody = {
   input: "<value>",
-  model: "A8",
+  model: "Model S",
 };
 ```
 

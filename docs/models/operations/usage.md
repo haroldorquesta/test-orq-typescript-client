@@ -8,8 +8,8 @@ Usage statistics to add to the deployment
 import { Usage } from "orq-poc-typescript/models/operations";
 
 let value: Usage = {
-  promptTokens: 5361.77,
-  completionTokens: 6813.93,
+  promptTokens: 9088.44,
+  completionTokens: 8155.24,
 };
 ```
 

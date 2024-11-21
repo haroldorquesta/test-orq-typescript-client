@@ -6,8 +6,8 @@
 import { RouterImageGenerationsMessage2 } from "orq-poc-typescript/models/operations";
 
 let value: RouterImageGenerationsMessage2 = {
-  role: "expected_output",
-  url: "https://celebrated-mountain.net/",
+  role: "correction",
+  url: "https://firm-gymnast.info/",
 };
 ```
 
