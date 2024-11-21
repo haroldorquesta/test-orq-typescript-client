@@ -25,7 +25,7 @@ jobs:
         id: target
         shell: bash
         run: |
-          SDK_TARGET_VERSION=$(cat .speakeasy/gen.yaml | yq ".typescript.version")
+          SDK_TARGET_VERSION=$(yq '.typescript.version' cat .speakeasy/gen.yaml)
           echo "$SDK_TARGET_VERSION" | grep -q "-rc"
           if [[ $? -eq 0 ]] ; then
             echo "target=orq-prerelease" >> "$GITHUB_OUTPUT"
