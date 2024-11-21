@@ -92,7 +92,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.create3({
+  const result = await orq.contacts.create4({
     externalId: "<id>",
   });
 
@@ -113,7 +113,7 @@ run();
 
 ### [contacts](docs/sdks/contacts/README.md)
 
-* [create3](docs/sdks/contacts/README.md#create3) - Update user information
+* [create4](docs/sdks/contacts/README.md#create4) - Update user information
 
 ### [deployments](docs/sdks/deployments/README.md)
 
@@ -185,7 +185,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [`contactsCreate3`](docs/sdks/contacts/README.md#create3) - Update user information
+- [`contactsCreate4`](docs/sdks/contacts/README.md#create4) - Update user information
 - [`deploymentsAll`](docs/sdks/deployments/README.md#all) - List all deployments
 - [`deploymentsDeleteV2DeploymentsInvalidateDeploymentId`](docs/sdks/deployments/README.md#deletev2deploymentsinvalidatedeploymentid) - Invalidates cache
 - [`deploymentsGetConfig`](docs/sdks/deployments/README.md#getconfig) - Get config
@@ -287,7 +287,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.create3({
+  const result = await orq.contacts.create4({
     externalId: "<id>",
   }, {
     retries: {
@@ -329,7 +329,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.create3({
+  const result = await orq.contacts.create4({
     externalId: "<id>",
   });
 
@@ -425,7 +425,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.create3({
+  const result = await orq.contacts.create4({
     externalId: "<id>",
   });
 
@@ -507,7 +507,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.create3({
+  const result = await orq.contacts.create4({
     externalId: "<id>",
   });
 

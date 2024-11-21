@@ -5,9 +5,9 @@
 
 ### Available Operations
 
-* [create3](#create3) - Update user information
+* [create4](#create4) - Update user information
 
-## create3
+## create4
 
 Update or add user information to workspace
 
@@ -21,7 +21,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.contacts.create3({
+  const result = await orq.contacts.create4({
     externalId: "<id>",
   });
 
@@ -38,7 +38,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript2/core.js";
-import { contactsCreate3 } from "orq-poc-typescript2/funcs/contactsCreate3.js";
+import { contactsCreate4 } from "orq-poc-typescript2/funcs/contactsCreate4.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -47,7 +47,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await contactsCreate3(orq, {
+  const res = await contactsCreate4(orq, {
     externalId: "<id>",
   });
 

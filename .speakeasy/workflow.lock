@@ -16,11 +16,11 @@ sources:
             - speakeasy-sdk-regen-1732167251
     orq-prerelease:
         sourceNamespace: orq-prerelease
-        sourceRevisionDigest: sha256:a1dfc42deda0d3cd465f2c5650b1fa621464077de578c876a1f9dc20dd233821
-        sourceBlobDigest: sha256:9caf67f9dab9f57c237523d5faffe3fc6034be7b6b9233d7572e18fe9ebdc8fa
+        sourceRevisionDigest: sha256:a65f5574c2bcb8eb30f95911c76117ddeb098241c267925f9593fd19ec649ee9
+        sourceBlobDigest: sha256:c8a754bdf146b183b3dee11d92d3560f13452472bfe8f2a85b768715344778a8
         tags:
             - latest
-            - speakeasy-sdk-regen-1732194226
+            - speakeasy-sdk-regen-1732195238
 targets:
     orq:
         source: orq
@@ -32,10 +32,10 @@ targets:
     orq-prerelease:
         source: orq-prerelease
         sourceNamespace: orq-prerelease
-        sourceRevisionDigest: sha256:a1dfc42deda0d3cd465f2c5650b1fa621464077de578c876a1f9dc20dd233821
-        sourceBlobDigest: sha256:9caf67f9dab9f57c237523d5faffe3fc6034be7b6b9233d7572e18fe9ebdc8fa
+        sourceRevisionDigest: sha256:a65f5574c2bcb8eb30f95911c76117ddeb098241c267925f9593fd19ec649ee9
+        sourceBlobDigest: sha256:c8a754bdf146b183b3dee11d92d3560f13452472bfe8f2a85b768715344778a8
         codeSamplesNamespace: orq-prerelease-code-samples
-        codeSamplesRevisionDigest: sha256:e5c3c101bb939e1f422315ef6e9b6d1680d75f2cd8b25a04799b5000c0ee54c5
+        codeSamplesRevisionDigest: sha256:f94a68edaf26a41f00412bb83e9eee1541641724550da954b953d387cf86d0f0
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -54,6 +54,9 @@ workflow:
         orq:
             target: typescript
             source: orq
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/orq/orq/orq-code-samples
@@ -61,6 +64,9 @@ workflow:
         orq-prerelease:
             target: typescript
             source: orq-prerelease
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/orq/orq/orq-prerelease-code-samples
