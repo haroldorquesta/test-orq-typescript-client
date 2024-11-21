@@ -3,10 +3,10 @@ speakeasyVersion: latest
 sources:
     orq-prerelease:
         inputs:
-            - location: ../openapi-prerelease.yaml
+            - location: ./openapi-prerelease.yaml
     orq:
         inputs:
-            - location: ../openapi.yaml
+            - location: ./openapi.yaml
 targets:
     orq-prerelease:
         target: typescript
