@@ -157,7 +157,7 @@ run();
 
 #### [router.completions](docs/sdks/completions/README.md)
 
-* [create](docs/sdks/completions/README.md#create) - Create Completion
+* [create2](docs/sdks/completions/README.md#create2) - Create Completion
 
 #### [router.embeddings](docs/sdks/embeddings/README.md)
 
@@ -197,7 +197,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`publicDeleteV2DeploymentsInvalidateDeploymentId`](docs/sdks/public/README.md#deletev2deploymentsinvalidatedeploymentid) - Invalidates cache
 - [`remoteconfigGetConfig`](docs/sdks/remoteconfig/README.md#getconfig) - Get Configurations
 - [`routerChatCompletionsCreate`](docs/sdks/orqcompletions/README.md#create) - Create Chat Completion
-- [`routerCompletionsCreate`](docs/sdks/completions/README.md#create) - Create Completion
+- [`routerCompletionsCreate2`](docs/sdks/completions/README.md#create2) - Create Completion
 - [`routerEmbeddingsCreate`](docs/sdks/embeddings/README.md#create) - Create an Embedding
 - [`routerImagesGenerate`](docs/sdks/images/README.md#generate) - Create an Image
 - [`routerRerank`](docs/sdks/router/README.md#rerank) - Rerank Documents

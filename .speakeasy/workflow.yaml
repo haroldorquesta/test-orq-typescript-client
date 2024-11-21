@@ -4,6 +4,8 @@ sources:
     orq:
         inputs:
             - location: ./openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/orq/orq/orq
     orq-prerelease:
         inputs:
             - location: ./openapi-prerelease.yaml

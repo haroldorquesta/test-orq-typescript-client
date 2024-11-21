@@ -5,9 +5,9 @@
 
 ### Available Operations
 
-* [create](#create) - Create Completion
+* [create2](#create2) - Create Completion
 
-## create
+## create2
 
 For sending requests to legacy completion models
 
@@ -21,7 +21,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.router.completions.create();
+  const result = await orq.router.completions.create2();
 
   // Handle the result
   console.log(result);
@@ -36,7 +36,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { routerCompletionsCreate } from "orq-poc-typescript/funcs/routerCompletionsCreate.js";
+import { routerCompletionsCreate2 } from "orq-poc-typescript/funcs/routerCompletionsCreate2.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -45,7 +45,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await routerCompletionsCreate(orq);
+  const res = await routerCompletionsCreate2(orq);
 
   if (!res.ok) {
     throw res.error;

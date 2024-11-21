@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 53c28128-5c38-4f41-bba4-e482fb33eb14
 management:
-  docChecksum: 01374bc219bb63df9330ecb14261298a
+  docChecksum: 3bd5649b10f6c414201a6b84fa410236
   docVersion: "2.0"
   speakeasyVersion: 1.441.1
   generationVersion: 2.461.2
-  releaseVersion: 1.30.2-alpha.1
-  configChecksum: 7cf61f5e46be3893b0f1baaa21bf193b
+  releaseVersion: 1.30.5
+  configChecksum: 6890a42e38c755ba97d104fe0eed8ba4
   repoURL: https://github.com/haroldorquesta/test-orq-typescript-client.git
   installationURL: https://github.com/haroldorquesta/test-orq-typescript-client
   published: true
@@ -398,7 +398,7 @@ generatedFiles:
   - src/funcs/publicDeleteV2DeploymentsInvalidateDeploymentId.ts
   - src/funcs/remoteconfigGetConfig.ts
   - src/funcs/routerChatCompletionsCreate.ts
-  - src/funcs/routerCompletionsCreate.ts
+  - src/funcs/routerCompletionsCreate2.ts
   - src/funcs/routerEmbeddingsCreate.ts
   - src/funcs/routerImagesGenerate.ts
   - src/funcs/routerRerank.ts

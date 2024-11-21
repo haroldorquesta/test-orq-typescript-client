@@ -27,7 +27,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * For sending requests to legacy completion models
  */
-export async function routerCompletionsCreate(
+export async function routerCompletionsCreate2(
   client: OrqCore,
   request?: operations.RouterCompletionsRequestBody | undefined,
   options?: RequestOptions,
