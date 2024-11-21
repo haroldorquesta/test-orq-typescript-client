@@ -7,7 +7,7 @@
 
 * [getConfig](#getconfig) - Get config
 * [invoke](#invoke) - Invoke
-* [list](#list) - List all deployments
+* [all](#all) - List all deployments
 
 ## getConfig
 
@@ -165,7 +165,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list
+## all
 
 Returns a list of your deployments. The deployments are returned sorted by creation date, with the most recent deployments appearing first.
 
@@ -179,7 +179,7 @@ const orq = new Orq({
 });
 
 async function run() {
-  const result = await orq.deployments.list();
+  const result = await orq.deployments.all();
 
   // Handle the result
   console.log(result);
@@ -194,7 +194,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OrqCore } from "orq-poc-typescript/core.js";
-import { deploymentsList } from "orq-poc-typescript/funcs/deploymentsList.js";
+import { deploymentsAll } from "orq-poc-typescript/funcs/deploymentsAll.js";
 
 // Use `OrqCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -203,7 +203,7 @@ const orq = new OrqCore({
 });
 
 async function run() {
-  const res = await deploymentsList(orq);
+  const res = await deploymentsAll(orq);
 
   if (!res.ok) {
     throw res.error;

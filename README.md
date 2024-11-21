@@ -119,7 +119,7 @@ run();
 
 * [getConfig](docs/sdks/deployments/README.md#getconfig) - Get config
 * [invoke](docs/sdks/deployments/README.md#invoke) - Invoke
-* [list](docs/sdks/deployments/README.md#list) - List all deployments
+* [all](docs/sdks/deployments/README.md#all) - List all deployments
 
 #### [deployments.metrics](docs/sdks/metrics/README.md)
 
@@ -181,9 +181,9 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 <summary>Available standalone functions</summary>
 
 - [`contactsCreate`](docs/sdks/contacts/README.md#create) - Update user information
+- [`deploymentsAll`](docs/sdks/deployments/README.md#all) - List all deployments
 - [`deploymentsGetConfig`](docs/sdks/deployments/README.md#getconfig) - Get config
 - [`deploymentsInvoke`](docs/sdks/deployments/README.md#invoke) - Invoke
-- [`deploymentsList`](docs/sdks/deployments/README.md#list) - List all deployments
 - [`deploymentsMetricsCreate`](docs/sdks/metrics/README.md#create) - Add metrics
 - [`feedbackCreate`](docs/sdks/feedback/README.md#create) - Submit feedback
 - [`filesBulkUpload`](docs/sdks/files/README.md#bulkupload) - Bulk upload file
@@ -350,7 +350,7 @@ If a HTTP request fails, an operation my also throw an error from the `models/er
 | InvalidRequestError                                  | Any input used to create a request is invalid        |
 | UnexpectedClientError                                | Unrecognised or unexpected error                     |
 
-In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `list` method may throw the following errors:
+In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `all` method may throw the following errors:
 
 | Error Type          | Status Code | Content Type     |
 | ------------------- | ----------- | ---------------- |
@@ -371,7 +371,7 @@ const orq = new Orq({
 async function run() {
   let result;
   try {
-    result = await orq.deployments.list();
+    result = await orq.deployments.all();
 
     // Handle the result
     console.log(result);
