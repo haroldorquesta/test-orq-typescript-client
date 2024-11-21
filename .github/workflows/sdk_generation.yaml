@@ -24,6 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Setup speakeasy
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Install speakeasy cli
         run: curl -fsSL https://raw.githubusercontent.com/speakeasy-api/speakeasy/main/install.sh | sh
 
