@@ -27,7 +27,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Update or add user information to workspace
  */
-export async function contactsCreate(
+export async function contactsCreate2(
   client: OrqCore,
   request: operations.CreateContactRequestBody,
   options?: RequestOptions,
