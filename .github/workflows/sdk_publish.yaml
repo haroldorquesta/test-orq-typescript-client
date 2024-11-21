@@ -1,4 +1,4 @@
-name: Generate
+name: Publish
 permissions:
   checks: write
   contents: write
@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - .speakeasy/gen.yaml
+      - .speakeasy/gen.lock
 jobs:
   get_target:
     runs-on: ubuntu-latest
