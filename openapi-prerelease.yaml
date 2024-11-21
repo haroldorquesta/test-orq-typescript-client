@@ -37146,7 +37146,7 @@ paths:
       tags:
         - "Router"
       x-speakeasy-group: "router.completions"
-      x-speakeasy-name-override: "create"
+      x-speakeasy-name-override: "create2"
       operationId: "RouterCompletions"
       description: "For sending requests to legacy completion models"
       summary: "Create Completion"
