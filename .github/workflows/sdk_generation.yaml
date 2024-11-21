@@ -33,7 +33,7 @@ jobs:
     with:
       mode: direct
       target: ${{ needs.get_target.outputs.target }}
-      publish_typescript: true
+      publish_typescript: "true"
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
