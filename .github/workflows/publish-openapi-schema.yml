@@ -62,7 +62,7 @@ jobs:
 
       - name: Commit and push generated openapi schema
         run: |
-          tag=${{ github.sha }}
+          tag=${{ github.ref_name }}
           export release_tag="${tag:1}"
           echo $release_tag
           yq -i '.typescript.version = env(release_tag)' .speakeasy/gen.yaml
@@ -94,7 +94,7 @@ jobs:
 
       - name: Commit and push generated openapi schema
         run: |
-          tag=${{ github.sha }}
+          tag=${{ github.ref_name }}
           export release_tag="${tag:1}"
           echo $release_tag
           yq -i '.python.version = env(release_tag)' .speakeasy/gen.yaml
