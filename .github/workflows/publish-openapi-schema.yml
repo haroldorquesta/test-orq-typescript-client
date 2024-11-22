@@ -67,6 +67,7 @@ jobs:
           echo $release_tag
           yq -i '.typescript.version = env(release_tag)' .speakeasy/gen.yaml
           cat .speakeasy/gen.yaml
+          git status
           # git add .
           # git commit -m "Publish openapi schema"
           # git push
@@ -99,6 +100,7 @@ jobs:
           echo $release_tag
           yq -i '.python.version = env(release_tag)' .speakeasy/gen.yaml
           cat .speakeasy/gen.yaml
+          git status
           # git add .
           # git commit -m "Publish openapi schema"
           # git push
