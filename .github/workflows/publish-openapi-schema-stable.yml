@@ -1,0 +1,19 @@
+name: '[Stable] Publishing openapi schema'
+
+on:
+  push:
+    # branches:
+    #   - feat/ORQ-6625-github-workflow-to-publish-sdk-openapi-schema
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+' # v1.0.0
+    paths:
+      - .openapi/openapi.json
+      - .openapi/openapi-overlay.yaml
+
+jobs:
+  publish:
+    uses: ./.github/workflows/publish-openapi-schema.yml
+    name: Runner
+    secrets: inherit
+    with:
+      generated_openapi_schema_name: openapi.yaml
